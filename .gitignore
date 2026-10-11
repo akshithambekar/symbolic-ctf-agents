@@ -1,6 +1,4 @@
 .venv/
-.local/
-runs/
 __pycache__/
 *.pyc
 .DS_Store

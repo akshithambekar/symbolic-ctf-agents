@@ -1,7 +1,0 @@
-{
-  "example": "attack-defend",
-  "render": "rgb_array",
-  "seconds": 120,
-  "seed": 7,
-  "record": true
-}

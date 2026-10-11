@@ -1,0 +1,6 @@
+{
+  "example": "attack-defend",
+  "render": "human",
+  "seconds": 120,
+  "seed": 7
+}
