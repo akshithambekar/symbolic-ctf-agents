@@ -1,5 +1,5 @@
-
-# generated at runtime by ltl/code_ltl_translator.py
-ltl/code_ltl_exec.py
+.venv/
 __pycache__/
-.env
+*.pyc
+.DS_Store
+ltl/code_ltl_exec.py
