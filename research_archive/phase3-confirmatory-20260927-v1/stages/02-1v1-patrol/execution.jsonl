@@ -1,0 +1,43 @@
+{"at": "2026-09-27T20:36:17.624655+00:00", "event": "started", "method": "neural", "seed": 0}
+{"at": "2026-09-27T21:33:51.108901+00:00", "event": "failed", "method": "neural", "seed": 0, "error": "KeyError('metrics')"}
+{"at": "2026-09-28T03:09:55.029260+00:00", "event": "recovered_postprocessing", "method": "neural", "seed": 0}
+{"at": "2026-09-28T03:09:55.030958+00:00", "event": "started_after_technical_fix", "method": "neural", "seed": 1}
+{"at": "2026-09-28T04:16:00.366683+00:00", "event": "completed", "method": "neural", "seed": 1}
+{"at": "2026-09-28T04:16:00.368257+00:00", "event": "started_after_technical_fix", "method": "neural", "seed": 2}
+{"at": "2026-09-28T05:16:53.922199+00:00", "event": "completed", "method": "neural", "seed": 2}
+{"at": "2026-09-28T05:16:53.922199+00:00", "event": "started_after_technical_fix", "method": "neural", "seed": 3}
+{"at": "2026-09-28T06:10:46.258210+00:00", "event": "completed", "method": "neural", "seed": 3}
+{"at": "2026-09-28T06:10:46.258210+00:00", "event": "started_after_technical_fix", "method": "neural", "seed": 4}
+{"at": "2026-09-28T16:05:58.992328+00:00", "event": "completed", "method": "neural", "seed": 4}
+{"at": "2026-09-28T16:05:58.993857+00:00", "event": "started_after_technical_fix", "method": "temporal_state_only", "seed": 0}
+{"at": "2026-09-28T17:02:43.341935+00:00", "event": "completed", "method": "temporal_state_only", "seed": 0}
+{"at": "2026-09-28T17:02:43.341935+00:00", "event": "started_after_technical_fix", "method": "temporal_state_only", "seed": 1}
+{"at": "2026-09-28T18:01:02.980322+00:00", "event": "completed", "method": "temporal_state_only", "seed": 1}
+{"at": "2026-09-28T18:01:02.980322+00:00", "event": "started_after_technical_fix", "method": "temporal_state_only", "seed": 2}
+{"at": "2026-09-28T18:57:30.958224+00:00", "event": "completed", "method": "temporal_state_only", "seed": 2}
+{"at": "2026-09-28T18:57:30.958224+00:00", "event": "started_after_technical_fix", "method": "temporal_state_only", "seed": 3}
+{"at": "2026-09-28T19:55:10.405710+00:00", "event": "completed", "method": "temporal_state_only", "seed": 3}
+{"at": "2026-09-28T19:55:10.405710+00:00", "event": "started_after_technical_fix", "method": "temporal_state_only", "seed": 4}
+{"at": "2026-09-28T20:52:56.266454+00:00", "event": "completed", "method": "temporal_state_only", "seed": 4}
+{"at": "2026-09-28T20:52:56.267989+00:00", "event": "started_after_technical_fix", "method": "softened_guidance", "seed": 0}
+{"at": "2026-09-28T21:57:09.726977+00:00", "event": "started_after_numerical_fix", "method": "softened_guidance", "seed": 0, "run": "seed0_technical_rerun1"}
+{"at": "2026-09-28T22:54:22.687800+00:00", "event": "completed_after_numerical_fix", "method": "softened_guidance", "seed": 0, "run": "seed0_technical_rerun1"}
+{"at": "2026-09-28T22:54:22.687800+00:00", "event": "started_after_numerical_fix", "method": "softened_guidance", "seed": 1, "run": "seed1"}
+{"at": "2026-09-29T00:07:08.658182+00:00", "event": "completed_after_numerical_fix", "method": "softened_guidance", "seed": 1, "run": "seed1"}
+{"at": "2026-09-29T00:07:08.658182+00:00", "event": "started_after_numerical_fix", "method": "softened_guidance", "seed": 2, "run": "seed2"}
+{"at": "2026-09-29T01:06:18.690403+00:00", "event": "completed_after_numerical_fix", "method": "softened_guidance", "seed": 2, "run": "seed2"}
+{"at": "2026-09-29T01:06:18.690403+00:00", "event": "started_after_numerical_fix", "method": "softened_guidance", "seed": 3, "run": "seed3"}
+{"at": "2026-09-29T02:05:12.001108+00:00", "event": "completed_after_numerical_fix", "method": "softened_guidance", "seed": 3, "run": "seed3"}
+{"at": "2026-09-29T02:05:12.002630+00:00", "event": "started_after_numerical_fix", "method": "softened_guidance", "seed": 4, "run": "seed4"}
+{"at": "2026-09-29T03:03:07.301798+00:00", "event": "completed_after_numerical_fix", "method": "softened_guidance", "seed": 4, "run": "seed4"}
+{"at": "2026-09-29T03:03:07.303326+00:00", "event": "started_after_numerical_fix", "method": "softened_guidance_no_tag_penalty", "seed": 0, "run": "seed0"}
+{"at": "2026-09-29T03:59:54.597970+00:00", "event": "completed_after_numerical_fix", "method": "softened_guidance_no_tag_penalty", "seed": 0, "run": "seed0"}
+{"at": "2026-09-29T03:59:54.599517+00:00", "event": "started_after_numerical_fix", "method": "softened_guidance_no_tag_penalty", "seed": 1, "run": "seed1"}
+{"at": "2026-09-29T05:03:14.284353+00:00", "event": "completed_after_numerical_fix", "method": "softened_guidance_no_tag_penalty", "seed": 1, "run": "seed1"}
+{"at": "2026-09-29T05:03:14.285912+00:00", "event": "started_after_numerical_fix", "method": "softened_guidance_no_tag_penalty", "seed": 2, "run": "seed2"}
+{"at": "2026-09-30T23:07:12.059856+00:00", "event": "started_after_numerical_fix", "method": "softened_guidance_no_tag_penalty", "seed": 2, "run": "seed2_interrupted_rerun1"}
+{"at": "2026-10-01T00:03:10.157348+00:00", "event": "completed_after_numerical_fix", "method": "softened_guidance_no_tag_penalty", "seed": 2, "run": "seed2_interrupted_rerun1"}
+{"at": "2026-10-01T00:03:10.158348+00:00", "event": "started_after_numerical_fix", "method": "softened_guidance_no_tag_penalty", "seed": 3, "run": "seed3"}
+{"at": "2026-10-01T00:58:25.588453+00:00", "event": "completed_after_numerical_fix", "method": "softened_guidance_no_tag_penalty", "seed": 3, "run": "seed3"}
+{"at": "2026-10-01T00:58:25.588453+00:00", "event": "started_after_numerical_fix", "method": "softened_guidance_no_tag_penalty", "seed": 4, "run": "seed4"}
+{"at": "2026-10-01T01:53:24.945263+00:00", "event": "completed_after_numerical_fix", "method": "softened_guidance_no_tag_penalty", "seed": 4, "run": "seed4"}

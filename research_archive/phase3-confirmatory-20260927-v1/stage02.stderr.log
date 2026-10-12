@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "C:\Users\ymasr\Documents\Codex\2026-09-18\build-an-end-to-end-proof\outputs\maritime-nsrl\scripts\run_phase3_confirmatory.py", line 21, in <module>
+    print(run_stage(args.root,args.stage))
+  File "C:\Users\ymasr\Documents\Codex\2026-09-18\build-an-end-to-end-proof\outputs\maritime-nsrl\src\maritime_nsrl\confirmatory.py", line 220, in run_stage
+    _write_representatives(trace,run / "representative_replays")
+  File "C:\Users\ymasr\Documents\Codex\2026-09-18\build-an-end-to-end-proof\outputs\maritime-nsrl\src\maritime_nsrl\confirmatory.py", line 148, in _write_representatives
+    record = next((r for r in records if predicate(r)), None)
+  File "C:\Users\ymasr\Documents\Codex\2026-09-18\build-an-end-to-end-proof\outputs\maritime-nsrl\src\maritime_nsrl\confirmatory.py", line 148, in <genexpr>
+    record = next((r for r in records if predicate(r)), None)
+  File "C:\Users\ymasr\Documents\Codex\2026-09-18\build-an-end-to-end-proof\outputs\maritime-nsrl\src\maritime_nsrl\confirmatory.py", line 141, in <lambda>
+    "success": lambda r: r["metrics"]["captures"] > 0,
+KeyError: 'metrics'

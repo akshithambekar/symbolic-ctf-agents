@@ -1,0 +1,26 @@
+[
+  {
+    "stage": "stage1-1v1-static",
+    "variant": "neural",
+    "captures": 0,
+    "episodes": 40,
+    "capture_rate": 0.0,
+    "promoted": false
+  },
+  {
+    "stage": "stage1-1v1-static",
+    "variant": "soft_guidance",
+    "captures": 40,
+    "episodes": 40,
+    "capture_rate": 1.0,
+    "promoted": true
+  },
+  {
+    "stage": "stage1-1v1-static",
+    "variant": "temporal_soft",
+    "captures": 0,
+    "episodes": 40,
+    "capture_rate": 0.0,
+    "promoted": false
+  }
+]

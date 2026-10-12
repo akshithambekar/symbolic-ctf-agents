@@ -1,0 +1,1301 @@
+[
+  {
+    "method": "current",
+    "trial": 0,
+    "group": "approach",
+    "equivalent": null,
+    "error": "Missing formula; not counted as semantic agreement"
+  },
+  {
+    "method": "current",
+    "trial": 0,
+    "group": "bounds",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 0,
+    "group": "bounds_order",
+    "equivalent": false,
+    "error": null,
+    "left_only": [
+      [
+        "in_bounds"
+      ]
+    ],
+    "right_only": [
+      [
+        "captured",
+        "has_flag",
+        "in_bounds"
+      ],
+      [
+        "has_flag",
+        "in_bounds"
+      ]
+    ],
+    "exhaustive": false
+  },
+  {
+    "method": "current",
+    "trial": 0,
+    "group": "capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 0,
+    "group": "conditional_defender",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 0,
+    "group": "defender",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 0,
+    "group": "home",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 0,
+    "group": "home_capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 0,
+    "group": "next",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 0,
+    "group": "one_defender",
+    "equivalent": null,
+    "error": "Missing formula; not counted as semantic agreement"
+  },
+  {
+    "method": "current",
+    "trial": 0,
+    "group": "own_side",
+    "equivalent": null,
+    "error": "Missing formula; not counted as semantic agreement"
+  },
+  {
+    "method": "current",
+    "trial": 0,
+    "group": "pickup_capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 0,
+    "group": "response",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 0,
+    "group": "response_capture",
+    "equivalent": null,
+    "error": "Missing formula; not counted as semantic agreement"
+  },
+  {
+    "method": "current",
+    "trial": 0,
+    "group": "safe_attacker",
+    "equivalent": false,
+    "error": null,
+    "left_only": [
+      [
+        "attacker_forward",
+        "tagged",
+        "teammate_safe"
+      ]
+    ],
+    "right_only": [
+      [
+        "attacker_forward"
+      ]
+    ],
+    "exhaustive": false
+  },
+  {
+    "method": "current",
+    "trial": 0,
+    "group": "safe_capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 0,
+    "group": "strict",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 0,
+    "group": "support",
+    "equivalent": null,
+    "error": "Missing formula; not counted as semantic agreement"
+  },
+  {
+    "method": "current",
+    "trial": 0,
+    "group": "tag",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 0,
+    "group": "until",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 1,
+    "group": "approach",
+    "equivalent": null,
+    "error": "Missing formula; not counted as semantic agreement"
+  },
+  {
+    "method": "current",
+    "trial": 1,
+    "group": "bounds",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 1,
+    "group": "bounds_order",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 1,
+    "group": "capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 1,
+    "group": "conditional_defender",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 1,
+    "group": "defender",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 1,
+    "group": "home",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 1,
+    "group": "home_capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 1,
+    "group": "next",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 1,
+    "group": "one_defender",
+    "equivalent": false,
+    "error": null,
+    "left_only": [
+      [
+        "defender_behind_center"
+      ]
+    ],
+    "right_only": [
+      [
+        "home"
+      ]
+    ],
+    "exhaustive": false
+  },
+  {
+    "method": "current",
+    "trial": 1,
+    "group": "own_side",
+    "equivalent": null,
+    "error": "Missing formula; not counted as semantic agreement"
+  },
+  {
+    "method": "current",
+    "trial": 1,
+    "group": "pickup_capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 1,
+    "group": "response",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 1,
+    "group": "response_capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 1,
+    "group": "safe_attacker",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 1,
+    "group": "safe_capture",
+    "equivalent": false,
+    "error": null,
+    "left_only": [
+      [
+        "captured",
+        "in_bounds",
+        "tagged"
+      ]
+    ],
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 1,
+    "group": "strict",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 1,
+    "group": "support",
+    "equivalent": false,
+    "error": null,
+    "left_only": [
+      [
+        "attacker_forward",
+        "has_flag",
+        "teammate_safe"
+      ],
+      [
+        "captured"
+      ]
+    ],
+    "right_only": [
+      [
+        "attacker_forward",
+        "captured"
+      ]
+    ],
+    "exhaustive": false
+  },
+  {
+    "method": "current",
+    "trial": 1,
+    "group": "tag",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 1,
+    "group": "until",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 2,
+    "group": "approach",
+    "equivalent": null,
+    "error": "Missing formula; not counted as semantic agreement"
+  },
+  {
+    "method": "current",
+    "trial": 2,
+    "group": "bounds",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 2,
+    "group": "bounds_order",
+    "equivalent": false,
+    "error": null,
+    "left_only": null,
+    "right_only": [
+      [
+        "captured",
+        "has_flag"
+      ]
+    ],
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 2,
+    "group": "capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 2,
+    "group": "conditional_defender",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 2,
+    "group": "defender",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 2,
+    "group": "home",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 2,
+    "group": "home_capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 2,
+    "group": "next",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 2,
+    "group": "one_defender",
+    "equivalent": false,
+    "error": null,
+    "left_only": [
+      [
+        "defender_behind_center"
+      ]
+    ],
+    "right_only": [
+      [
+        "home"
+      ]
+    ],
+    "exhaustive": false
+  },
+  {
+    "method": "current",
+    "trial": 2,
+    "group": "own_side",
+    "equivalent": null,
+    "error": "Missing formula; not counted as semantic agreement"
+  },
+  {
+    "method": "current",
+    "trial": 2,
+    "group": "pickup_capture",
+    "equivalent": false,
+    "error": null,
+    "left_only": [
+      [
+        "captured",
+        "has_flag"
+      ],
+      [
+        "has_flag"
+      ]
+    ],
+    "right_only": [
+      []
+    ],
+    "exhaustive": false
+  },
+  {
+    "method": "current",
+    "trial": 2,
+    "group": "response",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 2,
+    "group": "response_capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 2,
+    "group": "safe_attacker",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 2,
+    "group": "safe_capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 2,
+    "group": "strict",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 2,
+    "group": "support",
+    "equivalent": null,
+    "error": "Missing formula; not counted as semantic agreement"
+  },
+  {
+    "method": "current",
+    "trial": 2,
+    "group": "tag",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "current",
+    "trial": 2,
+    "group": "until",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 0,
+    "group": "approach",
+    "equivalent": null,
+    "error": "Missing formula; not counted as semantic agreement"
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 0,
+    "group": "bounds",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 0,
+    "group": "bounds_order",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 0,
+    "group": "capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 0,
+    "group": "conditional_defender",
+    "equivalent": false,
+    "error": null,
+    "left_only": null,
+    "right_only": [
+      [],
+      [
+        "attacker_forward"
+      ]
+    ],
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 0,
+    "group": "defender",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 0,
+    "group": "home",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 0,
+    "group": "home_capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 0,
+    "group": "next",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 0,
+    "group": "one_defender",
+    "equivalent": false,
+    "error": null,
+    "left_only": [
+      [
+        "defender_behind_center"
+      ]
+    ],
+    "right_only": [
+      [
+        "home"
+      ]
+    ],
+    "exhaustive": false
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 0,
+    "group": "own_side",
+    "equivalent": null,
+    "error": "Missing formula; not counted as semantic agreement"
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 0,
+    "group": "pickup_capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 0,
+    "group": "response",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 0,
+    "group": "response_capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 0,
+    "group": "safe_attacker",
+    "equivalent": false,
+    "error": null,
+    "left_only": [
+      [
+        "attacker_forward",
+        "tagged",
+        "teammate_safe"
+      ]
+    ],
+    "right_only": [
+      [
+        "attacker_forward"
+      ]
+    ],
+    "exhaustive": false
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 0,
+    "group": "safe_capture",
+    "equivalent": false,
+    "error": null,
+    "left_only": [
+      [
+        "captured",
+        "in_bounds",
+        "tagged"
+      ]
+    ],
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 0,
+    "group": "strict",
+    "equivalent": false,
+    "error": null,
+    "left_only": null,
+    "right_only": [
+      [
+        "captured",
+        "has_flag"
+      ],
+      [
+        "captured"
+      ]
+    ],
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 0,
+    "group": "support",
+    "equivalent": null,
+    "error": "Missing formula; not counted as semantic agreement"
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 0,
+    "group": "tag",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 0,
+    "group": "until",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 1,
+    "group": "approach",
+    "equivalent": null,
+    "error": "Missing formula; not counted as semantic agreement"
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 1,
+    "group": "bounds",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 1,
+    "group": "bounds_order",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 1,
+    "group": "capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 1,
+    "group": "conditional_defender",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 1,
+    "group": "defender",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 1,
+    "group": "home",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 1,
+    "group": "home_capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 1,
+    "group": "next",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 1,
+    "group": "one_defender",
+    "equivalent": false,
+    "error": null,
+    "left_only": [
+      [
+        "defender_behind_center"
+      ]
+    ],
+    "right_only": [
+      [
+        "home"
+      ]
+    ],
+    "exhaustive": false
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 1,
+    "group": "own_side",
+    "equivalent": null,
+    "error": "Missing formula; not counted as semantic agreement"
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 1,
+    "group": "pickup_capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 1,
+    "group": "response",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 1,
+    "group": "response_capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 1,
+    "group": "safe_attacker",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 1,
+    "group": "safe_capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 1,
+    "group": "strict",
+    "equivalent": false,
+    "error": null,
+    "left_only": null,
+    "right_only": [
+      [
+        "captured",
+        "has_flag"
+      ],
+      [
+        "captured"
+      ]
+    ],
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 1,
+    "group": "support",
+    "equivalent": null,
+    "error": "Missing formula; not counted as semantic agreement"
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 1,
+    "group": "tag",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 1,
+    "group": "until",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 2,
+    "group": "approach",
+    "equivalent": null,
+    "error": "Unsatisfiable on all nonempty finite traces"
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 2,
+    "group": "bounds",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 2,
+    "group": "bounds_order",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 2,
+    "group": "capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 2,
+    "group": "conditional_defender",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 2,
+    "group": "defender",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 2,
+    "group": "home",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 2,
+    "group": "home_capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 2,
+    "group": "next",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 2,
+    "group": "one_defender",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 2,
+    "group": "own_side",
+    "equivalent": false,
+    "error": null,
+    "left_only": null,
+    "right_only": [
+      [],
+      [
+        "has_flag"
+      ]
+    ],
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 2,
+    "group": "pickup_capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 2,
+    "group": "response",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 2,
+    "group": "response_capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 2,
+    "group": "safe_attacker",
+    "equivalent": false,
+    "error": null,
+    "left_only": [
+      [
+        "attacker_forward",
+        "tagged",
+        "teammate_safe"
+      ]
+    ],
+    "right_only": [
+      [
+        "attacker_forward"
+      ]
+    ],
+    "exhaustive": false
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 2,
+    "group": "safe_capture",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 2,
+    "group": "strict",
+    "equivalent": false,
+    "error": null,
+    "left_only": null,
+    "right_only": [
+      [
+        "captured"
+      ],
+      [
+        "has_flag"
+      ],
+      [
+        "captured"
+      ]
+    ],
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 2,
+    "group": "support",
+    "equivalent": null,
+    "error": "Unsatisfiable on all nonempty finite traces"
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 2,
+    "group": "tag",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  },
+  {
+    "method": "ltlcodegen",
+    "trial": 2,
+    "group": "until",
+    "equivalent": true,
+    "error": null,
+    "left_only": null,
+    "right_only": null,
+    "exhaustive": true
+  }
+]

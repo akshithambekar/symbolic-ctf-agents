@@ -1,0 +1,95 @@
+{
+  "policy": "C:\\Users\\ymasr\\Documents\\Codex\\2026-09-18\\build-an-end-to-end-proof\\outputs\\matched-ablation-20260918-v1\\shield-seed2\\policy.zip",
+  "summaries": [
+    {
+      "scenario": "standard",
+      "opponent": "static",
+      "episodes": 30,
+      "capture_rate": 0.0,
+      "mean_reward": -2.4,
+      "mean_tags_received": 0.0,
+      "mean_shield_interventions": 0.0,
+      "mean_shield_deadlocks": 0.0
+    },
+    {
+      "scenario": "standard",
+      "opponent": "patrol",
+      "episodes": 30,
+      "capture_rate": 0.0,
+      "mean_reward": -6.119666666666666,
+      "mean_tags_received": 0.0,
+      "mean_shield_interventions": 0.2,
+      "mean_shield_deadlocks": 0.2
+    },
+    {
+      "scenario": "standard",
+      "opponent": "chase",
+      "episodes": 30,
+      "capture_rate": 0.0,
+      "mean_reward": -3.6830000000000007,
+      "mean_tags_received": 0.0,
+      "mean_shield_interventions": 0.06666666666666667,
+      "mean_shield_deadlocks": 0.06666666666666667
+    },
+    {
+      "scenario": "wide",
+      "opponent": "static",
+      "episodes": 30,
+      "capture_rate": 0.0,
+      "mean_reward": -2.4,
+      "mean_tags_received": 0.0,
+      "mean_shield_interventions": 0.0,
+      "mean_shield_deadlocks": 0.0
+    },
+    {
+      "scenario": "wide",
+      "opponent": "patrol",
+      "episodes": 30,
+      "capture_rate": 0.0,
+      "mean_reward": -6.114666666666667,
+      "mean_tags_received": 0.0,
+      "mean_shield_interventions": 0.06666666666666667,
+      "mean_shield_deadlocks": 0.2
+    },
+    {
+      "scenario": "wide",
+      "opponent": "chase",
+      "episodes": 30,
+      "capture_rate": 0.0,
+      "mean_reward": -3.066333333333334,
+      "mean_tags_received": 0.0,
+      "mean_shield_interventions": 0.06666666666666667,
+      "mean_shield_deadlocks": 0.03333333333333333
+    },
+    {
+      "scenario": "narrow",
+      "opponent": "static",
+      "episodes": 30,
+      "capture_rate": 0.0,
+      "mean_reward": -2.4,
+      "mean_tags_received": 0.0,
+      "mean_shield_interventions": 0.0,
+      "mean_shield_deadlocks": 0.0
+    },
+    {
+      "scenario": "narrow",
+      "opponent": "patrol",
+      "episodes": 30,
+      "capture_rate": 0.0,
+      "mean_reward": -5.628666666666667,
+      "mean_tags_received": 0.0,
+      "mean_shield_interventions": 0.1,
+      "mean_shield_deadlocks": 0.16666666666666666
+    },
+    {
+      "scenario": "narrow",
+      "opponent": "chase",
+      "episodes": 30,
+      "capture_rate": 0.0,
+      "mean_reward": -4.982333333333334,
+      "mean_tags_received": 0.0,
+      "mean_shield_interventions": 0.06666666666666667,
+      "mean_shield_deadlocks": 0.13333333333333333
+    }
+  ]
+}

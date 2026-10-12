@@ -1,0 +1,15 @@
+{
+  "mode": "full",
+  "seed": 0,
+  "reward_shaping": true,
+  "temporal_state": true,
+  "shield": true,
+  "shield_formula": "G(in_bounds)",
+  "steps": 100000,
+  "team_size": 3,
+  "opponent": "chase",
+  "scenario": "standard",
+  "evaluation_episodes": 30,
+  "evaluation_seed": 20000,
+  "protocol_sha256": "c61fb92b9e782c7a58c334be4657ebe6a6819995312064aecf64fc054143735a"
+}

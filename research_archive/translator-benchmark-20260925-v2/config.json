@@ -1,0 +1,18 @@
+{
+  "benchmark_version": "ctf-translators-1.0",
+  "trials": 3,
+  "model": "gpt-4o-mini-2024-07-18",
+  "endpoint": "https://api.openai.com/v1",
+  "logic_backend": "dfa",
+  "timeout_seconds": 5.0,
+  "upstream_commit": "b5eb6a19769c3b06c5757136bef3bd444533e328",
+  "timestamp": "2026-09-26T01:46:26.565565+00:00",
+  "semantics": "LTLf nonempty finite traces; not upstream infinite-trace Buchi semantics",
+  "retry_budget": {
+    "current": 3,
+    "ltlcodegen": 4
+  },
+  "sampling": "Provider defaults; independent repeated calls",
+  "gold_review": "Project-authored interpretations, human approval pending",
+  "credential_present": true
+}

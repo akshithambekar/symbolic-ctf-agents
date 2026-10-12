@@ -1,0 +1,15 @@
+{
+  "policy": "..\\chase-recovery-20261002-v1\\diagnostic\\dense_flag_progress\\seed1\\policy.zip",
+  "summaries": [
+    {
+      "scenario": "standard",
+      "opponent": "chase",
+      "episodes": 20,
+      "capture_rate": 0.0,
+      "mean_reward": -1.9376008703077126,
+      "mean_tags_received": 3.0,
+      "mean_shield_interventions": 0.0,
+      "mean_shield_deadlocks": 0.0
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "arguments": {
+    "command": "watch",
+    "policy": "results/pilot/baseline-seed0/policy.zip",
+    "scenario": null,
+    "opponent": null,
+    "team_size": null,
+    "seed": 40000,
+    "episodes": 1,
+    "stochastic": false,
+    "config": null,
+    "speed": 10.0,
+    "headless": true,
+    "record": "..\\viewer-legacy-20260925-v1",
+    "max_frames": 2
+  },
+  "viewer_sha256": "4d2dd94f6b07008f5e180b3e8458fecdebfcf8047614ec8c963a2a26480deaa5",
+  "policy_sha256": "9ee1ff0d56c93d4fc76ef55ee437c79326febdce7ad71b3acf1ad055ebc77ec1"
+}

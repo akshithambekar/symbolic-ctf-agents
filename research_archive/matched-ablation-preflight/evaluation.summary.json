@@ -1,0 +1,15 @@
+{
+  "policy": "..\\matched-ablation-preflight\\policy.zip",
+  "summaries": [
+    {
+      "scenario": "standard",
+      "opponent": "static",
+      "episodes": 1,
+      "capture_rate": 0.0,
+      "mean_reward": -0.05,
+      "mean_tags_received": 0.0,
+      "mean_shield_interventions": 0.0,
+      "mean_shield_deadlocks": 0.0
+    }
+  ]
+}

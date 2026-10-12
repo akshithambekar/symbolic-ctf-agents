@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-01T01:53:24.967264+00:00",
+  "stage": "02-1v1-patrol",
+  "promotion_rule": {
+    "defined_before_runs": true,
+    "criterion": "A method advances only if at least 3 of 5 training seeds have held-out capture rate >= 0.10 and the pooled rate over 150 deterministic held-out episodes is >= 0.10.",
+    "held_out_episodes_per_seed": 30
+  },
+  "promoted_methods": [
+    "softened_guidance_no_tag_penalty"
+  ],
+  "summary": [
+    {
+      "method": "neural",
+      "seeds_completed": 5,
+      "evaluation_episodes": 150,
+      "total_captures": 0,
+      "pooled_capture_rate": 0.0,
+      "mean_seed_capture_rate": 0.0,
+      "std_seed_capture_rate": 0.0,
+      "promotes": false
+    },
+    {
+      "method": "temporal_state_only",
+      "seeds_completed": 5,
+      "evaluation_episodes": 150,
+      "total_captures": 0,
+      "pooled_capture_rate": 0.0,
+      "mean_seed_capture_rate": 0.0,
+      "std_seed_capture_rate": 0.0,
+      "promotes": false
+    },
+    {
+      "method": "softened_guidance",
+      "seeds_completed": 5,
+      "evaluation_episodes": 150,
+      "total_captures": 29,
+      "pooled_capture_rate": 0.19333333333333333,
+      "mean_seed_capture_rate": 0.19333333333333333,
+      "std_seed_capture_rate": 0.43230647564995933,
+      "promotes": false
+    },
+    {
+      "method": "softened_guidance_no_tag_penalty",
+      "seeds_completed": 5,
+      "evaluation_episodes": 150,
+      "total_captures": 138,
+      "pooled_capture_rate": 0.92,
+      "mean_seed_capture_rate": 0.92,
+      "std_seed_capture_rate": 0.08366600265340754,
+      "promotes": true
+    }
+  ],
+  "run_registry": {
+    "softened_guidance/seed0": "seed0_technical_rerun1",
+    "softened_guidance_no_tag_penalty/seed2": "seed2_interrupted_rerun1"
+  },
+  "review_note": "One documented simulator numerical rerun; all original artifacts retained."
+}

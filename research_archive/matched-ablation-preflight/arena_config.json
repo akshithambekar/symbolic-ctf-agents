@@ -1,0 +1,16 @@
+{
+  "team_size": 3,
+  "guided": false,
+  "reward_shaping": false,
+  "temporal_state": false,
+  "shield": false,
+  "shield_formula": "G(in_bounds)",
+  "formula": "(G(in_bounds) & F(has_flag & F(captured))) & (G(!tagged)) & (G(defender_behind_center))",
+  "opponent": "chase",
+  "opponent_speed": 1.0,
+  "scenario": "standard",
+  "random_starts": true,
+  "horizon": 5,
+  "repeat": 5,
+  "gamma": 0.99
+}

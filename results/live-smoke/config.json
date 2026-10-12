@@ -1,0 +1,22 @@
+{
+  "guided": true,
+  "opponent": "static",
+  "steps": 512,
+  "seed": 0,
+  "horizon": 240.0,
+  "gamma": 0.99,
+  "repeat": 5,
+  "dynamics": "heron",
+  "formula": "G(in_bounds) & F(has_flag & F(captured))",
+  "resume": "outputs\\maritime-nsrl\\results\\pilot\\guided-seed0\\policy.zip",
+  "versions": {
+    "pyquaticus": "0.1.0",
+    "stable-baselines3": "2.7.0",
+    "torch": "2.14.0",
+    "numpy": "1.26.4",
+    "gymnasium": "1.2.3",
+    "lark": "1.3.1"
+  },
+  "python": "3.10.20",
+  "pyquaticus_commit": "475d670650ec5d49691ba707cd1054c4e45d8053"
+}

@@ -1,0 +1,52 @@
+{
+  "policy": "outputs\\maritime-nsrl\\results\\live-smoke\\policy.zip",
+  "evaluation_seed_start": 10000,
+  "summaries": [
+    {
+      "opponent": "static",
+      "episodes": 1,
+      "capture_rate": 0.0,
+      "capture_rate_wilson95": [
+        0.0,
+        0.7934567085261071
+      ],
+      "mean_capture_time_successes_only": null,
+      "mean_base_reward": -0.40000000000000074,
+      "mean_episode_reward": -3.2675931008599495,
+      "mean_tags_received": 0.0,
+      "mean_rule_violation_steps": 0.0,
+      "mean_ltlf_satisfied": 0.0
+    },
+    {
+      "opponent": "patrol",
+      "episodes": 1,
+      "capture_rate": 0.0,
+      "capture_rate_wilson95": [
+        0.0,
+        0.7934567085261071
+      ],
+      "mean_capture_time_successes_only": null,
+      "mean_base_reward": -2.3999999999999955,
+      "mean_episode_reward": -4.589275254983659,
+      "mean_tags_received": 1.0,
+      "mean_rule_violation_steps": 0.0,
+      "mean_ltlf_satisfied": 0.0
+    },
+    {
+      "opponent": "chase",
+      "episodes": 1,
+      "capture_rate": 0.0,
+      "capture_rate_wilson95": [
+        0.0,
+        0.7934567085261071
+      ],
+      "mean_capture_time_successes_only": null,
+      "mean_base_reward": -8.399999999999997,
+      "mean_episode_reward": -11.7891480657518,
+      "mean_tags_received": 3.0,
+      "mean_rule_violation_steps": 0.0,
+      "mean_ltlf_satisfied": 0.0
+    }
+  ],
+  "note": "Wilson intervals describe episodes for this fixed policy, not uncertainty across training seeds."
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "kind": "composed",
+  "logic_backend": "dfa",
+  "mission_instruction": "Always stay within the arena. Pick up the enemy flag and then capture it.\n",
+  "translated_mission_ltl": "G(in_bounds) & F(has_flag & F(captured))",
+  "mission_translation": {
+    "instruction": "Always stay within the arena. Pick up the enemy flag and then capture it.\n",
+    "backend": "llm",
+    "model": "gpt-4o-mini-2024-07-18",
+    "ltl": "G(in_bounds) & F(has_flag & F(captured))",
+    "validation": {
+      "formula": "G(in_bounds) & F(has_flag & F(captured))",
+      "semantics": "LTLf, nonempty finite episodes",
+      "syntax_valid": true,
+      "supported_fragment": true,
+      "satisfiable_over_boolean_alphabet": true,
+      "goals": [
+        "has_flag",
+        "captured"
+      ],
+      "safety_clauses": 1,
+      "witness": [
+        [
+          "has_flag",
+          "in_bounds"
+        ],
+        [
+          "captured",
+          "in_bounds"
+        ]
+      ],
+      "physical_realizability_proven": false
+    },
+    "attempts": [
+      {
+        "response": "{\"ltl\":\"G(in_bounds) & F(has_flag & F(captured))\"}",
+        "valid": true
+      }
+    ]
+  },
+  "human_constraints": [
+    "G(!tagged)",
+    "G(defender_behind_center)"
+  ],
+  "combined_ltl": "(G(in_bounds) & F(has_flag & F(captured))) & (G(!tagged)) & (G(defender_behind_center))",
+  "ltl": "(G(in_bounds) & F(has_flag & F(captured))) & (G(!tagged)) & (G(defender_behind_center))",
+  "validation": {
+    "formula": "(G(in_bounds) & F(has_flag & F(captured))) & (G(!tagged)) & (G(defender_behind_center))",
+    "semantics": "LTLf; strong X; nonempty finite traces",
+    "operators": [
+      "!",
+      "&",
+      "|",
+      "->",
+      "X",
+      "U",
+      "F",
+      "G"
+    ],
+    "states": 4,
+    "accepting": [
+      3
+    ],
+    "satisfiable": true,
+    "witness": [
+      [
+        "captured",
+        "defender_behind_center",
+        "has_flag",
+        "in_bounds"
+      ]
+    ],
+    "physical_realizability_proven": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "mode": "team",
+  "team_size": 3,
+  "opponent": "chase",
+  "scenario": "standard",
+  "shield": true,
+  "steps": 2048,
+  "seed": 0,
+  "horizon": 240.0,
+  "formula": "G(in_bounds) & G(!tagged) & G(defender_behind_center -> teammate_safe) & F(captured)",
+  "pyquaticus_commit": "475d670650ec5d49691ba707cd1054c4e45d8053"
+}

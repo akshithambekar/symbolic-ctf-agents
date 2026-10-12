@@ -1,0 +1,15 @@
+{
+  "policy": "C:\\Users\\ymasr\\Documents\\Codex\\2026-09-18\\build-an-end-to-end-proof\\outputs\\phase3-confirmatory-20260927-v1\\stages\\03-1v1-chase\\softened_guidance_no_tag_penalty\\seed1\\policy.zip",
+  "summaries": [
+    {
+      "scenario": "standard",
+      "opponent": "chase",
+      "episodes": 30,
+      "capture_rate": 0.0,
+      "mean_reward": -3.22178264983349,
+      "mean_tags_received": 3.0,
+      "mean_shield_interventions": 0.0,
+      "mean_shield_deadlocks": 0.0
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "benchmark_version": "ctf-translators-1.0",
+  "trials": 3,
+  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "endpoint": "https://openrouter.ai/api/v1",
+  "logic_backend": "dfa",
+  "timeout_seconds": 120,
+  "upstream_commit": "b5eb6a19769c3b06c5757136bef3bd444533e328",
+  "timestamp": "2026-09-26T02:10:55.980420+00:00",
+  "semantics": "LTLf nonempty finite traces; not upstream infinite-trace Buchi semantics",
+  "retry_budget": {
+    "current": 3,
+    "ltlcodegen": 4
+  },
+  "sampling": "Provider defaults; independent repeated calls",
+  "gold_review": "Project-authored interpretations, human approval pending",
+  "credential_present": true
+}

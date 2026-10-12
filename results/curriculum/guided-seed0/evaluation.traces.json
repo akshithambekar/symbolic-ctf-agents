@@ -1,0 +1,2459 @@
+{
+  "evaluation_seed": 10000,
+  "traces": {
+    "static": [
+      {
+        "time": 5.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 10.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 15.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 20.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 25.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 30.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 35.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 40.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 45.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 50.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 55.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 60.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 65.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 70.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 75.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 80.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 85.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 90.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 95.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 100.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 105.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 110.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 115.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 120.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 125.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 130.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 135.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 140.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 145.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 150.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 155.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 160.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 165.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 170.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 175.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 180.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 185.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 190.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 195.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 200.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 205.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 210.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 215.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 220.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 225.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 230.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 235.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 240.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            120.0,
+            67.0
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      }
+    ],
+    "patrol": [
+      {
+        "time": 5.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            119.80054203567354,
+            64.28399007948177
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 10.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            118.99043779541488,
+            58.982193331916925
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 15.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            117.93983288309786,
+            53.01732347744111
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 20.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            116.82347530920299,
+            46.7989395428135
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 25.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            115.68589834971085,
+            40.47714765316968
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 30.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            114.54018797423359,
+            34.1119429236044
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 35.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.39112646283935,
+            27.72834508042853
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 40.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.75675338587793,
+            25.15693057816974
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 45.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            109.85874826260287,
+            31.57282703534367
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 50.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.27516111382187,
+            38.52593550307126
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 55.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.80394316059983,
+            45.245667628298136
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 60.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            111.33694419730504,
+            51.83277101907395
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 65.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.66538418561592,
+            54.59885559456881
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 70.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            114.49626096573333,
+            48.156462337225065
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 75.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.98696383564464,
+            41.18966896393021
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 80.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.36778934333692,
+            34.469583910954434
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 85.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            112.746520452865,
+            27.886875122603634
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 90.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.37102166119696,
+            25.14560128678138
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 95.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            109.53360548129302,
+            31.589188440091082
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 100.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.03034257749644,
+            38.55476177644967
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 105.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.63663927758692,
+            45.27518049187057
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 110.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            111.2452256561176,
+            51.858733633877634
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 115.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.61427102151397,
+            54.60390700365801
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 120.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            114.45191714626284,
+            48.16088451397615
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 125.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.95341599748485,
+            41.19512490029518
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 130.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.34499421437306,
+            34.47471355963203
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 135.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            112.73424017501581,
+            27.89126715404183
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 140.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.36433543231733,
+            25.147030967983635
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 145.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            109.52779791029354,
+            31.59056617154437
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 150.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.02595483130077,
+            38.556295285830444
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 155.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.63366565925801,
+            45.276680542894454
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 160.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            111.24363477639504,
+            51.86014161942772
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 165.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.61341672382784,
+            54.60492605579643
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 170.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            114.45118417811393,
+            48.161895532471675
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 175.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.95288160189327,
+            41.196155667998205
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 180.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.3446585882499,
+            34.47573900343983
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 185.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            112.7340992347699,
+            27.89227943754245
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 190.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.36429703391104,
+            25.147987263311997
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 195.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            109.52777090592097,
+            31.591519604191216
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 200.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.0259542412688,
+            38.55725154837558
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 205.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.63369273717517,
+            45.27763631397882
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 210.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            111.24368924088478,
+            51.86109571274182
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 215.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.61348466942862,
+            54.60587118366516
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 220.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            114.45124968254058,
+            48.162838624357235
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 225.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.95295119321987,
+            41.197099159006505
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 230.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.3447336512303,
+            34.4766825177065
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 235.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            112.73417999266954,
+            27.893222711369315
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 240.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.36437974261474,
+            25.14892775466468
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      }
+    ],
+    "chase": [
+      {
+        "time": 5.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            119.80054203567354,
+            64.28399007948177
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 10.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            118.99043779541488,
+            58.982193331916925
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 15.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            117.93983288309786,
+            53.01732347744111
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 20.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            116.82347530920299,
+            46.7989395428135
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 25.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            115.68589834971085,
+            40.47714765316968
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 30.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            114.54018797423359,
+            34.1119429236044
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 35.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.39112646283935,
+            27.72834508042853
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 40.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.75675338587793,
+            25.15693057816974
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 45.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            109.85874826260287,
+            31.57282703534367
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 50.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.27516111382187,
+            38.52593550307126
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 55.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.80394316059983,
+            45.245667628298136
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 60.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            111.33694419730504,
+            51.83277101907395
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 65.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.66538418561592,
+            54.59885559456881
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 70.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            114.49626096573333,
+            48.156462337225065
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 75.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.98696383564464,
+            41.18966896393021
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 80.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.36778934333692,
+            34.469583910954434
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 85.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            112.746520452865,
+            27.886875122603634
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 90.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.37102166119696,
+            25.14560128678138
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 95.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            109.53360548129302,
+            31.589188440091082
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 100.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.03034257749644,
+            38.55476177644967
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 105.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.63663927758692,
+            45.27518049187057
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 110.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            111.2452256561176,
+            51.858733633877634
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 115.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.61427102151397,
+            54.60390700365801
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 120.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            114.45191714626284,
+            48.16088451397615
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 125.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.95341599748485,
+            41.19512490029518
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 130.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.34499421437306,
+            34.47471355963203
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 135.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            112.73424017501581,
+            27.89126715404183
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 140.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.36433543231733,
+            25.147030967983635
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 145.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            109.52779791029354,
+            31.59056617154437
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 150.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.02595483130077,
+            38.556295285830444
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 155.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.63366565925801,
+            45.276680542894454
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 160.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            111.24363477639504,
+            51.86014161942772
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 165.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.61341672382784,
+            54.60492605579643
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 170.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            114.45118417811393,
+            48.161895532471675
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 175.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.95288160189327,
+            41.196155667998205
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 180.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.3446585882499,
+            34.47573900343983
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 185.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            112.7340992347699,
+            27.89227943754245
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 190.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.36429703391104,
+            25.147987263311997
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 195.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            109.52777090592097,
+            31.591519604191216
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 200.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.0259542412688,
+            38.55725154837558
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 205.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.63369273717517,
+            45.27763631397882
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 210.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            111.24368924088478,
+            51.86109571274182
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 215.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.61348466942862,
+            54.60587118366516
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 220.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            114.45124968254058,
+            48.162838624357235
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 225.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.95295119321987,
+            41.197099159006505
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 230.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            113.3447336512303,
+            34.4766825177065
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 235.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            112.73417999266954,
+            27.893222711369315
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      },
+      {
+        "time": 240.0,
+        "positions": [
+          [
+            35.0,
+            39.08438983019717
+          ],
+          [
+            110.36437974261474,
+            25.14892775466468
+          ]
+        ],
+        "has_flag": false,
+        "tagged": false,
+        "action": 6,
+        "stage": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "stage": "03-1v1-chase",
+  "per_seed": [
+    {
+      "method": "softened_guidance_no_tag_penalty",
+      "seed": 0,
+      "episodes": 30,
+      "captures": 0,
+      "capture_rate": 0.0,
+      "pickup_rate": 0.0,
+      "return_midfield_rate": 0.0,
+      "enemy_territory_rate": 1.0,
+      "tag_rate": 3.0,
+      "violation_rate": 1.0,
+      "ltlf_satisfaction_rate": 0.0,
+      "common_task_reward_mean": -8.399999999999954
+    },
+    {
+      "method": "softened_guidance_no_tag_penalty",
+      "seed": 1,
+      "episodes": 30,
+      "captures": 0,
+      "capture_rate": 0.0,
+      "pickup_rate": 0.0,
+      "return_midfield_rate": 0.0,
+      "enemy_territory_rate": 1.0,
+      "tag_rate": 3.0,
+      "violation_rate": 1.0,
+      "ltlf_satisfaction_rate": 0.0,
+      "common_task_reward_mean": -8.399999999999954
+    },
+    {
+      "method": "softened_guidance_no_tag_penalty",
+      "seed": 2,
+      "episodes": 30,
+      "captures": 0,
+      "capture_rate": 0.0,
+      "pickup_rate": 0.0,
+      "return_midfield_rate": 0.0,
+      "enemy_territory_rate": 1.0,
+      "tag_rate": 3.0,
+      "violation_rate": 1.0,
+      "ltlf_satisfaction_rate": 0.0,
+      "common_task_reward_mean": -8.399999999999954
+    },
+    {
+      "method": "softened_guidance_no_tag_penalty",
+      "seed": 3,
+      "episodes": 30,
+      "captures": 0,
+      "capture_rate": 0.0,
+      "pickup_rate": 0.0,
+      "return_midfield_rate": 0.0,
+      "enemy_territory_rate": 1.0,
+      "tag_rate": 0.36666666666666664,
+      "violation_rate": 0.36666666666666664,
+      "ltlf_satisfaction_rate": 0.0,
+      "common_task_reward_mean": -3.133333333333317
+    },
+    {
+      "method": "softened_guidance_no_tag_penalty",
+      "seed": 4,
+      "episodes": 30,
+      "captures": 0,
+      "capture_rate": 0.0,
+      "pickup_rate": 0.0,
+      "return_midfield_rate": 0.0,
+      "enemy_territory_rate": 1.0,
+      "tag_rate": 2.933333333333333,
+      "violation_rate": 1.0,
+      "ltlf_satisfaction_rate": 0.0,
+      "common_task_reward_mean": -8.266666666666621
+    }
+  ],
+  "methods": [
+    {
+      "method": "softened_guidance_no_tag_penalty",
+      "seeds_completed": 5,
+      "evaluation_episodes": 150,
+      "total_captures": 0,
+      "pooled_capture_rate": 0.0,
+      "mean_seed_capture_rate": 0.0,
+      "std_seed_capture_rate": 0.0,
+      "promotes": false
+    }
+  ],
+  "promotion_rule": {
+    "defined_before_runs": true,
+    "criterion": "A method advances only if at least 3 of 5 training seeds have held-out capture rate >= 0.10 and the pooled rate over 150 deterministic held-out episodes is >= 0.10.",
+    "held_out_episodes_per_seed": 30
+  }
+}

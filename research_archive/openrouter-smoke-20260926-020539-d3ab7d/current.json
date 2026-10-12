@@ -1,0 +1,55 @@
+{
+  "method": "current",
+  "requested_model": "z-ai/glm-5.2:free",
+  "endpoint": "https://openrouter.ai/api/v1",
+  "attempts": [
+    {
+      "request": {
+        "model": "z-ai/glm-5.2:free",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Translate Maritime Capture the Flag instructions to JSON {\"ltl\":\"...\"}.\nReturn data only, no code or Markdown. Allowed propositions: in_bounds (all controlled\nboats inside arena), tagged (any controlled boat tagged), has_flag (any controlled\nboat carries enemy flag), captured (team scores on this transition), home (any\ncontrolled boat within catch radius of own flag). Use ! & | -> X U F G with arbitrary\nnesting. Strong X requires a next state; U is strong until. Finite-trace semantics:\neventual obligations must finish by the episode deadline. Do not invent constraints.\nExample: Whenever carrying a flag, eventually capture it: G(has_flag -> F(captured)).\nIf intent is ambiguous or cannot be expressed, return {\"error\":\"explanation\"}."
+          },
+          {
+            "role": "user",
+            "content": "CTF benchmark domain: 3v3 team, nonempty finite episodes, strong X, inclusive F.\nin_bounds = all controlled boats inside arena; tagged = any controlled boat tagged;\nhas_flag = any controlled boat carrying enemy flag; captured = team score event;\nhome = any controlled boat within catch radius of own flag home (NOT own half);\ndefender_behind_center = designated agent 0 behind center (team size >=2);\nattacker_forward = any agent 1..n-1 beyond center; teammate_safe = no teammate tagged.\nOnly these eight predicates are available. An unspecified defender is NOT necessarily\nagent 0. No predicate represents opponent approach, support, communication, distance,\nor an arbitrary boat's own-half occupancy. Ask for clarification / return an error\nfor unsupported or ambiguous intent. For ordinary 'then', same-state witnesses are\nallowed; 'strictly later' requires X. No implicit safety clauses may be added.\n\nFor LTLCodeGen reach(object_i) denotes the truth of the mapped CTF predicate, not physical reach:\n{\"object_0\": \"in_bounds\", \"object_1\": \"tagged\", \"object_2\": \"has_flag\", \"object_3\": \"captured\", \"object_4\": \"home\", \"object_5\": \"defender_behind_center\", \"object_6\": \"attacker_forward\", \"object_7\": \"teammate_safe\"}\nInstruction:\nAlways stay inside the arena."
+          }
+        ]
+      },
+      "latency_seconds": 0.3576122999947984,
+      "response": "{\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: z-ai/glm-5.2\",\"code\":404},\"user_id\":\"user_3AxOu5qlTUlroUiNsfs2xGRLm5E\"}",
+      "error": "HTTPError: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions",
+      "http_status": 404
+    }
+  ],
+  "formula": null,
+  "explicit_rejection": false,
+  "infrastructure_error": true,
+  "error": "HTTPError: 404 Client Error: Not Found for url: https://openrouter.ai/api/v1/chat/completions",
+  "integration": "existing-adapter",
+  "latency_seconds": 0.35907229999429546,
+  "repair_attempts": 0,
+  "assessment": {
+    "syntax_valid": false,
+    "supported_predicates": null,
+    "unsupported_predicates": [],
+    "compilable": false,
+    "semantic_correctness": null,
+    "ordering_preserved": null,
+    "score": "Not measured",
+    "human_review_required": true,
+    "reason": "Infrastructure failure; excluded from translator quality metrics"
+  },
+  "input": {
+    "id": "bounds-0",
+    "category": "safety",
+    "paraphrase_group": "bounds",
+    "instruction": "Always stay inside the arena.",
+    "reference_ltl": "G(in_bounds)",
+    "expected": "formula",
+    "rationale": "All steps in bounds.",
+    "ordering_sensitive": false,
+    "reference_author": "project-authored; independent human review pending"
+  }
+}

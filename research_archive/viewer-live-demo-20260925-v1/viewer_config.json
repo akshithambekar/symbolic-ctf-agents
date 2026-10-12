@@ -1,0 +1,19 @@
+{
+  "arguments": {
+    "command": "watch",
+    "policy": "oracle",
+    "scenario": null,
+    "opponent": "static",
+    "team_size": 1,
+    "seed": 40000,
+    "episodes": 1,
+    "stochastic": false,
+    "config": null,
+    "speed": 30.0,
+    "headless": false,
+    "record": "..\\viewer-live-demo-20260925-v1",
+    "max_frames": 0
+  },
+  "viewer_sha256": "b5310bc4d93bf512fd92a553c7fcb11d2e5b37b0484c94cf3438f60893b8d17a",
+  "policy_sha256": null
+}

@@ -1,0 +1,12 @@
+{"at": "2026-10-02T04:48:00.189043+00:00", "event": "started", "variant": "current_no_tag_penalty", "seed": 0}
+{"at": "2026-10-02T05:00:12.637255+00:00", "event": "completed", "variant": "current_no_tag_penalty", "seed": 0}
+{"at": "2026-10-02T05:00:12.638806+00:00", "event": "started", "variant": "current_no_tag_penalty", "seed": 1}
+{"at": "2026-10-02T05:12:18.479688+00:00", "event": "completed", "variant": "current_no_tag_penalty", "seed": 1}
+{"at": "2026-10-02T05:12:18.479688+00:00", "event": "started", "variant": "dense_flag_progress", "seed": 0}
+{"at": "2026-10-02T05:24:19.035742+00:00", "event": "completed", "variant": "dense_flag_progress", "seed": 0}
+{"at": "2026-10-02T05:24:19.037393+00:00", "event": "started", "variant": "dense_flag_progress", "seed": 1}
+{"at": "2026-10-02T05:36:26.087354+00:00", "event": "completed", "variant": "dense_flag_progress", "seed": 1}
+{"at": "2026-10-02T05:36:26.088357+00:00", "event": "started", "variant": "progress_evasion_distance_feature", "seed": 0}
+{"at": "2026-10-02T05:48:41.719606+00:00", "event": "completed", "variant": "progress_evasion_distance_feature", "seed": 0}
+{"at": "2026-10-02T05:48:41.719606+00:00", "event": "started", "variant": "progress_evasion_distance_feature", "seed": 1}
+{"at": "2026-10-02T06:01:00.421864+00:00", "event": "completed", "variant": "progress_evasion_distance_feature", "seed": 1}

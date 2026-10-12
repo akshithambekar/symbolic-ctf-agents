@@ -1,0 +1,7 @@
+{
+  "at": "2026-09-30T23:07:11.540305+00:00",
+  "type": "external_process_interruption",
+  "training_progress": 30054,
+  "evidence": "No active Stage 2 Python process and no application traceback after the final metric log.",
+  "rerun_policy": "one documented exact-seed rerun under seed2_interrupted_rerun1; original directory preserved."
+}

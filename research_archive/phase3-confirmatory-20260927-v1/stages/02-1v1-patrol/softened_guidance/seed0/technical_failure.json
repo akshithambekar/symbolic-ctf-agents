@@ -1,0 +1,7 @@
+{
+  "at": "2026-09-28T21:57:09.533164+00:00",
+  "type": "simulator_numerical_failure",
+  "training_progress": 48768,
+  "error": "PyQuaticus invalid geometry propagated NaN logits to PPO",
+  "rerun_policy": "one documented technical rerun under seed0_technical_rerun1; original directory preserved."
+}

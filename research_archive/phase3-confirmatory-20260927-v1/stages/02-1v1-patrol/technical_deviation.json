@@ -1,0 +1,8 @@
+{
+  "at": "2026-09-28T03:09:55.005671+00:00",
+  "type": "postprocessing_fix",
+  "scope": "Representative replay selection only",
+  "effect_on_completed_policy_and_evaluation": "none",
+  "failure": "KeyError('metrics') because evaluate_team stores metrics separately from trajectories",
+  "action": "Join evaluation.csv rows to trajectory records by evaluation_seed; do not retrain completed seed0."
+}

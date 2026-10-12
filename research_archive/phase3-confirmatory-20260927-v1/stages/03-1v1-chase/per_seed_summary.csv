@@ -1,0 +1,6 @@
+method,seed,episodes,captures,capture_rate,pickup_rate,return_midfield_rate,enemy_territory_rate,tag_rate,violation_rate,ltlf_satisfaction_rate,common_task_reward_mean
+softened_guidance_no_tag_penalty,0,30,0,0.0,0.0,0.0,1.0,3.0,1.0,0.0,-8.399999999999954
+softened_guidance_no_tag_penalty,1,30,0,0.0,0.0,0.0,1.0,3.0,1.0,0.0,-8.399999999999954
+softened_guidance_no_tag_penalty,2,30,0,0.0,0.0,0.0,1.0,3.0,1.0,0.0,-8.399999999999954
+softened_guidance_no_tag_penalty,3,30,0,0.0,0.0,0.0,1.0,0.36666666666666664,0.36666666666666664,0.0,-3.133333333333317
+softened_guidance_no_tag_penalty,4,30,0,0.0,0.0,0.0,1.0,2.933333333333333,1.0,0.0,-8.266666666666621

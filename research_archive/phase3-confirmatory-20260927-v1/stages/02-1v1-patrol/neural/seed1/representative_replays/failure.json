@@ -1,0 +1,1160 @@
+{
+  "evaluation_seed": 52100,
+  "scenario": "standard",
+  "opponent": "patrol",
+  "trajectory": [
+    {
+      "decision": 1,
+      "time": 5.0,
+      "positions": [
+        [
+          34.326979352851225,
+          40.665793215654055
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 2,
+      "time": 10.0,
+      "positions": [
+        [
+          36.922497084764615,
+          46.30792426873052
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 3,
+      "time": 15.0,
+      "positions": [
+        [
+          29.799377807408664,
+          46.35416918132645
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 4,
+      "time": 20.0,
+      "positions": [
+        [
+          33.2467502128797,
+          52.23232771303232
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 5,
+      "time": 25.0,
+      "positions": [
+        [
+          30.77091095576471,
+          46.290079076691526
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 6,
+      "time": 30.0,
+      "positions": [
+        [
+          37.43280864328885,
+          46.934599321281794
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 7,
+      "time": 35.0,
+      "positions": [
+        [
+          30.948162476144773,
+          47.275452600788284
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 8,
+      "time": 40.0,
+      "positions": [
+        [
+          34.368007940048926,
+          53.07678071915441
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 9,
+      "time": 45.0,
+      "positions": [
+        [
+          31.883837499697663,
+          47.10577892853682
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 10,
+      "time": 50.0,
+      "positions": [
+        [
+          38.559200726435535,
+          47.75822004829405
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 11,
+      "time": 55.0,
+      "positions": [
+        [
+          32.077213948593595,
+          48.049501440222585
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 12,
+      "time": 60.0,
+      "positions": [
+        [
+          35.50184647900232,
+          53.83054147379922
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 13,
+      "time": 65.0,
+      "positions": [
+        [
+          32.99661507517218,
+          47.85246088391269
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 14,
+      "time": 70.0,
+      "positions": [
+        [
+          39.671920338672045,
+          48.51512431043665
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 15,
+      "time": 75.0,
+      "positions": [
+        [
+          33.18526652559059,
+          48.774109990000994
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 16,
+      "time": 80.0,
+      "positions": [
+        [
+          36.61739660427308,
+          54.540475248756444
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 17,
+      "time": 85.0,
+      "positions": [
+        [
+          34.088844816839476,
+          48.56133322908604
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 18,
+      "time": 90.0,
+      "positions": [
+        [
+          40.7592884584233,
+          49.2359203742104
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 19,
+      "time": 95.0,
+      "positions": [
+        [
+          34.26551855405555,
+          49.46958270267922
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 20,
+      "time": 100.0,
+      "positions": [
+        [
+          37.70621732262815,
+          55.222438800976
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 21,
+      "time": 105.0,
+      "positions": [
+        [
+          35.15488121710084,
+          49.24361148921565
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 22,
+      "time": 110.0,
+      "positions": [
+        [
+          41.81834777399777,
+          49.93145134775926
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 23,
+      "time": 115.0,
+      "positions": [
+        [
+          35.31652947763027,
+          50.14328538443944
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 24,
+      "time": 120.0,
+      "positions": [
+        [
+          38.766487398946886,
+          55.882344640344485
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 25,
+      "time": 125.0,
+      "positions": [
+        [
+          36.19346770840086,
+          49.90378364593948
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 26,
+      "time": 130.0,
+      "positions": [
+        [
+          42.84872893360308,
+          50.60603077011391
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 27,
+      "time": 135.0,
+      "positions": [
+        [
+          36.33839860825872,
+          50.79815380690213
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 28,
+      "time": 140.0,
+      "positions": [
+        [
+          39.798232479741145,
+          56.522616011021036
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 29,
+      "time": 145.0,
+      "positions": [
+        [
+          37.20458434920655,
+          50.543840575509535
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 30,
+      "time": 150.0,
+      "positions": [
+        [
+          43.85071410591368,
+          51.26158535080375
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 31,
+      "time": 155.0,
+      "positions": [
+        [
+          37.33153530741708,
+          51.43545169930539
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 32,
+      "time": 160.0,
+      "positions": [
+        [
+          40.80186206810501,
+          57.14431237641484
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 33,
+      "time": 165.0,
+      "positions": [
+        [
+          38.188447651496645,
+          51.164728051273435
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 34,
+      "time": 170.0,
+      "positions": [
+        [
+          44.8246158053287,
+          51.89904991262023
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 35,
+      "time": 175.0,
+      "positions": [
+        [
+          38.29626644388629,
+          52.05572653259724
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 36,
+      "time": 180.0,
+      "positions": [
+        [
+          41.777720269927464,
+          57.747881121589394
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 37,
+      "time": 185.0,
+      "positions": [
+        [
+          39.145192005024334,
+          51.76688116345864
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 38,
+      "time": 190.0,
+      "positions": [
+        [
+          45.770587647571155,
+          52.51887448427258
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 39,
+      "time": 195.0,
+      "positions": [
+        [
+          39.23272332203644,
+          52.65916316121482
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 40,
+      "time": 200.0,
+      "positions": [
+        [
+          42.7259580775635,
+          58.33344234688862
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 41,
+      "time": 205.0,
+      "positions": [
+        [
+          40.074777615869436,
+          52.350438683570715
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 42,
+      "time": 210.0,
+      "positions": [
+        [
+          46.688577522708115,
+          53.121223321358734
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 43,
+      "time": 215.0,
+      "positions": [
+        [
+          40.140821292680656,
+          53.24572516819611
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 44,
+      "time": 220.0,
+      "positions": [
+        [
+          43.6465087170495,
+          58.90090796077061
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 45,
+      "time": 225.0,
+      "positions": [
+        [
+          40.97697187512157,
+          52.91533813585012
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 46,
+      "time": 230.0,
+      "positions": [
+        [
+          47.578328005663224,
+          53.70606249055886
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 47,
+      "time": 235.0,
+      "positions": [
+        [
+          41.02027037605224,
+          53.81521801860879
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        1
+      ],
+      "executed_actions": [
+        1
+      ],
+      "monitor_state": 0
+    },
+    {
+      "decision": 48,
+      "time": 240.0,
+      "positions": [
+        [
+          44.539096405207644,
+          59.45003686910618
+        ]
+      ],
+      "has_flag": [
+        false
+      ],
+      "tagged": [
+        false
+      ],
+      "requested_actions": [
+        5
+      ],
+      "executed_actions": [
+        5
+      ],
+      "monitor_state": 0
+    }
+  ],
+  "metrics": {
+    "evaluation_seed": "52100",
+    "base_reward": "-1.1999999999999997",
+    "episode_reward": "-1.1999999999999997",
+    "guidance_reward": "0.0",
+    "captures": "0",
+    "opponent_captures": "0",
+    "pickups": "0",
+    "tags_received": "0",
+    "out_of_bounds_steps": "0",
+    "temporal_failure_steps": "0",
+    "shield_interventions": "0",
+    "shield_deadlocks": "0",
+    "shield_predictions": "0",
+    "capture_time": "",
+    "decisions": "48",
+    "per_agent_pickups": "[0]",
+    "per_agent_tags": "[0]",
+    "enemy_territory_steps": "0",
+    "reached_enemy_territory": "False",
+    "first_enemy_territory_time": "",
+    "reached_enemy_flag": "False",
+    "first_enemy_flag_time": "",
+    "enemy_flag_distance_min": "93.43244406106413",
+    "pickup_time": "",
+    "return_crossed_midfield": "False",
+    "first_return_midfield_time": "",
+    "tagged_steps": "0",
+    "tags_before_pickup": "0",
+    "tags_after_pickup": "0",
+    "tag_events_before_pickup": "0",
+    "tag_events_after_pickup": "0",
+    "common_task_reward": "-2.399999999999993",
+    "temporal_state_visits": "[48, 0, 0, 0]",
+    "flag_carrier_counts": "[0]",
+    "defender_violation_steps": "0",
+    "fixed_safety_violation_steps": "0",
+    "requested_action_counts": "[0, 24, 0, 0, 0, 24, 0, 0]",
+    "executed_action_counts": "[0, 24, 0, 0, 0, 24, 0, 0]",
+    "shield_offensive_interventions": "0",
+    "shield_substitutions": "{}",
+    "rule_violation_steps": "0",
+    "duration": "240.0",
+    "ltlf_satisfied": "False",
+    "team_size": "1",
+    "scenario": "standard",
+    "opponent": "patrol",
+    "opponent_speed": "1.0"
+  }
+}

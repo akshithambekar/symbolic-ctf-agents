@@ -1,0 +1,16 @@
+{
+  "algorithm": "shared-policy PPO",
+  "learning_rate": 0.0003,
+  "n_steps": 256,
+  "batch_size": 64,
+  "n_epochs": 5,
+  "gamma": 0.99,
+  "ent_coef": 0.01,
+  "net_arch": [
+    128,
+    128
+  ],
+  "seed": 999,
+  "device": "cpu",
+  "requested_agent_transitions": 512
+}

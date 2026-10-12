@@ -1,0 +1,3 @@
+method,scheduled,measured,not_measured,syntax_valid_rate,compilable_rate,semantic_correct_rate,unsupported_predicate_rate,repair_rate,mean_latency_seconds,paraphrase_equivalence_rate,paraphrase_pairs_compared
+current,120,0,120,,,,,,,,0
+ltlcodegen,120,0,120,,,,,,,,0

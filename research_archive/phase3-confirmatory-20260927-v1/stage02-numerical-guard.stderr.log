@@ -1,0 +1,4 @@
+C:\Users\ymasr\Documents\Codex\2026-09-18\build-an-end-to-end-proof\outputs\maritime-nsrl\vendor\pyquaticus\pyquaticus\utils\utils.py:98: RuntimeWarning: invalid value encountered in sqrt
+  x_int[0] = (-b + np.sqrt(b**2 - 4 * a * c)) / (2 * a)
+C:\Users\ymasr\Documents\Codex\2026-09-18\build-an-end-to-end-proof\outputs\maritime-nsrl\vendor\pyquaticus\pyquaticus\utils\utils.py:99: RuntimeWarning: invalid value encountered in sqrt
+  x_int[1] = (-b - np.sqrt(b**2 - 4 * a * c)) / (2 * a)

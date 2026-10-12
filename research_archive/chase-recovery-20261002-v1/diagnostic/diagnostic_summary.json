@@ -1,0 +1,155 @@
+{
+  "completed_at": "2026-10-02T06:01:00.427505+00:00",
+  "per_seed": [
+    {
+      "variant": "current_no_tag_penalty",
+      "seed": 0,
+      "episodes": 20,
+      "captures": 0,
+      "capture_rate": 0.0,
+      "pickup_rate": 0.0,
+      "mean_min_enemy_flag_distance": 39.742497540614366,
+      "mean_tags_before_pickup": 3.0,
+      "mean_enemy_territory_time": 5.675000000000001,
+      "mean_min_defender_distance": 5.020653839622118,
+      "mean_defender_distance": 51.73417563751834,
+      "mean_common_task_reward": -8.399999999999954
+    },
+    {
+      "variant": "current_no_tag_penalty",
+      "seed": 1,
+      "episodes": 20,
+      "captures": 0,
+      "capture_rate": 0.0,
+      "pickup_rate": 0.0,
+      "mean_min_enemy_flag_distance": 39.94483887741984,
+      "mean_tags_before_pickup": 3.0,
+      "mean_enemy_territory_time": 5.5150000000000015,
+      "mean_min_defender_distance": 5.961168643936238,
+      "mean_defender_distance": 51.86594485800465,
+      "mean_common_task_reward": -8.399999999999954
+    },
+    {
+      "variant": "dense_flag_progress",
+      "seed": 0,
+      "episodes": 20,
+      "captures": 0,
+      "capture_rate": 0.0,
+      "pickup_rate": 0.0,
+      "mean_min_enemy_flag_distance": 62.71283947525173,
+      "mean_tags_before_pickup": 0.0,
+      "mean_enemy_territory_time": 0.02,
+      "mean_min_defender_distance": 32.999233555991694,
+      "mean_defender_distance": 45.117888422323475,
+      "mean_common_task_reward": -2.3999999999999924
+    },
+    {
+      "variant": "dense_flag_progress",
+      "seed": 1,
+      "episodes": 20,
+      "captures": 0,
+      "capture_rate": 0.0,
+      "pickup_rate": 0.0,
+      "mean_min_enemy_flag_distance": 40.622073178210556,
+      "mean_tags_before_pickup": 3.0,
+      "mean_enemy_territory_time": 5.485,
+      "mean_min_defender_distance": 5.9471777347021195,
+      "mean_defender_distance": 51.96363728716467,
+      "mean_common_task_reward": -8.399999999999954
+    },
+    {
+      "variant": "progress_evasion_distance_feature",
+      "seed": 0,
+      "episodes": 20,
+      "captures": 0,
+      "capture_rate": 0.0,
+      "pickup_rate": 0.0,
+      "mean_min_enemy_flag_distance": 62.86993466267165,
+      "mean_tags_before_pickup": 0.0,
+      "mean_enemy_territory_time": 0.075,
+      "mean_min_defender_distance": 35.35741693722441,
+      "mean_defender_distance": 54.83023045004446,
+      "mean_common_task_reward": -2.3999999999999924
+    },
+    {
+      "variant": "progress_evasion_distance_feature",
+      "seed": 1,
+      "episodes": 20,
+      "captures": 0,
+      "capture_rate": 0.0,
+      "pickup_rate": 0.0,
+      "mean_min_enemy_flag_distance": 73.08369226944204,
+      "mean_tags_before_pickup": 0.0,
+      "mean_enemy_territory_time": 0.0,
+      "mean_min_defender_distance": 43.108432595079975,
+      "mean_defender_distance": 54.61287576838809,
+      "mean_common_task_reward": -2.3999999999999924
+    }
+  ],
+  "variants": [
+    {
+      "variant": "current_no_tag_penalty",
+      "seeds_completed": 2,
+      "evaluation_episodes": 40,
+      "captures": 0,
+      "pooled_capture_rate": 0.0,
+      "pooled_pickup_rate": 0.0,
+      "mean_min_enemy_flag_distance": 39.8436682090171,
+      "mean_tags_before_pickup": 3.0,
+      "mean_enemy_territory_time": 5.595000000000001,
+      "mean_min_defender_distance": 5.4909112417791786,
+      "mean_defender_distance": 51.80006024776149,
+      "mean_common_task_reward": -8.399999999999954
+    },
+    {
+      "variant": "dense_flag_progress",
+      "seeds_completed": 2,
+      "evaluation_episodes": 40,
+      "captures": 0,
+      "pooled_capture_rate": 0.0,
+      "pooled_pickup_rate": 0.0,
+      "mean_min_enemy_flag_distance": 51.66745632673114,
+      "mean_tags_before_pickup": 1.5,
+      "mean_enemy_territory_time": 2.7525,
+      "mean_min_defender_distance": 19.47320564534691,
+      "mean_defender_distance": 48.540762854744074,
+      "mean_common_task_reward": -5.399999999999974
+    },
+    {
+      "variant": "progress_evasion_distance_feature",
+      "seeds_completed": 2,
+      "evaluation_episodes": 40,
+      "captures": 0,
+      "pooled_capture_rate": 0.0,
+      "pooled_pickup_rate": 0.0,
+      "mean_min_enemy_flag_distance": 67.97681346605685,
+      "mean_tags_before_pickup": 0.0,
+      "mean_enemy_territory_time": 0.0375,
+      "mean_min_defender_distance": 39.232924766152195,
+      "mean_defender_distance": 54.72155310921627,
+      "mean_common_task_reward": -2.3999999999999924
+    }
+  ],
+  "promotion_rule": {
+    "defined_before_runs": true,
+    "criterion": "Promote only a non-baseline candidate with pooled held-out pickup rate >= 0.10 and mean minimum enemy-flag distance at least 10% below the current no-tag-penalty baseline. This short study is exploratory; promotion recommends, but does not itself launch, a five-seed confirmation.",
+    "held_out_episodes_per_seed": 20
+  },
+  "recommendations": [
+    {
+      "variant": "current_no_tag_penalty",
+      "distance_improvement_vs_baseline": 0.0,
+      "recommended_for_five_seed_confirmation": false
+    },
+    {
+      "variant": "dense_flag_progress",
+      "distance_improvement_vs_baseline": -0.296754507032015,
+      "recommended_for_five_seed_confirmation": false
+    },
+    {
+      "variant": "progress_evasion_distance_feature",
+      "distance_improvement_vs_baseline": -0.706088232374972,
+      "recommended_for_five_seed_confirmation": false
+    }
+  ]
+}

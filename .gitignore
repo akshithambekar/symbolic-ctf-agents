@@ -1,5 +1,14 @@
 .venv/
+.venv-*/
+venv/
 __pycache__/
-*.pyc
+*.py[cod]
+*.egg-info/
+.pytest_cache/
 .DS_Store
-ltl/code_ltl_exec.py
+.env
+.env.*
+!.env.example
+/runs/
+/vendor/
+/ltl/code_ltl_exec.py

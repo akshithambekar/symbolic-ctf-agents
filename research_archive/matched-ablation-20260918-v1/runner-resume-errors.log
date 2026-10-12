@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\ymasr\Documents\Codex\2026-09-18\build-an-end-to-end-proof\outputs\matched-ablation-20260918-v1\snapshot\scripts\matched_suite.py", line 120, in <module>
+    if __name__ == '__main__': main()
+  File "C:\Users\ymasr\Documents\Codex\2026-09-18\build-an-end-to-end-proof\outputs\matched-ablation-20260918-v1\snapshot\scripts\matched_suite.py", line 93, in main
+    save(root/'status.json', dict(state='running', current_run=run.name,
+  File "C:\Users\ymasr\Documents\Codex\2026-09-18\build-an-end-to-end-proof\outputs\matched-ablation-20260918-v1\snapshot\scripts\matched_suite.py", line 24, in save
+    temp.replace(path)
+  File "C:\Users\ymasr\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\lib\pathlib.py", line 1247, in replace
+    self._accessor.replace(self, target)
+PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ymasr\\Documents\\Codex\\2026-09-18\\build-an-end-to-end-proof\\outputs\\matched-ablation-20260918-v1\\status.tmp' -> 'C:\\Users\\ymasr\\Documents\\Codex\\2026-09-18\\build-an-end-to-end-proof\\outputs\\matched-ablation-20260918-v1\\status.json'

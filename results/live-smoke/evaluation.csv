@@ -1,0 +1,4 @@
+training_seed,evaluation_seed,guided,episode_reward,base_reward,guidance_reward,flag_captures,flag_pickups,capture_time,tags_made,tags_received,tagged_events,rule_violation_steps,out_of_bounds_steps,steps,ltlf_satisfied,mission_completed,duration_seconds,opponent
+0,10000,True,-3.2675931008599495,-0.40000000000000074,-2.8675931008599562,0,1,,0,0,0,0,0,48,False,False,240.0,static
+0,10000,True,-4.589275254983659,-2.3999999999999955,-2.1892752549836594,0,1,,0,1,1,0,0,48,False,False,240.0,patrol
+0,10000,True,-11.7891480657518,-8.399999999999997,-3.389148065751802,0,0,,0,3,3,0,0,48,False,False,240.0,chase

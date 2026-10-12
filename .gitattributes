@@ -1,0 +1,12 @@
+research_archive/** -text
+experiments/** -text
+results/** -text
+scripts/** -text
+src/** -text
+tests/** -text
+strategies/** -text
+/*.md -text
+/*.toml -text
+/*.txt -text
+/MANIFEST.sha256 text eol=lf
+/research_archive/MANIFEST.sha256 text eol=lf

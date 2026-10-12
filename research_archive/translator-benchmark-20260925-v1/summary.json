@@ -1,0 +1,30 @@
+[
+  {
+    "method": "current",
+    "scheduled": 120,
+    "measured": 0,
+    "not_measured": 120,
+    "syntax_valid_rate": null,
+    "compilable_rate": null,
+    "semantic_correct_rate": null,
+    "unsupported_predicate_rate": null,
+    "repair_rate": null,
+    "mean_latency_seconds": null,
+    "paraphrase_equivalence_rate": null,
+    "paraphrase_pairs_compared": 0
+  },
+  {
+    "method": "ltlcodegen",
+    "scheduled": 120,
+    "measured": 0,
+    "not_measured": 120,
+    "syntax_valid_rate": null,
+    "compilable_rate": null,
+    "semantic_correct_rate": null,
+    "unsupported_predicate_rate": null,
+    "repair_rate": null,
+    "mean_latency_seconds": null,
+    "paraphrase_equivalence_rate": null,
+    "paraphrase_pairs_compared": 0
+  }
+]

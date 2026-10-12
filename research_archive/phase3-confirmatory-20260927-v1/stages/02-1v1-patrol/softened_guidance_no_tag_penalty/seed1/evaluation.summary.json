@@ -1,0 +1,15 @@
+{
+  "policy": "C:\\Users\\ymasr\\Documents\\Codex\\2026-09-18\\build-an-end-to-end-proof\\outputs\\phase3-confirmatory-20260927-v1\\stages\\02-1v1-patrol\\softened_guidance_no_tag_penalty\\seed1\\policy.zip",
+  "summaries": [
+    {
+      "scenario": "standard",
+      "opponent": "patrol",
+      "episodes": 30,
+      "capture_rate": 0.9666666666666667,
+      "mean_reward": 37.17009871783586,
+      "mean_tags_received": 0.13333333333333333,
+      "mean_shield_interventions": 0.0,
+      "mean_shield_deadlocks": 0.0
+    }
+  ]
+}

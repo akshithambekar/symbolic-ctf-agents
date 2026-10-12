@@ -1,0 +1,19 @@
+{
+  "arguments": {
+    "command": "watch",
+    "policy": "../offensive-phase-20260924-v1/runs/stage1-1v1-static/soft_guidance/seed0/policy.zip",
+    "scenario": null,
+    "opponent": null,
+    "team_size": null,
+    "seed": 40000,
+    "episodes": 1,
+    "stochastic": false,
+    "config": null,
+    "speed": 10.0,
+    "headless": true,
+    "record": "..\\viewer-soft-guidance-20260925-v1",
+    "max_frames": 3
+  },
+  "viewer_sha256": "4d2dd94f6b07008f5e180b3e8458fecdebfcf8047614ec8c963a2a26480deaa5",
+  "policy_sha256": "7169d72094e9f45d5a6a1890bb63e5dba073f02a23dbcb3a27294b28bd23a14c"
+}

@@ -1,0 +1,11 @@
+{
+  "completed_at": "2026-09-27T20:35:57.188154+00:00",
+  "passed": true,
+  "missing_metrics": [],
+  "rows": 2,
+  "replay": "..\\phase3-confirmatory-20260927-v1\\preflight\\softened_guidance_seed999\\trajectories.jsonl",
+  "planned_stage": "02-1v1-patrol",
+  "planned_runs": 20,
+  "planned_evaluation_episodes": 600,
+  "training_agent_transitions": 2012160
+}

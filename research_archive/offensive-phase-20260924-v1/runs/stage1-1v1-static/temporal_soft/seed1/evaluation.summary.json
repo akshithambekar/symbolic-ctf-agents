@@ -1,0 +1,15 @@
+{
+  "policy": "C:\\Users\\ymasr\\Documents\\Codex\\2026-09-18\\build-an-end-to-end-proof\\outputs\\offensive-phase-20260924-v1\\runs\\stage1-1v1-static\\temporal_soft\\seed1\\policy.zip",
+  "summaries": [
+    {
+      "scenario": "standard",
+      "opponent": "static",
+      "episodes": 20,
+      "capture_rate": 0.0,
+      "mean_reward": -0.4000000000000007,
+      "mean_tags_received": 0.0,
+      "mean_shield_interventions": 0.0,
+      "mean_shield_deadlocks": 0.0
+    }
+  ]
+}

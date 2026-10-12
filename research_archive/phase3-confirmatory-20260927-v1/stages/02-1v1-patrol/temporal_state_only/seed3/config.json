@@ -1,0 +1,14 @@
+{
+  "mode": "team",
+  "team_size": 1,
+  "opponent": "patrol",
+  "scenario": "standard",
+  "shield": false,
+  "steps": 100608,
+  "reward_shaping": false,
+  "temporal_state": true,
+  "seed": 3,
+  "horizon": 240.0,
+  "formula": "G(in_bounds) & F(has_flag & F(captured))",
+  "pyquaticus_commit": "475d670650ec5d49691ba707cd1054c4e45d8053"
+}

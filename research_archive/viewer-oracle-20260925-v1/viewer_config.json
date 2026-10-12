@@ -1,0 +1,15 @@
+{
+  "command": "watch",
+  "policy": "oracle",
+  "scenario": null,
+  "opponent": null,
+  "team_size": 3,
+  "seed": 40000,
+  "episodes": 1,
+  "stochastic": false,
+  "config": null,
+  "speed": 10.0,
+  "headless": true,
+  "record": "..\\viewer-oracle-20260925-v1",
+  "max_frames": 3
+}
