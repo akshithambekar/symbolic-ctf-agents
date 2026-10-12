@@ -1,0 +1,21 @@
+{
+  "actual_agent_transitions": 4096,
+  "demonstrated_decisions": 570,
+  "teacher_capture_rate": 1.0,
+  "bc_screen": {
+    "episodes": 10,
+    "capture_rate": 1.0,
+    "pickup_rate": 1.0,
+    "enemy_territory_rate": 1.0,
+    "out_of_bounds_episode_rate": 0.0,
+    "mean_common_reward": 20.85
+  },
+  "ppo_screen": {
+    "episodes": 10,
+    "capture_rate": 1.0,
+    "pickup_rate": 1.0,
+    "enemy_territory_rate": 1.0,
+    "out_of_bounds_episode_rate": 0.0,
+    "mean_common_reward": 20.837999999999994
+  }
+}

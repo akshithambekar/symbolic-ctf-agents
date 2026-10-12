@@ -1,0 +1,14 @@
+{
+  "type": "post-hoc unmodified-checkpoint reference for easier chase stages",
+  "speeds": [
+    0.65,
+    0.85
+  ],
+  "episodes_per_seed_speed": 5,
+  "training_seeds": [
+    0,
+    1
+  ],
+  "evaluation_seeds": "940000 + stage*100 + seed*10; identical to staged capability screens",
+  "note": "Not used to change promotion. Passing the capability screen is not by itself evidence that continuation improved performance."
+}

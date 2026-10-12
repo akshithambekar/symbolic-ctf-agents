@@ -1,0 +1,7 @@
+opponent,arm,episodes,captures,pickups,bounds_episodes,deadlocks,interventions,offensive_events,mean_common_reward,mean_tags,mission_satisfied,mean_capture_time_successes
+static,off,25,25,25,25,0,0,0,18.220000000000027,0.0,0,178.0
+static,original,25,25,25,0,0,25,25,21.33,0.0,25,67.0
+patrol,off,25,21,25,25,0,0,0,14.56720000000003,0.16,0,182.0
+patrol,original,25,25,25,0,0,25,25,21.33,0.0,25,67.0
+chase,off,25,0,0,25,0,0,0,-8.319999999999949,1.96,0,
+chase,original,25,0,0,0,0,25,25,-6.799999999999954,2.2,0,

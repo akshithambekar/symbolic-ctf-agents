@@ -1,0 +1,6 @@
+{
+  "policy_sha256": "028f8f63fb9ed898dea757aae1f3e252f105f940e6524896f34e543635488d6e",
+  "source_policy": "experiments\\followup-20261012-v1\\chase\\directional1\\policy.zip",
+  "source_config_sha256": "87d333a4a70cdf79d18e2f6357e423136582a1868ca90a9b1bb68db3893c9f2b",
+  "note": "Canonical inference bundle. Standard TeamArena has identical observations/actions/physics; training-only reward terms are unnecessary for policy inference."
+}

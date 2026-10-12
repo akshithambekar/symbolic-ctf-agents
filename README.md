@@ -279,3 +279,7 @@ Upstream projects retain their respective licenses. Their source is cloned under
 ## Tactical attacker follow-up
 
 See [player tactics and reproduction commands](TACTICS_AND_ATTACKER.md) and the [new exploratory report](experiments/tactical-attacker-20261012-v1/REPORT.md). Two imitation-initialized PPO attackers enable a same-checkpoint runtime-shield test; scripted 3v3 role strategies and native replay are available. Earlier experiments remain unchanged.
+
+## Offensive and tactical follow-up screens
+
+See [the new studies and replay commands](FOLLOWUP_STUDIES.md), the [exploratory screen](experiments/followup-20261012-v1/REPORT.md), and the [five-seed selected-condition replication](experiments/offense5-20261012-v1/REPORT.md). The original bounds gate was replicated during offensive approach; braking/reserve failures, role conflicts, and stopped chase variants remain recorded.

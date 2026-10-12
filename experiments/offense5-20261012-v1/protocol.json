@@ -1,0 +1,41 @@
+{
+  "type": "five-seed matched replication of selected engineered condition",
+  "selection": "original gate passed offensive screen; brake was redundant and proactive aborted",
+  "selection_data_sha256": "b33caa932b7c457477b8e5301458962d007f8fd82b5ad3e883dcd39569576a5a",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "new_training_seeds": [
+    2,
+    3,
+    4
+  ],
+  "reused_selection_checkpoints": [
+    0,
+    1
+  ],
+  "training": "same 24 oracle episodes,160 cloning epochs,4096 PPO decisions,static/standard,unguided",
+  "evaluation_seed_base": 960000,
+  "evaluation_episodes_per_seed_opponent_arm": 5,
+  "opponents": [
+    "static",
+    "patrol",
+    "chase"
+  ],
+  "arms": [
+    "off",
+    "original"
+  ],
+  "exposure": {
+    "stage": "approach",
+    "margin": 2.01,
+    "speed": 1.0,
+    "edge": "lower"
+  },
+  "primary": "bounds-violation episode rate, capture rate, deadlocks, offensive interventions",
+  "interpretation": "Selected-condition replication, not an unselected general superiority comparison. Two checkpoints were used in selection; three are new independent training replicates. Fresh evaluation seeds for all."
+}

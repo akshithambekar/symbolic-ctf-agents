@@ -11,6 +11,7 @@ class TacticsConfig:
     defender_mode: str = "fixed"
     attack_style: str = "split_flank"
     red_behavior: str = "standard"
+    carrier_reassignment: bool = False
 
     def __post_init__(self):
         if self.defender_mode not in {"none", "fixed", "conditional", "dynamic"}:
@@ -53,6 +54,8 @@ class TacticalArena(TeamArena):
         available = [i for i in range(n) if not s["agent_has_flag"][i]]
         if mode != "none" and available:
             defender = min(available, key=lambda i: np.linalg.norm(s["agent_position"][i]-s["flag_home"][0])) if mode == "dynamic" else 0
+            if defender not in available and self.tactics.carrier_reassignment:
+                defender = min(available, key=lambda i: np.linalg.norm(s["agent_position"][i]-s["flag_home"][0]))
             # A carrier always returns; a fixed role never overrides possession.
             if defender in available:
                 roles[defender] = "defender" if mode in {"fixed", "dynamic"} or threat else "support"

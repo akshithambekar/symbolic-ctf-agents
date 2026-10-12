@@ -1,0 +1,14 @@
+{
+  "experiment_episodes": {
+    "exposure": 144,
+    "roles": 96,
+    "conflicts": 6,
+    "chase_screens_and_transfer": 280,
+    "lower_speed_reference": 20,
+    "selected_condition_replication": 150
+  },
+  "total": 696,
+  "additional_new_attacker_validation_episodes": 60,
+  "new_teacher_demonstration_episodes": 72,
+  "note": "Contexts are separate; do not pool them as one performance comparison."
+}

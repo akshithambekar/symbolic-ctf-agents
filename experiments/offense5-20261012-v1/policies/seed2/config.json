@@ -1,0 +1,20 @@
+{
+  "mode": "team",
+  "team_size": 1,
+  "seed": 2,
+  "steps": 4096,
+  "guided": false,
+  "reward_shaping": false,
+  "temporal_state": false,
+  "shield": false,
+  "formula": "G(in_bounds) & F(has_flag & F(captured))",
+  "opponent": "static",
+  "scenario": "standard",
+  "horizon": 240.0,
+  "training_method": "oracle behavior cloning followed by task-reward PPO",
+  "demonstration_episodes": 24,
+  "bc_epochs": 160,
+  "promotion_capture_rate": 0.6,
+  "promotion_episodes": 10,
+  "interpretation": "new exploratory attacker; not the original scratch-trained PPO baseline"
+}

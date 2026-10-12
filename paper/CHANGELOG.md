@@ -16,3 +16,7 @@
 ## Tactical attacker follow-up (October 12, 2026)
 
 Added the explicitly exploratory imitation-initialized attacker, paired moderate/severe boundary tests, and scripted per-player role screen. Distinguished these checkpoints from the original baseline and heuristic roles from learned coordination. No prior experimental findings were overwritten.
+
+## Offensive/role follow-up (October 12, 2026)
+
+Added the completed 144-episode offensive/recovery screen, five-seed selected-condition replication (150 episodes), controlled 96-episode role screen, six carrier-conflict probes, and stopped two-seed chase continuation. Distinguished existing easy-chase ability from learning, preserved failed recovery outcomes, and described reward/task mismatch. Earlier archived results and supplied original manuscript remain unchanged.

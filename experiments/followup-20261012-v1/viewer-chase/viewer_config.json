@@ -1,0 +1,19 @@
+{
+  "arguments": {
+    "command": "watch",
+    "policy": "experiments/followup-20261012-v1/viewer_policies/directional0/policy.zip",
+    "scenario": null,
+    "opponent": null,
+    "team_size": null,
+    "seed": 40000,
+    "episodes": 1,
+    "stochastic": false,
+    "config": null,
+    "speed": 10.0,
+    "headless": true,
+    "record": "experiments\\followup-20261012-v1\\viewer-chase",
+    "max_frames": 3
+  },
+  "viewer_sha256": "472c5d650996f561c804ae9e3de440b064312fb4c995c1c4e4366484acb6cff4",
+  "policy_sha256": "40b4617b71b1f716f6c0b07424baf47b04adc398eb2c3a170e9100340814350d"
+}

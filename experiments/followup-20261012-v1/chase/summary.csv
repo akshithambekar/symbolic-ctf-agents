@@ -1,0 +1,9 @@
+training_seed,variant,actual_decisions,completed_curriculum,full_speed_pickup_rate,full_speed_capture_rate,static_capture_rate,candidate
+0,unmodified,0,False,0.0,0.0,1.0,False
+1,unmodified,0,False,0.0,0.0,1.0,False
+0,task,4096,False,0.0,0.0,1.0,False
+0,progress,4096,False,0.0,0.0,1.0,False
+0,directional,4096,False,0.0,0.0,1.0,False
+1,task,4096,False,0.0,0.0,1.0,False
+1,progress,4096,False,0.0,0.0,1.0,False
+1,directional,4096,False,0.0,0.0,1.0,False

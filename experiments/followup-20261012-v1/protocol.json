@@ -1,0 +1,101 @@
+{
+  "study": "exploratory tactical/offensive follow-up",
+  "base_commit": "c4ebd4609790d930217ed7de19e3c1a08a3472b9",
+  "source_policies": {
+    "0": "dbdeb50c28e15dccd327489d26b491fc2d692d79cfbd95d4f97efbd111967ccb",
+    "1": "8b47b078d4932542d81470c528c95fa699186eeb4efc702e334e9a9c88ea8313"
+  },
+  "exposures": {
+    "ordinary": {
+      "stage": "ordinary",
+      "margin": 4.0,
+      "speed": 1.0,
+      "edge": "lower"
+    },
+    "approach_tight": {
+      "stage": "approach",
+      "margin": 2.01,
+      "speed": 1.0,
+      "edge": "lower"
+    },
+    "approach_reserve": {
+      "stage": "approach",
+      "margin": 6.0,
+      "speed": 2.0,
+      "edge": "lower"
+    },
+    "return_tight": {
+      "stage": "return",
+      "margin": 2.01,
+      "speed": 1.0,
+      "edge": "lower"
+    },
+    "return_reserve": {
+      "stage": "return",
+      "margin": 6.0,
+      "speed": 2.0,
+      "edge": "lower"
+    },
+    "return_severe": {
+      "stage": "return",
+      "margin": 2.01,
+      "speed": 2.0,
+      "edge": "lower"
+    }
+  },
+  "shield_arms": [
+    "off",
+    "original",
+    "brake",
+    "proactive"
+  ],
+  "exposure_episodes_per_seed_cell": 1,
+  "training_seeds": [
+    0,
+    1
+  ],
+  "opponents": [
+    "static",
+    "patrol",
+    "chase"
+  ],
+  "roles": [
+    "none",
+    "fixed",
+    "conditional",
+    "dynamic"
+  ],
+  "role_attack_styles": [
+    "split_flank",
+    "escort"
+  ],
+  "role_episodes_per_cell": 3,
+  "chase_variants": [
+    "task",
+    "progress",
+    "directional"
+  ],
+  "chase_training_speeds": [
+    0.65,
+    0.85,
+    1.0
+  ],
+  "chase_decisions_per_stage": 2048,
+  "promotion_rule_defined_before_runs": true,
+  "promotion_rule": "Advance to next training speed only if five held-out current-speed episodes give >=20% pickups AND five static episodes give >=60% captures. Final candidate requires full-speed held-out pickups >=20% and static captures >=60%; larger comparisons are not automatic.",
+  "paired_evaluation": "same checkpoint/RNG/init per off/on exposure; role attack style held fixed within comparison; chase evaluation seeds matched across variants",
+  "limits": [
+    "two training seeds",
+    "scripted roles are not learned MARL",
+    "return starts initialize possession and cannot prove flag acquisition",
+    "proactive reserve is heuristic, not a safety certificate",
+    "additional controls are shield actions, not learned policy actions"
+  ],
+  "packages": {
+    "numpy": "1.26.4",
+    "torch": "2.14.0",
+    "stable-baselines3": "2.7.0",
+    "gymnasium": "1.2.3",
+    "pygame": "2.4.0"
+  }
+}

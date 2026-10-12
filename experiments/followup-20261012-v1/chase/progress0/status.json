@@ -1,0 +1,10 @@
+{
+  "training_seed": 0,
+  "variant": "progress",
+  "actual_decisions": 4096,
+  "completed_curriculum": false,
+  "full_speed_pickup_rate": 0.0,
+  "full_speed_capture_rate": 0.0,
+  "static_capture_rate": 1.0,
+  "candidate": false
+}

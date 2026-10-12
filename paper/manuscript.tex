@@ -40,7 +40,7 @@ U. S. Naval Research Laboratory, Washington, DC, USA
 
 \begin{abstract}
 \begin{quote}
-Reinforcement learning (RL) provides a promising approach for learning autonomous behaviors in competitive multi-agent environments, but policies learned solely through reward optimization can be difficult to constrain using explicit mission rules and behavioral requirements. In this work, we investigate neuro-symbolic guidance for reinforcement learning agents in Maritime Capture-the-Flag using PyQuaticus. Our system translates natural-language mission requirements into finite-trace Linear Temporal Logic specifications, validates them, and uses temporal-state information and reward shaping to guide Proximal Policy Optimization policies. We also evaluate a bounds-only action shield in a matched 3-vs-3 ablation. In a five-seed 1-vs-1 patrol study, softened neuro-symbolic guidance with no reward penalty for tagging achieved 138 captures in 150 held-out episodes. The promoted policies achieved no flag pickups or captures in 150 episodes against a chasing defender, despite entering opponent territory in every episode. Additional two-seed recovery experiments did not restore flag acquisition. These results show that guidance effects depend on reward design and opponent behavior: strong performance against patrol did not transfer to active pursuit. For the evaluated policy, the primary failure occurred between entering enemy territory and acquiring the flag.
+Reinforcement learning provides a promising approach for learning autonomous behaviors in competitive multi-agent environments, but policies learned solely through reward optimization can be difficult to constrain using explicit mission rules and behavioral requirements. In this work, we investigate neuro-symbolic guidance for reinforcement learning agents in Maritime Capture-the-Flag using PyQuaticus. Our system translates natural-language mission requirements into finite-trace Linear Temporal Logic specifications, validates them, and uses temporal-state information and reward shaping to guide Proximal Policy Optimization policies. We also evaluate a bounds-only action shield in a matched 3-vs-3 ablation. In a five-seed 1-vs-1 patrol study, softened neuro-symbolic guidance with no reward penalty for tagging achieved 138 captures in 150 held-out episodes. The promoted policies achieved no flag pickups or captures in 150 episodes against a chasing defender, despite entering opponent territory in every episode. Additional two-seed recovery experiments did not restore flag acquisition. A separate five-seed runtime-shield comparison in a selected offensive-edge condition reduced bounds-violation episodes from 75/75 to zero, while captures changed from 46/75 to 50/75. These results show that guidance effects depend on reward design and opponent behavior: strong performance against patrol did not transfer to active pursuit. For the evaluated policy, the primary failure occurred between entering enemy territory and acquiring the flag.
 \end{quote}
 \end{abstract}
 
@@ -307,6 +307,41 @@ All substitutions occurred at the lower home boundary, not near the enemy flag o
 
 We also added scripted per-player attacker, carrier-return, defender-interception and escort primitives with no-defender, fixed, conditional and dynamic assignment modes. The conditional role clause is $G(p\rightarrow d)$, where $p$ denotes opponent intrusion and $d$ denotes a defender behind the centerline, grounded using the currently selected defender; carriers retain return duties. Human-authored role clauses and mission logic are combined and validated, then monitored, without guaranteed enforcement. The 48-episode 3-vs-3 screen used three episodes per mode/opponent cell. Against explicit raiding opponents, each defensive mode produced 3/3 blue captures and zero red captures, whereas no-defender produced zero blue captures and three red captures. All modes produced zero captures against chase. These are heuristic feasibility probes, not learned coordination or a strategy ranking; dynamic mode additionally uses escort rather than split-flank attack style.
 
+\subsection{Offensive Shield Replication and Role Conflicts}
+
+A subsequent screen evaluated ordinary starts, enemy-territory edge approaches, and initialized-carrier return states with the same two checkpoints and four runtime variants: gate off, original gate, extra brake-turn candidates, and an additional two-second velocity-reserve condition. Across 144 episodes, adding brake-turn candidates did not reduce observed deadlocks, while the proactive condition also aborted moderate starts. Return starts used the simulator's possession initializer and therefore test return control, not acquisition. In the selected tight approach condition, the original gate made six offensive substitutions, reduced bounds-violation episodes from 6/6 to 0/6, and retained 4/6 captures without deadlocks.
+
+We then froze a separate matched replication protocol for that selected condition: the standard arena, a 2.01 m lower-edge margin, and 1 m/s outward initial velocity in enemy territory. The comparison used five training seeds and five fresh held-out episodes per opponent, seed, and arm, totaling 150 episodes. Seeds 0 and 1 reused the selection checkpoints; seeds 2--4 were new replicas trained with the same imitation-initialized PPO protocol. Each arm used the identical checkpoint and paired initial condition, with only deployment-time shielding changed.
+
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrr}
+\hline
+Selected offensive-condition metric & Off & Shield \\
+\hline
+Episodes & 75 & 75 \\
+Captures / pickups & 46 / 50 & 50 / 50 \\
+Bounds-violation episodes & 75 & 0 \\
+Deadlock episodes & 0 & 0 \\
+Offensive substitutions & -- & 75 \\
+Mission-satisfied episodes & 0 & 50 \\
+Mean common task reward & 8.156 & 11.953 \\
+Mean tags received & 0.707 & 0.733 \\
+\hline
+\end{tabular}
+\caption{Five-seed matched replication of a selected engineered offensive-edge condition. These episodes are separate from ordinary-start full missions. Two checkpoints also participated in condition selection.}
+\label{tab:offensive-five}
+\end{table}
+
+Every training seed recorded 15 bounds-violation episodes without shielding and zero with it. Seed-level capture improvements were 0, 2, 0, 1, and 1 episodes out of 15. Static captures were 25/25 in both arms; patrol captures were 21/25 without shielding and 25/25 with it; chase produced zero pickups and captures in both arms. Mean capture time among successful episodes was 179.83 s without shielding and 67.00 s with it. This replicates bounds-failure prevention during an offensive approach in the selected simulator condition. It does not establish a general invariant, tagging protection, neuro-symbolic training superiority, or statistically robust capture improvement across broader conditions. Selection reuse and only five training seeds limit inference.
+
+A separate 96-episode scripted 3-vs-3 screen held split-flank or escort attack style fixed within each four-role comparison. Defensive role modes again recorded zero red captures in the three-episode raiding cells, while all role modes failed against chase. Attack style mattered: conditional roles captured in 3/3 patrol episodes with split flanks and 0/3 with escorts. These small cells are feasibility diagnostics, not a strategy ranking or learned coordination result. Six additional simulator-initialized carrier/intrusion probes exposed a contract conflict when fixed Agent 0 carried the flag. Optional carrier-aware reassignment preserved its return priority and kept another defender available in the tested states; it did not introduce a formal role-satisfaction guarantee.
+
+We also continued both initial checkpoints with task-only, progress, or progress-gated evasion reward, using 2,048 decisions at each chase-speed stage. All six runs passed the 0.65-speed capability screen but failed the 0.85-speed pickup criterion, stopping after 4,096 additional decisions. The unmodified policies already achieved 2/5 captures on the same 0.65-speed seeds, so that capability is not evidence of learning gains. Full-speed transfer tests produced zero pickups and captures in 60 episodes across the continued policies; final static tests retained 60/60 captures. At the failed 0.85-speed training stage, every recorded episode in the progress and evasion variants received positive training return despite zero pickups. These heuristic rewards omit tagged transitions and use pickup history to switch targets; they are not fully potential-based shaping. This exposes reward/task mismatch and does not rule out better-designed progress or evasion feedback.
+
+
 \subsection{Translator Benchmark}
 
 The current English-to-LTLf pipeline produced 93.75\% semantic correctness against the project-authored reference formulas, 98.96\% syntax validity, and 98.96\% compilation success across 120 measured outputs. Its mean latency was 34.9 s and its repair rate was 43.33\%.
@@ -335,7 +370,7 @@ Mean latency & 34.9 s & 53.7 s \\
 
 \section{Future Work}
 
-The most immediate direction for future work is to address the failure to acquire the flag under active pursuit. The existing diagnostics indicate that simply increasing progress or evasion shaping is insufficient and can make the agent more conservative. A more targeted approach should inspect per-step reward contributions and state-action trajectories around the point at which the agent approaches the defender or the flag. This could support gated or directional evasion terms that activate only when they preserve progress toward the offensive objective.
+The most immediate direction for future work is to address the failure to acquire the flag under active pursuit. The existing diagnostics indicate that simply increasing progress or evasion shaping is insufficient and can make the agent more conservative. A more targeted approach should inspect per-step reward contributions and state-action trajectories around the point at which the agent approaches the defender or the flag. Future reward designs should use current possession rather than pickup history and account for tagged return transitions, so repeated unsuccessful approaches do not collect positive progress feedback. The tested progress-gated evasion variant did not improve the staged capability screen.
 
 A second direction is to expand the action representation. The present PPO policy selects from eight waypoint-style primitives. This abstraction is sufficient for successful capture in several static and patrol configurations, but it may limit maneuvering near an active defender. A richer action set or a hierarchical policy could provide more expressive local evasion while retaining higher-level symbolic mission guidance.
 
@@ -351,7 +386,7 @@ This work evaluated neuro-symbolic reinforcement learning in Maritime Capture-th
 
 In the frozen 3-vs-3 ablation, combined guidance reduced measured tags and rule violations and produced the highest mean fixed common task reward, but it completed no captures. In the later staged 1-vs-1 study, softened guidance without a training penalty for tagging achieved 138 captures in 150 held-out patrol episodes across five seeds. The same promoted policies then achieved zero pickups and zero captures in 150 episodes against an active chasing defender, despite entering enemy territory in every episode. Additional diagnostic variants did not recover flag acquisition.
 
-The first runtime-only screen left the evaluated neural checkpoints unchanged because the bounds gate never intervened. A later exploratory test with task-capable, imitation-initialized checkpoints prevented observed bounds violations in a selected moving-start condition while retaining 16/36 captures in both arms. The benefit is specific to bounds safety in that exposure condition; tagging did not improve, higher-speed starts deadlocked, and chase acquisition remained unresolved.
+The first runtime-only screen left the evaluated neural checkpoints unchanged because the bounds gate never intervened. A later exploratory test with task-capable, imitation-initialized checkpoints prevented observed bounds violations in a selected moving-start condition while retaining 16/36 captures in both arms. A subsequent five-seed matched replication in a selected offensive-edge condition reduced bounds-violation episodes from 75/75 to zero, with 46/75 versus 50/75 captures. The benefit remains specific to the tested exposure condition; tagging did not improve, higher-speed starts deadlocked, and chase acquisition remained unresolved.
 
 The main empirical conclusion is therefore not that neuro-symbolic guidance universally improves task performance, but that symbolic guidance can substantially alter the balance between constraint-related behavior and task execution. The patrol and chase results further show the importance of evaluating policies across increasing levels of adversarial difficulty and of measuring intermediate task stages rather than relying only on final reward or capture rate. For the system studied here, the dominant unresolved failure occurs between entering opponent territory and acquiring the flag under active pursuit. This failure provides a concrete target for future work on reward design, action abstraction, and adaptive symbolic guidance.
 

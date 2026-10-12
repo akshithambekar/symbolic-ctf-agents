@@ -20,3 +20,5 @@ pdflatex -output-directory=build manuscript.tex
 Create build/ first. Required dependencies include the FLAIRS template styles, accessibility, and the Times/Helvetica/Courier LaTeX font packages. The built-in standalone compiler cannot load these project files; the local MiKTeX compiler was used.
 
 The tactical-attacker follow-up adds two imitation-initialized checkpoints, actual bounds-gate substitutions in an exploratory moving-start test, higher-speed deadlock evidence, and scripted per-player role screening. See the new study report; this is not a general superiority claim.
+
+The offensive follow-up reports the completed five-seed selected-condition replication, controlled role screen, carrier conflicts and stopped chase continuation. The nine-page PDF was rebuilt and visually checked; the report preserves selection reuse and reward/task mismatch limitations.

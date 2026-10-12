@@ -1,0 +1,5 @@
+training_seed,speed,episodes,capture_rate,pickup_rate,enemy_territory_rate,out_of_bounds_episode_rate,mean_common_reward
+0,0.65,5,0.4,0.4,1.0,0.0,4.1000000000000245
+0,0.85,5,0.0,0.0,1.0,0.0,-6.399999999999958
+1,0.65,5,0.4,0.4,1.0,0.0,4.1000000000000245
+1,0.85,5,0.0,0.0,1.0,0.0,-6.399999999999958

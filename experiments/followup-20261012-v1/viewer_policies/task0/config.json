@@ -1,0 +1,8 @@
+{
+  "mode": "team",
+  "team_size": 1,
+  "seed": 0,
+  "training_method": "imitation-initialized PPO followed by staged chase continuation",
+  "variant": "task",
+  "source_training_config": "experiments\\followup-20261012-v1\\chase\\task0\\config.json"
+}

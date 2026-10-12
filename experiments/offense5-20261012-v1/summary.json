@@ -1,0 +1,28 @@
+{
+  "off": {
+    "episodes": 75,
+    "captures": 46,
+    "pickups": 50,
+    "bounds_episodes": 75,
+    "deadlocks": 0,
+    "interventions": 0,
+    "offensive_events": 0,
+    "mean_common_reward": 8.15573333333337,
+    "mean_tags": 0.7066666666666667,
+    "mission_satisfied": 0,
+    "mean_capture_time_successes": 179.82608695652175
+  },
+  "original": {
+    "episodes": 75,
+    "captures": 50,
+    "pickups": 50,
+    "bounds_episodes": 0,
+    "deadlocks": 0,
+    "interventions": 75,
+    "offensive_events": 75,
+    "mean_common_reward": 11.953333333333347,
+    "mean_tags": 0.7333333333333333,
+    "mission_satisfied": 50,
+    "mean_capture_time_successes": 67.0
+  }
+}
