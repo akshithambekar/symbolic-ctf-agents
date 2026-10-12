@@ -1,5 +1,14 @@
 # Maritime neuro-symbolic reinforcement learning
 
+The current [LaTeX manuscript](paper/manuscript.tex) distinguishes the original deployment-only shielding proposal from the implemented training-time guidance. The separate [runtime-only screen](experiments/runtime-shield-20261012-v1/ANALYSIS.md) evaluates the same two saved neural policies with the bounds gate disabled/enabled: 360 episodes, no captures or pickups, and no substitutions in 43,200 shield checks. All 180 pairs had identical recorded trajectories. This exploratory result tests a dormant gate and establishes no safety or offensive advantage.
+
+Reproduce this screen into a fresh directory:
+
+```powershell
+.venv/Scripts/python.exe scripts/run_runtime_shield_study.py --output experiments/runtime-shield-new --episodes 10 --training-seeds 0 1
+.venv/Scripts/python.exe scripts/analyze_runtime_shield_study.py experiments/runtime-shield-new
+```
+
 New additive tools: [translator benchmark](TRANSLATOR_BENCHMARK.md) compares the
 existing translation/repair adapter with a pinned, CTF-adapted LTLCodeGen
 translation-only adapter using 40 reference-labelled statements and DFA semantic

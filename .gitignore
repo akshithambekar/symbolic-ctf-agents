@@ -12,3 +12,4 @@ __pycache__/
 /runs/
 /vendor/
 /ltl/code_ltl_exec.py
+/paper/build/

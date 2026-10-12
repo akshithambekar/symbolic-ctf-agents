@@ -1,0 +1,10 @@
+training_seed,scenario,opponent,evaluation_seed,delta_captures,delta_pickups,delta_common_task_reward,delta_tags_received,delta_out_of_bounds_steps,delta_duration
+0,standard,static,710000,0,0,0.0,0,0,0.0
+0,standard,patrol,710000,0,0,0.0,0,0,0.0
+0,standard,chase,710000,0,0,0.0,0,0,0.0
+0,wide,static,710000,0,0,0.0,0,0,0.0
+0,wide,patrol,710000,0,0,0.0,0,0,0.0
+0,wide,chase,710000,0,0,0.0,0,0,0.0
+0,narrow,static,710000,0,0,0.0,0,0,0.0
+0,narrow,patrol,710000,0,0,0.0,0,0,0.0
+0,narrow,chase,710000,0,0,0.0,0,0,0.0

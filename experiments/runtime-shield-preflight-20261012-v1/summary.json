@@ -1,0 +1,52 @@
+{
+  "status": "completed exploratory",
+  "elapsed_seconds": 38.86970050004311,
+  "arms": {
+    "unshielded": {
+      "episodes": 9,
+      "captures": 0,
+      "capture_rate": 0.0,
+      "pickup_rate": 0.0,
+      "mean_common_reward": -2.399999999999993,
+      "tag_rate": 0.0,
+      "mean_tags": 0.0,
+      "out_of_bounds_episode_rate": 0.0,
+      "mean_out_of_bounds_steps": 0.0,
+      "mean_rule_violation_steps": 0.0,
+      "ltlf_satisfaction_rate": 0.0,
+      "mean_capture_time_successes": null,
+      "mean_duration": 240.0,
+      "deadlock_rate": 0.0,
+      "numerical_termination_rate": 0.0,
+      "interventions": 0,
+      "checks": 0,
+      "intervention_frequency": 0.0,
+      "offensive_interventions": 0,
+      "near_flag_interventions": 0,
+      "carrying_interventions": 0
+    },
+    "runtime_bounds_shield": {
+      "episodes": 9,
+      "captures": 0,
+      "capture_rate": 0.0,
+      "pickup_rate": 0.0,
+      "mean_common_reward": -2.399999999999993,
+      "tag_rate": 0.0,
+      "mean_tags": 0.0,
+      "out_of_bounds_episode_rate": 0.0,
+      "mean_out_of_bounds_steps": 0.0,
+      "mean_rule_violation_steps": 0.0,
+      "ltlf_satisfaction_rate": 0.0,
+      "mean_capture_time_successes": null,
+      "mean_duration": 240.0,
+      "deadlock_rate": 0.0,
+      "numerical_termination_rate": 0.0,
+      "interventions": 0,
+      "checks": 2160,
+      "intervention_frequency": 0.0,
+      "offensive_interventions": 0,
+      "near_flag_interventions": 0,
+      "carrying_interventions": 0
+    }
+  }
+}

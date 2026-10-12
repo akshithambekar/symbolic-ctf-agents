@@ -10,3 +10,7 @@ strategies/** -text
 /*.txt -text
 /MANIFEST.sha256 text eol=lf
 /research_archive/MANIFEST.sha256 text eol=lf
+/paper/originals/** -text
+/paper/*.tex -text
+/paper/*.bib -text
+/.gitignore -text

@@ -40,7 +40,7 @@ U. S. Naval Research Laboratory, Washington, DC, USA
 
 \begin{abstract}
 \begin{quote}
-Reinforcement learning (RL) provides a promising approach for learning autonomous behaviors in competitive multi-agent environments, but policies learned solely through reward optimiz1ation can be difficult to constrain using explicit mission rules and behavioral requirements. In this work, we investigate neuro-symbolic guidance for reinforcement learning agents in Maritime Capture-the-Flag using PyQuaticus. Our system translates natural-language mission requirements into finite-trace Linear Temporal Logic specifications, validates them, and uses temporal-state information and reward shaping to guide Proximal Policy Optimization policies. We also evaluate a bounds-only action shield in a matched 3-vs-3 ablation. In a five-seed 1-vs-1 patrol study, softened neuro-symbolic guidance with no reward penalty for tagging achieved 138 captures in 150 held-out episodes. The same policy achieved no flag pickups or captures in 150 episodes against a chasing defender, despite entering opponent territory in every episode. Additional two-seed recovery experiments did not restore flag acquisition. These results show that guidance effects depend on reward design and opponent behavior: strong performance against patrol did not transfer to active pursuit. For the evaluated policy, the primary failure occurred between entering enemy territory and acquiring the flag.
+Reinforcement learning (RL) provides a promising approach for learning autonomous behaviors in competitive multi-agent environments, but policies learned solely through reward optimization can be difficult to constrain using explicit mission rules and behavioral requirements. In this work, we investigate neuro-symbolic guidance for reinforcement learning agents in Maritime Capture-the-Flag using PyQuaticus. Our system translates natural-language mission requirements into finite-trace Linear Temporal Logic specifications, validates them, and uses temporal-state information and reward shaping to guide Proximal Policy Optimization policies. We also evaluate a bounds-only action shield in a matched 3-vs-3 ablation. In a five-seed 1-vs-1 patrol study, softened neuro-symbolic guidance with no reward penalty for tagging achieved 138 captures in 150 held-out episodes. The promoted policies achieved no flag pickups or captures in 150 episodes against a chasing defender, despite entering opponent territory in every episode. Additional two-seed recovery experiments did not restore flag acquisition. These results show that guidance effects depend on reward design and opponent behavior: strong performance against patrol did not transfer to active pursuit. For the evaluated policy, the primary failure occurred between entering enemy territory and acquiring the flag.
 \end{quote}
 \end{abstract}
 
@@ -103,11 +103,19 @@ The system is organized as a pipeline from mission specification to policy evalu
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\columnwidth]{figures/figure1_system_architecture.png}
-\caption{End-to-end neuro-symbolic reinforcement learning pipeline for Maritime Capture-the-Flag. Natural-language mission requirements are translated into LTLf, validated and grounded, and incorporated into learning through temporal-state features, reward shaping, or shielding before evaluation in PyQuaticus.}
+\caption{Implemented neuro-symbolic pipeline. Offline translation and validation produce an LTLf mission monitor; optional temporal features and shaping influence PPO training. A separate optional bounds gate filters proposed actions. The runtime-only study evaluates the same saved policy with this gate disabled and enabled.}
 \label{fig:system-architecture}
 \end{figure}
 
 The original implementation used Python 3.10, Stable-Baselines3 PPO, and pinned PyQuaticus Heron dynamics. Policies select among eight discrete waypoint-style action primitives. Each selected primitive is applied for a short decision interval; the learned policy therefore chooses among higher-level movement primitives rather than directly controlling low-level vessel dynamics.
+
+\subsection{Original Proposal and Implemented Guidance}
+
+The original project proposal was to train a neural policy without symbolic guidance and apply a temporal-logic action shield during deployment. The implemented research framework subsequently expanded this design to include temporal-state features in the policy observation and reward shaping during training, with action shielding enabled in selected experimental conditions. These are distinct interventions: observation augmentation and shaping affect the learned policy, whereas a deployment-only shield filters the actions of an already trained policy.
+
+In particular, the frozen 3-vs-3 shield-only condition enabled the bounds gate during both training and evaluation. Its results therefore do not isolate the effect of adding a runtime shield to an unchanged neural checkpoint. We evaluate that narrower question separately using paired shield-off and shield-on evaluations of the same saved neural policies.
+
+The language model is invoked before gameplay to construct the specification. Per-step temporal monitoring uses the compiled finite-state monitor and does not require a language-model request. The computational cost of monitoring must therefore be distinguished from the cost of language-model translation and from simulator prediction within the shield.
 
 \subsection{Temporal Mission Specification}
 
@@ -125,7 +133,7 @@ respectively.
 
 The first term requires the agent to remain in bounds throughout the finite trace. The second term represents an ordered mission objective: at some point the agent must possess the flag, and after that point a capture must eventually occur. Earlier specifications included harder safety and role constraints. During the project, provenance review separated translated mission intent from human-added role and safety rules, and the ordered flag-acquisition objective was restored explicitly.
 
-The project used three principal mechanisms for incorporating symbolic information into learning. Temporal-state guidance augments the policy observation with information derived from the progress of the temporal monitor. Reward shaping adds intermediate rewards or penalties associated with progress toward or away from temporal objectives. Shielding can reject or redirect actions judged to violate specified constraints. In the frozen matched 3-vs-3 experiment, the hard shield enforced arena bounds only; tagging and the designated defender's centerline position were monitored as rule violations, not enforced by the shield. Thus, ``shield-only'' refers to bounds shielding and does not mean the shield hard-enforced the full LTL role and safety contract. A combined condition applies multiple mechanisms simultaneously.
+The project used three principal mechanisms for incorporating symbolic information into learning. Temporal-state guidance augments the policy observation with information derived from the progress of the temporal monitor. Reward shaping adds intermediate rewards or penalties associated with progress toward or away from temporal objectives. Shielding can reject or redirect actions judged to violate specified constraints. In the frozen matched 3-vs-3 experiment, the hard shield enforced arena bounds only; tagging and the designated defender's centerline position were monitored as rule violations, not enforced by the shield. Thus, ``shield-only'' refers to bounds shielding and does not mean the shield hard-enforced the full LTL role and safety contract. A combined condition applies multiple mechanisms simultaneously. The implemented gate tests a bounded set of one-step simulator successors and commits a candidate whose bounds-monitor state remains live. If every tested candidate is rejected, the episode terminates without advancing the simulator. Such a deadlock does not prove that no safe action exists, because the candidate set is not exhaustive. This local-model check does not guarantee collision avoidance, absence of tagging, eventual flag capture, or satisfaction of the complete mission specification.
     
 \subsection{Earlier Single-Seed Exploratory Run}
 
@@ -157,6 +165,12 @@ Three variants were evaluated: the current no-tag-penalty baseline, dense flag-p
 
 The diagnostic measured captures, pickups, minimum distance to the enemy flag, tags before pickup, time spent in enemy territory, and minimum distance to the defender. A pre-defined screen required at least a 10\% pickup rate and at least a 10\% improvement in mean minimum flag distance relative to the baseline before a candidate would be considered for further confirmation.
 
+\subsection{Paired Runtime-Shield-Only Evaluation}
+
+We conducted a separate exploratory evaluation using two neural policies from the completed 1-vs-1 patrol study. Both checkpoints had been trained without reward shaping, temporal-state input, or shielding. Each unchanged checkpoint was evaluated deterministically with the existing bounds gate disabled and enabled, using identical held-out episode seeds, observations, action primitives, opponent settings, and horizons. The evaluation covered standard, wide, and narrow maps against static, patrol, and chase opponents, with ten held-out episodes per map--opponent combination and training seed: 180 episodes per arm and 360 episodes in total. No additional policy training was performed.
+
+We recorded captures, pickups, common task reward, tags, bounds violations, monitored mission satisfaction, successful capture times, episode duration, numerical terminations, and shield deadlocks. Additional event logs recorded proposed and substituted controls and intervention context before the successor was committed, including enemy-territory position, proximity to the enemy flag, and flag possession. Early deadlocks shorten exposure to time penalties and tagging, so common reward is interpreted together with duration and termination outcomes. The study has two independent training seeds and is treated as exploratory rather than confirmatory.
+
 \subsection{Translator Benchmark}
 
 The natural-language translation component was evaluated independently from policy learning. The benchmark contained 40 Capture-the-Flag statements across nine categories and 20 paraphrase pairs. Each method received three independent trials per statement, producing 120 measured outputs per method.
@@ -176,6 +190,7 @@ Despite the absence of captures, the full-guidance condition produced the highes
 \begin{table}[htbp]
 \centering
 \small
+\setlength{\tabcolsep}{4pt}
 \begin{tabular}{lrrr}
 \hline
 Method & Captures & Mean Reward & Tag Episodes \\
@@ -230,6 +245,34 @@ The baseline reached a mean minimum distance of 39.84 m from the enemy flag. Den
 
 Because the diagnostic used only two seeds per condition, this result should not be interpreted as a definitive causal comparison. It nevertheless shows that the tested recovery mechanisms did not satisfy the pre-defined promotion screen and suggests that simply increasing distance-based evasion incentives can conflict with flag-approach behavior.
 
+\subsection{Runtime-Shield-Only Evaluation}
+
+The paired runtime-only screen completed 360 episodes across two training seeds, three maps, and three opponents. Both arms produced zero captures and zero pickups in 180 episodes each. Neither neural checkpoint entered enemy territory, and neither arm recorded tags, bounds violations, numerical terminations, or shield deadlocks. Mean common task reward was $-2.400$ and mean episode duration was 240 simulator seconds in both arms. Monitored mission satisfaction was zero, and successful capture time was undefined because there were no captures.
+
+The runtime gate performed 43,200 successor checks without substituting an action. All 180 matched pairs had identical recorded action and state trajectories. Thus, the shield was dormant in this sample: the policies failed to initiate offensive progress before any action filtering occurred. These observations establish neither a safety advantage nor suppression of offensive actions by deployment-only shielding. A meaningful intervention test requires a task-capable unshielded policy and states in which unsafe actions are actually proposed. With only two independent training seeds, this study is exploratory and does not support a superiority claim.
+
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{lrr}
+\hline
+Metric & Shield off & Runtime shield \\
+\hline
+Episodes & 180 & 180 \\
+Captures / pickups & 0 / 0 & 0 / 0 \\
+Enemy-territory episodes & 0 & 0 \\
+Tag / bounds-violation episodes & 0 / 0 & 0 / 0 \\
+Deadlock episodes & 0 & 0 \\
+Mean common task reward & -2.400 & -2.400 \\
+Mean duration (seconds) & 240 & 240 \\
+Shield substitutions & -- & 0 \\
+\hline
+\end{tabular}
+\caption{Exploratory deployment-only comparison of the same two saved neural policies. The lack of unsafe proposals leaves intervention effects untested.}
+\label{tab:runtime-shield}
+\end{table}
+
 \subsection{Translator Benchmark}
 
 The current English-to-LTLf pipeline produced 93.75\% semantic correctness against the project-authored reference formulas, 98.96\% syntax validity, and 98.96\% compilation success across 120 measured outputs. Its mean latency was 34.9 s and its repair rate was 43.33\%.
@@ -272,14 +315,13 @@ Finally, future studies should treat training seeds as the independent experimen
 
 This work evaluated neuro-symbolic reinforcement learning in Maritime Capture-the-Flag using an end-to-end system that connects natural-language mission specification, LTLf validation and monitoring, symbolic guidance, PPO-based learning, and PyQuaticus execution. Rather than producing a single conclusion that neuro-symbolic guidance is uniformly better or worse than neural reinforcement learning, the experiments show that its effect depends strongly on both the form of guidance and the behavior of the opponent.
 
-In the frozen 3-vs-3 ablation, combined guidance reduced measured tags and rule violations and produced the highest mean fixed common task reward, but it completed no captures. In the later staged 1-vs-1 study, softened guidance without a training penalty for tagging achieved 138 captures in 150 held-out patrol episodes across five seeds. The same policy then achieved zero pickups and zero captures in 150 episodes against an active chasing defender, despite entering enemy territory in every episode. Additional diagnostic variants did not recover flag acquisition.
+In the frozen 3-vs-3 ablation, combined guidance reduced measured tags and rule violations and produced the highest mean fixed common task reward, but it completed no captures. In the later staged 1-vs-1 study, softened guidance without a training penalty for tagging achieved 138 captures in 150 held-out patrol episodes across five seeds. The same promoted policies then achieved zero pickups and zero captures in 150 episodes against an active chasing defender, despite entering enemy territory in every episode. Additional diagnostic variants did not recover flag acquisition.
+
+The separate runtime-only screen left the evaluated neural checkpoints unchanged because the bounds gate never intervened; it provides no evidence that deployment-only shielding recovers offensive behavior.
 
 The main empirical conclusion is therefore not that neuro-symbolic guidance universally improves task performance, but that symbolic guidance can substantially alter the balance between constraint-related behavior and task execution. The patrol and chase results further show the importance of evaluating policies across increasing levels of adversarial difficulty and of measuring intermediate task stages rather than relying only on final reward or capture rate. For the system studied here, the dominant unresolved failure occurs between entering opponent territory and acquiring the flag under active pursuit. This failure provides a concrete target for future work on reward design, action abstraction, and adaptive symbolic guidance.
 
-% Literature review citations and the final bibliography will be added after
-% the related-work section is completed.
-%
-% Once references.bib is created, uncomment:
+% Bibliography supplied in CS491_references.bib and copied to references.bib.
 \bibliographystyle{flairs}
 \bibliography{references}
 

@@ -1,0 +1,54 @@
+{
+  "status": "exploratory",
+  "design": "paired saved neural policies; evaluation-only shield",
+  "training_seeds": [
+    0,
+    1
+  ],
+  "evaluation_seeds": [
+    710000,
+    710001,
+    710002,
+    710003,
+    710004,
+    710005,
+    710006,
+    710007,
+    710008,
+    710009
+  ],
+  "scenarios": [
+    "standard",
+    "wide",
+    "narrow"
+  ],
+  "opponents": [
+    "static",
+    "patrol",
+    "chase"
+  ],
+  "arms": [
+    "unshielded",
+    "runtime_bounds_shield"
+  ],
+  "deterministic": true,
+  "shield_formula": "G(in_bounds)",
+  "retraining": false,
+  "git_commit": "0eddf725645314547efe8a4c62d1dda21f5eae46",
+  "git_status": " M paper/manuscript.tex\n?? experiments/runtime-shield-20261012-v1/\n?? experiments/runtime-shield-preflight-20261012-v1/\n?? paper/CHANGELOG.md\n?? scripts/run_runtime_shield_study.py\n?? src/maritime_nsrl/runtime_shield_study.py\n?? tests/test_runtime_shield_study.py\n",
+  "dependencies": {
+    "numpy": "1.26.4",
+    "torch": "2.14.0",
+    "stable-baselines3": "2.7.0",
+    "gymnasium": "1.2.3",
+    "lark": "1.3.1"
+  },
+  "simulator_path": "C:\\Users\\ymasr\\Documents\\Codex\\2026-09-18\\build-an-end-to-end-proof\\outputs\\maritime-nsrl\\vendor\\pyquaticus\\pyquaticus",
+  "source_root": "C:\\Users\\ymasr\\Documents\\Codex\\2026-09-18\\build-an-end-to-end-proof\\outputs\\symbolic-ctf-agents-working",
+  "limitations": [
+    "Two training seeds, no confirmatory significance claim",
+    "Patrol-trained neural policies",
+    "One-step local bounds gate, not full LTL mission enforcement",
+    "Deadlocks shorten exposure and can inflate common reward"
+  ]
+}

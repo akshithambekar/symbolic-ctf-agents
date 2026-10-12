@@ -1,0 +1,15 @@
+{
+  "compiler": "MiKTeX pdfTeX 1.40.26 / LaTeX + BibTeX",
+  "pages": 8,
+  "compiled": true,
+  "undefined_citations": false,
+  "overfull_boxes": false,
+  "source_and_output_sha256": {
+    "manuscript.tex": "793a07699b78cd4400f169b4e1eaf4901d0b1942ccff3cef9ee35b219447cfe0",
+    "references.bib": "3907093b2a77b68e405fa274b2e8afb67c3f0182c2bcac4a13a19f4618bbc43e",
+    "flairs.sty": "f2fb83e04fd8ca9fc2ca4bbe4789d5c7e0d97e8a52d73004a9cbbf55ec1c3cc2",
+    "flairs.bst": "832a1f10781ff468cdc05b33c33f92e7783eeb6117a2300a77e5cb51728e20ec",
+    "figures/figure1_system_architecture.png": "8234f061148748efb37491de5e59d5f5b2b6ea13ec89f52631524de67b4defa1",
+    "manuscript.pdf": "c92740faa4c0d3636b21cc6a93897c848984358e1afe6f623f838aec01d05dd1"
+  }
+}

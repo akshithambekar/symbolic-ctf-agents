@@ -1,0 +1,6 @@
+{
+  "original_manuscript": "C:\\Users\\ymasr\\Downloads\\formatting-instructions-latex.v2.2026.tex",
+  "bibliography": "C:\\Users\\ymasr\\Downloads\\CS491_references.bib",
+  "styles": "C:\\Users\\ymasr\\Downloads\\FLAIRS-Paper-Template.zip",
+  "architecture_renderer": "scripts/render_paper_architecture.py"
+}
