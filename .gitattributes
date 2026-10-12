@@ -14,3 +14,5 @@ strategies/** -text
 /paper/*.tex -text
 /paper/*.bib -text
 /.gitignore -text
+/paper/*.sty -text
+/paper/*.bst -text
