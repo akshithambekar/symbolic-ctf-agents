@@ -275,3 +275,7 @@ The adapter also resets pristine Heron PID controllers on each episode: the pinn
 - [Stable-Baselines3 PPO 2.7](https://stable-baselines3.readthedocs.io/en/v2.7.0/modules/ppo.html): supports the discrete action/Box observation interface used here and provides CPU PPO plus serializable checkpoints.
 
 Upstream projects retain their respective licenses. Their source is cloned under `vendor/` by setup, rather than copied into this project's source tree.
+
+## Tactical attacker follow-up
+
+See [player tactics and reproduction commands](TACTICS_AND_ATTACKER.md) and the [new exploratory report](experiments/tactical-attacker-20261012-v1/REPORT.md). Two imitation-initialized PPO attackers enable a same-checkpoint runtime-shield test; scripted 3v3 role strategies and native replay are available. Earlier experiments remain unchanged.

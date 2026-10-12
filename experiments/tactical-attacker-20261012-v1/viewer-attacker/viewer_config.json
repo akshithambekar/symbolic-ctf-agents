@@ -1,0 +1,19 @@
+{
+  "arguments": {
+    "command": "watch",
+    "policy": "experiments/tactical-attacker-20261012-v1/attackers/seed0/policy.zip",
+    "scenario": null,
+    "opponent": null,
+    "team_size": null,
+    "seed": 40000,
+    "episodes": 1,
+    "stochastic": false,
+    "config": null,
+    "speed": 10.0,
+    "headless": true,
+    "record": "experiments\\tactical-attacker-20261012-v1\\viewer-attacker",
+    "max_frames": 4
+  },
+  "viewer_sha256": "a0b96fc3d6d8922025a809ec075756f6d6e28511192112ca86bc6bb204d1bf33",
+  "policy_sha256": "dbdeb50c28e15dccd327489d26b491fc2d692d79cfbd95d4f97efbd111967ccb"
+}

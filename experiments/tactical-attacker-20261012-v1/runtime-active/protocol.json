@@ -1,0 +1,53 @@
+{
+  "status": "exploratory",
+  "design": "paired saved neural policies; evaluation-only shield",
+  "training_seeds": [
+    0,
+    1
+  ],
+  "evaluation_seeds": [
+    862000,
+    862001,
+    862002
+  ],
+  "scenarios": [
+    "standard"
+  ],
+  "opponents": [
+    "static",
+    "patrol",
+    "chase"
+  ],
+  "start_modes": [
+    "boundary_lower",
+    "boundary_upper"
+  ],
+  "config_layout": "with-start-mode",
+  "policy_source": "experiments\\tactical-attacker-20261012-v1\\attackers",
+  "boundary_start_margin": 2.01,
+  "boundary_start_speed": 1.0,
+  "arms": [
+    "unshielded",
+    "runtime_bounds_shield"
+  ],
+  "deterministic": true,
+  "shield_formula": "G(in_bounds)",
+  "retraining": false,
+  "git_commit": "1da1532f4aa652afebe7b21a5ccfee3fde060613",
+  "git_status": " M scripts/analyze_runtime_shield_study.py\n M scripts/run_runtime_shield_study.py\n M src/maritime_nsrl/cli.py\n M src/maritime_nsrl/logic.py\n M src/maritime_nsrl/research_env.py\n M src/maritime_nsrl/runtime_shield_study.py\n M src/maritime_nsrl/viewer.py\n?? experiments/tactical-attacker-20261012-v1/\n?? results/tactical-attacker-tests-20261012.xml\n?? scripts/evaluate_tactics.py\n?? scripts/probe_shield_exposure.py\n?? scripts/train_capable_attacker.py\n?? src/maritime_nsrl/attacker_training.py\n?? src/maritime_nsrl/tactics.py\n?? strategies/tactics-3v3-conditional.json\n?? strategies/tactics-3v3-dynamic.json\n?? strategies/tactics-3v3-fixed.json\n?? strategies/tactics-3v3-none.json\n?? strategies/tactics-3v3-raiding.json\n?? tests/test_tactics.py\n",
+  "dependencies": {
+    "numpy": "1.26.4",
+    "torch": "2.14.0",
+    "stable-baselines3": "2.7.0",
+    "gymnasium": "1.2.3",
+    "lark": "1.3.1"
+  },
+  "simulator_path": "C:\\Users\\ymasr\\Documents\\Codex\\2026-09-18\\build-an-end-to-end-proof\\outputs\\maritime-nsrl\\vendor\\pyquaticus\\pyquaticus",
+  "source_root": "C:\\Users\\ymasr\\Documents\\Codex\\2026-09-18\\build-an-end-to-end-proof\\outputs\\symbolic-ctf-agents-working",
+  "limitations": [
+    "Two training seeds, no confirmatory significance claim",
+    "Saved neural checkpoints; inspect inputs for training method",
+    "One-step local bounds gate, not full LTL mission enforcement",
+    "Deadlocks shorten exposure and can inflate common reward"
+  ]
+}

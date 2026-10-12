@@ -1,0 +1,6 @@
+{
+  "status": "technical failure before any evaluation",
+  "reason": "Windows path limit during source snapshot copy",
+  "replacement": "tight-smoke",
+  "results_measured": false
+}

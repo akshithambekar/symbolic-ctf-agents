@@ -21,7 +21,7 @@ def main():
     for command in ('watch','replay'):
         viewer=sub.add_parser(command)
         if command=='watch':
-            viewer.add_argument('policy',help='policy.zip or oracle')
+            viewer.add_argument('policy',help='policy.zip, oracle, or tactics')
             viewer.add_argument('--scenario',choices=['standard','wide','narrow'])
             viewer.add_argument('--opponent',choices=['static','patrol','chase'])
             viewer.add_argument('--team-size',type=int,choices=[1,2,3])

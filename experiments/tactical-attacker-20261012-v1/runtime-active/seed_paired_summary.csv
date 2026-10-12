@@ -1,0 +1,3 @@
+training_seed,delta_capture_rate,delta_pickup_rate,delta_tag_rate,delta_out_of_bounds_episode_rate,delta_mean_common_reward,delta_mean_duration
+0,0.0,0.0,0.0,-0.5,0.7166666666666544,-5.0
+1,0.0,0.0,0.0,-0.5,0.7166666666666544,-5.0

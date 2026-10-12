@@ -5,6 +5,7 @@ import json
 import shutil
 import sys
 from pathlib import Path
+from itertools import product
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -16,22 +17,23 @@ def analyze(directory):
     directory = Path(directory)
     protocol = json.loads((directory / "protocol.json").read_text())
     rows = [json.loads(line) for line in (directory / "episodes.jsonl").read_text().splitlines()]
-    keys = ("training_seed", "scenario", "opponent", "evaluation_seed")
+    has_starts = "start_mode" in rows[0]
+    starts = protocol.get("start_modes", ["standard"])
+    keys = ("training_seed", "scenario", "opponent", "evaluation_seed") + (("start_mode",) if has_starts else ())
     pairs = {}
     for row in rows:
         key = tuple(row[k] for k in keys)
         if row["arm"] in pairs.setdefault(key, {}): raise ValueError("Duplicate episode")
         pairs[key][row["arm"]] = row
-    expected = len(protocol["training_seeds"]) * len(protocol["evaluation_seeds"]) * len(protocol["scenarios"]) * len(protocol["opponents"])
+    expected = len(protocol["training_seeds"]) * len(protocol["evaluation_seeds"]) * len(protocol["scenarios"]) * len(protocol["opponents"]) * len(starts)
     assert len(pairs) == expected and len(rows) == expected * 2
     assert all(set(pair) == set(protocol["arms"]) for pair in pairs.values())
-    for seed in protocol["training_seeds"]:
-        for scenario in protocol["scenarios"]:
-            for opponent in protocol["opponents"]:
-                prefix = directory / "configs" / f"seed{seed}" / f"{scenario}-{opponent}"
-                off = json.loads(Path(str(prefix) + "-unshielded.json").read_text())
-                on = json.loads(Path(str(prefix) + "-runtime_bounds_shield.json").read_text())
-                assert {**off, "shield": True} == on
+    for seed, scenario, opponent, start_mode in product(protocol["training_seeds"], protocol["scenarios"], protocol["opponents"], starts):
+        prefix = directory / "configs" / f"seed{seed}" / f"{scenario}-{opponent}"
+        if protocol.get("config_layout") == "with-start-mode": prefix = Path(str(prefix) + f"-{start_mode}")
+        off = json.loads(Path(str(prefix) + "-unshielded.json").read_text(encoding="utf-8"))
+        on = json.loads(Path(str(prefix) + "-runtime_bounds_shield.json").read_text(encoding="utf-8"))
+        assert {**off, "shield": True} == on
     traces = [json.loads(line) for line in (directory / "traces.jsonl").read_text().splitlines()]
     by_trace = {(tuple(r[k] for k in keys), r["arm"]): r for r in traces}
     identical = 0
@@ -44,11 +46,9 @@ def analyze(directory):
     totals = {arm: summarize([r for r in rows if r["arm"] == arm]) for arm in protocol["arms"]}
     cells = []
     seed_rows = []
-    for scenario in protocol["scenarios"]:
-        for opponent in protocol["opponents"]:
-            for arm in protocol["arms"]:
-                subset = [r for r in rows if (r["scenario"], r["opponent"], r["arm"]) == (scenario, opponent, arm)]
-                cells.append({"scenario": scenario, "opponent": opponent, "arm": arm, **summarize(subset)})
+    for scenario, opponent, start_mode, arm in product(protocol["scenarios"], protocol["opponents"], starts, protocol["arms"]):
+        subset = [r for r in rows if (r["scenario"], r["opponent"], r.get("start_mode", "standard"), r["arm"]) == (scenario, opponent, start_mode, arm)]
+        cells.append({"scenario": scenario, "opponent": opponent, "start_mode": start_mode, "arm": arm, **summarize(subset)})
     for seed in protocol["training_seeds"]:
         subsets = {arm: summarize([r for r in rows if r["training_seed"] == seed and r["arm"] == arm]) for arm in protocol["arms"]}
         seed_rows.append({"training_seed": seed, **{f"delta_{k}": subsets[protocol["arms"][1]][k] - subsets[protocol["arms"][0]][k]
@@ -56,15 +56,15 @@ def analyze(directory):
     csv_rows(directory / "cell_summary.csv", cells)
     csv_rows(directory / "seed_paired_summary.csv", seed_rows)
     lines = ["# Post-run analysis: paired runtime-only bounds shield", "",
-        f"Completed {len(rows)} episodes, {expected} matched pairs, {len(protocol['training_seeds'])} independently trained checkpoints. Both arms use the same saved patrol-trained neural policies, deterministic action selection, seeds, maps, opponents, and evaluation horizon; only the runtime gate differs. No retraining or guidance features were introduced.", "",
-        "| Map | Opponent | Arm | Captures / episodes | Pickup % | Territory % | Tag % | OOB % | Deadlock % | Common reward |", "|---|---|---|---:|---:|---:|---:|---:|---:|---:|"]
+        f"Completed {len(rows)} episodes, {expected} matched pairs, {len(protocol['training_seeds'])} independently trained checkpoints. Both arms use the same saved unshielded neural checkpoints (see input config.json for the training method), deterministic action selection, seeds, maps, opponents, and evaluation horizon; only the runtime gate differs. No retraining or guidance features were introduced.", "",
+        "| Map | Opponent | Starts | Arm | Captures / episodes | Pickup % | Territory % | Tag % | OOB % | Deadlock % | Common reward |", "|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|"]
     for s in cells:
-        lines.append(f"| {s['scenario']} | {s['opponent']} | {s['arm']} | {s['captures']}/{s['episodes']} | {100*s['pickup_rate']:.1f} | {100*s['enemy_territory_rate']:.1f} | {100*s['tag_rate']:.1f} | {100*s['out_of_bounds_episode_rate']:.1f} | {100*s['deadlock_rate']:.1f} | {s['mean_common_reward']:.3f} |")
+        lines.append(f"| {s['scenario']} | {s['opponent']} | {s['start_mode']} | {s['arm']} | {s['captures']}/{s['episodes']} | {100*s['pickup_rate']:.1f} | {100*s['enemy_territory_rate']:.1f} | {100*s['tag_rate']:.1f} | {100*s['out_of_bounds_episode_rate']:.1f} | {100*s['deadlock_rate']:.1f} | {s['mean_common_reward']:.3f} |")
     on = totals["runtime_bounds_shield"]
     lines += ["", "## Intervention evidence", "", f"The shield performed {on['checks']} successor checks, substituted {on['interventions']} actions, and recorded {on['offensive_interventions']} interventions in enemy-territory/carrier states, {on['near_flag_interventions']} near the flag, and {on['carrying_interventions']} while carrying. {identical}/{expected} pairs had no shield events and identical recorded action/state trajectories."]
     if on["interventions"] == 0 and on["deadlock_rate"] == 0:
-        lines += ["", "The shield was dormant throughout this sample. Both checkpoints already avoided the checked bounds failures. Consequently this study does not estimate how shielding changes behavior when an unsafe proposal occurs. It establishes no safety advantage, no offensive benefit, and no shield-caused suppression of offensive actions. If a policy fails to approach the flag before filtering, a safety filter alone supplies no task-learning signal."]
-    lines += ["", "## Limits and next useful test", "", "This is exploratory with two training seeds. Held-out episodes are paired observations within training replicates, not extra independent training seeds. These policies were trained against patrol; static/chase and wider/narrower arenas are transfer evaluations. There are no successful capture times to compare when capture counts are zero. Deadlocks and numerical termination are explicitly recorded because shorter exposure can improve common reward without improving control.", "", "Before spending more evaluation budget, obtain a conventionally trained checkpoint that demonstrates offensive progress and inspect whether it ever proposes unsafe boundary actions. Reuse that same checkpoint and held-out initial conditions with the gate off/on. A separate, clearly labeled boundary-stress evaluation could assess intervention effectiveness; it would not replace task-level performance testing.", "", "## Integrity", "", "All expected pairs and configurations were checked. Frozen source and simulator hashes, saved model weights and training configurations, raw metrics, trajectories, and intervention events accompany this analysis. Earlier Phase 2/3 results are unchanged. Timing is diagnostic wall-clock measurement, not a controlled performance benchmark."]
+        lines += ["", "The shield was dormant throughout this sample. The checkpoints already avoided the checked bounds failures. Consequently this study does not estimate how shielding changes behavior when an unsafe proposal occurs. It establishes no safety advantage, no offensive benefit, and no shield-caused suppression of offensive actions."]
+    lines += ["", "## Limits and next useful test", "", "This is exploratory with two training seeds. Held-out episodes are paired observations within training replicates, not extra independent training seeds. The training method and opponent are preserved in inputs/. Any new map, opponent, or boundary start is a transfer/stress condition; boundary starts are engineered exposure probes and are not pooled with ordinary starts for task-performance claims. Capture time is computed only among successful episodes. Deadlocks and numerical termination are explicitly recorded because shorter exposure can improve common reward without improving control.", "", "Before spending more evaluation budget, verify offensive capability in the saved checkpoint and inspect whether it ever proposes unsafe boundary actions. Reuse that same checkpoint and held-out initial conditions with the gate off/on. A separate, clearly labeled boundary-stress evaluation could assess intervention effectiveness; it would not replace task-level performance testing.", "", "## Integrity", "", "All expected pairs and configurations were checked. Frozen source and simulator hashes, saved model weights and training configurations, raw metrics, trajectories, and intervention events accompany this analysis. Earlier Phase 2/3 results are unchanged. Timing is diagnostic wall-clock measurement, not a controlled performance benchmark."]
     (directory / "ANALYSIS.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     shutil.copy2(__file__, directory / "analysis_source.py")
     save(directory / "analysis_provenance.json", {"script_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),

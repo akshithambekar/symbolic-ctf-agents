@@ -1,0 +1,13 @@
+scenario,opponent,start_mode,arm,episodes,captures,capture_rate,pickup_rate,enemy_territory_rate,flag_vicinity_rate,mean_min_flag_distance,mean_common_reward,tag_rate,mean_tags,out_of_bounds_episode_rate,mean_out_of_bounds_steps,mean_rule_violation_steps,ltlf_satisfaction_rate,mean_capture_time_successes,mean_duration,mean_evaluation_wall_seconds,deadlock_rate,numerical_termination_rate,interventions,checks,intervention_frequency,offensive_interventions,near_flag_interventions,carrying_interventions
+standard,static,boundary_lower,unshielded,6,6,1.0,1.0,1.0,1.0,4.298840710607904,20.88,0.0,0.0,0.0,0.0,0.0,1.0,112.0,112.0,0.7299340166694795,0.0,0.0,0,0,0.0,0,0,0
+standard,static,boundary_lower,runtime_bounds_shield,6,6,1.0,1.0,1.0,1.0,4.298840710607904,20.88,0.0,0.0,0.0,0.0,0.0,1.0,112.0,112.0,1.1371079833285573,0.0,0.0,0,672,0.0,0,0,0
+standard,static,boundary_upper,unshielded,6,6,1.0,1.0,1.0,1.0,3.75603400826937,20.679999999999996,0.0,0.0,0.0,0.0,0.0,1.0,132.0,132.0,0.8425063833322687,0.0,0.0,0,0,0.0,0,0,0
+standard,static,boundary_upper,runtime_bounds_shield,6,6,1.0,1.0,1.0,1.0,3.75603400826937,20.679999999999996,0.0,0.0,0.0,0.0,0.0,1.0,132.0,132.0,1.343378716672305,0.0,0.0,0,792,0.0,0,0,0
+standard,patrol,boundary_lower,unshielded,6,0,0.0,1.0,1.0,1.0,4.298840710607904,-4.066666666666659,1.0,1.8333333333333333,0.0,0.0,64.33333333333333,0.0,,240.0,1.722198266691218,0.0,0.0,0,0,0.0,0,0,0
+standard,patrol,boundary_lower,runtime_bounds_shield,6,0,0.0,1.0,1.0,1.0,4.298840710607904,-4.066666666666659,1.0,1.8333333333333333,0.0,0.0,64.33333333333333,0.0,,240.0,2.5871484333183616,0.0,0.0,0,1440,0.0,0,0,0
+standard,patrol,boundary_upper,unshielded,6,6,1.0,1.0,1.0,1.0,3.75603400826937,20.679999999999996,0.0,0.0,0.0,0.0,0.0,1.0,132.0,132.0,0.9145860333228484,0.0,0.0,0,0,0.0,0,0,0
+standard,patrol,boundary_upper,runtime_bounds_shield,6,6,1.0,1.0,1.0,1.0,3.75603400826937,20.679999999999996,0.0,0.0,0.0,0.0,0.0,1.0,132.0,132.0,1.404764516686555,0.0,0.0,0,792,0.0,0,0,0
+standard,chase,boundary_lower,unshielded,6,0,0.0,0.0,1.0,0.0,20.892128281636985,-6.399999999999956,1.0,2.0,0.0,0.0,95.0,0.0,,240.0,1.6992371833378759,0.0,0.0,0,0,0.0,0,0,0
+standard,chase,boundary_lower,runtime_bounds_shield,6,0,0.0,0.0,1.0,0.0,20.892128281636985,-6.399999999999956,1.0,2.0,0.0,0.0,95.0,0.0,,240.0,2.531301800025782,0.0,0.0,0,1440,0.0,0,0,0
+standard,chase,boundary_upper,unshielded,6,0,0.0,0.0,1.0,0.0,23.46208433974677,-6.399999999999967,1.0,2.0,0.0,0.0,96.33333333333333,0.0,,240.0,1.833441900011773,0.0,0.0,0,0,0.0,0,0,0
+standard,chase,boundary_upper,runtime_bounds_shield,6,0,0.0,0.0,1.0,0.0,23.46208433974677,-6.399999999999967,1.0,2.0,0.0,0.0,96.33333333333333,0.0,,240.0,2.4922975166506753,0.0,0.0,0,1440,0.0,0,0,0

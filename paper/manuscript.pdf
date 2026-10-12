@@ -1509,7 +1509,7 @@ endobj
 endobj
 145 0 obj
 <<
-/Length 16820     
+/Length 16870     
 >>
 stream
 0 g 0 G
@@ -2008,23 +2008,26 @@ BT
 0 g 0 G
  0 -10.959 Td [(language-model)-411(translation)-410(and)-411(from)-411(simulator)-411(prediction)]TJ
 0 g 0 G
+ET
+1 0 0 1 319.5 125.715 cm
+EMC
 0 g 0 G
- 0 -10.959 Td [(within)-250(the)-250(shield.)]TJ
+1 0 0 1 -319.5 -125.715 cm
+BT
+/F50 9.9626 Tf 319.5 114.756 Td [(within)-250(the)-250(shield.)]TJ
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 319.5 114.617 cm
-EMC
-1 0 0 1 0 -20.131 cm
+1 0 0 1 319.5 94.486 cm
 /H <</MCID 82>> BDC
 1 0 0 1 -319.5 -94.486 cm
 BT
 /F48 10.9091 Tf 319.5 94.486 Td [(T)92(emporal)-250(Mission)-250(Speci\002cation)]TJ
 0 g 0 G
-ET
-1 0 0 1 319.5 94.486 cm
-EMC
 0 g 0 G
+ET
+1 0 0 1 319.5 90 cm
+EMC
 0 g 0 G
 0 g 0 G
 
@@ -2702,7 +2705,7 @@ endobj
 endobj
 190 0 obj
 <<
-/Length 17869     
+/Length 17904     
 >>
 stream
 0 g 0 G
@@ -2967,20 +2970,23 @@ BT
 0 g 0 G
  0 -10.959 Td [(were:)-246(neural)-246(PPO,)-247(temporal)-246(state)-246(only)65(,)-246(re)25(w)10(ard)-246(shaping)-247(only)65(,)]TJ
 0 g 0 G
+0 g 0 G
+0 g 0 G
+0 g 0 G
 ET
-1 0 0 1 54 90 cm
-EMC
-0 g 0 G
-0 g 0 G
-0 g 0 G
-1 0 0 1 265.5 648 cm
+1 0 0 1 319.5 738 cm
 /P <</MCID 98>> BDC
 1 0 0 1 -319.5 -738 cm
 BT
 /F50 9.9626 Tf 319.5 728.037 Td [(shielding)-230(only)65(,)-230(and)-231(full)-230(guidance.)-230(Each)-230(method)-230(used)-231(shared-)]TJ
 0 g 0 G
+ET
+1 0 0 1 319.5 728.037 cm
+EMC
 0 g 0 G
- 0 -10.959 Td [(polic)15(y)-232(PPO)-231(and)-232(w)10(as)-231(trained)-232(ag)5(ainst)-232(the)-231(scripted)-232(chase)-232(oppo-)]TJ
+1 0 0 1 -319.5 -728.037 cm
+BT
+/F50 9.9626 Tf 319.5 717.078 Td [(polic)15(y)-232(PPO)-231(and)-232(w)10(as)-231(trained)-232(ag)5(ainst)-232(the)-231(scripted)-232(chase)-232(oppo-)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.958 Td [(nent)-250(on)-250(the)-250(standard)-250(map)-250(with)-250(\002)25(v)15(e)-250(training)-250(seeds.)]TJ
@@ -3208,12 +3214,10 @@ BT
 0 g 0 G
  0 -10.959 Td [(rather)-250(than)-250(a)-250(con\002rmatory)-250(comparison.)]TJ
 0 g 0 G
+0 g 0 G
+0 g 0 G
+0 g 0 G
 ET
-1 0 0 1 319.5 90 cm
-EMC
-0 g 0 G
-0 g 0 G
-0 g 0 G
 
 endstream
 endobj
@@ -3285,7 +3289,7 @@ endobj
 <</Type /StructElem /P 205 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 115>>] /S /P >>
 endobj
 209 0 obj
-<</Type /StructElem /P 205 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 116>> <</Type /MCR /Pg 202 0 R /MCID 117>>] /S /P >>
+<</Type /StructElem /P 205 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 116>>] /S /P >>
 endobj
 205 0 obj
 <</Type /StructElem /P 125 0 R /T (Translator Benchmark)/C /Normal  /K [ 206 0 R 207 0 R 208 0 R 209 0 R] /S /Subsection>>
@@ -3294,112 +3298,112 @@ endobj
 <</Type /StructElem /P 4 0 R /T (Methodology)/C /Normal  /K [ 126 0 R 127 0 R 136 0 R 141 0 R 170 0 R 173 0 R 178 0 R 184 0 R 200 0 R 205 0 R] /S /Section>>
 endobj
 211 0 obj
-<</Type /StructElem /P 210 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 118>>] /S /H   >>
+<</Type /StructElem /P 210 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 117>>] /S /H   >>
 endobj
 213 0 obj
-<</Type /StructElem /P 212 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 119>>] /S /H   >>
+<</Type /StructElem /P 212 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 118>>] /S /H   >>
 endobj
 215 0 obj
-<</Type /StructElem /P 214 0 R /C /Normal /K [<</Type /MCR /Pg 202 0 R /MCID 121>> <</Type /OBJR /Obj 216 0 R>>] /S /Reference>>
+<</Type /StructElem /P 214 0 R /C /Normal /K [<</Type /MCR /Pg 202 0 R /MCID 120>> <</Type /OBJR /Obj 216 0 R>>] /S /Reference>>
 endobj
 214 0 obj
-<</Type /StructElem /P 212 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 120>>215 0 R   <</Type /MCR /Pg 202 0 R /MCID 122>>] /S /P >>
+<</Type /StructElem /P 212 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 119>>215 0 R   <</Type /MCR /Pg 202 0 R /MCID 121>>] /S /P >>
 endobj
 217 0 obj
-<</Type /StructElem /P 212 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 123>>] /S /P >>
+<</Type /StructElem /P 212 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 122>>] /S /P >>
 endobj
 222 0 obj
-<</Type /StructElem /P 221 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 124>>] /S /TD   >>
+<</Type /StructElem /P 221 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 123>>] /S /TD   >>
 endobj
 223 0 obj
-<</Type /StructElem /P 221 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 125>>] /S /TD   >>
+<</Type /StructElem /P 221 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 124>>] /S /TD   >>
 endobj
 224 0 obj
-<</Type /StructElem /P 221 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 126>>] /S /TD   >>
+<</Type /StructElem /P 221 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 125>>] /S /TD   >>
 endobj
 225 0 obj
-<</Type /StructElem /P 221 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 127>>] /S /TD   >>
+<</Type /StructElem /P 221 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 126>>] /S /TD   >>
 endobj
 221 0 obj
 <</Type /StructElem /P 220 0 R /C /Normal  /K [ 222 0 R 223 0 R 224 0 R 225 0 R] /S /TR>>
 endobj
 227 0 obj
-<</Type /StructElem /P 226 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 128>>] /S /TD   >>
+<</Type /StructElem /P 226 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 127>>] /S /TD   >>
 endobj
 228 0 obj
-<</Type /StructElem /P 226 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 129>>] /S /TD   >>
+<</Type /StructElem /P 226 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 128>>] /S /TD   >>
 endobj
 229 0 obj
-<</Type /StructElem /P 226 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 130>>] /S /TD   >>
+<</Type /StructElem /P 226 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 129>>] /S /TD   >>
 endobj
 230 0 obj
-<</Type /StructElem /P 226 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 131>>] /S /TD   >>
+<</Type /StructElem /P 226 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 130>>] /S /TD   >>
 endobj
 226 0 obj
 <</Type /StructElem /P 220 0 R /C /Normal  /K [ 227 0 R 228 0 R 229 0 R 230 0 R] /S /TR>>
 endobj
 232 0 obj
-<</Type /StructElem /P 231 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 132>>] /S /TD   >>
+<</Type /StructElem /P 231 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 131>>] /S /TD   >>
 endobj
 233 0 obj
-<</Type /StructElem /P 231 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 133>>] /S /TD   >>
+<</Type /StructElem /P 231 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 132>>] /S /TD   >>
 endobj
 234 0 obj
-<</Type /StructElem /P 231 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 134>>] /S /TD   >>
+<</Type /StructElem /P 231 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 133>>] /S /TD   >>
 endobj
 235 0 obj
-<</Type /StructElem /P 231 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 135>>] /S /TD   >>
+<</Type /StructElem /P 231 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 134>>] /S /TD   >>
 endobj
 231 0 obj
 <</Type /StructElem /P 220 0 R /C /Normal  /K [ 232 0 R 233 0 R 234 0 R 235 0 R] /S /TR>>
 endobj
 237 0 obj
-<</Type /StructElem /P 236 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 136>>] /S /TD   >>
+<</Type /StructElem /P 236 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 135>>] /S /TD   >>
 endobj
 238 0 obj
-<</Type /StructElem /P 236 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 137>>] /S /TD   >>
+<</Type /StructElem /P 236 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 136>>] /S /TD   >>
 endobj
 239 0 obj
-<</Type /StructElem /P 236 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 138>>] /S /TD   >>
+<</Type /StructElem /P 236 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 137>>] /S /TD   >>
 endobj
 240 0 obj
-<</Type /StructElem /P 236 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 139>>] /S /TD   >>
+<</Type /StructElem /P 236 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 138>>] /S /TD   >>
 endobj
 236 0 obj
 <</Type /StructElem /P 220 0 R /C /Normal  /K [ 237 0 R 238 0 R 239 0 R 240 0 R] /S /TR>>
 endobj
 242 0 obj
-<</Type /StructElem /P 241 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 140>>] /S /TD   >>
+<</Type /StructElem /P 241 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 139>>] /S /TD   >>
 endobj
 243 0 obj
-<</Type /StructElem /P 241 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 141>>] /S /TD   >>
+<</Type /StructElem /P 241 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 140>>] /S /TD   >>
 endobj
 244 0 obj
-<</Type /StructElem /P 241 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 142>>] /S /TD   >>
+<</Type /StructElem /P 241 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 141>>] /S /TD   >>
 endobj
 245 0 obj
-<</Type /StructElem /P 241 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 143>>] /S /TD   >>
+<</Type /StructElem /P 241 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 142>>] /S /TD   >>
 endobj
 241 0 obj
 <</Type /StructElem /P 220 0 R /C /Normal  /K [ 242 0 R 243 0 R 244 0 R 245 0 R] /S /TR>>
 endobj
 247 0 obj
-<</Type /StructElem /P 246 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 144>>] /S /TD   >>
+<</Type /StructElem /P 246 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 143>>] /S /TD   >>
 endobj
 248 0 obj
-<</Type /StructElem /P 246 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 145>>] /S /TD   >>
+<</Type /StructElem /P 246 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 144>>] /S /TD   >>
 endobj
 249 0 obj
-<</Type /StructElem /P 246 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 146>>] /S /TD   >>
+<</Type /StructElem /P 246 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 145>>] /S /TD   >>
 endobj
 250 0 obj
-<</Type /StructElem /P 246 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 147>>] /S /TD   >>
+<</Type /StructElem /P 246 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 146>>] /S /TD   >>
 endobj
 246 0 obj
 <</Type /StructElem /P 220 0 R /C /Normal  /K [ 247 0 R 248 0 R 249 0 R 250 0 R] /S /TR>>
 endobj
 252 0 obj
-<</Type /StructElem /P 251 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 148>>] /S /TD   >>
+<</Type /StructElem /P 251 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 147>>] /S /TD   >>
 endobj
 251 0 obj
 <</Type /StructElem /P 220 0 R /C /Normal  /K [ 252 0 R] /S /TR>>
@@ -3411,7 +3415,7 @@ endobj
 <</Type /StructElem /P 218 0 R /C /Normal  /K [ 220 0 R] /S /Table>>
 endobj
 253 0 obj
-<</Type /StructElem /P 218 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 149>>] /S /Caption   >>
+<</Type /StructElem /P 218 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 148>>] /S /Caption   >>
 endobj
 218 0 obj
 <</Type /StructElem /P 212 0 R /T (Table)/C /Normal  /K [ 219 0 R 253 0 R] /S /Float>>
@@ -3420,22 +3424,23 @@ endobj
 <</Type /StructElem /P 210 0 R /T (Frozen 3-vs-3 Ablation)/C /Normal  /K [ 213 0 R 214 0 R 217 0 R 218 0 R] /S /Subsection>>
 endobj
 255 0 obj
-<</Type /StructElem /P 254 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 150>>] /S /H   >>
+<</Type /StructElem /P 254 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 149>>] /S /H   >>
 endobj
 256 0 obj
-<</Type /StructElem /P 254 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 151>>] /S /P >>
+<</Type /StructElem /P 254 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 150>>] /S /P >>
 endobj
 257 0 obj
-<</Type /StructElem /P 254 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 152>>] /S /P >>
+<</Type /StructElem /P 254 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 151>>] /S /P >>
 endobj
 260 0 obj
 <<
-/Length 20808     
+/Length 20778     
 >>
 stream
 0 g 0 G
 0 g 0 G
 1 0 0 1 63.963 728.037 cm
+EMC
 /P <</MCID 109>> BDC
 1 0 0 1 -63.963 -728.037 cm
 BT
@@ -3444,8 +3449,13 @@ BT
 0 g 0 G
  -9.963 -10.959 Td [(distance)-358(to)-358(the)-357(enemy)-358(\003ag,)-358(tags)-358(before)-358(pickup,)-358(time)-358(spent)]TJ
 0 g 0 G
+ET
+1 0 0 1 54 717.078 cm
+EMC
 0 g 0 G
- 0 -10.958 Td [(in)-223(enemy)-223(territory)65(,)-223(and)-223(minimum)-223(distance)-223(to)-223(the)-223(defender)55(.)-224(A)]TJ
+1 0 0 1 -54 -717.078 cm
+BT
+/F50 9.9626 Tf 54 706.12 Td [(in)-223(enemy)-223(territory)65(,)-223(and)-223(minimum)-223(distance)-223(to)-223(the)-223(defender)55(.)-224(A)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(pre-de\002ned)-334(screen)-333(required)-334(at)-333(least)-334(a)-334(10%)-333(pickup)-334(rate)-334(and)]TJ
@@ -3461,9 +3471,7 @@ BT
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 54 662.169 cm
-EMC
-1 0 0 1 0 -20.436 cm
+1 0 0 1 54 641.733 cm
 /H <</MCID 110>> BDC
 1 0 0 1 -54 -641.733 cm
 BT
@@ -3655,20 +3663,18 @@ BT
 0 g 0 G
  0 -10.959 Td [(and)-486(paraphrase)-485(equi)25(v)25(alence.)-487(The)-486(reference)-486(formulas)-486(had)]TJ
 0 g 0 G
+0 g 0 G
+0 g 0 G
+0 g 0 G
+ 265.5 638.037 Td [(not)-285(yet)-285(recei)25(v)15(ed)-286(independent)-285(human)-285(appro)15(v)25(al,)-285(so)-286(semantic-)]TJ
+0 g 0 G
 ET
-1 0 0 1 54 90 cm
+1 0 0 1 319.5 728.037 cm
 EMC
 0 g 0 G
-0 g 0 G
-0 g 0 G
-1 0 0 1 265.5 648 cm
-/P <</MCID 117>> BDC
-1 0 0 1 -319.5 -738 cm
+1 0 0 1 -319.5 -728.037 cm
 BT
-/F50 9.9626 Tf 319.5 728.037 Td [(not)-285(yet)-285(recei)25(v)15(ed)-286(independent)-285(human)-285(appro)15(v)25(al,)-285(so)-286(semantic-)]TJ
-0 g 0 G
-0 g 0 G
- 0 -10.959 Td [(correctness)-302(results)-301(should)-302(be)-302(interpreted)-301(as)-302(agreement)-302(with)]TJ
+/F50 9.9626 Tf 319.5 717.078 Td [(correctness)-302(results)-301(should)-302(be)-302(interpreted)-301(as)-302(agreement)-302(with)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.958 Td [(the)-251(project')55(s)-251(reference)-251(interpretation)-251(rather)-251(than)-251(as)-251(a)-251(uni)25(v)15(er)20(-)]TJ
@@ -3678,10 +3684,8 @@ BT
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 319.5 693.004 cm
-EMC
-1 0 0 1 100.654 -20.798 cm
-/H <</MCID 118>> BDC
+1 0 0 1 420.154 672.206 cm
+/H <</MCID 117>> BDC
 1 0 0 1 -420.154 -672.206 cm
 BT
 /F48 11.9552 Tf 420.154 672.206 Td [(Results)]TJ
@@ -3691,7 +3695,7 @@ ET
 1 0 0 1 319.5 669.025 cm
 EMC
 1 0 0 1 0 -11.801 cm
-/H <</MCID 119>> BDC
+/H <</MCID 118>> BDC
 1 0 0 1 -319.5 -657.224 cm
 BT
 /F48 10.9091 Tf 319.5 657.224 Td [(Fr)18(ozen)-250(3-vs-3)-250(Ablation)]TJ
@@ -3701,14 +3705,14 @@ ET
 1 0 0 1 319.5 654.058 cm
 EMC
 1 0 0 1 0 -10.819 cm
-/P <</MCID 120>> BDC
+/P <</MCID 119>> BDC
 1 0 0 1 -319.5 -643.239 cm
 BT
 /F50 9.9626 Tf 319.5 643.239 Td [(T)80(able)]TJ
 ET
 1 0 0 1 344.305 643.239 cm
 EMC
-/Reference <</MCID 121>> BDC
+/Reference <</MCID 120>> BDC
 0 g 0 G
 1 0 0 1 -344.305 -643.239 cm
 BT
@@ -3717,7 +3721,7 @@ BT
 ET
 1 0 0 1 349.287 643.239 cm
 EMC
-/P <</MCID 122>> BDC
+/P <</MCID 121>> BDC
 1 0 0 1 -349.287 -643.239 cm
 BT
 /F50 9.9626 Tf 352.204 643.239 Td [(summarizes)-293(the)-293(main)-293(result)1(s)-293(of)-293(the)-293(frozen)-293(matched)]TJ
@@ -3744,7 +3748,7 @@ BT
 ET
 1 0 0 1 329.463 566.514 cm
 EMC
-/P <</MCID 123>> BDC
+/P <</MCID 122>> BDC
 1 0 0 1 -329.463 -566.514 cm
 BT
 /F50 9.9626 Tf 329.463 566.514 Td [(Despite)-282(the)-282(absence)-282(of)-282(captures,)-282(the)-282(full-guidance)-282(condi-)]TJ
@@ -3791,7 +3795,7 @@ ET
 EMC
 0 g 0 G
 1 0 0 1 0 -11.98 cm
-/TD <</MCID 124>> BDC
+/TD <</MCID 123>> BDC
 1 0 0 1 1.636 0 cm
 /Artifact <</Type /Layout>> BDC
 q
@@ -3807,7 +3811,7 @@ ET
 1 0 0 1 355.257 415.54 cm
 EMC
 1 0 0 1 37.783 0 cm
-/TD <</MCID 125>> BDC
+/TD <</MCID 124>> BDC
 1 0 0 1 -393.04 -415.54 cm
 BT
 /F50 8.9664 Tf 395.282 415.54 Td [(Captures)]TJ
@@ -3815,7 +3819,7 @@ ET
 1 0 0 1 429.399 415.54 cm
 EMC
 1 0 0 1 7.97 0 cm
-/TD <</MCID 126>> BDC
+/TD <</MCID 125>> BDC
 1 0 0 1 -437.369 -415.54 cm
 BT
 /F50 8.9664 Tf 439.61 415.54 Td [(Mean)-250(Re)25(w)10(ard)]TJ
@@ -3823,14 +3827,14 @@ ET
 1 0 0 1 492.081 415.54 cm
 EMC
 1 0 0 1 7.97 0 cm
-/TD <</MCID 127>> BDC
+/TD <</MCID 126>> BDC
 1 0 0 1 -500.051 -415.54 cm
 BT
 /F50 8.9664 Tf 502.293 415.54 Td [(T)80(ag)-250(Episodes)]TJ
 ET
 1 0 0 1 552.379 415.54 cm
 EMC
-/TD <</MCID 128>> BDC
+/TD <</MCID 127>> BDC
 1 0 0 1 -231.243 -2.988 cm
 /Artifact <</Type /Layout>> BDC
 q
@@ -3846,7 +3850,7 @@ ET
 1 0 0 1 351.76 405.179 cm
 EMC
 1 0 0 1 48.247 0 cm
-/TD <</MCID 129>> BDC
+/TD <</MCID 128>> BDC
 1 0 0 1 -400.007 -405.179 cm
 BT
 /F50 8.9664 Tf 402.248 405.179 Td [(1/1350)]TJ
@@ -3854,7 +3858,7 @@ ET
 1 0 0 1 429.399 405.179 cm
 EMC
 1 0 0 1 35.039 0 cm
-/TD <</MCID 130>> BDC
+/TD <</MCID 129>> BDC
 1 0 0 1 -464.438 -405.179 cm
 BT
 /F50 8.9664 Tf 466.679 405.179 Td [(-2.650)]TJ
@@ -3862,14 +3866,14 @@ ET
 1 0 0 1 492.081 405.179 cm
 EMC
 1 0 0 1 32.654 0 cm
-/TD <</MCID 131>> BDC
+/TD <</MCID 130>> BDC
 1 0 0 1 -524.735 -405.179 cm
 BT
 /F50 8.9664 Tf 526.977 405.179 Td [(2.81%)]TJ
 ET
 1 0 0 1 552.379 405.179 cm
 EMC
-/TD <</MCID 132>> BDC
+/TD <</MCID 131>> BDC
 1 0 0 1 -552.379 -405.179 cm
 BT
 /F50 8.9664 Tf 325.121 395.217 Td [(T)70(emporal)-250(state)]TJ
@@ -3877,7 +3881,7 @@ ET
 1 0 0 1 380.273 395.217 cm
 EMC
 1 0 0 1 19.734 0 cm
-/TD <</MCID 133>> BDC
+/TD <</MCID 132>> BDC
 1 0 0 1 -400.007 -395.217 cm
 BT
 /F50 8.9664 Tf 402.248 395.217 Td [(3/1350)]TJ
@@ -3885,7 +3889,7 @@ ET
 1 0 0 1 429.399 395.217 cm
 EMC
 1 0 0 1 35.039 0 cm
-/TD <</MCID 134>> BDC
+/TD <</MCID 133>> BDC
 1 0 0 1 -464.438 -395.217 cm
 BT
 /F50 8.9664 Tf 466.679 395.217 Td [(-2.600)]TJ
@@ -3893,14 +3897,14 @@ ET
 1 0 0 1 492.081 395.217 cm
 EMC
 1 0 0 1 32.654 0 cm
-/TD <</MCID 135>> BDC
+/TD <</MCID 134>> BDC
 1 0 0 1 -524.735 -395.217 cm
 BT
 /F50 8.9664 Tf 526.977 395.217 Td [(4.30%)]TJ
 ET
 1 0 0 1 552.379 395.217 cm
 EMC
-/TD <</MCID 136>> BDC
+/TD <</MCID 135>> BDC
 1 0 0 1 -552.379 -395.217 cm
 BT
 /F50 8.9664 Tf 325.121 385.254 Td [(Re)25(w)10(ard)-250(shaping)]TJ
@@ -3908,7 +3912,7 @@ ET
 1 0 0 1 385.07 385.254 cm
 EMC
 1 0 0 1 14.937 0 cm
-/TD <</MCID 137>> BDC
+/TD <</MCID 136>> BDC
 1 0 0 1 -400.007 -385.254 cm
 BT
 /F50 8.9664 Tf 402.248 385.254 Td [(0/1350)]TJ
@@ -3916,7 +3920,7 @@ ET
 1 0 0 1 429.399 385.254 cm
 EMC
 1 0 0 1 35.039 0 cm
-/TD <</MCID 138>> BDC
+/TD <</MCID 137>> BDC
 1 0 0 1 -464.438 -385.254 cm
 BT
 /F50 8.9664 Tf 466.679 385.254 Td [(-2.659)]TJ
@@ -3924,14 +3928,14 @@ ET
 1 0 0 1 492.081 385.254 cm
 EMC
 1 0 0 1 32.654 0 cm
-/TD <</MCID 139>> BDC
+/TD <</MCID 138>> BDC
 1 0 0 1 -524.735 -385.254 cm
 BT
 /F50 8.9664 Tf 526.977 385.254 Td [(8.15%)]TJ
 ET
 1 0 0 1 552.379 385.254 cm
 EMC
-/TD <</MCID 140>> BDC
+/TD <</MCID 139>> BDC
 1 0 0 1 -552.379 -385.254 cm
 BT
 /F50 8.9664 Tf 325.121 375.291 Td [(Shield)]TJ
@@ -3939,7 +3943,7 @@ ET
 1 0 0 1 350.281 375.291 cm
 EMC
 1 0 0 1 49.726 0 cm
-/TD <</MCID 141>> BDC
+/TD <</MCID 140>> BDC
 1 0 0 1 -400.007 -375.291 cm
 BT
 /F50 8.9664 Tf 402.248 375.291 Td [(0/1350)]TJ
@@ -3947,7 +3951,7 @@ ET
 1 0 0 1 429.399 375.291 cm
 EMC
 1 0 0 1 35.039 0 cm
-/TD <</MCID 142>> BDC
+/TD <</MCID 141>> BDC
 1 0 0 1 -464.438 -375.291 cm
 BT
 /F50 8.9664 Tf 466.679 375.291 Td [(-2.720)]TJ
@@ -3955,14 +3959,14 @@ ET
 1 0 0 1 492.081 375.291 cm
 EMC
 1 0 0 1 28.171 0 cm
-/TD <</MCID 143>> BDC
+/TD <</MCID 142>> BDC
 1 0 0 1 -520.252 -375.291 cm
 BT
 /F50 8.9664 Tf 522.494 375.291 Td [(13.11%)]TJ
 ET
 1 0 0 1 552.379 375.291 cm
 EMC
-/TD <</MCID 144>> BDC
+/TD <</MCID 143>> BDC
 1 0 0 1 -552.379 -375.291 cm
 BT
 /F50 8.9664 Tf 325.122 365.329 Td [(Full)-250(guidance)]TJ
@@ -3970,7 +3974,7 @@ ET
 1 0 0 1 376.427 365.329 cm
 EMC
 1 0 0 1 23.58 0 cm
-/TD <</MCID 145>> BDC
+/TD <</MCID 144>> BDC
 1 0 0 1 -400.007 -365.329 cm
 BT
 /F50 8.9664 Tf 402.248 365.329 Td [(0/1350)]TJ
@@ -3978,7 +3982,7 @@ ET
 1 0 0 1 429.399 365.329 cm
 EMC
 1 0 0 1 35.039 0 cm
-/TD <</MCID 146>> BDC
+/TD <</MCID 145>> BDC
 1 0 0 1 -464.438 -365.329 cm
 BT
 /F50 8.9664 Tf 466.679 365.329 Td [(-2.383)]TJ
@@ -3986,14 +3990,14 @@ ET
 1 0 0 1 492.081 365.329 cm
 EMC
 1 0 0 1 32.654 0 cm
-/TD <</MCID 147>> BDC
+/TD <</MCID 146>> BDC
 1 0 0 1 -524.735 -365.329 cm
 BT
 /F50 8.9664 Tf 526.977 365.329 Td [(0.37%)]TJ
 ET
 1 0 0 1 552.379 365.329 cm
 EMC
-/TD <</MCID 148>> BDC
+/TD <</MCID 147>> BDC
 1 0 0 1 -231.243 -2.989 cm
 /Artifact <</Type /Layout>> BDC
 q
@@ -4005,7 +4009,7 @@ EMC
 1 0 0 1 235.228 23.263 cm
 EMC
 1 0 0 1 -236.864 -33.225 cm
-/Caption <</MCID 149>> BDC
+/Caption <</MCID 148>> BDC
 1 0 0 1 -319.5 -351.979 cm
 BT
 /F50 9.9626 Tf 319.5 334.225 Td [(T)80(able)-207(1:)-208(Frozen)-207(matched)-207(3-vs-3)-207(ablation.)-208(Mean)-207(re)25(w)10(ard)-207(is)-208(the)]TJ 0 -10.959 Td [(\002x)15(ed)-193(common)-193(task)-192(re)25(w)10(ard)-193(used)-193(for)-193(cross-method)-193(e)25(v)25(aluation.)]TJ
@@ -4014,7 +4018,7 @@ ET
 EMC
 0 g 0 G
 1 0 0 1 0 -32.815 cm
-/H <</MCID 150>> BDC
+/H <</MCID 149>> BDC
 1 0 0 1 -319.5 -290.312 cm
 BT
 /F48 10.9091 Tf 319.5 290.312 Td [(P)10(atr)18(ol)-250(Ev)10(aluation)]TJ
@@ -4024,7 +4028,7 @@ ET
 1 0 0 1 319.5 287.145 cm
 EMC
 1 0 0 1 0 -10.819 cm
-/P <</MCID 151>> BDC
+/P <</MCID 150>> BDC
 1 0 0 1 -319.5 -276.326 cm
 BT
 /F50 9.9626 Tf 319.5 276.326 Td [(The)-384(staged)-385(patrol)-384(study)-384(produced)-385(a)-384(substantially)-385(dif)25(ferent)]TJ
@@ -4048,7 +4052,7 @@ BT
 ET
 1 0 0 1 329.463 210.56 cm
 EMC
-/P <</MCID 152>> BDC
+/P <</MCID 151>> BDC
 1 0 0 1 -329.463 -210.56 cm
 BT
 /F50 9.9626 Tf 329.463 210.56 Td [(The)-191(strongest)-190(result)-191(w)10(as)-190(obtained)-191(after)-190(remo)15(ving)-191(the)-191(train-)]TJ
@@ -4078,7 +4082,7 @@ BT
 ET
 1 0 0 1 329.463 122.877 cm
 EMC
-/P <</MCID 153>> BDC
+/P <</MCID 152>> BDC
 1 0 0 1 -329.463 -122.877 cm
 BT
 /F50 9.9626 Tf 329.463 122.877 Td [(The)-552(impro)15(v)15(ement)-552(came)-551(with)-552(a)-552(change)-552(in)-552(constraint-)]TJ
@@ -4092,12 +4096,10 @@ BT
 0 g 0 G
  0 -10.959 Td [(measured)-463(violations)-462(in)-463(approximately)-463(8.7%,)-463(whereas)-463(the)]TJ
 0 g 0 G
+0 g 0 G
+0 g 0 G
+0 g 0 G
 ET
-1 0 0 1 319.5 90 cm
-EMC
-0 g 0 G
-0 g 0 G
-0 g 0 G
 
 endstream
 endobj
@@ -4162,235 +4164,235 @@ endobj
 >>
 endobj
 258 0 obj
-<</Type /StructElem /P 254 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 153>> <</Type /MCR /Pg 268 0 R /MCID 154>>] /S /P >>
-endobj
-273 0 obj
-<</Type /StructElem /P 272 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 155>>] /S /TD   >>
-endobj
-274 0 obj
-<</Type /StructElem /P 272 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 156>>] /S /TD   >>
-endobj
-275 0 obj
-<</Type /StructElem /P 272 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 157>>] /S /TD   >>
+<</Type /StructElem /P 254 0 R /C /Normal /K [ <</Type /MCR /Pg 202 0 R /MCID 152>>] /S /P >>
 endobj
 272 0 obj
-<</Type /StructElem /P 271 0 R /C /Normal  /K [ 273 0 R 274 0 R 275 0 R] /S /TR>>
+<</Type /StructElem /P 271 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 153>>] /S /TD   >>
 endobj
-277 0 obj
-<</Type /StructElem /P 276 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 158>>] /S /TD   >>
+274 0 obj
+<</Type /StructElem /P 271 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 154>>] /S /TD   >>
 endobj
-278 0 obj
-<</Type /StructElem /P 276 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 159>>] /S /TD   >>
-endobj
-279 0 obj
-<</Type /StructElem /P 276 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 160>>] /S /TD   >>
-endobj
-276 0 obj
-<</Type /StructElem /P 271 0 R /C /Normal  /K [ 277 0 R 278 0 R 279 0 R] /S /TR>>
-endobj
-281 0 obj
-<</Type /StructElem /P 280 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 161>>] /S /TD   >>
-endobj
-282 0 obj
-<</Type /StructElem /P 280 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 162>>] /S /TD   >>
-endobj
-283 0 obj
-<</Type /StructElem /P 280 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 163>>] /S /TD   >>
-endobj
-280 0 obj
-<</Type /StructElem /P 271 0 R /C /Normal  /K [ 281 0 R 282 0 R 283 0 R] /S /TR>>
-endobj
-285 0 obj
-<</Type /StructElem /P 284 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 164>>] /S /TD   >>
-endobj
-286 0 obj
-<</Type /StructElem /P 284 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 165>>] /S /TD   >>
-endobj
-287 0 obj
-<</Type /StructElem /P 284 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 166>>] /S /TD   >>
-endobj
-284 0 obj
-<</Type /StructElem /P 271 0 R /C /Normal  /K [ 285 0 R 286 0 R 287 0 R] /S /TR>>
-endobj
-289 0 obj
-<</Type /StructElem /P 288 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 167>>] /S /TD   >>
-endobj
-290 0 obj
-<</Type /StructElem /P 288 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 168>>] /S /TD   >>
-endobj
-291 0 obj
-<</Type /StructElem /P 288 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 169>>] /S /TD   >>
-endobj
-288 0 obj
-<</Type /StructElem /P 271 0 R /C /Normal  /K [ 289 0 R 290 0 R 291 0 R] /S /TR>>
-endobj
-293 0 obj
-<</Type /StructElem /P 292 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 170>>] /S /TD   >>
-endobj
-292 0 obj
-<</Type /StructElem /P 271 0 R /C /Normal  /K [ 293 0 R] /S /TR>>
+275 0 obj
+<</Type /StructElem /P 271 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 155>>] /S /TD   >>
 endobj
 271 0 obj
-<</Type /StructElem /P 270 0 R /C /Normal  /K [ 272 0 R 276 0 R 280 0 R 284 0 R 288 0 R 292 0 R] /S /TBody>>
+<</Type /StructElem /P 270 0 R /C /Normal  /K [ 272 0 R 274 0 R 275 0 R] /S /TR>>
+endobj
+277 0 obj
+<</Type /StructElem /P 276 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 156>>] /S /TD   >>
+endobj
+278 0 obj
+<</Type /StructElem /P 276 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 157>>] /S /TD   >>
+endobj
+279 0 obj
+<</Type /StructElem /P 276 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 158>>] /S /TD   >>
+endobj
+276 0 obj
+<</Type /StructElem /P 270 0 R /C /Normal  /K [ 277 0 R 278 0 R 279 0 R] /S /TR>>
+endobj
+281 0 obj
+<</Type /StructElem /P 280 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 159>>] /S /TD   >>
+endobj
+282 0 obj
+<</Type /StructElem /P 280 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 160>>] /S /TD   >>
+endobj
+283 0 obj
+<</Type /StructElem /P 280 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 161>>] /S /TD   >>
+endobj
+280 0 obj
+<</Type /StructElem /P 270 0 R /C /Normal  /K [ 281 0 R 282 0 R 283 0 R] /S /TR>>
+endobj
+285 0 obj
+<</Type /StructElem /P 284 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 162>>] /S /TD   >>
+endobj
+286 0 obj
+<</Type /StructElem /P 284 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 163>>] /S /TD   >>
+endobj
+287 0 obj
+<</Type /StructElem /P 284 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 164>>] /S /TD   >>
+endobj
+284 0 obj
+<</Type /StructElem /P 270 0 R /C /Normal  /K [ 285 0 R 286 0 R 287 0 R] /S /TR>>
+endobj
+289 0 obj
+<</Type /StructElem /P 288 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 165>>] /S /TD   >>
+endobj
+290 0 obj
+<</Type /StructElem /P 288 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 166>>] /S /TD   >>
+endobj
+291 0 obj
+<</Type /StructElem /P 288 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 167>>] /S /TD   >>
+endobj
+288 0 obj
+<</Type /StructElem /P 270 0 R /C /Normal  /K [ 289 0 R 290 0 R 291 0 R] /S /TR>>
+endobj
+293 0 obj
+<</Type /StructElem /P 292 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 168>>] /S /TD   >>
+endobj
+292 0 obj
+<</Type /StructElem /P 270 0 R /C /Normal  /K [ 293 0 R] /S /TR>>
 endobj
 270 0 obj
-<</Type /StructElem /P 269 0 R /C /Normal  /K [ 271 0 R] /S /Table>>
-endobj
-294 0 obj
-<</Type /StructElem /P 269 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 171>>] /S /Caption   >>
+<</Type /StructElem /P 269 0 R /C /Normal  /K [ 271 0 R 276 0 R 280 0 R 284 0 R 288 0 R 292 0 R] /S /TBody>>
 endobj
 269 0 obj
-<</Type /StructElem /P 254 0 R /T (Table)/C /Normal  /K [ 270 0 R 294 0 R] /S /Float>>
+<</Type /StructElem /P 268 0 R /C /Normal  /K [ 270 0 R] /S /Table>>
+endobj
+294 0 obj
+<</Type /StructElem /P 268 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 169>>] /S /Caption   >>
+endobj
+268 0 obj
+<</Type /StructElem /P 254 0 R /T (Table)/C /Normal  /K [ 269 0 R 294 0 R] /S /Float>>
 endobj
 254 0 obj
-<</Type /StructElem /P 210 0 R /T (Patrol Evaluation)/C /Normal  /K [ 255 0 R 256 0 R 257 0 R 258 0 R 269 0 R] /S /Subsection>>
+<</Type /StructElem /P 210 0 R /T (Patrol Evaluation)/C /Normal  /K [ 255 0 R 256 0 R 257 0 R 258 0 R 268 0 R] /S /Subsection>>
 endobj
 296 0 obj
-<</Type /StructElem /P 295 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 172>>] /S /H   >>
+<</Type /StructElem /P 295 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 170>>] /S /H   >>
 endobj
 297 0 obj
-<</Type /StructElem /P 295 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 173>>] /S /P >>
+<</Type /StructElem /P 295 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 171>>] /S /P >>
 endobj
 298 0 obj
-<</Type /StructElem /P 295 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 174>>] /S /P >>
+<</Type /StructElem /P 295 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 172>>] /S /P >>
 endobj
 295 0 obj
 <</Type /StructElem /P 210 0 R /T (Chase Evaluation)/C /Normal  /K [ 296 0 R 297 0 R 298 0 R] /S /Subsection>>
 endobj
 300 0 obj
-<</Type /StructElem /P 299 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 175>>] /S /H   >>
+<</Type /StructElem /P 299 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 173>>] /S /H   >>
 endobj
 301 0 obj
-<</Type /StructElem /P 299 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 176>>] /S /P >>
+<</Type /StructElem /P 299 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 174>>] /S /P >>
 endobj
 302 0 obj
-<</Type /StructElem /P 299 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 177>>] /S /P >>
+<</Type /StructElem /P 299 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 175>>] /S /P >>
 endobj
 303 0 obj
-<</Type /StructElem /P 299 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 178>>] /S /P >>
+<</Type /StructElem /P 299 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 176>>] /S /P >>
 endobj
 299 0 obj
 <</Type /StructElem /P 210 0 R /T (Chase-Recovery Diagnostic)/C /Normal  /K [ 300 0 R 301 0 R 302 0 R 303 0 R] /S /Subsection>>
 endobj
 305 0 obj
-<</Type /StructElem /P 304 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 179>>] /S /H   >>
+<</Type /StructElem /P 304 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 177>>] /S /H   >>
 endobj
 306 0 obj
-<</Type /StructElem /P 304 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 180>> <</Type /MCR /Pg 268 0 R /MCID 181>>] /S /P >>
+<</Type /StructElem /P 304 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 178>>] /S /P >>
 endobj
 307 0 obj
-<</Type /StructElem /P 304 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 182>>] /S /P >>
+<</Type /StructElem /P 304 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 179>>] /S /P >>
 endobj
 312 0 obj
-<</Type /StructElem /P 311 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 183>>] /S /TD   >>
+<</Type /StructElem /P 311 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 180>>] /S /TD   >>
 endobj
 313 0 obj
-<</Type /StructElem /P 311 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 184>>] /S /TD   >>
+<</Type /StructElem /P 311 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 181>>] /S /TD   >>
 endobj
 314 0 obj
-<</Type /StructElem /P 311 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 185>>] /S /TD   >>
+<</Type /StructElem /P 311 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 182>>] /S /TD   >>
 endobj
 311 0 obj
 <</Type /StructElem /P 310 0 R /C /Normal  /K [ 312 0 R 313 0 R 314 0 R] /S /TR>>
 endobj
 316 0 obj
-<</Type /StructElem /P 315 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 186>>] /S /TD   >>
+<</Type /StructElem /P 315 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 183>>] /S /TD   >>
 endobj
 317 0 obj
-<</Type /StructElem /P 315 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 187>>] /S /TD   >>
+<</Type /StructElem /P 315 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 184>>] /S /TD   >>
 endobj
 318 0 obj
-<</Type /StructElem /P 315 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 188>>] /S /TD   >>
+<</Type /StructElem /P 315 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 185>>] /S /TD   >>
 endobj
 315 0 obj
 <</Type /StructElem /P 310 0 R /C /Normal  /K [ 316 0 R 317 0 R 318 0 R] /S /TR>>
 endobj
 320 0 obj
-<</Type /StructElem /P 319 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 189>>] /S /TD   >>
+<</Type /StructElem /P 319 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 186>>] /S /TD   >>
 endobj
 321 0 obj
-<</Type /StructElem /P 319 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 190>>] /S /TD   >>
+<</Type /StructElem /P 319 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 187>>] /S /TD   >>
 endobj
 322 0 obj
-<</Type /StructElem /P 319 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 191>>] /S /TD   >>
+<</Type /StructElem /P 319 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 188>>] /S /TD   >>
 endobj
 319 0 obj
 <</Type /StructElem /P 310 0 R /C /Normal  /K [ 320 0 R 321 0 R 322 0 R] /S /TR>>
 endobj
 324 0 obj
-<</Type /StructElem /P 323 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 192>>] /S /TD   >>
+<</Type /StructElem /P 323 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 189>>] /S /TD   >>
 endobj
 325 0 obj
-<</Type /StructElem /P 323 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 193>>] /S /TD   >>
+<</Type /StructElem /P 323 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 190>>] /S /TD   >>
 endobj
 326 0 obj
-<</Type /StructElem /P 323 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 194>>] /S /TD   >>
+<</Type /StructElem /P 323 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 191>>] /S /TD   >>
 endobj
 323 0 obj
 <</Type /StructElem /P 310 0 R /C /Normal  /K [ 324 0 R 325 0 R 326 0 R] /S /TR>>
 endobj
 328 0 obj
-<</Type /StructElem /P 327 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 195>>] /S /TD   >>
+<</Type /StructElem /P 327 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 192>>] /S /TD   >>
 endobj
 329 0 obj
-<</Type /StructElem /P 327 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 196>>] /S /TD   >>
+<</Type /StructElem /P 327 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 193>>] /S /TD   >>
 endobj
 330 0 obj
-<</Type /StructElem /P 327 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 197>>] /S /TD   >>
+<</Type /StructElem /P 327 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 194>>] /S /TD   >>
 endobj
 327 0 obj
 <</Type /StructElem /P 310 0 R /C /Normal  /K [ 328 0 R 329 0 R 330 0 R] /S /TR>>
 endobj
 332 0 obj
-<</Type /StructElem /P 331 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 198>>] /S /TD   >>
+<</Type /StructElem /P 331 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 195>>] /S /TD   >>
 endobj
 333 0 obj
-<</Type /StructElem /P 331 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 199>>] /S /TD   >>
+<</Type /StructElem /P 331 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 196>>] /S /TD   >>
 endobj
 334 0 obj
-<</Type /StructElem /P 331 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 200>>] /S /TD   >>
+<</Type /StructElem /P 331 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 197>>] /S /TD   >>
 endobj
 331 0 obj
 <</Type /StructElem /P 310 0 R /C /Normal  /K [ 332 0 R 333 0 R 334 0 R] /S /TR>>
 endobj
 336 0 obj
-<</Type /StructElem /P 335 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 201>>] /S /TD   >>
+<</Type /StructElem /P 335 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 198>>] /S /TD   >>
 endobj
 337 0 obj
-<</Type /StructElem /P 335 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 202>>] /S /TD   >>
+<</Type /StructElem /P 335 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 199>>] /S /TD   >>
 endobj
 338 0 obj
-<</Type /StructElem /P 335 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 203>>] /S /TD   >>
+<</Type /StructElem /P 335 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 200>>] /S /TD   >>
 endobj
 335 0 obj
 <</Type /StructElem /P 310 0 R /C /Normal  /K [ 336 0 R 337 0 R 338 0 R] /S /TR>>
 endobj
 340 0 obj
-<</Type /StructElem /P 339 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 204>>] /S /TD   >>
+<</Type /StructElem /P 339 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 201>>] /S /TD   >>
 endobj
 341 0 obj
-<</Type /StructElem /P 339 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 205>>] /S /TD   >>
+<</Type /StructElem /P 339 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 202>>] /S /TD   >>
 endobj
 342 0 obj
-<</Type /StructElem /P 339 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 206>>] /S /TD   >>
+<</Type /StructElem /P 339 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 203>>] /S /TD   >>
 endobj
 339 0 obj
 <</Type /StructElem /P 310 0 R /C /Normal  /K [ 340 0 R 341 0 R 342 0 R] /S /TR>>
 endobj
 344 0 obj
-<</Type /StructElem /P 343 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 207>>] /S /TD   >>
+<</Type /StructElem /P 343 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 204>>] /S /TD   >>
 endobj
 345 0 obj
-<</Type /StructElem /P 343 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 208>>] /S /TD   >>
+<</Type /StructElem /P 343 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 205>>] /S /TD   >>
 endobj
 346 0 obj
-<</Type /StructElem /P 343 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 209>>] /S /TD   >>
+<</Type /StructElem /P 343 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 206>>] /S /TD   >>
 endobj
 343 0 obj
 <</Type /StructElem /P 310 0 R /C /Normal  /K [ 344 0 R 345 0 R 346 0 R] /S /TR>>
 endobj
 348 0 obj
-<</Type /StructElem /P 347 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 210>>] /S /TD   >>
+<</Type /StructElem /P 347 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 207>>] /S /TD   >>
 endobj
 347 0 obj
 <</Type /StructElem /P 310 0 R /C /Normal  /K [ 348 0 R] /S /TR>>
@@ -4402,7 +4404,7 @@ endobj
 <</Type /StructElem /P 308 0 R /C /Normal  /K [ 310 0 R] /S /Table>>
 endobj
 349 0 obj
-<</Type /StructElem /P 308 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 211>>] /S /Caption   >>
+<</Type /StructElem /P 308 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 208>>] /S /Caption   >>
 endobj
 308 0 obj
 <</Type /StructElem /P 304 0 R /T (Table)/C /Normal  /K [ 309 0 R 349 0 R] /S /Float>>
@@ -4411,145 +4413,43 @@ endobj
 <</Type /StructElem /P 210 0 R /T (Runtime-Shield-Only Evaluation)/C /Normal  /K [ 305 0 R 306 0 R 307 0 R 308 0 R] /S /Subsection>>
 endobj
 351 0 obj
-<</Type /StructElem /P 350 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 212>>] /S /H   >>
+<</Type /StructElem /P 350 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 209>>] /S /H   >>
 endobj
 352 0 obj
-<</Type /StructElem /P 350 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 213>>] /S /P >>
+<</Type /StructElem /P 350 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 210>>] /S /P >>
 endobj
 353 0 obj
-<</Type /StructElem /P 350 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 214>>] /S /P >>
-endobj
-354 0 obj
-<</Type /StructElem /P 350 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 215>>] /S /P >>
-endobj
-359 0 obj
-<</Type /StructElem /P 358 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 216>>] /S /TD   >>
-endobj
-360 0 obj
-<</Type /StructElem /P 358 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 217>>] /S /TD   >>
-endobj
-361 0 obj
-<</Type /StructElem /P 358 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 218>>] /S /TD   >>
-endobj
-358 0 obj
-<</Type /StructElem /P 357 0 R /C /Normal  /K [ 359 0 R 360 0 R 361 0 R] /S /TR>>
-endobj
-363 0 obj
-<</Type /StructElem /P 362 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 219>>] /S /TD   >>
-endobj
-364 0 obj
-<</Type /StructElem /P 362 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 220>>] /S /TD   >>
-endobj
-365 0 obj
-<</Type /StructElem /P 362 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 221>>] /S /TD   >>
-endobj
-362 0 obj
-<</Type /StructElem /P 357 0 R /C /Normal  /K [ 363 0 R 364 0 R 365 0 R] /S /TR>>
-endobj
-367 0 obj
-<</Type /StructElem /P 366 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 222>>] /S /TD   >>
-endobj
-368 0 obj
-<</Type /StructElem /P 366 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 223>>] /S /TD   >>
-endobj
-369 0 obj
-<</Type /StructElem /P 366 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 224>>] /S /TD   >>
-endobj
-366 0 obj
-<</Type /StructElem /P 357 0 R /C /Normal  /K [ 367 0 R 368 0 R 369 0 R] /S /TR>>
-endobj
-371 0 obj
-<</Type /StructElem /P 370 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 225>>] /S /TD   >>
-endobj
-372 0 obj
-<</Type /StructElem /P 370 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 226>>] /S /TD   >>
-endobj
-373 0 obj
-<</Type /StructElem /P 370 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 227>>] /S /TD   >>
-endobj
-370 0 obj
-<</Type /StructElem /P 357 0 R /C /Normal  /K [ 371 0 R 372 0 R 373 0 R] /S /TR>>
-endobj
-375 0 obj
-<</Type /StructElem /P 374 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 228>>] /S /TD   >>
-endobj
-376 0 obj
-<</Type /StructElem /P 374 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 229>>] /S /TD   >>
-endobj
-377 0 obj
-<</Type /StructElem /P 374 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 230>>] /S /TD   >>
-endobj
-374 0 obj
-<</Type /StructElem /P 357 0 R /C /Normal  /K [ 375 0 R 376 0 R 377 0 R] /S /TR>>
-endobj
-379 0 obj
-<</Type /StructElem /P 378 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 231>>] /S /TD   >>
-endobj
-380 0 obj
-<</Type /StructElem /P 378 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 232>>] /S /TD   >>
-endobj
-381 0 obj
-<</Type /StructElem /P 378 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 233>>] /S /TD   >>
-endobj
-378 0 obj
-<</Type /StructElem /P 357 0 R /C /Normal  /K [ 379 0 R 380 0 R 381 0 R] /S /TR>>
-endobj
-383 0 obj
-<</Type /StructElem /P 382 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 234>>] /S /TD   >>
-endobj
-382 0 obj
-<</Type /StructElem /P 357 0 R /C /Normal  /K [ 383 0 R] /S /TR>>
-endobj
-357 0 obj
-<</Type /StructElem /P 356 0 R /C /Normal  /K [ 358 0 R 362 0 R 366 0 R 370 0 R 374 0 R 378 0 R 382 0 R] /S /TBody>>
+<</Type /StructElem /P 350 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 211>>] /S /P >>
 endobj
 356 0 obj
-<</Type /StructElem /P 355 0 R /C /Normal  /K [ 357 0 R] /S /Table>>
-endobj
-384 0 obj
-<</Type /StructElem /P 355 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 235>>] /S /Caption   >>
-endobj
-355 0 obj
-<</Type /StructElem /P 350 0 R /T (Table)/C /Normal  /K [ 356 0 R 384 0 R] /S /Float>>
-endobj
-350 0 obj
-<</Type /StructElem /P 210 0 R /T (Translator Benchmark)/C /Normal  /K [ 351 0 R 352 0 R 353 0 R 354 0 R 355 0 R] /S /Subsection>>
-endobj
-210 0 obj
-<</Type /StructElem /P 4 0 R /T (Results)/C /Normal  /K [ 211 0 R 212 0 R 254 0 R 295 0 R 299 0 R 304 0 R 350 0 R] /S /Section>>
-endobj
-386 0 obj
-<</Type /StructElem /P 385 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 236>>] /S /H   >>
-endobj
-389 0 obj
 <<
-/Length 21250     
+/Length 21571     
 >>
 stream
 0 g 0 G
 0 g 0 G
-1 0 0 1 54 738 cm
-/P <</MCID 154>> BDC
-1 0 0 1 -54 -738 cm
 BT
 /F50 9.9626 Tf 54 728.037 Td [(tag-penalty-1)-285(condition)-286(had)-286(tag)-285(and)-286(violation)-285(episodes)-286(near)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(1.3%.)-258(Thus)-257(the)-258(modi\002cation)-258(that)-257(substantially)-258(impro)15(v)15(ed)-258(of-)]TJ
 0 g 0 G
+ET
+1 0 0 1 54 717.078 cm
+EMC
 0 g 0 G
- 0 -10.958 Td [(fensi)25(v)15(e)-301(task)-301(completion)-301(also)-301(relax)15(ed)-301(beha)20(vior)-301(that)-301(had)-302(pre-)]TJ
+1 0 0 1 -54 -717.078 cm
+BT
+/F50 9.9626 Tf 54 706.12 Td [(fensi)25(v)15(e)-301(task)-301(completion)-301(also)-301(relax)15(ed)-301(beha)20(vior)-301(that)-301(had)-302(pre-)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(viously)-250(discouraged)-250(contact)-250(with)-250(the)-250(defender)55(.)]TJ
 0 g 0 G
 0 g 0 G
-ET
-1 0 0 1 54 693.004 cm
-EMC
 0 g 0 G
-1 0 0 1 0 -13.827 cm
-/TD <</MCID 155>> BDC
+ET
+1 0 0 1 54 679.177 cm
+/TD <</MCID 153>> BDC
 1 0 0 1 14.9 0 cm
 /Artifact <</Type /Layout>> BDC
 q
@@ -4565,7 +4465,7 @@ ET
 1 0 0 1 105.013 671.805 cm
 EMC
 1 0 0 1 84.421 0 cm
-/TD <</MCID 156>> BDC
+/TD <</MCID 154>> BDC
 1 0 0 1 -189.434 -671.805 cm
 BT
 /F50 8.9664 Tf 191.676 671.805 Td [(Captures)]TJ
@@ -4573,14 +4473,14 @@ ET
 1 0 0 1 225.792 671.805 cm
 EMC
 1 0 0 1 12.951 0 cm
-/TD <</MCID 157>> BDC
+/TD <</MCID 155>> BDC
 1 0 0 1 -238.743 -671.805 cm
 BT
 /F50 8.9664 Tf 240.985 671.805 Td [(Pickups)]TJ
 ET
 1 0 0 1 271.622 671.805 cm
 EMC
-/TD <</MCID 158>> BDC
+/TD <</MCID 156>> BDC
 1 0 0 1 -202.722 -2.989 cm
 /Artifact <</Type /Layout>> BDC
 q
@@ -4596,7 +4496,7 @@ ET
 1 0 0 1 101.516 661.444 cm
 EMC
 1 0 0 1 99.368 0 cm
-/TD <</MCID 159>> BDC
+/TD <</MCID 157>> BDC
 1 0 0 1 -200.884 -661.444 cm
 BT
 /F50 8.9664 Tf 203.125 661.444 Td [(0/150)]TJ
@@ -4604,14 +4504,14 @@ ET
 1 0 0 1 225.792 661.444 cm
 EMC
 1 0 0 1 16.439 0 cm
-/TD <</MCID 160>> BDC
+/TD <</MCID 158>> BDC
 1 0 0 1 -242.231 -661.444 cm
 BT
 /F50 8.9664 Tf 244.472 661.444 Td [(30/150)]TJ
 ET
 1 0 0 1 271.622 661.444 cm
 EMC
-/TD <</MCID 161>> BDC
+/TD <</MCID 159>> BDC
 1 0 0 1 -271.622 -661.444 cm
 BT
 /F50 8.9664 Tf 74.878 651.481 Td [(T)70(emporal)-250(state)]TJ
@@ -4619,7 +4519,7 @@ ET
 1 0 0 1 130.029 651.481 cm
 EMC
 1 0 0 1 70.855 0 cm
-/TD <</MCID 162>> BDC
+/TD <</MCID 160>> BDC
 1 0 0 1 -200.884 -651.481 cm
 BT
 /F50 8.9664 Tf 203.125 651.481 Td [(0/150)]TJ
@@ -4627,14 +4527,14 @@ ET
 1 0 0 1 225.792 651.481 cm
 EMC
 1 0 0 1 16.439 0 cm
-/TD <</MCID 163>> BDC
+/TD <</MCID 161>> BDC
 1 0 0 1 -242.231 -651.481 cm
 BT
 /F50 8.9664 Tf 244.472 651.481 Td [(60/150)]TJ
 ET
 1 0 0 1 271.622 651.481 cm
 EMC
-/TD <</MCID 164>> BDC
+/TD <</MCID 162>> BDC
 1 0 0 1 -271.622 -651.481 cm
 BT
 /F50 8.9664 Tf 74.878 641.518 Td [(Soft)-250(guidance,)-250(tag)-250(penalty)-250(1)]TJ
@@ -4642,7 +4542,7 @@ ET
 1 0 0 1 177.479 641.518 cm
 EMC
 1 0 0 1 18.922 0 cm
-/TD <</MCID 165>> BDC
+/TD <</MCID 163>> BDC
 1 0 0 1 -196.401 -641.518 cm
 BT
 /F50 8.9664 Tf 198.642 641.518 Td [(29/150)]TJ
@@ -4650,14 +4550,14 @@ ET
 1 0 0 1 225.792 641.518 cm
 EMC
 1 0 0 1 16.439 0 cm
-/TD <</MCID 166>> BDC
+/TD <</MCID 164>> BDC
 1 0 0 1 -242.231 -641.518 cm
 BT
 /F50 8.9664 Tf 244.472 641.518 Td [(29/150)]TJ
 ET
 1 0 0 1 271.622 641.518 cm
 EMC
-/TD <</MCID 167>> BDC
+/TD <</MCID 165>> BDC
 1 0 0 1 -271.622 -641.518 cm
 BT
 /F50 8.9664 Tf 74.878 631.556 Td [(Soft)-250(guidance,)-250(tag)-250(penalty)-250(0)]TJ
@@ -4665,7 +4565,7 @@ ET
 1 0 0 1 177.479 631.556 cm
 EMC
 1 0 0 1 14.439 0 cm
-/TD <</MCID 168>> BDC
+/TD <</MCID 166>> BDC
 1 0 0 1 -191.918 -631.556 cm
 BT
 /F50 8.9664 Tf 194.159 631.556 Td [(138/150)]TJ
@@ -4673,14 +4573,14 @@ ET
 1 0 0 1 225.792 631.556 cm
 EMC
 1 0 0 1 11.956 0 cm
-/TD <</MCID 169>> BDC
+/TD <</MCID 167>> BDC
 1 0 0 1 -237.748 -631.556 cm
 BT
 /F50 8.9664 Tf 239.989 631.556 Td [(149/150)]TJ
 ET
 1 0 0 1 271.622 631.556 cm
 EMC
-/TD <</MCID 170>> BDC
+/TD <</MCID 168>> BDC
 1 0 0 1 -202.722 -2.989 cm
 /Artifact <</Type /Layout>> BDC
 q
@@ -4692,7 +4592,7 @@ EMC
 1 0 0 1 208.7 18.281 cm
 EMC
 1 0 0 1 -223.6 -28.244 cm
-/Caption <</MCID 171>> BDC
+/Caption <</MCID 169>> BDC
 1 0 0 1 -54 -618.206 cm
 BT
 /F50 9.9626 Tf 54 600.453 Td [(T)80(able)-285(2:)-285(Held-out)-285(1-vs-1)-285(patrol)-285(e)25(v)25(aluation)-285(across)-285(\002)25(v)15(e)-286(train-)]TJ 0 -10.959 Td [(ing)-250(seeds.)]TJ
@@ -4701,7 +4601,7 @@ ET
 EMC
 0 g 0 G
 1 0 0 1 0 -34.697 cm
-/H <</MCID 172>> BDC
+/H <</MCID 170>> BDC
 1 0 0 1 -54 -552.64 cm
 BT
 /F48 10.9091 Tf 54 552.64 Td [(Chase)-250(Ev)10(aluation)]TJ
@@ -4711,7 +4611,7 @@ ET
 1 0 0 1 54 547.578 cm
 EMC
 1 0 0 1 0 -11.692 cm
-/P <</MCID 173>> BDC
+/P <</MCID 171>> BDC
 1 0 0 1 -54 -535.886 cm
 BT
 /F50 9.9626 Tf 54 535.886 Td [(The)-447(promoted)-446(zero-tag-penalty)-447(pol)1(ic)15(y)-447(did)-447(not)-446(transfer)-447(to)]TJ
@@ -4729,7 +4629,7 @@ BT
 ET
 1 0 0 1 63.963 491.114 cm
 EMC
-/P <</MCID 174>> BDC
+/P <</MCID 172>> BDC
 1 0 0 1 -63.963 -491.114 cm
 BT
 /F50 9.9626 Tf 63.963 491.114 Td [(This)-356(distinction)-356(localizes)-357(the)-356(f)10(ailure.)-357(The)-356(polic)15(y)-357(consis-)]TJ
@@ -4763,7 +4663,7 @@ ET
 1 0 0 1 54 401.286 cm
 EMC
 1 0 0 1 0 -21.806 cm
-/H <</MCID 175>> BDC
+/H <</MCID 173>> BDC
 1 0 0 1 -54 -379.48 cm
 BT
 /F48 10.9091 Tf 54 379.48 Td [(Chase-Reco)10(v)10(ery)-250(Diagnostic)]TJ
@@ -4773,7 +4673,7 @@ ET
 1 0 0 1 54 372.4 cm
 EMC
 1 0 0 1 0 -9.674 cm
-/P <</MCID 176>> BDC
+/P <</MCID 174>> BDC
 1 0 0 1 -54 -362.726 cm
 BT
 /F50 9.9626 Tf 54 362.726 Td [(None)-479(of)-480(the)-479(three)-479(diagnostic)-480(v)25(ariants)-479(reco)15(v)15(ered)-479(\003ag)-480(ac-)]TJ
@@ -4794,7 +4694,7 @@ BT
 ET
 1 0 0 1 63.963 306.995 cm
 EMC
-/P <</MCID 177>> BDC
+/P <</MCID 175>> BDC
 1 0 0 1 -63.963 -306.995 cm
 BT
 /F50 9.9626 Tf 63.963 306.995 Td [(The)-267(baseline)-268(reached)-267(a)-267(mean)-268(minimum)-267(distance)-267(of)-267(39)-1(.84)]TJ
@@ -4827,7 +4727,7 @@ BT
 ET
 1 0 0 1 63.963 207.43 cm
 EMC
-/P <</MCID 178>> BDC
+/P <</MCID 176>> BDC
 1 0 0 1 -63.963 -207.43 cm
 BT
 /F50 9.9626 Tf 63.963 207.43 Td [(Because)-213(the)-213(diagnostic)-212(used)-213(only)-213(tw)10(o)-213(seeds)-213(per)-213(conditi)1(on,)]TJ
@@ -4852,7 +4752,7 @@ ET
 1 0 0 1 54 150.478 cm
 EMC
 1 0 0 1 0 -21.805 cm
-/H <</MCID 179>> BDC
+/H <</MCID 177>> BDC
 1 0 0 1 -54 -128.673 cm
 BT
 /F48 10.9091 Tf 54 128.673 Td [(Runtime-Shield-Only)-250(Ev)10(aluation)]TJ
@@ -4862,7 +4762,7 @@ ET
 1 0 0 1 54 121.593 cm
 EMC
 1 0 0 1 0 -9.675 cm
-/P <</MCID 180>> BDC
+/P <</MCID 178>> BDC
 1 0 0 1 -54 -111.918 cm
 BT
 /F50 9.9626 Tf 54 111.918 Td [(The)-500(paired)-500(runtime-only)-500(screen)-500(completed)-500(360)-500(episodes)]TJ
@@ -4873,17 +4773,10 @@ BT
 0 g 0 G
  0 -10.959 Td [(Both)-303(ar)1(ms)-303(produced)-303(zero)-302(captures)-303(and)-302(zero)-303(pickups)-302(in)-303(180)]TJ
 0 g 0 G
-ET
-1 0 0 1 54 90 cm
-EMC
 0 g 0 G
 0 g 0 G
 0 g 0 G
-1 0 0 1 265.5 648 cm
-/P <</MCID 181>> BDC
-1 0 0 1 -319.5 -738 cm
-BT
-/F50 9.9626 Tf 319.5 728.037 Td [(episodes)-221(each.)-222(Neither)-222(neural)-221(checkpoint)-222(entered)-221(enemy)-222(ter)20(-)]TJ
+ 265.5 638.037 Td [(episodes)-221(each.)-222(Neither)-222(neural)-221(checkpoint)-222(entered)-221(enemy)-222(ter)20(-)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(ritory)65(,)-248(and)-247(neither)-248(arm)-247(recorded)-248(tags,)-247(bounds)-248(violations,)-248(nu-)]TJ
@@ -4897,23 +4790,27 @@ BT
 0 g 0 G
  -97.798 -10.959 Td [(simulator)-227(seconds)-227(in)-227(both)-227(arms.)-227(Monitored)-228(missi)1(on)-228(satisf)10(ac-)]TJ
 0 g 0 G
+ET
+1 0 0 1 319.5 684.202 cm
+EMC
 0 g 0 G
- 0 -10.959 Td [(tion)-388(w)10(as)-388(zero,)-388(and)-388(successful)-388(capture)-388(time)-388(w)10(as)-388(unde\002ned)]TJ
+1 0 0 1 -319.5 -684.202 cm
+BT
+/F50 9.9626 Tf 319.5 673.243 Td [(tion)-388(w)10(as)-388(zero,)-388(and)-388(successful)-388(capture)-388(time)-388(w)10(as)-388(unde\002ned)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(because)-250(there)-250(were)-250(no)-250(captures.)]TJ
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 329.463 650.294 cm
-EMC
-/P <</MCID 182>> BDC
-1 0 0 1 -329.463 -650.294 cm
+1 0 0 1 329.463 651.303 cm
+/P <</MCID 179>> BDC
+1 0 0 1 -329.463 -651.303 cm
 BT
-/F50 9.9626 Tf 329.463 650.294 Td [(The)-524(runtime)-524(g)5(ate)-524(performed)-524(43,200)-524(successor)-525(checks)]TJ
+/F50 9.9626 Tf 329.463 651.303 Td [(The)-524(runtime)-524(g)5(ate)-524(performed)-524(43,200)-524(successor)-525(checks)]TJ
 0 g 0 G
 0 g 0 G
- -9.963 -10.958 Td [(without)-378(substituting)-378(an)-378(acti)1(on.)-379(All)-378(180)-378(matched)-378(pairs)-378(had)]TJ
+ -9.963 -10.959 Td [(without)-378(substituting)-378(an)-378(acti)1(on.)-379(All)-378(180)-378(matched)-378(pairs)-378(had)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(identical)-444(recorded)-445(action)-444(and)-444(state)-445(trajectories.)-445(Thus,)-445(the)]TJ
@@ -4928,7 +4825,7 @@ BT
  0 -10.959 Td [(These)-293(observ)25(ations)-293(establish)-293(neither)-293(a)-293(safety)-293(adv)25(antage)-293(nor)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.959 Td [(suppression)-225(of)-225(of)25(fensi)25(v)15(e)-225(actions)-225(by)-225(deplo)10(yment-only)-226(shield-)]TJ
+ 0 -10.958 Td [(suppression)-225(of)-225(of)25(fensi)25(v)15(e)-225(actions)-225(by)-225(deplo)10(yment-only)-226(shield-)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(ing.)-324(A)-323(meaningful)-324(interv)15(ention)-323(test)-324(requires)-323(a)-324(task-capable)]TJ
@@ -4943,238 +4840,46 @@ BT
  0 -10.959 Td [(this)-304(study)-303(is)-304(e)15(xploratory)-304(and)-304(does)-303(not)-304(support)-304(a)-304(superiority)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.958 Td [(claim.)]TJ
+ 0 -10.959 Td [(claim.)]TJ
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 319.5 529.632 cm
+1 0 0 1 319.5 530.641 cm
 EMC
 0 g 0 G
-1 0 0 1 0 -14.016 cm
-/TD <</MCID 183>> BDC
+1 0 0 1 0 -12 cm
+/TD <</MCID 180>> BDC
 1 0 0 1 1.167 0 cm
 /Artifact <</Type /Layout>> BDC
 q
 1 0 0 1 0 -0.199 cm
 []0 d 0 J 0.398 w 0 0 m 236.166 0 l S
 Q
-1 0 0 1 0 -0.399 cm
+1 0 0 1 0 -0.398 cm
 EMC
-1 0 0 1 -320.667 -515.217 cm
+1 0 0 1 -320.667 -518.243 cm
 BT
-/F50 8.9664 Tf 324.154 508.243 Td [(Metric)]TJ
+/F50 8.9664 Tf 324.154 511.269 Td [(Metric)]TJ
 ET
-1 0 0 1 350.299 508.243 cm
+1 0 0 1 350.299 511.269 cm
 EMC
 1 0 0 1 97.166 0 cm
-/TD <</MCID 184>> BDC
-1 0 0 1 -447.465 -508.243 cm
+/TD <</MCID 181>> BDC
+1 0 0 1 -447.465 -511.269 cm
 BT
-/F50 8.9664 Tf 449.707 508.243 Td [(Shield)-250(of)25(f)]TJ
+/F50 8.9664 Tf 449.707 511.269 Td [(Shield)-250(of)25(f)]TJ
 ET
-1 0 0 1 487.338 508.243 cm
+1 0 0 1 487.338 511.269 cm
 EMC
 1 0 0 1 6.974 0 cm
-/TD <</MCID 185>> BDC
-1 0 0 1 -494.312 -508.243 cm
+/TD <</MCID 182>> BDC
+1 0 0 1 -494.312 -511.269 cm
 BT
-/F50 8.9664 Tf 496.554 508.243 Td [(Runtime)-250(shield)]TJ
+/F50 8.9664 Tf 496.554 511.269 Td [(Runtime)-250(shield)]TJ
 ET
-1 0 0 1 553.346 508.243 cm
+1 0 0 1 553.346 511.269 cm
 EMC
-/TD <</MCID 186>> BDC
-1 0 0 1 -232.679 -2.988 cm
-/Artifact <</Type /Layout>> BDC
-q
-1 0 0 1 0 -0.2 cm
-[]0 d 0 J 0.398 w 0 0 m 236.166 0 l S
-Q
-1 0 0 1 0 -0.399 cm
-EMC
-1 0 0 1 -320.667 -504.856 cm
-BT
-/F50 8.9664 Tf 324.154 497.882 Td [(Episodes)]TJ
-ET
-1 0 0 1 358.773 497.882 cm
-EMC
-1 0 0 1 110.633 0 cm
-/TD <</MCID 187>> BDC
-1 0 0 1 -469.406 -497.882 cm
-BT
-/F50 8.9664 Tf 471.647 497.882 Td [(180)]TJ
-ET
-1 0 0 1 487.338 497.882 cm
-EMC
-1 0 0 1 48.075 0 cm
-/TD <</MCID 188>> BDC
-1 0 0 1 -535.413 -497.882 cm
-BT
-/F50 8.9664 Tf 537.655 497.882 Td [(180)]TJ
-ET
-1 0 0 1 553.346 497.882 cm
-EMC
-/TD <</MCID 189>> BDC
-1 0 0 1 -553.346 -497.882 cm
-BT
-/F50 8.9664 Tf 324.154 487.92 Td [(Captures)-250(/)-250(pickups)]TJ
-ET
-1 0 0 1 393.14 487.92 cm
-EMC
-1 0 0 1 73.773 0 cm
-/TD <</MCID 190>> BDC
-1 0 0 1 -466.913 -487.92 cm
-BT
-/F50 8.9664 Tf 469.155 487.92 Td [(0)-250(/)-250(0)]TJ
-ET
-1 0 0 1 487.338 487.92 cm
-EMC
-1 0 0 1 45.583 0 cm
-/TD <</MCID 191>> BDC
-1 0 0 1 -532.921 -487.92 cm
-BT
-/F50 8.9664 Tf 535.162 487.92 Td [(0)-250(/)-250(0)]TJ
-ET
-1 0 0 1 553.346 487.92 cm
-EMC
-/TD <</MCID 192>> BDC
-1 0 0 1 -553.346 -487.92 cm
-BT
-/F50 8.9664 Tf 324.154 477.957 Td [(Enemy-territory)-250(episodes)]TJ
-ET
-1 0 0 1 417.287 477.957 cm
-EMC
-1 0 0 1 61.085 0 cm
-/TD <</MCID 193>> BDC
-1 0 0 1 -478.372 -477.957 cm
-BT
-/F50 8.9664 Tf 480.614 477.957 Td [(0)]TJ
-ET
-1 0 0 1 487.338 477.957 cm
-EMC
-1 0 0 1 57.042 0 cm
-/TD <</MCID 194>> BDC
-1 0 0 1 -544.38 -477.957 cm
-BT
-/F50 8.9664 Tf 546.621 477.957 Td [(0)]TJ
-ET
-1 0 0 1 553.346 477.957 cm
-EMC
-/TD <</MCID 195>> BDC
-1 0 0 1 -553.346 -477.957 cm
-BT
-/F50 8.9664 Tf 324.154 467.994 Td [(T)80(ag)-250(/)-250(bounds-violation)-250(episodes)]TJ
-ET
-1 0 0 1 440.491 467.994 cm
-EMC
-1 0 0 1 26.422 0 cm
-/TD <</MCID 196>> BDC
-1 0 0 1 -466.913 -467.994 cm
-BT
-/F50 8.9664 Tf 469.155 467.994 Td [(0)-250(/)-250(0)]TJ
-ET
-1 0 0 1 487.338 467.994 cm
-EMC
-1 0 0 1 45.583 0 cm
-/TD <</MCID 197>> BDC
-1 0 0 1 -532.921 -467.994 cm
-BT
-/F50 8.9664 Tf 535.162 467.994 Td [(0)-250(/)-250(0)]TJ
-ET
-1 0 0 1 553.346 467.994 cm
-EMC
-/TD <</MCID 198>> BDC
-1 0 0 1 -553.346 -467.994 cm
-BT
-/F50 8.9664 Tf 324.154 458.032 Td [(Deadlock)-250(episodes)]TJ
-ET
-1 0 0 1 393.876 458.032 cm
-EMC
-1 0 0 1 84.496 0 cm
-/TD <</MCID 199>> BDC
-1 0 0 1 -478.372 -458.032 cm
-BT
-/F50 8.9664 Tf 480.614 458.032 Td [(0)]TJ
-ET
-1 0 0 1 487.338 458.032 cm
-EMC
-1 0 0 1 57.042 0 cm
-/TD <</MCID 200>> BDC
-1 0 0 1 -544.38 -458.032 cm
-BT
-/F50 8.9664 Tf 546.621 458.032 Td [(0)]TJ
-ET
-1 0 0 1 553.346 458.032 cm
-EMC
-/TD <</MCID 201>> BDC
-1 0 0 1 -553.346 -458.032 cm
-BT
-/F50 8.9664 Tf 324.154 448.069 Td [(Mean)-250(common)-250(task)-250(re)25(w)10(ard)]TJ
-ET
-1 0 0 1 423.94 448.069 cm
-EMC
-1 0 0 1 35.755 0 cm
-/TD <</MCID 202>> BDC
-1 0 0 1 -459.695 -448.069 cm
-BT
-/F50 8.9664 Tf 461.937 448.069 Td [(-2.400)]TJ
-ET
-1 0 0 1 487.338 448.069 cm
-EMC
-1 0 0 1 38.365 0 cm
-/TD <</MCID 203>> BDC
-1 0 0 1 -525.703 -448.069 cm
-BT
-/F50 8.9664 Tf 527.944 448.069 Td [(-2.400)]TJ
-ET
-1 0 0 1 553.346 448.069 cm
-EMC
-/TD <</MCID 204>> BDC
-1 0 0 1 -553.346 -448.069 cm
-BT
-/F50 8.9664 Tf 324.154 438.106 Td [(Mean)-250(duration)-250(\050seconds\051)]TJ
-ET
-1 0 0 1 415.538 438.106 cm
-EMC
-1 0 0 1 53.868 0 cm
-/TD <</MCID 205>> BDC
-1 0 0 1 -469.406 -438.106 cm
-BT
-/F50 8.9664 Tf 471.647 438.106 Td [(240)]TJ
-ET
-1 0 0 1 487.338 438.106 cm
-EMC
-1 0 0 1 48.075 0 cm
-/TD <</MCID 206>> BDC
-1 0 0 1 -535.413 -438.106 cm
-BT
-/F50 8.9664 Tf 537.655 438.106 Td [(240)]TJ
-ET
-1 0 0 1 553.346 438.106 cm
-EMC
-/TD <</MCID 207>> BDC
-1 0 0 1 -553.346 -438.106 cm
-BT
-/F50 8.9664 Tf 324.154 428.144 Td [(Shield)-250(substitutions)]TJ
-ET
-1 0 0 1 396.897 428.144 cm
-EMC
-1 0 0 1 81.475 0 cm
-/TD <</MCID 208>> BDC
-1 0 0 1 -478.372 -428.144 cm
-BT
-/F50 8.9664 Tf 480.614 428.144 Td [(\226)]TJ
-ET
-1 0 0 1 487.338 428.144 cm
-EMC
-1 0 0 1 57.042 0 cm
-/TD <</MCID 209>> BDC
-1 0 0 1 -544.38 -428.144 cm
-BT
-/F50 8.9664 Tf 546.621 428.144 Td [(0)]TJ
-ET
-1 0 0 1 553.346 428.144 cm
-EMC
-/TD <</MCID 210>> BDC
+/TD <</MCID 183>> BDC
 1 0 0 1 -232.679 -2.989 cm
 /Artifact <</Type /Layout>> BDC
 q
@@ -5183,38 +4888,1010 @@ q
 Q
 1 0 0 1 0 -0.398 cm
 EMC
-1 0 0 1 236.166 38.206 cm
+1 0 0 1 -320.667 -507.882 cm
+BT
+/F50 8.9664 Tf 324.154 500.908 Td [(Episodes)]TJ
+ET
+1 0 0 1 358.773 500.908 cm
+EMC
+1 0 0 1 110.633 0 cm
+/TD <</MCID 184>> BDC
+1 0 0 1 -469.406 -500.908 cm
+BT
+/F50 8.9664 Tf 471.647 500.908 Td [(180)]TJ
+ET
+1 0 0 1 487.338 500.908 cm
+EMC
+1 0 0 1 48.075 0 cm
+/TD <</MCID 185>> BDC
+1 0 0 1 -535.413 -500.908 cm
+BT
+/F50 8.9664 Tf 537.655 500.908 Td [(180)]TJ
+ET
+1 0 0 1 553.346 500.908 cm
+EMC
+/TD <</MCID 186>> BDC
+1 0 0 1 -553.346 -500.908 cm
+BT
+/F50 8.9664 Tf 324.154 490.945 Td [(Captures)-250(/)-250(pickups)]TJ
+ET
+1 0 0 1 393.14 490.945 cm
+EMC
+1 0 0 1 73.773 0 cm
+/TD <</MCID 187>> BDC
+1 0 0 1 -466.913 -490.945 cm
+BT
+/F50 8.9664 Tf 469.155 490.945 Td [(0)-250(/)-250(0)]TJ
+ET
+1 0 0 1 487.338 490.945 cm
+EMC
+1 0 0 1 45.583 0 cm
+/TD <</MCID 188>> BDC
+1 0 0 1 -532.921 -490.945 cm
+BT
+/F50 8.9664 Tf 535.162 490.945 Td [(0)-250(/)-250(0)]TJ
+ET
+1 0 0 1 553.346 490.945 cm
+EMC
+/TD <</MCID 189>> BDC
+1 0 0 1 -553.346 -490.945 cm
+BT
+/F50 8.9664 Tf 324.154 480.983 Td [(Enemy-territory)-250(episodes)]TJ
+ET
+1 0 0 1 417.287 480.983 cm
+EMC
+1 0 0 1 61.085 0 cm
+/TD <</MCID 190>> BDC
+1 0 0 1 -478.372 -480.983 cm
+BT
+/F50 8.9664 Tf 480.614 480.983 Td [(0)]TJ
+ET
+1 0 0 1 487.338 480.983 cm
+EMC
+1 0 0 1 57.042 0 cm
+/TD <</MCID 191>> BDC
+1 0 0 1 -544.38 -480.983 cm
+BT
+/F50 8.9664 Tf 546.621 480.983 Td [(0)]TJ
+ET
+1 0 0 1 553.346 480.983 cm
+EMC
+/TD <</MCID 192>> BDC
+1 0 0 1 -553.346 -480.983 cm
+BT
+/F50 8.9664 Tf 324.154 471.02 Td [(T)80(ag)-250(/)-250(bounds-violation)-250(episodes)]TJ
+ET
+1 0 0 1 440.491 471.02 cm
+EMC
+1 0 0 1 26.422 0 cm
+/TD <</MCID 193>> BDC
+1 0 0 1 -466.913 -471.02 cm
+BT
+/F50 8.9664 Tf 469.155 471.02 Td [(0)-250(/)-250(0)]TJ
+ET
+1 0 0 1 487.338 471.02 cm
+EMC
+1 0 0 1 45.583 0 cm
+/TD <</MCID 194>> BDC
+1 0 0 1 -532.921 -471.02 cm
+BT
+/F50 8.9664 Tf 535.162 471.02 Td [(0)-250(/)-250(0)]TJ
+ET
+1 0 0 1 553.346 471.02 cm
+EMC
+/TD <</MCID 195>> BDC
+1 0 0 1 -553.346 -471.02 cm
+BT
+/F50 8.9664 Tf 324.154 461.057 Td [(Deadlock)-250(episodes)]TJ
+ET
+1 0 0 1 393.876 461.057 cm
+EMC
+1 0 0 1 84.496 0 cm
+/TD <</MCID 196>> BDC
+1 0 0 1 -478.372 -461.057 cm
+BT
+/F50 8.9664 Tf 480.614 461.057 Td [(0)]TJ
+ET
+1 0 0 1 487.338 461.057 cm
+EMC
+1 0 0 1 57.042 0 cm
+/TD <</MCID 197>> BDC
+1 0 0 1 -544.38 -461.057 cm
+BT
+/F50 8.9664 Tf 546.621 461.057 Td [(0)]TJ
+ET
+1 0 0 1 553.346 461.057 cm
+EMC
+/TD <</MCID 198>> BDC
+1 0 0 1 -553.346 -461.057 cm
+BT
+/F50 8.9664 Tf 324.154 451.095 Td [(Mean)-250(common)-250(task)-250(re)25(w)10(ard)]TJ
+ET
+1 0 0 1 423.94 451.095 cm
+EMC
+1 0 0 1 35.755 0 cm
+/TD <</MCID 199>> BDC
+1 0 0 1 -459.695 -451.095 cm
+BT
+/F50 8.9664 Tf 461.937 451.095 Td [(-2.400)]TJ
+ET
+1 0 0 1 487.338 451.095 cm
+EMC
+1 0 0 1 38.365 0 cm
+/TD <</MCID 200>> BDC
+1 0 0 1 -525.703 -451.095 cm
+BT
+/F50 8.9664 Tf 527.944 451.095 Td [(-2.400)]TJ
+ET
+1 0 0 1 553.346 451.095 cm
+EMC
+/TD <</MCID 201>> BDC
+1 0 0 1 -553.346 -451.095 cm
+BT
+/F50 8.9664 Tf 324.154 441.132 Td [(Mean)-250(duration)-250(\050seconds\051)]TJ
+ET
+1 0 0 1 415.538 441.132 cm
+EMC
+1 0 0 1 53.868 0 cm
+/TD <</MCID 202>> BDC
+1 0 0 1 -469.406 -441.132 cm
+BT
+/F50 8.9664 Tf 471.647 441.132 Td [(240)]TJ
+ET
+1 0 0 1 487.338 441.132 cm
+EMC
+1 0 0 1 48.075 0 cm
+/TD <</MCID 203>> BDC
+1 0 0 1 -535.413 -441.132 cm
+BT
+/F50 8.9664 Tf 537.655 441.132 Td [(240)]TJ
+ET
+1 0 0 1 553.346 441.132 cm
+EMC
+/TD <</MCID 204>> BDC
+1 0 0 1 -553.346 -441.132 cm
+BT
+/F50 8.9664 Tf 324.154 431.17 Td [(Shield)-250(substitutions)]TJ
+ET
+1 0 0 1 396.897 431.17 cm
+EMC
+1 0 0 1 81.475 0 cm
+/TD <</MCID 205>> BDC
+1 0 0 1 -478.372 -431.17 cm
+BT
+/F50 8.9664 Tf 480.614 431.17 Td [(\226)]TJ
+ET
+1 0 0 1 487.338 431.17 cm
+EMC
+1 0 0 1 57.042 0 cm
+/TD <</MCID 206>> BDC
+1 0 0 1 -544.38 -431.17 cm
+BT
+/F50 8.9664 Tf 546.621 431.17 Td [(0)]TJ
+ET
+1 0 0 1 553.346 431.17 cm
+EMC
+/TD <</MCID 207>> BDC
+1 0 0 1 -232.679 -2.989 cm
+/Artifact <</Type /Layout>> BDC
+q
+1 0 0 1 0 -0.2 cm
+[]0 d 0 J 0.398 w 0 0 m 236.166 0 l S
+Q
+1 0 0 1 0 -0.399 cm
+EMC
+1 0 0 1 236.166 38.207 cm
 EMC
 1 0 0 1 -237.333 -48.169 cm
-/Caption <</MCID 211>> BDC
-1 0 0 1 -319.5 -414.794 cm
+/Caption <</MCID 208>> BDC
+1 0 0 1 -319.5 -417.82 cm
 BT
-/F50 9.9626 Tf 319.5 397.041 Td [(T)80(able)-441(3:)-441(Exploratory)-440(deplo)10(yment-only)-441(comparison)-440(of)-441(the)]TJ 0 -10.959 Td [(same)-286(tw)10(o)-286(sa)20(v)15(ed)-286(neural)-286(policies.)-286(The)-286(lack)-286(of)-286(unsafe)-286(propos-)]TJ 0 -10.959 Td [(als)-250(lea)20(v)15(es)-250(interv)15(ention)-250(ef)25(fects)-250(untested.)]TJ
+/F50 9.9626 Tf 319.5 400.066 Td [(T)80(able)-441(3:)-441(Exploratory)-440(deplo)10(yment-only)-441(comparison)-440(of)-441(the)]TJ 0 -10.959 Td [(same)-286(tw)10(o)-286(sa)20(v)15(ed)-286(neural)-286(policies.)-286(The)-286(lack)-286(of)-286(unsafe)-286(propos-)]TJ 0 -10.959 Td [(als)-250(lea)20(v)15(es)-250(interv)15(ention)-250(ef)25(fects)-250(untested.)]TJ
 ET
-1 0 0 1 319.5 374.983 cm
+1 0 0 1 319.5 378.009 cm
 EMC
 0 g 0 G
-1 0 0 1 0 -37.142 cm
-/H <</MCID 212>> BDC
-1 0 0 1 -319.5 -337.841 cm
+1 0 0 1 0 -32.856 cm
+/H <</MCID 209>> BDC
+1 0 0 1 -319.5 -345.153 cm
 BT
-/F48 10.9091 Tf 319.5 337.841 Td [(T)74(ranslator)-250(Benchmark)]TJ
+/F48 10.9091 Tf 319.5 345.153 Td [(T)92(ask-Capable)-250(Attack)10(er)-250(and)-250(T)92(actical)-250(Scr)18(een)]TJ
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 319.5 332.639 cm
+1 0 0 1 319.5 339.901 cm
 EMC
-1 0 0 1 0 -11.837 cm
-/P <</MCID 213>> BDC
-1 0 0 1 -319.5 -320.802 cm
+1 0 0 1 0 -8.761 cm
+/P <</MCID 210>> BDC
+1 0 0 1 -319.5 -331.14 cm
 BT
-/F50 9.9626 Tf 319.5 320.802 Td [(The)-298(current)-298(Englis)1(h)-1(-)1(to-L)92(TLf)-298(pipeline)-298(produced)-298(93.75%)-298(se-)]TJ
+/F50 9.9626 Tf 319.5 331.14 Td [(T)80(o)-649(test)-649(runtime)-649(interv)15(ention)-649(with)-649(an)-649(of)25(fensi)25(v)15(e)-649(polic)15(y)65(,)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(we)-431(constructed)-432(tw)10(o)-431(ne)25(w)-432(imitation-initialized)-431(PPO)-432(check-)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(points.)-421(Each)-420(used)-421(24)-420(scripted)-420(oracle)-420(demonstrations,)-421(160)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(beha)20(vioral-cloning)-355(epochs,)-355(and)-355(4,096)-355(subsequent)-355(PPO)-355(de-)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(cisions)-615(ag)5(ainst)-616(static)-615(opponents)-616(in)-616(the)-615(standard)-616(arena.)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(The)-308(eight-action)-309(abstraction)-308(w)10(as)-308(unchanged.)-309(T)35(raining)-309(used)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(con)40(v)15(entional)-442(task)-442(re)25(w)10(ard)-442(without)-442(formal)-442(re)25(w)10(ard)-443(shaping,)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.958 Td [(temporal-state)-443(input,)-444(or)-444(shielding.)-444(Both)-444(\002nal)-444(checkpoints)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(captured)-315(in)-315(10/10)-315(separate)-315(held-out)-315(static)-315(capability-screen)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(episodes.)-212(These)-212(policies)-212(are)-212(distinct)-212(from)-212(the)-212(earlier)-212(scratch-)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(trained)-555(baseline;)-557(the)-555(screen)-556(is)-555(not)-556(a)-555(matched)-556(learning-)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(ef)25(\002cienc)15(y)-250(comparison.)]TJ
+0 g 0 G
+0 g 0 G
+ET
+1 0 0 1 329.463 199.611 cm
+EMC
+/P <</MCID 211>> BDC
+1 0 0 1 -329.463 -199.611 cm
+BT
+/F50 9.9626 Tf 329.463 199.611 Td [(W)40(ith)-418(ordinary)-419(starts,)-418(the)-418(same-checkpoint)-419(shield-of)25(f/)1(on)]TJ
+0 g 0 G
+0 g 0 G
+ -9.963 -10.959 Td [(comparison)-301(completed)-302(180)-302(episodes)-301(across)-302(three)-301(maps)-302(and)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(three)-191(opponents.)-191(Each)-191(arm)-190(captured)-191(in)-191(42/90)-191(episodes:)-191(30/30)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(ag)5(ainst)-533(static)-532(opponents,)-533(12/30)-533(ag)5(ainst)-532(patrol,)-533(and)-533(0/30)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(ag)5(ainst)-272(chase.)-272(Chase)-272(produced)-272(no)-272(pickups.)-272(All)-272(90)-273(pai)1(rs)-273(had)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(identical)-269(trajectories,)-270(zero)-269(bounds)-270(violations,)-270(and)-269(no)-270(substi-)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.958 Td [(tutions,)-250(ag)5(ain)-250(lea)20(ving)-250(the)-250(g)5(ate)-250(dormant.)]TJ
+0 g 0 G
+0 g 0 G
+ET
+1 0 0 1 329.463 122.877 cm
+EMC
+/P <</MCID 212>> BDC
+1 0 0 1 -329.463 -122.877 cm
+BT
+/F50 9.9626 Tf 329.463 122.877 Td [(A)-372(separate)-372(calibration)-373(with)-372(one)-372(checkpoint)-372(v)25(aried)-373(v)25(ali)1(d)]TJ
+0 g 0 G
+0 g 0 G
+ -9.963 -10.959 Td [(boundary)-481(mar)18(gins)-482(and)-481(outw)10(ard)-482(initial)-481(v)15(elocities.)-483(W)80(e)-482(se-)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(lected)-284(the)-285(\002rst)-284(tested)-285(condition)-284(with)-285(unsafe)-284(unshielded)-285(pro-)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(posals,)-524(shield)-523(substitutions,)-524(and)-524(no)-523(deadlock:)-524(a)-524(2.01)-524(m)]TJ
+0 g 0 G
+0 g 0 G
+0 g 0 G
+0 g 0 G
+ET
+
+endstream
+endobj
+273 0 obj
+<<
+/Type /Page
+/Contents 356 0 R
+/Resources 355 0 R
+/MediaBox [0 0 612 792]
+/Parent 51 0 R
+>>
+endobj
+357 0 obj
+<<
+/D [273 0 R /XYZ 132.768 739 null]
+>>
+endobj
+358 0 obj
+<<
+/D [273 0 R /XYZ 89.32 611.411 null]
+>>
+endobj
+359 0 obj
+<<
+/D [273 0 R /XYZ 54 564.595 null]
+>>
+endobj
+360 0 obj
+<<
+/D [273 0 R /XYZ 54 391.436 null]
+>>
+endobj
+361 0 obj
+<<
+/D [273 0 R /XYZ 54 140.628 null]
+>>
+endobj
+362 0 obj
+<<
+/D [273 0 R /XYZ 357.922 411.025 null]
+>>
+endobj
+363 0 obj
+<<
+/D [273 0 R /XYZ 319.5 357.109 null]
+>>
+endobj
+355 0 obj
+<<
+/Font << /F50 47 0 R /F48 46 0 R /F34 194 0 R /F28 193 0 R /F31 192 0 R >>
+/ProcSet [ /PDF /Text ]
+>>
+endobj
+354 0 obj
+<</Type /StructElem /P 350 0 R /C /Normal /K [ <</Type /MCR /Pg 273 0 R /MCID 212>>] /S /P >>
+endobj
+368 0 obj
+<</Type /StructElem /P 367 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 213>>] /S /TD   >>
+endobj
+370 0 obj
+<</Type /StructElem /P 367 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 214>>] /S /TD   >>
+endobj
+371 0 obj
+<</Type /StructElem /P 367 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 215>>] /S /TD   >>
+endobj
+367 0 obj
+<</Type /StructElem /P 366 0 R /C /Normal  /K [ 368 0 R 370 0 R 371 0 R] /S /TR>>
+endobj
+373 0 obj
+<</Type /StructElem /P 372 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 216>>] /S /TD   >>
+endobj
+374 0 obj
+<</Type /StructElem /P 372 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 217>>] /S /TD   >>
+endobj
+375 0 obj
+<</Type /StructElem /P 372 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 218>>] /S /TD   >>
+endobj
+372 0 obj
+<</Type /StructElem /P 366 0 R /C /Normal  /K [ 373 0 R 374 0 R 375 0 R] /S /TR>>
+endobj
+377 0 obj
+<</Type /StructElem /P 376 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 219>>] /S /TD   >>
+endobj
+378 0 obj
+<</Type /StructElem /P 376 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 220>>] /S /TD   >>
+endobj
+379 0 obj
+<</Type /StructElem /P 376 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 221>>] /S /TD   >>
+endobj
+376 0 obj
+<</Type /StructElem /P 366 0 R /C /Normal  /K [ 377 0 R 378 0 R 379 0 R] /S /TR>>
+endobj
+381 0 obj
+<</Type /StructElem /P 380 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 222>>] /S /TD   >>
+endobj
+382 0 obj
+<</Type /StructElem /P 380 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 223>>] /S /TD   >>
+endobj
+383 0 obj
+<</Type /StructElem /P 380 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 224>>] /S /TD   >>
+endobj
+380 0 obj
+<</Type /StructElem /P 366 0 R /C /Normal  /K [ 381 0 R 382 0 R 383 0 R] /S /TR>>
+endobj
+385 0 obj
+<</Type /StructElem /P 384 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 225>>] /S /TD   >>
+endobj
+386 0 obj
+<</Type /StructElem /P 384 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 226>>] /S /TD   >>
+endobj
+387 0 obj
+<</Type /StructElem /P 384 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 227>>] /S /TD   >>
+endobj
+384 0 obj
+<</Type /StructElem /P 366 0 R /C /Normal  /K [ 385 0 R 386 0 R 387 0 R] /S /TR>>
+endobj
+389 0 obj
+<</Type /StructElem /P 388 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 228>>] /S /TD   >>
+endobj
+390 0 obj
+<</Type /StructElem /P 388 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 229>>] /S /TD   >>
+endobj
+391 0 obj
+<</Type /StructElem /P 388 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 230>>] /S /TD   >>
+endobj
+388 0 obj
+<</Type /StructElem /P 366 0 R /C /Normal  /K [ 389 0 R 390 0 R 391 0 R] /S /TR>>
+endobj
+393 0 obj
+<</Type /StructElem /P 392 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 231>>] /S /TD   >>
+endobj
+394 0 obj
+<</Type /StructElem /P 392 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 232>>] /S /TD   >>
+endobj
+395 0 obj
+<</Type /StructElem /P 392 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 233>>] /S /TD   >>
+endobj
+392 0 obj
+<</Type /StructElem /P 366 0 R /C /Normal  /K [ 393 0 R 394 0 R 395 0 R] /S /TR>>
+endobj
+397 0 obj
+<</Type /StructElem /P 396 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 234>>] /S /TD   >>
+endobj
+398 0 obj
+<</Type /StructElem /P 396 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 235>>] /S /TD   >>
+endobj
+399 0 obj
+<</Type /StructElem /P 396 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 236>>] /S /TD   >>
+endobj
+396 0 obj
+<</Type /StructElem /P 366 0 R /C /Normal  /K [ 397 0 R 398 0 R 399 0 R] /S /TR>>
+endobj
+401 0 obj
+<</Type /StructElem /P 400 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 237>>] /S /TD   >>
+endobj
+402 0 obj
+<</Type /StructElem /P 400 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 238>>] /S /TD   >>
+endobj
+403 0 obj
+<</Type /StructElem /P 400 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 239>>] /S /TD   >>
+endobj
+400 0 obj
+<</Type /StructElem /P 366 0 R /C /Normal  /K [ 401 0 R 402 0 R 403 0 R] /S /TR>>
+endobj
+405 0 obj
+<</Type /StructElem /P 404 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 240>>] /S /TD   >>
+endobj
+404 0 obj
+<</Type /StructElem /P 366 0 R /C /Normal  /K [ 405 0 R] /S /TR>>
+endobj
+366 0 obj
+<</Type /StructElem /P 365 0 R /C /Normal  /K [ 367 0 R 372 0 R 376 0 R 380 0 R 384 0 R 388 0 R 392 0 R 396 0 R 400 0 R 404 0 R] /S /TBody>>
+endobj
+365 0 obj
+<</Type /StructElem /P 364 0 R /C /Normal  /K [ 366 0 R] /S /Table>>
+endobj
+406 0 obj
+<</Type /StructElem /P 364 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 241>>] /S /Caption   >>
+endobj
+364 0 obj
+<</Type /StructElem /P 350 0 R /T (Table)/C /Normal  /K [ 365 0 R 406 0 R] /S /Float>>
+endobj
+407 0 obj
+<</Type /StructElem /P 350 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 242>>] /S /P >>
+endobj
+408 0 obj
+<</Type /StructElem /P 350 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 243>>] /S /P >>
+endobj
+350 0 obj
+<</Type /StructElem /P 210 0 R /T (Task-Capable Attacker and Tactical Screen)/C /Normal  /K [ 351 0 R 352 0 R 353 0 R 354 0 R 364 0 R 407 0 R 408 0 R] /S /Subsection>>
+endobj
+410 0 obj
+<</Type /StructElem /P 409 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 244>>] /S /H   >>
+endobj
+411 0 obj
+<</Type /StructElem /P 409 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 245>>] /S /P >>
+endobj
+412 0 obj
+<</Type /StructElem /P 409 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 246>>] /S /P >>
+endobj
+413 0 obj
+<</Type /StructElem /P 409 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 247>>] /S /P >>
+endobj
+418 0 obj
+<</Type /StructElem /P 417 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 248>>] /S /TD   >>
+endobj
+419 0 obj
+<</Type /StructElem /P 417 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 249>>] /S /TD   >>
+endobj
+420 0 obj
+<</Type /StructElem /P 417 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 250>>] /S /TD   >>
+endobj
+417 0 obj
+<</Type /StructElem /P 416 0 R /C /Normal  /K [ 418 0 R 419 0 R 420 0 R] /S /TR>>
+endobj
+422 0 obj
+<</Type /StructElem /P 421 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 251>>] /S /TD   >>
+endobj
+423 0 obj
+<</Type /StructElem /P 421 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 252>>] /S /TD   >>
+endobj
+424 0 obj
+<</Type /StructElem /P 421 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 253>>] /S /TD   >>
+endobj
+421 0 obj
+<</Type /StructElem /P 416 0 R /C /Normal  /K [ 422 0 R 423 0 R 424 0 R] /S /TR>>
+endobj
+426 0 obj
+<</Type /StructElem /P 425 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 254>>] /S /TD   >>
+endobj
+427 0 obj
+<</Type /StructElem /P 425 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 255>>] /S /TD   >>
+endobj
+428 0 obj
+<</Type /StructElem /P 425 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 256>>] /S /TD   >>
+endobj
+425 0 obj
+<</Type /StructElem /P 416 0 R /C /Normal  /K [ 426 0 R 427 0 R 428 0 R] /S /TR>>
+endobj
+430 0 obj
+<</Type /StructElem /P 429 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 257>>] /S /TD   >>
+endobj
+431 0 obj
+<</Type /StructElem /P 429 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 258>>] /S /TD   >>
+endobj
+432 0 obj
+<</Type /StructElem /P 429 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 259>>] /S /TD   >>
+endobj
+429 0 obj
+<</Type /StructElem /P 416 0 R /C /Normal  /K [ 430 0 R 431 0 R 432 0 R] /S /TR>>
+endobj
+434 0 obj
+<</Type /StructElem /P 433 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 260>>] /S /TD   >>
+endobj
+435 0 obj
+<</Type /StructElem /P 433 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 261>>] /S /TD   >>
+endobj
+436 0 obj
+<</Type /StructElem /P 433 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 262>>] /S /TD   >>
+endobj
+433 0 obj
+<</Type /StructElem /P 416 0 R /C /Normal  /K [ 434 0 R 435 0 R 436 0 R] /S /TR>>
+endobj
+438 0 obj
+<</Type /StructElem /P 437 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 263>>] /S /TD   >>
+endobj
+439 0 obj
+<</Type /StructElem /P 437 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 264>>] /S /TD   >>
+endobj
+440 0 obj
+<</Type /StructElem /P 437 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 265>>] /S /TD   >>
+endobj
+437 0 obj
+<</Type /StructElem /P 416 0 R /C /Normal  /K [ 438 0 R 439 0 R 440 0 R] /S /TR>>
+endobj
+442 0 obj
+<</Type /StructElem /P 441 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 266>>] /S /TD   >>
+endobj
+441 0 obj
+<</Type /StructElem /P 416 0 R /C /Normal  /K [ 442 0 R] /S /TR>>
+endobj
+416 0 obj
+<</Type /StructElem /P 415 0 R /C /Normal  /K [ 417 0 R 421 0 R 425 0 R 429 0 R 433 0 R 437 0 R 441 0 R] /S /TBody>>
+endobj
+415 0 obj
+<</Type /StructElem /P 414 0 R /C /Normal  /K [ 416 0 R] /S /Table>>
+endobj
+443 0 obj
+<</Type /StructElem /P 414 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 267>>] /S /Caption   >>
+endobj
+414 0 obj
+<</Type /StructElem /P 409 0 R /T (Table)/C /Normal  /K [ 415 0 R 443 0 R] /S /Float>>
+endobj
+409 0 obj
+<</Type /StructElem /P 210 0 R /T (Translator Benchmark)/C /Normal  /K [ 410 0 R 411 0 R 412 0 R 413 0 R 414 0 R] /S /Subsection>>
+endobj
+210 0 obj
+<</Type /StructElem /P 4 0 R /T (Results)/C /Normal  /K [ 211 0 R 212 0 R 254 0 R 295 0 R 299 0 R 304 0 R 350 0 R 409 0 R] /S /Section>>
+endobj
+445 0 obj
+<</Type /StructElem /P 444 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 268>>] /S /H   >>
+endobj
+446 0 obj
+<</Type /StructElem /P 444 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 269>>] /S /P >>
+endobj
+447 0 obj
+<</Type /StructElem /P 444 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 270>>] /S /P >>
+endobj
+448 0 obj
+<</Type /StructElem /P 444 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 271>>] /S /P >>
+endobj
+451 0 obj
+<<
+/Length 22101     
+>>
+stream
+0 g 0 G
+0 g 0 G
+BT
+/F50 9.9626 Tf 54 728.037 Td [(v)15(essel-center)-356(mar)18(gin)-356(and)-356(1)-355(m/s)-356(initial)-356(outw)10(ard)-356(speed.)-357(The)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(subsequent)-379(tw)10(o-checkpoint)-378(comparison)-379(used)-379(fresh)-379(e)25(v)25(alua-)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.958 Td [(tion)-345(seeds,)-346(both)-345(lo)25(wer)-345(and)-345(upper)-346(edges,)-345(the)-345(standard)-346(map,)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(and)-440(all)-441(three)-440(opponents.)-442(This)-440(post-selection)-441(stress)-440(test)-441(is)]TJ
+0 g 0 G
+ET
+1 0 0 1 54 695.161 cm
+EMC
+0 g 0 G
+1 0 0 1 -54 -695.161 cm
+BT
+/F50 9.9626 Tf 54 684.202 Td [(e)15(xploratory)65(,)-323(not)-324(con\002rmatory)-323(or)-323(pooled)-323(with)-324(ordinary-start)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(e)25(v)25(aluations.)]TJ
+0 g 0 G
+0 g 0 G
+0 g 0 G
+ET
+1 0 0 1 54 661.741 cm
+/TD <</MCID 213>> BDC
+1 0 0 1 16.2 0 cm
+/Artifact <</Type /Layout>> BDC
+q
+1 0 0 1 0 -0.199 cm
+[]0 d 0 J 0.398 w 0 0 m 206.099 0 l S
+Q
+1 0 0 1 0 -0.399 cm
+EMC
+1 0 0 1 -70.2 -661.342 cm
+BT
+/F50 8.9664 Tf 73.189 654.369 Td [(Moderate)-250(mo)15(ving-start)-250(metric)]TJ
+ET
+1 0 0 1 182.874 654.369 cm
+EMC
+1 0 0 1 5.977 0 cm
+/TD <</MCID 214>> BDC
+1 0 0 1 -188.851 -654.369 cm
+BT
+/F50 8.9664 Tf 191.093 654.369 Td [(Shield)-250(of)25(f)]TJ
+ET
+1 0 0 1 228.724 654.369 cm
+EMC
+1 0 0 1 5.978 0 cm
+/TD <</MCID 215>> BDC
+1 0 0 1 -234.702 -654.369 cm
+BT
+/F50 8.9664 Tf 236.943 654.369 Td [(Shield)-250(on)]TJ
+ET
+1 0 0 1 273.311 654.369 cm
+EMC
+/TD <</MCID 216>> BDC
+1 0 0 1 -203.111 -2.989 cm
+/Artifact <</Type /Layout>> BDC
+q
+1 0 0 1 0 -0.199 cm
+[]0 d 0 J 0.398 w 0 0 m 206.099 0 l S
+Q
+1 0 0 1 0 -0.399 cm
+EMC
+1 0 0 1 -70.2 -650.981 cm
+BT
+/F50 8.9664 Tf 73.189 644.007 Td [(Episodes)]TJ
+ET
+1 0 0 1 107.808 644.007 cm
+EMC
+1 0 0 1 107.467 0 cm
+/TD <</MCID 217>> BDC
+1 0 0 1 -215.275 -644.007 cm
+BT
+/F50 8.9664 Tf 217.516 644.007 Td [(36)]TJ
+ET
+1 0 0 1 228.724 644.007 cm
+EMC
+1 0 0 1 31.137 0 cm
+/TD <</MCID 218>> BDC
+1 0 0 1 -259.861 -644.007 cm
+BT
+/F50 8.9664 Tf 262.103 644.007 Td [(36)]TJ
+ET
+1 0 0 1 273.311 644.007 cm
+EMC
+/TD <</MCID 219>> BDC
+1 0 0 1 -273.311 -644.007 cm
+BT
+/F50 8.9664 Tf 73.189 634.045 Td [(Captures)-250(/)-250(pickups)]TJ
+ET
+1 0 0 1 142.176 634.045 cm
+EMC
+1 0 0 1 57.157 0 cm
+/TD <</MCID 220>> BDC
+1 0 0 1 -199.333 -634.045 cm
+BT
+/F50 8.9664 Tf 201.574 634.045 Td [(16)-250(/)-250(24)]TJ
+ET
+1 0 0 1 228.724 634.045 cm
+EMC
+1 0 0 1 15.195 0 cm
+/TD <</MCID 221>> BDC
+1 0 0 1 -243.919 -634.045 cm
+BT
+/F50 8.9664 Tf 246.161 634.045 Td [(16)-250(/)-250(24)]TJ
+ET
+1 0 0 1 273.311 634.045 cm
+EMC
+/TD <</MCID 222>> BDC
+1 0 0 1 -273.311 -634.045 cm
+BT
+/F50 8.9664 Tf 73.189 624.082 Td [(Bounds-violation)-250(episodes)]TJ
+ET
+1 0 0 1 170.823 624.082 cm
+EMC
+1 0 0 1 44.452 0 cm
+/TD <</MCID 223>> BDC
+1 0 0 1 -215.275 -624.082 cm
+BT
+/F50 8.9664 Tf 217.516 624.082 Td [(18)]TJ
+ET
+1 0 0 1 228.724 624.082 cm
+EMC
+1 0 0 1 35.62 0 cm
+/TD <</MCID 224>> BDC
+1 0 0 1 -264.344 -624.082 cm
+BT
+/F50 8.9664 Tf 266.586 624.082 Td [(0)]TJ
+ET
+1 0 0 1 273.311 624.082 cm
+EMC
+/TD <</MCID 225>> BDC
+1 0 0 1 -273.311 -624.082 cm
+BT
+/F50 8.9664 Tf 73.189 614.12 Td [(T)80(ag)-250(episodes)]TJ
+ET
+1 0 0 1 121.778 614.12 cm
+EMC
+1 0 0 1 93.497 0 cm
+/TD <</MCID 226>> BDC
+1 0 0 1 -215.275 -614.12 cm
+BT
+/F50 8.9664 Tf 217.516 614.12 Td [(20)]TJ
+ET
+1 0 0 1 228.724 614.12 cm
+EMC
+1 0 0 1 31.137 0 cm
+/TD <</MCID 227>> BDC
+1 0 0 1 -259.861 -614.12 cm
+BT
+/F50 8.9664 Tf 262.103 614.12 Td [(20)]TJ
+ET
+1 0 0 1 273.311 614.12 cm
+EMC
+/TD <</MCID 228>> BDC
+1 0 0 1 -273.311 -614.12 cm
+BT
+/F50 8.9664 Tf 73.189 604.157 Td [(Mean)-250(tags)-250(recei)25(v)15(ed)]TJ
+ET
+1 0 0 1 144.785 604.157 cm
+EMC
+1 0 0 1 59.282 0 cm
+/TD <</MCID 229>> BDC
+1 0 0 1 -204.067 -604.157 cm
+BT
+/F50 8.9664 Tf 206.308 604.157 Td [(0.889)]TJ
+ET
+1 0 0 1 228.724 604.157 cm
+EMC
+1 0 0 1 19.929 0 cm
+/TD <</MCID 230>> BDC
+1 0 0 1 -248.653 -604.157 cm
+BT
+/F50 8.9664 Tf 250.895 604.157 Td [(1.056)]TJ
+ET
+1 0 0 1 273.311 604.157 cm
+EMC
+/TD <</MCID 231>> BDC
+1 0 0 1 -273.311 -604.157 cm
+BT
+/F50 8.9664 Tf 73.189 594.194 Td [(Mission-satis\002ed)-250(episodes)]TJ
+ET
+1 0 0 1 169.827 594.194 cm
+EMC
+1 0 0 1 45.448 0 cm
+/TD <</MCID 232>> BDC
+1 0 0 1 -215.275 -594.194 cm
+BT
+/F50 8.9664 Tf 217.516 594.194 Td [(10)]TJ
+ET
+1 0 0 1 228.724 594.194 cm
+EMC
+1 0 0 1 31.137 0 cm
+/TD <</MCID 233>> BDC
+1 0 0 1 -259.861 -594.194 cm
+BT
+/F50 8.9664 Tf 262.103 594.194 Td [(16)]TJ
+ET
+1 0 0 1 273.311 594.194 cm
+EMC
+/TD <</MCID 234>> BDC
+1 0 0 1 -273.311 -594.194 cm
+BT
+/F50 8.9664 Tf 73.189 584.232 Td [(Deadlock)-250(episodes)]TJ
+ET
+1 0 0 1 142.911 584.232 cm
+EMC
+1 0 0 1 76.847 0 cm
+/TD <</MCID 235>> BDC
+1 0 0 1 -219.758 -584.232 cm
+BT
+/F50 8.9664 Tf 221.999 584.232 Td [(0)]TJ
+ET
+1 0 0 1 228.724 584.232 cm
+EMC
+1 0 0 1 35.62 0 cm
+/TD <</MCID 236>> BDC
+1 0 0 1 -264.344 -584.232 cm
+BT
+/F50 8.9664 Tf 266.586 584.232 Td [(0)]TJ
+ET
+1 0 0 1 273.311 584.232 cm
+EMC
+/TD <</MCID 237>> BDC
+1 0 0 1 -273.311 -584.232 cm
+BT
+/F50 8.9664 Tf 73.189 574.269 Td [(Shield)-250(substitutions)]TJ
+ET
+1 0 0 1 145.932 574.269 cm
+EMC
+1 0 0 1 73.826 0 cm
+/TD <</MCID 238>> BDC
+1 0 0 1 -219.758 -574.269 cm
+BT
+/F50 8.9664 Tf 221.999 574.269 Td [(\226)]TJ
+ET
+1 0 0 1 228.724 574.269 cm
+EMC
+1 0 0 1 31.137 0 cm
+/TD <</MCID 239>> BDC
+1 0 0 1 -259.861 -574.269 cm
+BT
+/F50 8.9664 Tf 262.103 574.269 Td [(18)]TJ
+ET
+1 0 0 1 273.311 574.269 cm
+EMC
+/TD <</MCID 240>> BDC
+1 0 0 1 -203.111 -2.989 cm
+/Artifact <</Type /Layout>> BDC
+q
+1 0 0 1 0 -0.199 cm
+[]0 d 0 J 0.398 w 0 0 m 206.099 0 l S
+Q
+1 0 0 1 0 -0.398 cm
+EMC
+1 0 0 1 206.1 38.206 cm
+EMC
+1 0 0 1 -222.3 -48.169 cm
+/Caption <</MCID 241>> BDC
+1 0 0 1 -54 -560.919 cm
+BT
+/F50 9.9626 Tf 54 543.166 Td [(T)80(able)-204(4:)-203(Exploratory)-204(runtime-only)-204(bounds-g)5(ate)-203(test)-204(with)-204(tw)10(o)]TJ 0 -10.959 Td [(imitation-initialized)-261(PPO)-260(checkpoints.)-261(Each)-261(seed)-261(separately)]TJ 0 -10.959 Td [(had)-453(nine)-452(bounds-violation)-453(episodes)-453(without)-452(the)-453(g)5(ate)-453(and)]TJ 0 -10.959 Td [(zero)-250(with)-250(it,)-250(with)-250(unchanged)-250(capture)-250(counts.)]TJ
+ET
+1 0 0 1 54 508.132 cm
+EMC
+0 g 0 G
+1 0 0 1 9.963 -22.182 cm
+/P <</MCID 242>> BDC
+1 0 0 1 -63.963 -485.95 cm
+BT
+/F50 9.9626 Tf 63.963 485.95 Td [(All)-389(substitutions)-390(occurred)-389(at)-390(the)-389(lo)25(wer)-390(home)-389(boundary)65(,)]TJ
+0 g 0 G
+0 g 0 G
+ -9.963 -10.959 Td [(not)-274(near)-274(the)-274(enemy)-274(\003ag)-274(or)-274(while)-274(carrying;)-274(upper)20(-edge)-274(pairs)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(were)-449(dormant.)-450(This)-448(demonstrates)-449(pre)25(v)15(ention)-449(of)-449(observ)15(ed)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(bounds)-343(f)10(ailures)-343(without)-344(losing)-343(captures)-343(in)-343(the)-343(selected)-344(e)15(x-)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(posure)-486(condition,)-486(not)-486(protection)-486(from)-485(tagging,)-487(impro)15(v)15(ed)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.958 Td [(chase)-273(beha)20(vior)40(,)-273(or)-273(a)-272(general)-273(safety)-273(guarantee.)-273(At)-273(2)-273(m/s)-273(out-)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(w)10(ard)-232(speed,)-232(a)-232(separate)-232(one-seed,)-232(three-opponent)-233(lo)25(wer)20(-edge)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(probe)-286(deadlock)10(ed)-286(in)-286(all)-286(shielded)-286(episodes)-286(after)-286(one)-286(simula-)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(tor)-212(second.)-212(Its)-212(zero)-211(violations)-212(re\003ect)-212(early)-212(termination)-212(rather)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(than)-250(useful)-250(safe)-250(task)-250(e)15(x)15(ecution.)]TJ
+0 g 0 G
+0 g 0 G
+ET
+1 0 0 1 63.963 376.361 cm
+EMC
+/P <</MCID 243>> BDC
+1 0 0 1 -63.963 -376.361 cm
+BT
+/F50 9.9626 Tf 63.963 376.361 Td [(W)80(e)-682(also)-681(added)-682(scripted)-682(per)20(-player)-681(attack)10(er)40(,)-683(carrier)20(-)]TJ
+0 g 0 G
+0 g 0 G
+ -9.963 -10.959 Td [(return,)-292(defender)20(-interception)-293(and)-292(escort)-293(primiti)25(v)15(es)-292(with)-293(no-)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(defender)40(,)-208(\002x)15(ed,)-208(conditional)-208(and)-208(dynamic)-208(assignment)-208(modes.)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(The)-316(conditional)-315(role)-316(clause)-316(is)]TJ/F31 9.9626 Tf 123.083 0 Td [(G)]TJ/F28 9.9626 Tf 7.834 0 Td [(\050)]TJ/F31 9.9626 Tf 3.874 0 Td [(p)]TJ/F34 9.9626 Tf 8.992 0 Td [(!)]TJ/F31 9.9626 Tf 13.943 0 Td [(d)]TJ/F28 9.9626 Tf 5.185 0 Td [(\051)]TJ/F50 9.9626 Tf 3.875 0 Td [(,)-316(where)]TJ/F31 9.9626 Tf 33.121 0 Td [(p)]TJ/F50 9.9626 Tf 8.157 0 Td [(denotes)]TJ
+0 g 0 G
+0 g 0 G
+ -208.064 -10.959 Td [(opponent)-470(int)1(rusion)-470(and)]TJ/F31 9.9626 Tf 100.926 0 Td [(d)]TJ/F50 9.9626 Tf 9.863 0 Td [(denotes)-470(a)-469(defender)-470(behind)-469(the)]TJ
+0 g 0 G
+0 g 0 G
+ -110.789 -10.959 Td [(centerline,)-329(grounded)-329(using)-329(the)-329(currently)-329(selected)-329(defender;)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.958 Td [(carriers)-403(retain)-403(return)-403(duties.)-404(Human-authored)-403(role)-403(clauses)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(and)-347(mission)-346(logic)-347(are)-346(combined)-347(and)-346(v)25(alidated,)-347(then)-347(moni-)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(tored,)-361(without)-361(guaranteed)-361(enforcement.)-362(The)-361(48-episode)-362(3-)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(vs-3)-456(screen)-457(used)-456(three)-456(episodes)-457(per)-456(mode/opponent)-457(cell.)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(Ag)5(ainst)-468(e)15(xplicit)-468(raiding)-468(opponents,)-468(each)-468(defensi)25(v)15(e)-469(mode)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(produced)-323(3/3)-324(blue)-323(captures)-323(and)-324(zero)-323(red)-323(captures,)-324(whereas)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(no-defender)-271(produced)-272(zero)-271(blue)-272(captures)-271(and)-272(three)-271(red)-272(cap-)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(tures.)-542(All)-540(modes)-541(produced)-540(zero)-540(captures)-540(ag)5(ainst)-541(chase.)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(These)-274(are)-274(heuristic)-274(feasibility)-274(probes,)-274(not)-274(learned)-274(coordina-)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(tion)-307(or)-307(a)-307(strate)15(gy)-307(ranking;)-307(dynamic)-307(mode)-308(additional)1(ly)-308(uses)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.958 Td [(escort)-250(rather)-250(than)-250(split-\003ank)-250(attack)-250(style.)]TJ
+0 g 0 G
+0 g 0 G
+ET
+1 0 0 1 54 198.862 cm
+EMC
+1 0 0 1 0 -18.498 cm
+/H <</MCID 244>> BDC
+1 0 0 1 -54 -180.364 cm
+BT
+/F48 10.9091 Tf 54 180.364 Td [(T)74(ranslator)-250(Benchmark)]TJ
+0 g 0 G
+0 g 0 G
+ET
+1 0 0 1 54 177.519 cm
+EMC
+1 0 0 1 0 -10.807 cm
+/P <</MCID 245>> BDC
+1 0 0 1 -54 -166.712 cm
+BT
+/F50 9.9626 Tf 54 166.712 Td [(The)-298(current)-298(Englis)1(h)-1(-)1(to-L)92(TLf)-298(pipeline)-298(produced)-298(93.75%)-298(se-)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(mantic)-468(correctness)-469(ag)5(ainst)-468(the)-468(project-authored)-469(reference)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.959 Td [(formulas,)-320(98.96%)-320(syntax)-320(v)25(alidity)65(,)-320(and)-320(98.96%)-320(compilation)]TJ
+ 0 -10.958 Td [(formulas,)-320(98.96%)-320(syntax)-320(v)25(alidity)65(,)-320(and)-320(98.96%)-320(compilation)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(success)-291(across)-292(120)-291(measured)-291(outputs.)-292(Its)-291(mean)-291(latenc)15(y)-292(w)10(as)]TJ
@@ -5224,12 +5901,12 @@ BT
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 329.463 264.977 cm
+1 0 0 1 63.963 111.918 cm
 EMC
-/P <</MCID 214>> BDC
-1 0 0 1 -329.463 -264.977 cm
+/P <</MCID 246>> BDC
+1 0 0 1 -63.963 -111.918 cm
 BT
-/F50 9.9626 Tf 329.463 264.977 Td [(The)-218(custom)-219(CTF-speci\002c)-218(L)92(TLCodeGen)-218(adapter)-218(produced)]TJ
+/F50 9.9626 Tf 63.963 111.918 Td [(The)-218(custom)-219(CTF-speci\002c)-218(L)92(TLCodeGen)-218(adapter)-218(produced)]TJ
 0 g 0 G
 0 g 0 G
  -9.963 -10.959 Td [(71.88%)-492(semanti)1(c)-492(correctness,)-492(100%)-491(syntax)-492(v)25(alidity)65(,)-492(and)]TJ
@@ -5238,25 +5915,32 @@ BT
  0 -10.959 Td [(100%)-268(compilation)-268(success.)-268(Its)-268(mean)-268(latenc)15(y)-268(w)10(as)-268(53.7)-268(s)-269(and)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.959 Td [(its)-198(repair)-198(rate)-199(w)10(as)-198(15.00%.)-198(P)15(araphrase-equi)25(v)25(alence)-199(measure-)]TJ
+0 g 0 G
+0 g 0 G
+ 265.5 638.037 Td [(its)-198(repair)-198(rate)-199(w)10(as)-198(15.00%.)-198(P)15(araphrase-equi)25(v)25(alence)-199(measure-)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(ments)-321(were)-321(84.0%)-321(for)-321(the)-321(current)-321(pipeline)-321(and)-321(80.77%)-322(for)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.959 Td [(the)-250(adapter)-250(o)15(v)15(er)-250(the)-250(pairs)-250(that)-250(could)-250(be)-250(compared.)]TJ
+ 0 -10.958 Td [(the)-250(adapter)-250(o)15(v)15(er)-250(the)-250(pairs)-250(that)-250(could)-250(be)-250(compared.)]TJ
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 329.463 198.193 cm
+1 0 0 1 329.463 694.841 cm
 EMC
-/P <</MCID 215>> BDC
-1 0 0 1 -329.463 -198.193 cm
+/P <</MCID 247>> BDC
+1 0 0 1 -329.463 -694.841 cm
 BT
-/F50 9.9626 Tf 329.463 198.193 Td [(These)-491(results)-492(f)10(a)20(v)20(or)-491(the)-491(current)-492(pipeline)-491(on)-492(agreement)]TJ
+/F50 9.9626 Tf 329.463 694.841 Td [(These)-491(results)-492(f)10(a)20(v)20(or)-491(the)-491(current)-492(pipeline)-491(on)-492(agreement)]TJ
 0 g 0 G
+ET
+1 0 0 1 319.5 694.841 cm
+EMC
 0 g 0 G
- -9.963 -10.959 Td [(with)-258(the)-258(project)-258(reference)-258(formulas,)-258(latenc)15(y)65(,)-258(and)-258(paraphrase)]TJ
+1 0 0 1 -319.5 -694.841 cm
+BT
+/F50 9.9626 Tf 319.5 683.883 Td [(with)-258(the)-258(project)-258(reference)-258(formulas,)-258(latenc)15(y)65(,)-258(and)-258(paraphrase)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(consistenc)15(y)65(,)-309(while)-309(the)-310(adapter)-309(produced)-309(perfect)-309(syntax)-310(and)]TJ
@@ -5274,170 +5958,13 @@ BT
  0 -10.959 Td [(ag)5(ainst)-368(the)-368(complet)1(e)-368(upstream)-368(L)92(TLCodeGen)-368(robotics)-368(sys-)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.958 Td [(tem.)]TJ
+ 0 -10.959 Td [(tem.)]TJ
+0 g 0 G
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 319.5 121.366 cm
-EMC
-1 0 0 1 85.77 -26.149 cm
-/H <</MCID 236>> BDC
-1 0 0 1 -405.27 -95.217 cm
-BT
-/F48 11.9552 Tf 405.27 95.217 Td [(Futur)18(e)-250(W)75(ork)]TJ
-0 g 0 G
-ET
-1 0 0 1 319.5 95.217 cm
-EMC
-0 g 0 G
-0 g 0 G
-0 g 0 G
-
-endstream
-endobj
-268 0 obj
-<<
-/Type /Page
-/Contents 389 0 R
-/Resources 388 0 R
-/MediaBox [0 0 612 792]
-/Parent 51 0 R
->>
-endobj
-390 0 obj
-<<
-/D [268 0 R /XYZ 132.768 739 null]
->>
-endobj
-391 0 obj
-<<
-/D [268 0 R /XYZ 89.32 611.411 null]
->>
-endobj
-392 0 obj
-<<
-/D [268 0 R /XYZ 54 564.595 null]
->>
-endobj
-393 0 obj
-<<
-/D [268 0 R /XYZ 54 391.436 null]
->>
-endobj
-394 0 obj
-<<
-/D [268 0 R /XYZ 54 140.628 null]
->>
-endobj
-395 0 obj
-<<
-/D [268 0 R /XYZ 357.922 407.999 null]
->>
-endobj
-396 0 obj
-<<
-/D [268 0 R /XYZ 319.5 349.796 null]
->>
-endobj
-397 0 obj
-<<
-/D [268 0 R /XYZ 405.27 109.165 null]
->>
-endobj
-388 0 obj
-<<
-/Font << /F50 47 0 R /F48 46 0 R /F34 194 0 R /F28 193 0 R /F31 192 0 R >>
-/ProcSet [ /PDF /Text ]
->>
-endobj
-387 0 obj
-<</Type /StructElem /P 385 0 R /C /Normal /K [ <</Type /MCR /Pg 268 0 R /MCID 237>>] /S /P >>
-endobj
-398 0 obj
-<</Type /StructElem /P 385 0 R /C /Normal /K [ <</Type /MCR /Pg 399 0 R /MCID 238>>] /S /P >>
-endobj
-400 0 obj
-<</Type /StructElem /P 385 0 R /C /Normal /K [ <</Type /MCR /Pg 399 0 R /MCID 239>>] /S /P >>
-endobj
-401 0 obj
-<</Type /StructElem /P 385 0 R /C /Normal /K [ <</Type /MCR /Pg 399 0 R /MCID 240>>] /S /P >>
-endobj
-402 0 obj
-<</Type /StructElem /P 385 0 R /C /Normal /K [ <</Type /MCR /Pg 399 0 R /MCID 241>>] /S /P >>
-endobj
-385 0 obj
-<</Type /StructElem /P 4 0 R /T (Future Work)/C /Normal  /K [ 386 0 R 387 0 R 398 0 R 400 0 R 401 0 R 402 0 R] /S /Section>>
-endobj
-404 0 obj
-<</Type /StructElem /P 403 0 R /C /Normal /K [ <</Type /MCR /Pg 399 0 R /MCID 242>>] /S /H   >>
-endobj
-405 0 obj
-<</Type /StructElem /P 403 0 R /C /Normal /K [ <</Type /MCR /Pg 399 0 R /MCID 243>>] /S /P >>
-endobj
-406 0 obj
-<</Type /StructElem /P 403 0 R /C /Normal /K [ <</Type /MCR /Pg 399 0 R /MCID 244>>] /S /P >>
-endobj
-407 0 obj
-<</Type /StructElem /P 403 0 R /C /Normal /K [ <</Type /MCR /Pg 399 0 R /MCID 245>>] /S /P >>
-endobj
-408 0 obj
-<</Type /StructElem /P 403 0 R /C /Normal /K [ <</Type /MCR /Pg 399 0 R /MCID 246>>] /S /P >>
-endobj
-403 0 obj
-<</Type /StructElem /P 4 0 R /T (Conclusion)/C /Normal  /K [ 404 0 R 405 0 R 406 0 R 407 0 R 408 0 R] /S /Section>>
-endobj
-410 0 obj
-<</Type /StructElem /P 409 0 R /C /Normal /K [ <</Type /MCR /Pg 399 0 R /MCID 247>>] /S /H   >>
-endobj
-413 0 obj
-<</Type /StructElem /P 412 0 R /C /Normal /K [ <</Type /MCR /Pg 399 0 R /MCID 248>>] /S /Lbl   >>
-endobj
-414 0 obj
-<</Type /StructElem /P 412 0 R /C /Normal /K [ <</Type /MCR /Pg 399 0 R /MCID 249>>] /S /LBody   >>
-endobj
-412 0 obj
-<</Type /StructElem /P 411 0 R /C /Normal  /K [ 413 0 R 414 0 R] /S /BibItem>>
-endobj
-416 0 obj
-<</Type /StructElem /P 415 0 R /C /Normal /K [ <</Type /MCR /Pg 399 0 R /MCID 250>>] /S /Lbl   >>
-endobj
-417 0 obj
-<</Type /StructElem /P 415 0 R /C /Normal /K [ <</Type /MCR /Pg 399 0 R /MCID 251>>] /S /LBody   >>
-endobj
-415 0 obj
-<</Type /StructElem /P 411 0 R /C /Normal  /K [ 416 0 R 417 0 R] /S /BibItem>>
-endobj
-419 0 obj
-<</Type /StructElem /P 418 0 R /C /Normal /K [ <</Type /MCR /Pg 399 0 R /MCID 252>>] /S /Lbl   >>
-endobj
-420 0 obj
-<</Type /StructElem /P 418 0 R /C /Normal /K [ <</Type /MCR /Pg 399 0 R /MCID 253>>] /S /LBody   >>
-endobj
-418 0 obj
-<</Type /StructElem /P 411 0 R /C /Normal  /K [ 419 0 R 420 0 R] /S /BibItem>>
-endobj
-422 0 obj
-<</Type /StructElem /P 421 0 R /C /Normal /K [ <</Type /MCR /Pg 399 0 R /MCID 254>>] /S /Lbl   >>
-endobj
-423 0 obj
-<</Type /StructElem /P 421 0 R /C /Normal /K [ <</Type /MCR /Pg 399 0 R /MCID 255>>] /S /LBody   >>
-endobj
-421 0 obj
-<</Type /StructElem /P 411 0 R /C /Normal  /K [ 422 0 R 423 0 R] /S /BibItem>>
-endobj
-425 0 obj
-<</Type /StructElem /P 424 0 R /C /Normal /K [ <</Type /MCR /Pg 399 0 R /MCID 256>>] /S /Lbl   >>
-endobj
-428 0 obj
-<<
-/Length 19921     
->>
-stream
-0 g 0 G
-0 g 0 G
-0 g 0 G
-1 0 0 1 54 738 cm
-/TD <</MCID 216>> BDC
+1 0 0 1 319.5 605.421 cm
+/TD <</MCID 248>> BDC
 1 0 0 1 20.136 0 cm
 /Artifact <</Type /Layout>> BDC
 q
@@ -5446,29 +5973,29 @@ q
 Q
 1 0 0 1 0 -0.398 cm
 EMC
-1 0 0 1 -74.136 -737.602 cm
+1 0 0 1 -339.636 -605.023 cm
 BT
-/F50 8.9664 Tf 80.114 730.628 Td [(Metric)]TJ
+/F50 8.9664 Tf 345.614 598.049 Td [(Metric)]TJ
 ET
-1 0 0 1 106.26 730.628 cm
+1 0 0 1 371.76 598.049 cm
 EMC
 1 0 0 1 64.246 0 cm
-/TD <</MCID 217>> BDC
-1 0 0 1 -170.506 -730.628 cm
+/TD <</MCID 249>> BDC
+1 0 0 1 -436.006 -598.049 cm
 BT
-/F50 8.9664 Tf 172.748 730.628 Td [(Current)]TJ
+/F50 8.9664 Tf 438.248 598.049 Td [(Current)]TJ
 ET
-1 0 0 1 202.381 730.628 cm
+1 0 0 1 467.881 598.049 cm
 EMC
 1 0 0 1 11.956 0 cm
-/TD <</MCID 218>> BDC
-1 0 0 1 -214.337 -730.628 cm
+/TD <</MCID 250>> BDC
+1 0 0 1 -479.837 -598.049 cm
 BT
-/F50 8.9664 Tf 216.578 730.628 Td [(CTF)-250(Adapter)]TJ
+/F50 8.9664 Tf 482.078 598.049 Td [(CTF)-250(Adapter)]TJ
 ET
-1 0 0 1 266.386 730.628 cm
+1 0 0 1 531.886 598.049 cm
 EMC
-/TD <</MCID 219>> BDC
+/TD <</MCID 251>> BDC
 1 0 0 1 -192.25 -2.989 cm
 /Artifact <</Type /Layout>> BDC
 q
@@ -5477,121 +6004,121 @@ q
 Q
 1 0 0 1 0 -0.399 cm
 EMC
-1 0 0 1 -74.136 -727.24 cm
+1 0 0 1 -339.636 -594.661 cm
 BT
-/F50 8.9664 Tf 80.114 720.267 Td [(Semantic)-250(correctness)]TJ
+/F50 8.9664 Tf 345.614 587.688 Td [(Semantic)-250(correctness)]TJ
 ET
-1 0 0 1 158.3 720.267 cm
+1 0 0 1 423.8 587.688 cm
 EMC
 1 0 0 1 11.955 0 cm
-/TD <</MCID 220>> BDC
-1 0 0 1 -170.255 -720.267 cm
+/TD <</MCID 252>> BDC
+1 0 0 1 -435.755 -587.688 cm
 BT
-/F50 8.9664 Tf 172.497 720.267 Td [(93.75%)]TJ
+/F50 8.9664 Tf 437.997 587.688 Td [(93.75%)]TJ
 ET
-1 0 0 1 202.381 720.267 cm
+1 0 0 1 467.881 587.688 cm
 EMC
 1 0 0 1 31.878 0 cm
-/TD <</MCID 221>> BDC
-1 0 0 1 -234.259 -720.267 cm
+/TD <</MCID 253>> BDC
+1 0 0 1 -499.759 -587.688 cm
 BT
-/F50 8.9664 Tf 236.501 720.267 Td [(71.88%)]TJ
+/F50 8.9664 Tf 502.001 587.688 Td [(71.88%)]TJ
 ET
-1 0 0 1 266.386 720.267 cm
+1 0 0 1 531.886 587.688 cm
 EMC
-/TD <</MCID 222>> BDC
-1 0 0 1 -266.386 -720.267 cm
+/TD <</MCID 254>> BDC
+1 0 0 1 -531.886 -587.688 cm
 BT
-/F50 8.9664 Tf 80.114 710.304 Td [(Syntax)-250(v)25(alid)]TJ
+/F50 8.9664 Tf 345.614 577.725 Td [(Syntax)-250(v)25(alid)]TJ
 ET
-1 0 0 1 127.214 710.304 cm
+1 0 0 1 392.714 577.725 cm
 EMC
 1 0 0 1 43.041 0 cm
-/TD <</MCID 223>> BDC
-1 0 0 1 -170.255 -710.304 cm
+/TD <</MCID 255>> BDC
+1 0 0 1 -435.755 -577.725 cm
 BT
-/F50 8.9664 Tf 172.497 710.304 Td [(98.96%)]TJ
+/F50 8.9664 Tf 437.997 577.725 Td [(98.96%)]TJ
 ET
-1 0 0 1 202.381 710.304 cm
+1 0 0 1 467.881 577.725 cm
 EMC
 1 0 0 1 38.603 0 cm
-/TD <</MCID 224>> BDC
-1 0 0 1 -240.984 -710.304 cm
+/TD <</MCID 256>> BDC
+1 0 0 1 -506.484 -577.725 cm
 BT
-/F50 8.9664 Tf 243.226 710.304 Td [(100%)]TJ
+/F50 8.9664 Tf 508.726 577.725 Td [(100%)]TJ
 ET
-1 0 0 1 266.386 710.304 cm
+1 0 0 1 531.886 577.725 cm
 EMC
-/TD <</MCID 225>> BDC
-1 0 0 1 -266.386 -710.304 cm
+/TD <</MCID 257>> BDC
+1 0 0 1 -531.886 -577.725 cm
 BT
-/F50 8.9664 Tf 80.114 700.341 Td [(Compilable)]TJ
+/F50 8.9664 Tf 345.614 567.762 Td [(Compilable)]TJ
 ET
-1 0 0 1 124.201 700.341 cm
+1 0 0 1 389.701 567.762 cm
 EMC
 1 0 0 1 46.054 0 cm
-/TD <</MCID 226>> BDC
-1 0 0 1 -170.255 -700.341 cm
+/TD <</MCID 258>> BDC
+1 0 0 1 -435.755 -567.762 cm
 BT
-/F50 8.9664 Tf 172.497 700.341 Td [(98.96%)]TJ
+/F50 8.9664 Tf 437.997 567.762 Td [(98.96%)]TJ
 ET
-1 0 0 1 202.381 700.341 cm
+1 0 0 1 467.881 567.762 cm
 EMC
 1 0 0 1 38.603 0 cm
-/TD <</MCID 227>> BDC
-1 0 0 1 -240.984 -700.341 cm
+/TD <</MCID 259>> BDC
+1 0 0 1 -506.484 -567.762 cm
 BT
-/F50 8.9664 Tf 243.226 700.341 Td [(100%)]TJ
+/F50 8.9664 Tf 508.726 567.762 Td [(100%)]TJ
 ET
-1 0 0 1 266.386 700.341 cm
+1 0 0 1 531.886 567.762 cm
 EMC
-/TD <</MCID 228>> BDC
-1 0 0 1 -266.386 -700.341 cm
+/TD <</MCID 260>> BDC
+1 0 0 1 -531.886 -567.762 cm
 BT
-/F50 8.9664 Tf 80.114 690.379 Td [(Repair)-250(rate)]TJ
+/F50 8.9664 Tf 345.614 557.8 Td [(Repair)-250(rate)]TJ
 ET
-1 0 0 1 121.942 690.379 cm
+1 0 0 1 387.442 557.8 cm
 EMC
 1 0 0 1 48.313 0 cm
-/TD <</MCID 229>> BDC
-1 0 0 1 -170.255 -690.379 cm
+/TD <</MCID 261>> BDC
+1 0 0 1 -435.755 -557.8 cm
 BT
-/F50 8.9664 Tf 172.497 690.379 Td [(43.33%)]TJ
+/F50 8.9664 Tf 437.997 557.8 Td [(43.33%)]TJ
 ET
-1 0 0 1 202.381 690.379 cm
+1 0 0 1 467.881 557.8 cm
 EMC
 1 0 0 1 31.878 0 cm
-/TD <</MCID 230>> BDC
-1 0 0 1 -234.259 -690.379 cm
+/TD <</MCID 262>> BDC
+1 0 0 1 -499.759 -557.8 cm
 BT
-/F50 8.9664 Tf 236.501 690.379 Td [(15.00%)]TJ
+/F50 8.9664 Tf 502.001 557.8 Td [(15.00%)]TJ
 ET
-1 0 0 1 266.386 690.379 cm
+1 0 0 1 531.886 557.8 cm
 EMC
-/TD <</MCID 231>> BDC
-1 0 0 1 -266.386 -690.379 cm
+/TD <</MCID 263>> BDC
+1 0 0 1 -531.886 -557.8 cm
 BT
-/F50 8.9664 Tf 80.114 680.416 Td [(Mean)-250(latenc)15(y)]TJ
+/F50 8.9664 Tf 345.614 547.837 Td [(Mean)-250(latenc)15(y)]TJ
 ET
-1 0 0 1 130.774 680.416 cm
+1 0 0 1 396.274 547.837 cm
 EMC
 1 0 0 1 45.704 0 cm
-/TD <</MCID 232>> BDC
-1 0 0 1 -176.478 -680.416 cm
+/TD <</MCID 264>> BDC
+1 0 0 1 -441.978 -547.837 cm
 BT
-/F50 8.9664 Tf 178.719 680.416 Td [(34.9)-250(s)]TJ
+/F50 8.9664 Tf 444.219 547.837 Td [(34.9)-250(s)]TJ
 ET
-1 0 0 1 202.381 680.416 cm
+1 0 0 1 467.881 547.837 cm
 EMC
 1 0 0 1 38.101 0 cm
-/TD <</MCID 233>> BDC
-1 0 0 1 -240.482 -680.416 cm
+/TD <</MCID 265>> BDC
+1 0 0 1 -505.982 -547.837 cm
 BT
-/F50 8.9664 Tf 242.724 680.416 Td [(53.7)-250(s)]TJ
+/F50 8.9664 Tf 508.224 547.837 Td [(53.7)-250(s)]TJ
 ET
-1 0 0 1 266.386 680.416 cm
+1 0 0 1 531.886 547.837 cm
 EMC
-/TD <</MCID 234>> BDC
+/TD <</MCID 266>> BDC
 1 0 0 1 -192.25 -2.989 cm
 /Artifact <</Type /Layout>> BDC
 q
@@ -5603,22 +6130,32 @@ EMC
 1 0 0 1 198.228 23.262 cm
 EMC
 1 0 0 1 -218.364 -33.225 cm
-/Caption <</MCID 235>> BDC
-1 0 0 1 -54 -667.066 cm
+/Caption <</MCID 267>> BDC
+1 0 0 1 -319.5 -534.487 cm
 BT
-/F50 9.9626 Tf 54 649.313 Td [(T)80(able)-783(4:)-785(English-to-L)92(TLf)-784(translator)-783(benchmark.)-787(Each)]TJ 0 -10.959 Td [(method)-243(produced)-243(120)-242(measured)-243(outputs)-243(using)-243(the)-243(same)-243(lan-)]TJ 0 -10.959 Td [(guage)-250(model)-250(and)-250(v)25(alidation)-250(pipeline.)]TJ
+/F50 9.9626 Tf 319.5 516.734 Td [(T)80(able)-783(5:)-785(English-to-L)92(TLf)-784(translator)-783(benchmark.)-787(Each)]TJ 0 -10.959 Td [(method)-243(produced)-243(120)-242(measured)-243(outputs)-243(using)-243(the)-243(same)-243(lan-)]TJ 0 -10.959 Td [(guage)-250(model)-250(and)-250(v)25(alidation)-250(pipeline.)]TJ
 ET
-1 0 0 1 54 625.238 cm
+1 0 0 1 319.5 492.659 cm
 EMC
 0 g 0 G
-1 0 0 1 0 -33.954 cm
-/P <</MCID 237>> BDC
-1 0 0 1 -54 -591.284 cm
+1 0 0 1 85.77 -36.111 cm
+/H <</MCID 268>> BDC
+1 0 0 1 -405.27 -456.548 cm
 BT
-/F50 9.9626 Tf 54 591.284 Td [(The)-291(most)-291(immediate)-291(direction)-291(for)-291(future)-291(w)10(ork)-291(is)-291(to)-292(address)]TJ
+/F48 11.9552 Tf 405.27 456.548 Td [(Futur)18(e)-250(W)75(ork)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.959 Td [(the)-320(f)10(ailure)-321(to)-320(acquire)-321(the)-320(\003ag)-320(under)-321(acti)25(v)15(e)-320(pursuit.)-321(The)-321(e)15(x-)]TJ
+ET
+1 0 0 1 319.5 452.753 cm
+EMC
+1 0 0 1 0 -11.111 cm
+/P <</MCID 269>> BDC
+1 0 0 1 -319.5 -441.642 cm
+BT
+/F50 9.9626 Tf 319.5 441.642 Td [(The)-291(most)-291(immediate)-291(direction)-291(for)-291(future)-291(w)10(ork)-291(is)-291(to)-292(address)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.958 Td [(the)-320(f)10(ailure)-321(to)-320(acquire)-321(the)-320(\003ag)-320(under)-321(acti)25(v)15(e)-320(pursuit.)-321(The)-321(e)15(x-)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(isting)-388(diagnostics)-389(i)1(n)-1(di)1(cate)-389(that)-388(simply)-388(increasing)-389(progress)]TJ
@@ -5642,25 +6179,25 @@ BT
  0 -10.959 Td [(terms)-251(that)-250(acti)25(v)25(ate)-251(only)-250(when)-251(the)15(y)-250(preserv)15(e)-251(progress)-251(to)25(w)10(ard)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.958 Td [(the)-250(of)25(fensi)25(v)15(e)-250(objecti)25(v)15(e.)]TJ
+ 0 -10.959 Td [(the)-250(of)25(fensi)25(v)15(e)-250(objecti)25(v)15(e.)]TJ
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 63.963 479.661 cm
+1 0 0 1 329.463 331.734 cm
 EMC
-/P <</MCID 238>> BDC
-1 0 0 1 -63.963 -479.661 cm
+/P <</MCID 270>> BDC
+1 0 0 1 -329.463 -331.734 cm
 BT
-/F50 9.9626 Tf 63.963 479.661 Td [(A)-248(second)-249(direction)-248(is)-248(to)-249(e)15(xpand)-248(the)-248(action)-249(representation.)]TJ
+/F50 9.9626 Tf 329.463 331.734 Td [(A)-248(second)-249(direction)-248(is)-248(to)-249(e)15(xpand)-248(the)-248(action)-249(representation.)]TJ
 0 g 0 G
 0 g 0 G
  -9.963 -10.959 Td [(The)-376(present)-376(PPO)-377(polic)15(y)-376(selects)-376(from)-376(eight)-377(w)10(aypoint-style)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.958 Td [(primiti)25(v)15(es.)-307(This)-307(abstracti)1(on)-307(is)-307(suf)25(\002cient)-306(for)-307(successful)-307(cap-)]TJ
+ 0 -10.959 Td [(primiti)25(v)15(es.)-307(This)-307(abstracti)1(on)-307(is)-307(suf)25(\002cient)-306(for)-307(successful)-307(cap-)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.959 Td [(ture)-380(in)-380(se)25(v)15(eral)-379(static)-380(and)-380(patrol)-380(con\002gurations,)-380(b)20(ut)-380(it)-380(may)]TJ
+ 0 -10.958 Td [(ture)-380(in)-380(se)25(v)15(eral)-379(static)-380(and)-380(patrol)-380(con\002gurations,)-380(b)20(ut)-380(it)-380(may)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(limit)-330(maneuv)15(ering)-330(near)-330(an)-330(acti)25(v)15(e)-329(defender)55(.)-331(A)-330(richer)-330(action)]TJ
@@ -5676,12 +6213,12 @@ BT
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 63.963 389.957 cm
+1 0 0 1 329.463 243.744 cm
 EMC
-/P <</MCID 239>> BDC
-1 0 0 1 -63.963 -389.957 cm
+/P <</MCID 271>> BDC
+1 0 0 1 -329.463 -243.744 cm
 BT
-/F50 9.9626 Tf 63.963 389.957 Td [(A)-271(third)-272(direction)-271(is)-272(to)-271(continue)-271(the)-272(staged)-271(curriculum)-272(be-)]TJ
+/F50 9.9626 Tf 329.463 243.744 Td [(A)-271(third)-272(direction)-271(is)-272(to)-271(continue)-271(the)-272(staged)-271(curriculum)-272(be-)]TJ
 0 g 0 G
 0 g 0 G
  -9.963 -10.959 Td [(yond)-272(1-vs-1)-272(once)-271(a)-272(polic)15(y)-272(demonstrates)-272(reliable)-272(acquisition)]TJ
@@ -5702,22 +6239,22 @@ BT
  0 -10.959 Td [(Future)-194(e)15(xperiments)-195(should)-194(therefore)-194(a)20(v)20(oid)-194(claiming)-195(success-)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.958 Td [(ful)-255(learned)-254(team)-255(coordination)-254(until)-255(a)-255(polic)15(y)-254(passes)-255(the)-255(more)]TJ
+ 0 -10.959 Td [(ful)-255(learned)-254(team)-255(coordination)-254(until)-255(a)-255(polic)15(y)-254(passes)-255(the)-255(more)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.959 Td [(dif)25(\002cult)-302(of)25(fensi)25(v)15(e)-302(stages)-303(and)-302(adv)25(ances)-302(through)-302(the)-303(curricu-)]TJ
+ 0 -10.958 Td [(dif)25(\002cult)-302(of)25(fensi)25(v)15(e)-302(stages)-303(and)-302(adv)25(ances)-302(through)-302(the)-303(curricu-)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(lum.)]TJ
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 63.963 278.335 cm
+1 0 0 1 329.463 133.836 cm
 EMC
-/P <</MCID 240>> BDC
-1 0 0 1 -63.963 -278.335 cm
+/P <</MCID 272>> BDC
+1 0 0 1 -329.463 -133.836 cm
 BT
-/F50 9.9626 Tf 63.963 278.335 Td [(The)-448(translation)-449(subsystem)-448(also)-449(requires)-448(further)-449(v)25(alida-)]TJ
+/F50 9.9626 Tf 329.463 133.836 Td [(The)-448(translation)-449(subsystem)-448(also)-449(requires)-448(further)-449(v)25(alida-)]TJ
 0 g 0 G
 0 g 0 G
  -9.963 -10.959 Td [(tion.)-454(The)-452(present)-453(benchmark)-452(uses)-453(project-authored)-453(refer)20(-)]TJ
@@ -5732,34 +6269,233 @@ BT
  0 -10.959 Td [(e)15(xperiments)-486(could)-486(e)25(v)25(aluate)-486(rob)20(ustness)-486(to)-486(longer)-486(mission)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.959 Td [(descriptions,)-312(compositional)-311(rules,)-312(con\003icting)-312(requirements,)]TJ
+0 g 0 G
+0 g 0 G
+ET
+
+endstream
+endobj
+369 0 obj
+<<
+/Type /Page
+/Contents 451 0 R
+/Resources 450 0 R
+/MediaBox [0 0 612 792]
+/Parent 457 0 R
+>>
+endobj
+452 0 obj
+<<
+/D [369 0 R /XYZ 53 739 null]
+>>
+endobj
+453 0 obj
+<<
+/D [369 0 R /XYZ 87.698 554.125 null]
+>>
+endobj
+454 0 obj
+<<
+/D [369 0 R /XYZ 54 192.319 null]
+>>
+endobj
+455 0 obj
+<<
+/D [369 0 R /XYZ 364.763 527.693 null]
+>>
+endobj
+456 0 obj
+<<
+/D [369 0 R /XYZ 405.27 470.496 null]
+>>
+endobj
+450 0 obj
+<<
+/Font << /F50 47 0 R /F31 192 0 R /F28 193 0 R /F34 194 0 R /F48 46 0 R >>
+/ProcSet [ /PDF /Text ]
+>>
+endobj
+449 0 obj
+<</Type /StructElem /P 444 0 R /C /Normal /K [ <</Type /MCR /Pg 369 0 R /MCID 272>>] /S /P >>
+endobj
+458 0 obj
+<</Type /StructElem /P 444 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 273>>] /S /P >>
+endobj
+444 0 obj
+<</Type /StructElem /P 4 0 R /T (Future Work)/C /Normal  /K [ 445 0 R 446 0 R 447 0 R 448 0 R 449 0 R 458 0 R] /S /Section>>
+endobj
+461 0 obj
+<</Type /StructElem /P 460 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 274>>] /S /H   >>
+endobj
+462 0 obj
+<</Type /StructElem /P 460 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 275>>] /S /P >>
+endobj
+463 0 obj
+<</Type /StructElem /P 460 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 276>>] /S /P >>
+endobj
+464 0 obj
+<</Type /StructElem /P 460 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 277>>] /S /P >>
+endobj
+465 0 obj
+<</Type /StructElem /P 460 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 278>>] /S /P >>
+endobj
+460 0 obj
+<</Type /StructElem /P 4 0 R /T (Conclusion)/C /Normal  /K [ 461 0 R 462 0 R 463 0 R 464 0 R 465 0 R] /S /Section>>
+endobj
+467 0 obj
+<</Type /StructElem /P 466 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 279>>] /S /H   >>
+endobj
+470 0 obj
+<</Type /StructElem /P 469 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 280>>] /S /Lbl   >>
+endobj
+471 0 obj
+<</Type /StructElem /P 469 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 281>>] /S /LBody   >>
+endobj
+469 0 obj
+<</Type /StructElem /P 468 0 R /C /Normal  /K [ 470 0 R 471 0 R] /S /BibItem>>
+endobj
+473 0 obj
+<</Type /StructElem /P 472 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 282>>] /S /Lbl   >>
+endobj
+474 0 obj
+<</Type /StructElem /P 472 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 283>>] /S /LBody   >>
+endobj
+472 0 obj
+<</Type /StructElem /P 468 0 R /C /Normal  /K [ 473 0 R 474 0 R] /S /BibItem>>
+endobj
+476 0 obj
+<</Type /StructElem /P 475 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 284>>] /S /Lbl   >>
+endobj
+477 0 obj
+<</Type /StructElem /P 475 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 285>>] /S /LBody   >>
+endobj
+475 0 obj
+<</Type /StructElem /P 468 0 R /C /Normal  /K [ 476 0 R 477 0 R] /S /BibItem>>
+endobj
+479 0 obj
+<</Type /StructElem /P 478 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 286>>] /S /Lbl   >>
+endobj
+480 0 obj
+<</Type /StructElem /P 478 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 287>>] /S /LBody   >>
+endobj
+478 0 obj
+<</Type /StructElem /P 468 0 R /C /Normal  /K [ 479 0 R 480 0 R] /S /BibItem>>
+endobj
+482 0 obj
+<</Type /StructElem /P 481 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 288>>] /S /Lbl   >>
+endobj
+483 0 obj
+<</Type /StructElem /P 481 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 289>>] /S /LBody   >>
+endobj
+481 0 obj
+<</Type /StructElem /P 468 0 R /C /Normal  /K [ 482 0 R 483 0 R] /S /BibItem>>
+endobj
+485 0 obj
+<</Type /StructElem /P 484 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 290>>] /S /Lbl   >>
+endobj
+486 0 obj
+<</Type /StructElem /P 484 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 291>>] /S /LBody   >>
+endobj
+484 0 obj
+<</Type /StructElem /P 468 0 R /C /Normal  /K [ 485 0 R 486 0 R] /S /BibItem>>
+endobj
+488 0 obj
+<</Type /StructElem /P 487 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 292>>] /S /Lbl   >>
+endobj
+489 0 obj
+<</Type /StructElem /P 487 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 293>>] /S /LBody   >>
+endobj
+487 0 obj
+<</Type /StructElem /P 468 0 R /C /Normal  /K [ 488 0 R 489 0 R] /S /BibItem>>
+endobj
+491 0 obj
+<</Type /StructElem /P 490 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 294>>] /S /Lbl   >>
+endobj
+492 0 obj
+<</Type /StructElem /P 490 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 295>>] /S /LBody   >>
+endobj
+490 0 obj
+<</Type /StructElem /P 468 0 R /C /Normal  /K [ 491 0 R 492 0 R] /S /BibItem>>
+endobj
+494 0 obj
+<</Type /StructElem /P 493 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 296>>] /S /Lbl   >>
+endobj
+495 0 obj
+<</Type /StructElem /P 493 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 297>>] /S /LBody   >>
+endobj
+493 0 obj
+<</Type /StructElem /P 468 0 R /C /Normal  /K [ 494 0 R 495 0 R] /S /BibItem>>
+endobj
+497 0 obj
+<</Type /StructElem /P 496 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 298>>] /S /Lbl   >>
+endobj
+498 0 obj
+<</Type /StructElem /P 496 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 299>>] /S /LBody   >>
+endobj
+496 0 obj
+<</Type /StructElem /P 468 0 R /C /Normal  /K [ 497 0 R 498 0 R] /S /BibItem>>
+endobj
+500 0 obj
+<</Type /StructElem /P 499 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 300>>] /S /Lbl   >>
+endobj
+501 0 obj
+<</Type /StructElem /P 499 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 301>>] /S /LBody   >>
+endobj
+499 0 obj
+<</Type /StructElem /P 468 0 R /C /Normal  /K [ 500 0 R 501 0 R] /S /BibItem>>
+endobj
+503 0 obj
+<</Type /StructElem /P 502 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 302>>] /S /Lbl   >>
+endobj
+504 0 obj
+<</Type /StructElem /P 502 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 303>>] /S /LBody   >>
+endobj
+502 0 obj
+<</Type /StructElem /P 468 0 R /C /Normal  /K [ 503 0 R 504 0 R] /S /BibItem>>
+endobj
+506 0 obj
+<</Type /StructElem /P 505 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 304>>] /S /Lbl   >>
+endobj
+509 0 obj
+<<
+/Length 18980     
+>>
+stream
+0 g 0 G
+0 g 0 G
+BT
+/F50 9.9626 Tf 54 728.037 Td [(descriptions,)-312(compositional)-311(rules,)-312(con\003icting)-312(requirements,)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(and)-373(pre)25(viously)-373(unseen)-373(predicates.)-374(A)-373(h)5(ybrid)-373(translator)-374(that)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.959 Td [(combines)-296(the)-297(current)-296(pipeline')55(s)-296(semantic)-296(performance)-297(with)]TJ
+ 0 -10.958 Td [(combines)-296(the)-297(current)-296(pipeline')55(s)-296(semantic)-296(performance)-297(with)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(the)-241(adapter')55(s)-241(syntax)-242(reliability)-241(and)-241(lo)25(wer)-241(repair)-241(frequenc)15(y)-242(is)]TJ
 0 g 0 G
+ET
+1 0 0 1 54 695.161 cm
+EMC
 0 g 0 G
- 0 -10.959 Td [(another)-250(possible)-250(direction.)]TJ
+1 0 0 1 -54 -695.161 cm
+BT
+/F50 9.9626 Tf 54 684.202 Td [(another)-250(possible)-250(direction.)]TJ
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 63.963 166.712 cm
-EMC
-/P <</MCID 241>> BDC
-1 0 0 1 -63.963 -166.712 cm
+1 0 0 1 63.963 672.905 cm
+/P <</MCID 273>> BDC
+1 0 0 1 -63.963 -672.905 cm
 BT
-/F50 9.9626 Tf 63.963 166.712 Td [(Finally)65(,)-372(future)-373(studies)-372(should)-372(treat)-373(training)-372(seeds)-372(as)-373(the)]TJ
+/F50 9.9626 Tf 63.963 672.905 Td [(Finally)65(,)-372(future)-373(studies)-372(should)-372(treat)-373(training)-372(seeds)-372(as)-373(the)]TJ
 0 g 0 G
 0 g 0 G
  -9.963 -10.959 Td [(independent)-304(e)15(xperimental)-303(un)-1(i)1(ts)-304(and)-304(report)-304(uncertainty)-304(o)15(v)15(er)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.958 Td [(seed-le)25(v)15(el)-206(outcomes.)-206(Lar)18(ger)-206(multi-seed)-206(con\002rmatory)-206(studies)]TJ
+ 0 -10.959 Td [(seed-le)25(v)15(el)-206(outcomes.)-206(Lar)18(ger)-206(multi-seed)-206(con\002rmatory)-206(studies)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(w)10(ould)-300(help)-299(determine)-300(whether)-300(the)-299(patrol)-300(result)-300(persists)-300(un-)]TJ
@@ -5776,30 +6512,28 @@ BT
 0 g 0 G
  0 -10.959 Td [(ality)-250(of)-250(neuro-symbolic)-250(guidance.)]TJ
 0 g 0 G
+0 g 0 G
 ET
-1 0 0 1 54 90 cm
+1 0 0 1 54 594.035 cm
 EMC
-0 g 0 G
-0 g 0 G
-0 g 0 G
-1 0 0 1 356.183 638.037 cm
-/H <</MCID 242>> BDC
-1 0 0 1 -410.183 -728.037 cm
+1 0 0 1 90.683 -21.856 cm
+/H <</MCID 274>> BDC
+1 0 0 1 -144.683 -572.179 cm
 BT
-/F48 11.9552 Tf 410.183 728.037 Td [(Conclusion)]TJ
+/F48 11.9552 Tf 144.683 572.179 Td [(Conclusion)]TJ
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 319.5 725.793 cm
+1 0 0 1 54 568.293 cm
 EMC
-1 0 0 1 0 -10.738 cm
-/P <</MCID 243>> BDC
-1 0 0 1 -319.5 -715.055 cm
+1 0 0 1 0 -11.076 cm
+/P <</MCID 275>> BDC
+1 0 0 1 -54 -557.217 cm
 BT
-/F50 9.9626 Tf 319.5 715.055 Td [(This)-234(w)10(ork)-235(e)25(v)25(aluated)-234(neuro-symbolic)-234(reinforcement)-235(learning)]TJ
+/F50 9.9626 Tf 54 557.217 Td [(This)-234(w)10(ork)-235(e)25(v)25(aluated)-234(neuro-symbolic)-234(reinforcement)-235(learning)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.958 Td [(in)-398(Maritime)-398(Capt)1(u)-1(r)1(e-the-Flag)-398(using)-398(an)-398(end-to-end)-398(system)]TJ
+ 0 -10.959 Td [(in)-398(Maritime)-398(Capt)1(u)-1(r)1(e-the-Flag)-398(using)-398(an)-398(end-to-end)-398(system)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(that)-346(connects)-346(natural-language)-346(mission)-346(speci\002cation,)-346(L)92(TLf)]TJ
@@ -5824,21 +6558,21 @@ BT
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 329.463 616.425 cm
+1 0 0 1 63.963 458.248 cm
 EMC
-/P <</MCID 244>> BDC
-1 0 0 1 -329.463 -616.425 cm
+/P <</MCID 276>> BDC
+1 0 0 1 -63.963 -458.248 cm
 BT
-/F50 9.9626 Tf 329.463 616.425 Td [(In)-226(the)-227(frozen)-226(3-vs-3)-226(ablation,)-227(combined)-226(guidance)-227(reduce)1(d)]TJ
+/F50 9.9626 Tf 63.963 458.248 Td [(In)-226(the)-227(frozen)-226(3-vs-3)-226(ablation,)-227(combined)-226(guidance)-227(reduce)1(d)]TJ
 0 g 0 G
 0 g 0 G
  -9.963 -10.959 Td [(measured)-382(tags)-382(and)-381(rule)-382(violations)-382(and)-382(produced)-382(the)-382(high-)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.958 Td [(est)-399(mean)-400(\002x)15(ed)-399(common)-400(task)-399(re)25(w)10(ard,)-400(b)20(ut)-400(it)-399(completed)-400(no)]TJ
+ 0 -10.959 Td [(est)-399(mean)-400(\002x)15(ed)-399(common)-400(task)-399(re)25(w)10(ard,)-400(b)20(ut)-400(it)-399(completed)-400(no)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.959 Td [(captures.)-258(In)-258(the)-259(later)-258(staged)-258(1-vs-1)-258(study)65(,)-258(softened)-259(guidance)]TJ
+ 0 -10.958 Td [(captures.)-258(In)-258(the)-259(later)-258(staged)-258(1-vs-1)-258(study)65(,)-258(softened)-259(guidance)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(without)-234(a)-234(training)-234(penalty)-234(for)-234(tagging)-234(achie)25(v)15(ed)-234(138)-235(captures)]TJ
@@ -5860,30 +6594,45 @@ BT
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 329.463 506.836 cm
+1 0 0 1 63.963 348.321 cm
 EMC
-/P <</MCID 245>> BDC
-1 0 0 1 -329.463 -506.836 cm
+/P <</MCID 277>> BDC
+1 0 0 1 -63.963 -348.321 cm
 BT
-/F50 9.9626 Tf 329.463 506.836 Td [(The)-214(separate)-214(runtime-only)-213(screen)-214(left)-214(the)-214(e)25(v)25(aluated)-214(neural)]TJ
+/F50 9.9626 Tf 63.963 348.321 Td [(The)-459(\002rst)-460(runtime-only)-459(screen)-460(left)-459(the)-460(e)25(v)25(aluated)-460(neural)]TJ
 0 g 0 G
 0 g 0 G
  -9.963 -10.959 Td [(checkpoints)-224(unchanged)-224(because)-223(the)-224(bounds)-224(g)5(ate)-224(ne)25(v)15(er)-224(inter)20(-)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.959 Td [(v)15(ened;)-247(it)-247(pro)15(vides)-247(no)-247(e)25(vidence)-247(that)-247(d)-1(e)1(plo)10(yment-only)-248(shield-)]TJ
+ 0 -10.959 Td [(v)15(ened.)-266(A)-266(later)-266(e)15(xploratory)-266(test)-266(with)-267(task-capabl)1(e,)-267(imitation-)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.958 Td [(ing)-250(reco)15(v)15(ers)-250(of)25(fensi)25(v)15(e)-250(beha)20(vior)55(.)]TJ
+ 0 -10.959 Td [(initialized)-488(checkpoints)-489(pre)25(v)15(ented)-489(obs)1(erv)15(ed)-489(bounds)-489(viola-)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(tions)-414(in)-415(a)-414(selected)-414(mo)15(ving-start)-415(condition)-414(while)-415(retaining)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(16/36)-191(captures)-192(in)-191(both)-191(arms.)-192(The)-191(bene\002t)-192(is)-191(speci\002c)-191(to)-192(bounds)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.958 Td [(safety)-314(in)-314(that)-315(e)15(xposure)-314(condition;)-314(tagging)-314(did)-314(not)-315(impro)15(v)15(e,)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(higher)20(-speed)-454(starts)-454(deadlock)10(ed,)-455(and)-454(chase)-454(acquisition)-455(re-)]TJ
+0 g 0 G
+0 g 0 G
+ 0 -10.959 Td [(mained)-250(unresolv)15(ed.)]TJ
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 329.463 463.001 cm
+1 0 0 1 63.963 249.353 cm
 EMC
-/P <</MCID 246>> BDC
-1 0 0 1 -329.463 -463.001 cm
+/P <</MCID 278>> BDC
+1 0 0 1 -63.963 -249.353 cm
 BT
-/F50 9.9626 Tf 329.463 463.001 Td [(The)-201(main)-202(empirical)-201(conclusion)-201(is)-202(therefore)-201(not)-201(that)-202(neuro-)]TJ
+/F50 9.9626 Tf 63.963 249.353 Td [(The)-201(main)-202(empirical)-201(conclusion)-201(is)-202(therefore)-201(not)-201(that)-202(neuro-)]TJ
 0 g 0 G
 0 g 0 G
  -9.963 -10.959 Td [(symbolic)-331(gui)1(dance)-331(uni)25(v)15(ersally)-331(impro)15(v)15(es)-330(task)-331(performance,)]TJ
@@ -5923,50 +6672,53 @@ BT
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 319.5 329.337 cm
+1 0 0 1 54 115.689 cm
 EMC
-1 0 0 1 91.478 -19.888 cm
-/H <</MCID 247>> BDC
-1 0 0 1 -410.978 -309.449 cm
+1 0 0 1 91.478 -21.856 cm
+/H <</MCID 279>> BDC
+1 0 0 1 -145.478 -93.833 cm
 BT
-/F48 11.9552 Tf 410.978 309.449 Td [(Refer)18(ences)]TJ
+/F48 11.9552 Tf 145.478 93.833 Td [(Refer)18(ences)]TJ
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 319.5 307.259 cm
+1 0 0 1 54 90 cm
 EMC
-/Lbl <</MCID 248>> BDC
+/Lbl <</MCID 280>> BDC
 0 g 0 G
 0 g 0 G
-1 0 0 1 0 -10.792 cm
+0 g 0 G
+0 g 0 G
+1 0 0 1 265.5 638.037 cm
 EMC
-/LBody <</MCID 249>> BDC
-1 0 0 1 -319.5 -296.467 cm
+/LBody <</MCID 281>> BDC
+1 0 0 1 -319.5 -728.037 cm
 BT
-/F50 9.9626 Tf 319.5 296.467 Td [(Alshiekh,)-648(M.;)-648(Bloem,)-647(R.;)-648(Ehlers,)-648(R.;)-648(K)]TJ 180.148 0.05 Td [(\250)]TJ -0.832 -0.05 Td [(onighofer)40(,)-648(B.;)]TJ
+/F50 9.9626 Tf 319.5 728.037 Td [(Alshiekh,)-648(M.;)-648(Bloem,)-647(R.;)-648(Ehlers,)-648(R.;)-648(K)]TJ 180.148 0.05 Td [(\250)]TJ -0.832 -0.05 Td [(onighofer)40(,)-648(B.;)]TJ
 0 g 0 G
 0 g 0 G
  -179.316 -10.959 Td [(Niekum,)-254(S.;)-255(and)-254(T)80(opcu,)-255(U.)-374(2018.)-374(Safe)-254(reinforcement)-255(learn-)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.959 Td [(ing)-337(via)-337(shielding.)-638(In)]TJ/F53 9.9626 Tf 88.657 0 Td [(Pr)45(oceedings)-337(of)-337(the)-337(AAAI)-337(Confer)37(ence)]TJ
+ 0 -10.958 Td [(ing)-337(via)-337(shielding.)-638(In)]TJ/F53 9.9626 Tf 88.657 0 Td [(Pr)45(oceedings)-337(of)-337(the)-337(AAAI)-337(Confer)37(ence)]TJ
 0 g 0 G
 0 g 0 G
  -88.657 -10.959 Td [(on)-250(Arti\002cial)-250(Intellig)10(ence)]TJ/F50 9.9626 Tf 97.304 0 Td [(,)-250(v)20(olume)-250(32,)-250(2669\2262678.)]TJ
 0 g 0 G
-0 g 0 G
 ET
-1 0 0 1 319.5 261.533 cm
+1 0 0 1 319.5 695.161 cm
 EMC
-/Lbl <</MCID 250>> BDC
+0 g 0 G
+1 0 0 1 0 -2.058 cm
+/Lbl <</MCID 282>> BDC
 0 g 0 G
 0 g 0 G
-1 0 0 1 0 -11.203 cm
+1 0 0 1 0 -11.843 cm
 EMC
-/LBody <</MCID 251>> BDC
-1 0 0 1 -319.5 -250.33 cm
+/LBody <</MCID 283>> BDC
+1 0 0 1 -319.5 -681.26 cm
 BT
-/F50 9.9626 Tf 319.5 250.33 Td [(Alur)40(,)-498(R.;)-498(Bansal,)-498(S.;)-499(Bast)1(ani,)-499(O.;)-498(and)-498(Jothimurug)5(an,)-498(K.)]TJ
+/F50 9.9626 Tf 319.5 681.26 Td [(Alur)40(,)-498(R.;)-498(Bansal,)-498(S.;)-499(Bast)1(ani,)-499(O.;)-498(and)-498(Jothimurug)5(an,)-498(K.)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(2026.)-678(Speci\002cation-guided)-349(reinforcement)-350(learning.)]TJ/F53 9.9626 Tf 216.363 0 Td [(Com-)]TJ
@@ -5976,23 +6728,23 @@ BT
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 319.5 226.355 cm
+1 0 0 1 319.5 657.285 cm
 EMC
-/Lbl <</MCID 252>> BDC
+/Lbl <</MCID 284>> BDC
 0 g 0 G
 0 g 0 G
-1 0 0 1 0 -11.204 cm
+1 0 0 1 0 -11.843 cm
 EMC
-/LBody <</MCID 253>> BDC
-1 0 0 1 -319.5 -215.151 cm
+/LBody <</MCID 285>> BDC
+1 0 0 1 -319.5 -645.442 cm
 BT
-/F50 9.9626 Tf 319.5 215.151 Td [(Beason,)-364(J.;)-364(No)15(vitzk)15(y)65(,)-364(M.;)-364(Kliem,)-364(J.;)-364(Errico,)-364(T)74(.;)-364(Serlin,)-364(Z.;)]TJ
+/F50 9.9626 Tf 319.5 645.442 Td [(Beason,)-364(J.;)-364(No)15(vitzk)15(y)65(,)-364(M.;)-364(Kliem,)-364(J.;)-364(Errico,)-364(T)74(.;)-364(Serlin,)-364(Z.;)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(Beck)10(er)40(,)-381(K.;)-381(P)15(aine,)-382(T)74(.;)-381(Benjamin,)-381(M.;)-381(Dasgupta,)-381(P)111(.;)-382(Cro)25(w-)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.958 Td [(le)15(y)65(,)-512(P)111(.;)-511(O'Donnell,)-512(C.;)-512(and)-511(James,)-512(J.)-1196(2024.)-1197(Ev)25(aluat-)]TJ
+ 0 -10.959 Td [(le)15(y)65(,)-512(P)111(.;)-511(O'Donnell,)-512(C.;)-512(and)-511(James,)-512(J.)-1196(2024.)-1197(Ev)25(aluat-)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(ing)-457(collaborati)25(v)15(e)-458(a)1(u)-1(t)1(onomy)-458(in)-457(opposed)-457(en)40(vironments)-458(us-)]TJ
@@ -6001,21 +6753,21 @@ BT
  0 -10.959 Td [(ing)-317(maritime)-316(capture-the-\003ag)-317(competitions.)]TJ/F53 9.9626 Tf 180.92 0 Td [(arXiv)-317(pr)37(eprint)]TJ
 0 g 0 G
 0 g 0 G
- -180.92 -10.959 Td [(arXiv:2404.17038)]TJ/F50 9.9626 Tf 72.777 0 Td [(.)]TJ
+ -180.92 -10.958 Td [(arXiv:2404.17038)]TJ/F50 9.9626 Tf 72.777 0 Td [(.)]TJ
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 319.5 160.178 cm
+1 0 0 1 319.5 590.468 cm
 EMC
-/Lbl <</MCID 254>> BDC
+/Lbl <</MCID 286>> BDC
 0 g 0 G
 0 g 0 G
-1 0 0 1 0 -13.082 cm
+1 0 0 1 0 -13.721 cm
 EMC
-/LBody <</MCID 255>> BDC
-1 0 0 1 -319.5 -147.096 cm
+/LBody <</MCID 287>> BDC
+1 0 0 1 -319.5 -576.747 cm
 BT
-/F50 9.9626 Tf 319.5 147.096 Td [(Dasgupta,)-289(P)111(.,)-290(and)-289(Kliem,)-289(J.)-486(2023.)-485(Impro)15(v)15(ed)-290(reinforcement)]TJ
+/F50 9.9626 Tf 319.5 576.747 Td [(Dasgupta,)-289(P)111(.,)-290(and)-289(Kliem,)-289(J.)-486(2023.)-485(Impro)15(v)15(ed)-290(reinforcement)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(learning)-376(in)-376(asymmetric)-375(real-time)-376(strate)15(gy)-376(g)5(ames)-376(via)-376(strat-)]TJ
@@ -6024,218 +6776,44 @@ BT
  0 -10.959 Td [(e)15(gy)-346(di)25(v)15(ersity:)-346(A)-346(cas)1(e)-346(study)-346(for)-346(hunting-of-the-plark)-346(g)5(ame.)]TJ
 0 g 0 G
 0 g 0 G
-/F53 9.9626 Tf 0 -10.958 Td [(International)-250(J)25(ournal)-250(of)-250(Serious)-250(Games)]TJ/F50 9.9626 Tf 161.084 0 Td [(10\0501\051:19\22638.)]TJ
+/F53 9.9626 Tf 0 -10.959 Td [(International)-250(J)25(ournal)-250(of)-250(Serious)-250(Games)]TJ/F50 9.9626 Tf 161.084 0 Td [(10\0501\051:19\22638.)]TJ
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 319.5 112.162 cm
+1 0 0 1 319.5 541.813 cm
 EMC
-/Lbl <</MCID 256>> BDC
+/Lbl <</MCID 288>> BDC
 0 g 0 G
 0 g 0 G
-1 0 0 1 0 -11.203 cm
+1 0 0 1 0 -11.843 cm
 EMC
-/LBody <</MCID 257>> BDC
-1 0 0 1 -319.5 -100.959 cm
+/LBody <</MCID 289>> BDC
+1 0 0 1 -319.5 -529.97 cm
 BT
-/F50 9.9626 Tf 319.5 100.959 Td [(Hsiung,)-241(E.;)-241(Mehta,)-241(H.;)-240(Chu,)-241(J.;)-241(Liu,)-241(X.;)-241(P)15(atel,)-241(R.;)-241(T)70(elle)15(x,)-241(S.;)]TJ
+/F50 9.9626 Tf 319.5 529.97 Td [(Hsiung,)-241(E.;)-241(Mehta,)-241(H.;)-240(Chu,)-241(J.;)-241(Liu,)-241(X.;)-241(P)15(atel,)-241(R.;)-241(T)70(elle)15(x,)-241(S.;)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(and)-324(K)35(onidaris,)-325(G.)-598(2022.)-597(Generalizing)-325(to)-324(ne)25(w)-324(domains)-325(by)]TJ
 0 g 0 G
-ET
-1 0 0 1 319.5 90 cm
-EMC
 0 g 0 G
-0 g 0 G
-0 g 0 G
-
-endstream
-endobj
-399 0 obj
-<<
-/Type /Page
-/Contents 428 0 R
-/Resources 427 0 R
-/MediaBox [0 0 612 792]
-/Parent 433 0 R
->>
-endobj
-429 0 obj
-<<
-/D [399 0 R /XYZ 53 739 null]
->>
-endobj
-430 0 obj
-<<
-/D [399 0 R /XYZ 99.263 660.272 null]
->>
-endobj
-431 0 obj
-<<
-/D [399 0 R /XYZ 410.183 741.985 null]
->>
-endobj
-432 0 obj
-<<
-/D [399 0 R /XYZ 410.978 323.397 null]
->>
-endobj
-427 0 obj
-<<
-/Font << /F50 47 0 R /F48 46 0 R /F53 50 0 R >>
-/ProcSet [ /PDF /Text ]
->>
-endobj
-426 0 obj
-<</Type /StructElem /P 424 0 R /C /Normal /K [ <</Type /MCR /Pg 399 0 R /MCID 257>> <</Type /MCR /Pg 434 0 R /MCID 258>>] /S /LBody   >>
-endobj
-424 0 obj
-<</Type /StructElem /P 411 0 R /C /Normal  /K [ 425 0 R 426 0 R] /S /BibItem>>
-endobj
-436 0 obj
-<</Type /StructElem /P 435 0 R /C /Normal /K [ <</Type /MCR /Pg 434 0 R /MCID 259>>] /S /Lbl   >>
-endobj
-437 0 obj
-<</Type /StructElem /P 435 0 R /C /Normal /K [ <</Type /MCR /Pg 434 0 R /MCID 260>>] /S /LBody   >>
-endobj
-435 0 obj
-<</Type /StructElem /P 411 0 R /C /Normal  /K [ 436 0 R 437 0 R] /S /BibItem>>
-endobj
-439 0 obj
-<</Type /StructElem /P 438 0 R /C /Normal /K [ <</Type /MCR /Pg 434 0 R /MCID 261>>] /S /Lbl   >>
-endobj
-440 0 obj
-<</Type /StructElem /P 438 0 R /C /Normal /K [ <</Type /MCR /Pg 434 0 R /MCID 262>>] /S /LBody   >>
-endobj
-438 0 obj
-<</Type /StructElem /P 411 0 R /C /Normal  /K [ 439 0 R 440 0 R] /S /BibItem>>
-endobj
-442 0 obj
-<</Type /StructElem /P 441 0 R /C /Normal /K [ <</Type /MCR /Pg 434 0 R /MCID 263>>] /S /Lbl   >>
-endobj
-443 0 obj
-<</Type /StructElem /P 441 0 R /C /Normal /K [ <</Type /MCR /Pg 434 0 R /MCID 264>>] /S /LBody   >>
-endobj
-441 0 obj
-<</Type /StructElem /P 411 0 R /C /Normal  /K [ 442 0 R 443 0 R] /S /BibItem>>
-endobj
-445 0 obj
-<</Type /StructElem /P 444 0 R /C /Normal /K [ <</Type /MCR /Pg 434 0 R /MCID 265>>] /S /Lbl   >>
-endobj
-446 0 obj
-<</Type /StructElem /P 444 0 R /C /Normal /K [ <</Type /MCR /Pg 434 0 R /MCID 266>>] /S /LBody   >>
-endobj
-444 0 obj
-<</Type /StructElem /P 411 0 R /C /Normal  /K [ 445 0 R 446 0 R] /S /BibItem>>
-endobj
-448 0 obj
-<</Type /StructElem /P 447 0 R /C /Normal /K [ <</Type /MCR /Pg 434 0 R /MCID 267>>] /S /Lbl   >>
-endobj
-449 0 obj
-<</Type /StructElem /P 447 0 R /C /Normal /K [ <</Type /MCR /Pg 434 0 R /MCID 268>>] /S /LBody   >>
-endobj
-447 0 obj
-<</Type /StructElem /P 411 0 R /C /Normal  /K [ 448 0 R 449 0 R] /S /BibItem>>
-endobj
-451 0 obj
-<</Type /StructElem /P 450 0 R /C /Normal /K [ <</Type /MCR /Pg 434 0 R /MCID 269>>] /S /Lbl   >>
-endobj
-452 0 obj
-<</Type /StructElem /P 450 0 R /C /Normal /K [ <</Type /MCR /Pg 434 0 R /MCID 270>>] /S /LBody   >>
-endobj
-450 0 obj
-<</Type /StructElem /P 411 0 R /C /Normal  /K [ 451 0 R 452 0 R] /S /BibItem>>
-endobj
-454 0 obj
-<</Type /StructElem /P 453 0 R /C /Normal /K [ <</Type /MCR /Pg 434 0 R /MCID 271>>] /S /Lbl   >>
-endobj
-455 0 obj
-<</Type /StructElem /P 453 0 R /C /Normal /K [ <</Type /MCR /Pg 434 0 R /MCID 272>>] /S /LBody   >>
-endobj
-453 0 obj
-<</Type /StructElem /P 411 0 R /C /Normal  /K [ 454 0 R 455 0 R] /S /BibItem>>
-endobj
-457 0 obj
-<</Type /StructElem /P 456 0 R /C /Normal /K [ <</Type /MCR /Pg 434 0 R /MCID 273>>] /S /Lbl   >>
-endobj
-458 0 obj
-<</Type /StructElem /P 456 0 R /C /Normal /K [ <</Type /MCR /Pg 434 0 R /MCID 274>>] /S /LBody   >>
-endobj
-456 0 obj
-<</Type /StructElem /P 411 0 R /C /Normal  /K [ 457 0 R 458 0 R] /S /BibItem>>
-endobj
-460 0 obj
-<</Type /StructElem /P 459 0 R /C /Normal /K [ <</Type /MCR /Pg 434 0 R /MCID 275>>] /S /Lbl   >>
-endobj
-461 0 obj
-<</Type /StructElem /P 459 0 R /C /Normal /K [ <</Type /MCR /Pg 434 0 R /MCID 276>>] /S /LBody   >>
-endobj
-459 0 obj
-<</Type /StructElem /P 411 0 R /C /Normal  /K [ 460 0 R 461 0 R] /S /BibItem>>
-endobj
-463 0 obj
-<</Type /StructElem /P 462 0 R /C /Normal /K [ <</Type /MCR /Pg 434 0 R /MCID 277>>] /S /Lbl   >>
-endobj
-464 0 obj
-<</Type /StructElem /P 462 0 R /C /Normal /K [ <</Type /MCR /Pg 434 0 R /MCID 278>>] /S /LBody   >>
-endobj
-462 0 obj
-<</Type /StructElem /P 411 0 R /C /Normal  /K [ 463 0 R 464 0 R] /S /BibItem>>
-endobj
-466 0 obj
-<</Type /StructElem /P 465 0 R /C /Normal /K [ <</Type /MCR /Pg 434 0 R /MCID 279>>] /S /Lbl   >>
-endobj
-467 0 obj
-<</Type /StructElem /P 465 0 R /C /Normal /K [ <</Type /MCR /Pg 434 0 R /MCID 280>>] /S /LBody   >>
-endobj
-465 0 obj
-<</Type /StructElem /P 411 0 R /C /Normal  /K [ 466 0 R 467 0 R] /S /BibItem>>
-endobj
-411 0 obj
-<</Type /StructElem /P 409 0 R /C /Normal  /K [ 412 0 R 415 0 R 418 0 R 421 0 R 424 0 R 435 0 R 438 0 R 441 0 R 444 0 R 447 0 R 450 0 R 453 0 R 456 0 R 459 0 R 462 0 R 465 0 R] /S /Bibliography>>
-endobj
-409 0 obj
-<</Type /StructElem /P 4 0 R /T (References)/C /Normal  /K [ 410 0 R 411 0 R] /S /Section>>
-endobj
-4 0 obj
-<</Type /StructElem /P 1 0 R /C /Normal  /K [ 5 0 R 29 0 R 31 0 R 31 0 R 33 0 R 55 0 R 125 0 R 210 0 R 385 0 R 403 0 R 409 0 R] /S /Document>>
-endobj
-468 0 obj
-<</Normal <</O /Layout /EndIndent 0.0 /SpaceAfter 0.0 /SpaceBefore 0.0 /StartIndent 0.0 /WritingMode /LrTb /TextAlign /Start>> /CM1 <</O /Layout /TextAlign /Justify>> /CM2 <</O /Layout /TextAlign /Center>> /CM3 <</O /Layout /TextAlign /Start>> /CM4 <</O /Layout /InlineAlign /Center /Placement /Block /SpaceAfter 12.125 /BBox [266 314 329 336]>> >>
-endobj
-1 0 obj
-<</Type /StructTreeRoot /RoleMap 469 0 R /ClassMap 468 0 R /ParentTree <</Nums [0 [ 4 0 R]]>> /ParentTreeNextKey 1 /K [ 4 0 R] >>
-endobj
-471 0 obj
-<<
-/Length 10257     
->>
-stream
-0 g 0 G
-0 g 0 G
-1 0 0 1 54 738 cm
-/P <</MCID 258>> BDC
-1 0 0 1 -54 -738 cm
-BT
-/F50 9.9626 Tf 54 728.037 Td [(mapping)-216(natural)-217(language)-216(to)-217(lifted)-216(ltl.)-288(In)]TJ/F53 9.9626 Tf 162.182 0 Td [(IEEE)-216(International)]TJ
+ 0 -10.959 Td [(mapping)-216(natural)-217(language)-216(to)-217(lifted)-216(ltl.)-288(In)]TJ/F53 9.9626 Tf 162.182 0 Td [(IEEE)-216(International)]TJ
 0 g 0 G
 0 g 0 G
  -162.182 -10.959 Td [(Confer)37(ence)-250(on)-250(Robotics)-250(and)-250(A)20(utomation)-250(\050ICRA\051)]TJ/F50 9.9626 Tf 192.855 0 Td [(.)]TJ
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 54 715.021 cm
+1 0 0 1 319.5 495.036 cm
 EMC
-/Lbl <</MCID 259>> BDC
+/Lbl <</MCID 290>> BDC
 0 g 0 G
 0 g 0 G
-1 0 0 1 0 -11.686 cm
+1 0 0 1 0 -11.843 cm
 EMC
-/LBody <</MCID 260>> BDC
-1 0 0 1 -54 -703.335 cm
+/LBody <</MCID 291>> BDC
+1 0 0 1 -319.5 -483.193 cm
 BT
-/F50 9.9626 Tf 54 703.335 Td [(Huang,)-369(S.;)-370(Chen,)-369(Y)129(.-F)80(.;)-370(Sun,)-369(M.-Y)129(.;)-369(Gao,)-370(J.-N.;)-369(Zhou,)-370(Y)129(.-)]TJ
+/F50 9.9626 Tf 319.5 483.193 Td [(Huang,)-369(S.;)-370(Chen,)-369(Y)129(.-F)80(.;)-370(Sun,)-369(M.-Y)129(.;)-369(Gao,)-370(J.-N.;)-369(Zhou,)-370(Y)129(.-)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(H.;)-418(Zeng,)-418(J.-W)92(.;)-418(W)80(ang,)-418(C.-C.;)-418(Han,)-418(Y)129(.-Z.;)-418(and)-418(Xiong,)-418(Y)129(.)]TJ
@@ -6251,17 +6829,17 @@ BT
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 54 659.32 cm
+1 0 0 1 319.5 439.178 cm
 EMC
-/Lbl <</MCID 261>> BDC
+/Lbl <</MCID 292>> BDC
 0 g 0 G
 0 g 0 G
-1 0 0 1 0 -13.564 cm
+1 0 0 1 0 -13.721 cm
 EMC
-/LBody <</MCID 262>> BDC
-1 0 0 1 -54 -645.756 cm
+/LBody <</MCID 293>> BDC
+1 0 0 1 -319.5 -425.457 cm
 BT
-/F50 9.9626 Tf 54 645.756 Td [(Jiang,)-310(Y)129(.;)-310(Bharadw)10(aj,)-310(S.;)-309(W)50(u,)-310(B.;)-310(Shah,)-310(R.;)-310(T)80(opcu,)-310(U.;)-310(and)]TJ
+/F50 9.9626 Tf 319.5 425.457 Td [(Jiang,)-310(Y)129(.;)-310(Bharadw)10(aj,)-310(S.;)-309(W)50(u,)-310(B.;)-310(Shah,)-310(R.;)-310(T)80(opcu,)-310(U.;)-310(and)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(Stone,)-343(P)111(.)-658(2021.)-658(T)70(emporal-)1(logic-based)-343(re)25(w)10(ard)-344(shapi)1(ng)-344(for)]TJ
@@ -6277,17 +6855,17 @@ BT
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 54 601.701 cm
+1 0 0 1 319.5 381.402 cm
 EMC
-/Lbl <</MCID 263>> BDC
+/Lbl <</MCID 294>> BDC
 0 g 0 G
 0 g 0 G
-1 0 0 1 0 -13.524 cm
+1 0 0 1 0 -13.681 cm
 EMC
-/LBody <</MCID 264>> BDC
-1 0 0 1 -54 -588.177 cm
+/LBody <</MCID 295>> BDC
+1 0 0 1 -319.5 -367.721 cm
 BT
-/F50 9.9626 Tf 54 588.177 Td [(Kiely)65(,)-295(M.;)-295(Ahiskali,)-295(M.;)-295(Borde,)-295(E.;)-295(Bo)25(wman,)-295(B.;)-295(Bo)25(wman,)]TJ
+/F50 9.9626 Tf 319.5 367.721 Td [(Kiely)65(,)-295(M.;)-295(Ahiskali,)-295(M.;)-295(Borde,)-295(E.;)-295(Bo)25(wman,)-295(B.;)-295(Bo)25(wman,)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(D.;)-289(v)25(an)-289(Bruggen,)-289(D.;)-289(Co)25(w)10(an,)-289(K.;)-288(Dasgupta,)-289(P)111(.;)-289(et)-289(al.)-485(2025.)]TJ
@@ -6306,17 +6884,17 @@ BT
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 54 531.325 cm
+1 0 0 1 319.5 310.869 cm
 EMC
-/Lbl <</MCID 265>> BDC
+/Lbl <</MCID 296>> BDC
 0 g 0 G
 0 g 0 G
-1 0 0 1 0 -11.686 cm
+1 0 0 1 0 -11.843 cm
 EMC
-/LBody <</MCID 266>> BDC
-1 0 0 1 -54 -519.639 cm
+/LBody <</MCID 297>> BDC
+1 0 0 1 -319.5 -299.026 cm
 BT
-/F50 9.9626 Tf 54 519.639 Td [(K)]TJ 8.025 0.049 Td [(\250)]TJ -0.832 -0.049 Td [(onighofer)40(,)-518(B.;)-519(Bloem,)-518(R.;)-518(Jansen,)-518(N.;)-519(Junges,)-518(S.;)-519(and)]TJ
+/F50 9.9626 Tf 319.5 299.026 Td [(K)]TJ 8.025 0.05 Td [(\250)]TJ -0.832 -0.05 Td [(onighofer)40(,)-518(B.;)-519(Bloem,)-518(R.;)-518(Jansen,)-518(N.;)-519(Junges,)-518(S.;)-519(and)]TJ
 0 g 0 G
 0 g 0 G
  -7.193 -10.959 Td [(Pranger)40(,)-315(S.)-566(2025.)-567(Shields)-315(for)-314(safe)-315(reinforcement)-315(learning.)]TJ
@@ -6326,17 +6904,17 @@ BT
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 54 495.664 cm
+1 0 0 1 319.5 275.051 cm
 EMC
-/Lbl <</MCID 267>> BDC
+/Lbl <</MCID 298>> BDC
 0 g 0 G
 0 g 0 G
-1 0 0 1 0 -11.687 cm
+1 0 0 1 0 -11.843 cm
 EMC
-/LBody <</MCID 268>> BDC
-1 0 0 1 -54 -483.977 cm
+/LBody <</MCID 299>> BDC
+1 0 0 1 -319.5 -263.208 cm
 BT
-/F50 9.9626 Tf 54 483.977 Td [(Le)]TJ 11.342 0.05 Td [(\264)]TJ -0.831 -0.05 Td [(on,)-270(B.)-271(G.;)-270(Shanahan,)-270(M.;)-271(and)-270(Belardinelli,)-270(F)80(.)-425(2020.)-425(Sys-)]TJ
+/F50 9.9626 Tf 319.5 263.208 Td [(Le)]TJ 11.342 0.05 Td [(\264)]TJ -0.831 -0.05 Td [(on,)-270(B.)-271(G.;)-270(Shanahan,)-270(M.;)-271(and)-270(Belardinelli,)-270(F)80(.)-425(2020.)-425(Sys-)]TJ
 0 g 0 G
 0 g 0 G
  -10.511 -10.959 Td [(tematic)-254(generalisation)-254(through)-253(task)-254(temporal)-254(logic)-254(and)-254(deep)]TJ
@@ -6346,17 +6924,17 @@ BT
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 54 459.903 cm
+1 0 0 1 319.5 239.133 cm
 EMC
-/Lbl <</MCID 269>> BDC
+/Lbl <</MCID 300>> BDC
 0 g 0 G
 0 g 0 G
-1 0 0 1 0 -11.587 cm
+1 0 0 1 0 -11.743 cm
 EMC
-/LBody <</MCID 270>> BDC
-1 0 0 1 -54 -448.316 cm
+/LBody <</MCID 301>> BDC
+1 0 0 1 -319.5 -227.39 cm
 BT
-/F50 9.9626 Tf 54 448.316 Td [(Liu,)-357(J.)-357(X.;)-356(Y)100(ang,)-357(Z.;)-357(Idrees,)-357(I.;)-357(Liang,)-357(S.;)-357(Schornstein,)-357(B.;)]TJ
+/F50 9.9626 Tf 319.5 227.39 Td [(Liu,)-357(J.)-357(X.;)-356(Y)100(ang,)-357(Z.;)-357(Idrees,)-357(I.;)-357(Liang,)-357(S.;)-357(Schornstein,)-357(B.;)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(T)70(elle)15(x,)-345(S.;)-346(and)-345(Shah,)-346(A.)-665(2023.)-665(Grounding)-345(comple)15(x)-346(natu-)]TJ
@@ -6375,17 +6953,17 @@ BT
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 54 392.117 cm
+1 0 0 1 319.5 171.191 cm
 EMC
-/Lbl <</MCID 271>> BDC
+/Lbl <</MCID 302>> BDC
 0 g 0 G
 0 g 0 G
-1 0 0 1 0 -12.339 cm
+1 0 0 1 0 -12.496 cm
 EMC
-/LBody <</MCID 272>> BDC
-1 0 0 1 -54 -379.778 cm
+/LBody <</MCID 303>> BDC
+1 0 0 1 -319.5 -158.695 cm
 BT
-/F50 9.9626 Tf 54 379.778 Td [(P)15(an,)-612(J.;)-612(Chou,)-612(G.;)-613(and)-611(Berenson,)-612(D.)-1517(2023.)-1518(Data-)]TJ
+/F50 9.9626 Tf 319.5 158.695 Td [(P)15(an,)-612(J.;)-612(Chou,)-612(G.;)-613(and)-611(Berenson,)-612(D.)-1517(2023.)-1518(Data-)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(ef)25(\002cient)-511(learning)-512(of)-512(natural)-511(language)-512(to)-511(linear)-512(temporal)]TJ
@@ -6398,17 +6976,17 @@ BT
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 54 346.722 cm
+1 0 0 1 319.5 125.639 cm
 EMC
-/Lbl <</MCID 273>> BDC
+/Lbl <</MCID 304>> BDC
 0 g 0 G
 0 g 0 G
-1 0 0 1 0 -13.564 cm
+1 0 0 1 0 -13.721 cm
 EMC
-/LBody <</MCID 274>> BDC
-1 0 0 1 -54 -333.158 cm
+/LBody <</MCID 305>> BDC
+1 0 0 1 -319.5 -111.918 cm
 BT
-/F50 9.9626 Tf 54 333.158 Td [(Rabiei,)-331(B.;)-330(R.,)-331(M.)-331(K.)-330(A.;)-331(Dai,)-331(Z.;)-330(Pilla,)-331(S.)-331(L.)-330(S.)-331(R.;)-331(Dong,)]TJ
+/F50 9.9626 Tf 319.5 111.918 Td [(Rabiei,)-331(B.;)-330(R.,)-331(M.)-331(K.)-330(A.;)-331(Dai,)-331(Z.;)-330(Pilla,)-331(S.)-331(L.)-330(S.)-331(R.;)-331(Dong,)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(Q.;)-243(and)-243(Atanaso)15(v)65(,)-244(N.)-345(2025.)-345(Ltlcode)15(gen:)-243(Code)-243(generation)-244(of)]TJ
@@ -6417,30 +6995,127 @@ BT
  0 -10.959 Td [(syntactically)-274(correct)-273(temporal)-274(logic)-274(for)-273(robot)-274(task)-274(planning.)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.959 Td [(In)]TJ/F53 9.9626 Tf 11.878 0 Td [(2025)-359(IEEE/RSJ)-360(Int)1(ernational)-360(Confer)37(ence)-359(on)-359(Intellig)10(ent)]TJ
+0 g 0 G
+0 g 0 G
+ET
+
+endstream
+endobj
+459 0 obj
+<<
+/Type /Page
+/Contents 509 0 R
+/Resources 508 0 R
+/MediaBox [0 0 612 792]
+/Parent 457 0 R
+>>
+endobj
+510 0 obj
+<<
+/D [459 0 R /XYZ 132.768 739 null]
+>>
+endobj
+511 0 obj
+<<
+/D [459 0 R /XYZ 144.683 586.127 null]
+>>
+endobj
+512 0 obj
+<<
+/D [459 0 R /XYZ 145.478 107.78 null]
+>>
+endobj
+508 0 obj
+<<
+/Font << /F50 47 0 R /F48 46 0 R /F53 50 0 R >>
+/ProcSet [ /PDF /Text ]
+>>
+endobj
+507 0 obj
+<</Type /StructElem /P 505 0 R /C /Normal /K [ <</Type /MCR /Pg 459 0 R /MCID 305>>] /S /LBody   >>
+endobj
+505 0 obj
+<</Type /StructElem /P 468 0 R /C /Normal  /K [ 506 0 R 507 0 R] /S /BibItem>>
+endobj
+514 0 obj
+<</Type /StructElem /P 513 0 R /C /Normal /K [ <</Type /MCR /Pg 515 0 R /MCID 306>>] /S /Lbl   >>
+endobj
+516 0 obj
+<</Type /StructElem /P 513 0 R /C /Normal /K [ <</Type /MCR /Pg 515 0 R /MCID 307>>] /S /LBody   >>
+endobj
+513 0 obj
+<</Type /StructElem /P 468 0 R /C /Normal  /K [ 514 0 R 516 0 R] /S /BibItem>>
+endobj
+518 0 obj
+<</Type /StructElem /P 517 0 R /C /Normal /K [ <</Type /MCR /Pg 515 0 R /MCID 308>>] /S /Lbl   >>
+endobj
+519 0 obj
+<</Type /StructElem /P 517 0 R /C /Normal /K [ <</Type /MCR /Pg 515 0 R /MCID 309>>] /S /LBody   >>
+endobj
+517 0 obj
+<</Type /StructElem /P 468 0 R /C /Normal  /K [ 518 0 R 519 0 R] /S /BibItem>>
+endobj
+521 0 obj
+<</Type /StructElem /P 520 0 R /C /Normal /K [ <</Type /MCR /Pg 515 0 R /MCID 310>>] /S /Lbl   >>
+endobj
+522 0 obj
+<</Type /StructElem /P 520 0 R /C /Normal /K [ <</Type /MCR /Pg 515 0 R /MCID 311>>] /S /LBody   >>
+endobj
+520 0 obj
+<</Type /StructElem /P 468 0 R /C /Normal  /K [ 521 0 R 522 0 R] /S /BibItem>>
+endobj
+468 0 obj
+<</Type /StructElem /P 466 0 R /C /Normal  /K [ 469 0 R 472 0 R 475 0 R 478 0 R 481 0 R 484 0 R 487 0 R 490 0 R 493 0 R 496 0 R 499 0 R 502 0 R 505 0 R 513 0 R 517 0 R 520 0 R] /S /Bibliography>>
+endobj
+466 0 obj
+<</Type /StructElem /P 4 0 R /T (References)/C /Normal  /K [ 467 0 R 468 0 R] /S /Section>>
+endobj
+4 0 obj
+<</Type /StructElem /P 1 0 R /C /Normal  /K [ 5 0 R 29 0 R 31 0 R 31 0 R 33 0 R 55 0 R 125 0 R 210 0 R 444 0 R 460 0 R 466 0 R] /S /Document>>
+endobj
+523 0 obj
+<</Normal <</O /Layout /EndIndent 0.0 /SpaceAfter 0.0 /SpaceBefore 0.0 /StartIndent 0.0 /WritingMode /LrTb /TextAlign /Start>> /CM1 <</O /Layout /TextAlign /Justify>> /CM2 <</O /Layout /TextAlign /Center>> /CM3 <</O /Layout /TextAlign /Start>> /CM4 <</O /Layout /InlineAlign /Center /Placement /Block /SpaceAfter 12.125 /BBox [266 314 329 336]>> >>
+endobj
+1 0 obj
+<</Type /StructTreeRoot /RoleMap 524 0 R /ClassMap 523 0 R /ParentTree <</Nums [0 [ 4 0 R]]>> /ParentTreeNextKey 1 /K [ 4 0 R] >>
+endobj
+526 0 obj
+<<
+/Length 3371      
+>>
+stream
+0 g 0 G
+0 g 0 G
+BT
+/F50 9.9626 Tf 54 728.037 Td [(In)]TJ/F53 9.9626 Tf 11.878 0 Td [(2025)-359(IEEE/RSJ)-360(Int)1(ernational)-360(Confer)37(ence)-359(on)-359(Intellig)10(ent)]TJ
 0 g 0 G
 0 g 0 G
  -11.878 -10.959 Td [(Robots)-250(and)-250(Systems)-250(\050IR)40(OS\051)]TJ/F50 9.9626 Tf 109.449 0 Td [(,)-250(19240\22619247.)]TJ
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 54 287.265 cm
+1 0 0 1 54 715.021 cm
 EMC
-/Lbl <</MCID 275>> BDC
+/Lbl <</MCID 306>> BDC
 0 g 0 G
 0 g 0 G
-1 0 0 1 0 -11.687 cm
+1 0 0 1 0 -11.686 cm
 EMC
-/LBody <</MCID 276>> BDC
-1 0 0 1 -54 -275.578 cm
+/LBody <</MCID 307>> BDC
+1 0 0 1 -54 -703.335 cm
 BT
-/F50 9.9626 Tf 54 275.578 Td [(Rajbhandari,)-313(P)111(.;)-314(Dasgupta,)-313(P)111(.;)-313(and)-313(Sofge,)-314(D.)-562(2025.)-563(T)35(rans-)]TJ
+/F50 9.9626 Tf 54 703.335 Td [(Rajbhandari,)-313(P)111(.;)-314(Dasgupta,)-313(P)111(.;)-313(and)-313(Sofge,)-314(D.)-562(2025.)-563(T)35(rans-)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.958 Td [(former)-503(guided)-503(coe)25(v)20(olution:)-503(Impro)15(v)15(ed)-503(team)-503(formation)-503(in)]TJ
+ 0 -10.959 Td [(former)-503(guided)-503(coe)25(v)20(olution:)-503(Impro)15(v)15(ed)-503(team)-503(formation)-503(in)]TJ
 0 g 0 G
+ET
+1 0 0 1 54 692.376 cm
+EMC
 0 g 0 G
- 0 -10.959 Td [(multiagent)-366(adv)15(ersarial)-365(g)5(ames.)-731(In)]TJ/F53 9.9626 Tf 140.576 0 Td [(Pr)45(oceedings)-366(of)-365(the)-366(24th)]TJ
+1 0 0 1 -54 -692.376 cm
+BT
+/F50 9.9626 Tf 54 681.417 Td [(multiagent)-366(adv)15(ersarial)-365(g)5(ames.)-731(In)]TJ/F53 9.9626 Tf 140.576 0 Td [(Pr)45(oceedings)-366(of)-365(the)-366(24th)]TJ
 0 g 0 G
 0 g 0 G
  -140.576 -10.959 Td [(International)-233(Confer)37(ence)-232(on)-233(A)20(utonomous)-233(Ag)10(ents)-233(and)-233(Multi-)]TJ
@@ -6450,17 +7125,16 @@ BT
 0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 54 229.686 cm
-EMC
-/Lbl <</MCID 277>> BDC
+1 0 0 1 54 657.442 cm
+/Lbl <</MCID 308>> BDC
 0 g 0 G
 0 g 0 G
-1 0 0 1 0 -11.687 cm
+1 0 0 1 0 -11.686 cm
 EMC
-/LBody <</MCID 278>> BDC
-1 0 0 1 -54 -217.999 cm
+/LBody <</MCID 309>> BDC
+1 0 0 1 -54 -645.756 cm
 BT
-/F50 9.9626 Tf 54 217.999 Td [(Rodrigues,)-244(R.;)-244(Abbasi,)-244(A.;)-243(Hosseini,)-244(S.;)-244(da)-244(Costa,)-244(N.)-244(M.)-244(C.;)]TJ
+/F50 9.9626 Tf 54 645.756 Td [(Rodrigues,)-244(R.;)-244(Abbasi,)-244(A.;)-243(Hosseini,)-244(S.;)-244(da)-244(Costa,)-244(N.)-244(M.)-244(C.;)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(and)-341(Fernandes,)-341(D.)-651(2026.)-652(The)-341(agentic)-341(control)-341(frame)25(w)10(ork:)]TJ
@@ -6469,7 +7143,7 @@ BT
  0 -10.959 Td [(Inte)15(grating)-442(kno)25(wledge)-441(graph)-442(retrie)25(v)25(al)-441(and)-442(g)5(ame-theoretic)]TJ
 0 g 0 G
 0 g 0 G
- 0 -10.958 Td [(multi-agent)-266(l)1(earning)-266(for)-266(rob)20(ust)-265(process)-266(design.)-409(In)]TJ/F53 9.9626 Tf 201.543 0 Td [(9th)-266(IEEE)]TJ
+ 0 -10.959 Td [(multi-agent)-266(l)1(earning)-266(for)-266(rob)20(ust)-265(process)-266(design.)-409(In)]TJ/F53 9.9626 Tf 201.543 0 Td [(9th)-266(IEEE)]TJ
 0 g 0 G
 0 g 0 G
  -201.543 -10.959 Td [(International)-255(Confer)37(ence)-256(on)-255(Industrial)-255(Cyber)20(-Physical)-256(Sys-)]TJ
@@ -6477,19 +7151,20 @@ BT
 0 g 0 G
  0 -10.959 Td [(tems)-250(\050ICPS\051)]TJ/F50 9.9626 Tf 48.418 0 Td [(,)-250(1\2268.)]TJ
 0 g 0 G
-0 g 0 G
 ET
-1 0 0 1 54 161.402 cm
+1 0 0 1 54 590.961 cm
 EMC
-/Lbl <</MCID 279>> BDC
+0 g 0 G
+1 0 0 1 0 -1.803 cm
+/Lbl <</MCID 310>> BDC
 0 g 0 G
 0 g 0 G
-1 0 0 1 0 -11.941 cm
+1 0 0 1 0 -11.94 cm
 EMC
-/LBody <</MCID 280>> BDC
-1 0 0 1 -54 -149.461 cm
+/LBody <</MCID 311>> BDC
+1 0 0 1 -54 -577.218 cm
 BT
-/F50 9.9626 Tf 54 149.461 Td [(W)80(ang,)-410(C.;)-410(Ross,)-410(C.;)-411(K)15(uo,)-410(Y)129(.-L.;)-410(Katz,)-410(B.;)-410(and)-410(Barb)20(u,)-411(A.)]TJ
+/F50 9.9626 Tf 54 577.218 Td [(W)80(ang,)-410(C.;)-410(Ross,)-410(C.;)-411(K)15(uo,)-410(Y)129(.-L.;)-410(Katz,)-410(B.;)-410(and)-410(Barb)20(u,)-411(A.)]TJ
 0 g 0 G
 0 g 0 G
  0 -10.959 Td [(2021.)-468(Learning)-283(a)-284(natural-language)-284(to)-283(ltl)-284(e)15(x)15(ecutable)-284(seman-)]TJ
@@ -6501,41 +7176,37 @@ BT
  -142.015 -10.959 Td [(Confer)37(ence)-256(on)-256(Robot)-257(Learning)]TJ/F50 9.9626 Tf 123.513 0 Td [(,)-256(v)20(olume)-256(155)-257(of)]TJ/F53 9.9626 Tf 65.633 0 Td [(Pr)45(oceedings)]TJ
 0 g 0 G
 0 g 0 G
- -189.146 -10.958 Td [(of)-250(Mac)15(hine)-250(Learning)-250(Resear)37(c)15(h)]TJ/F50 9.9626 Tf 123.018 0 Td [(,)-250(1706\2261718.)-360(PMLR.)]TJ
+ -189.146 -10.959 Td [(of)-250(Mac)15(hine)-250(Learning)-250(Resear)37(c)15(h)]TJ/F50 9.9626 Tf 123.018 0 Td [(,)-250(1706\2261718.)-360(PMLR.)]TJ
+0 g 0 G
 0 g 0 G
 ET
-1 0 0 1 54 105.626 cm
+1 0 0 1 54 526.344 cm
 EMC
 0 g 0 G
 0 g 0 G
-0 g 0 G
-1 0 0 1 265.5 632.374 cm
-/P <</MCID 281>> BDC
-1 0 0 1 0 -9.963 cm
-EMC
 0 g 0 G
 0 g 0 G
 
 endstream
 endobj
-434 0 obj
+515 0 obj
 <<
 /Type /Page
-/Contents 471 0 R
-/Resources 470 0 R
+/Contents 526 0 R
+/Resources 525 0 R
 /MediaBox [0 0 612 792]
-/Parent 433 0 R
+/Parent 457 0 R
 >>
 endobj
-469 0 obj
+524 0 obj
 <</IndexItem /Span /TOF /TOC /TOFI /TOCI /TOT /TOC /TOTI /TOCI /Titlepage /Sect /Bibliography /L /BibItem /LI /ParagraphSpan /Span /Footnote /Note /Chapter /Sect/Section /Sect/Subsection /Sect/Subsubsection /Sect/Float /Div/L1 /L/L2 /L/L3 /L/L4 /L/L5 /L>>
 endobj
-472 0 obj
+527 0 obj
 <<
-/D [434 0 R /XYZ 132.768 739 null]
+/D [515 0 R /XYZ 53 739 null]
 >>
 endobj
-470 0 obj
+525 0 obj
 <<
 /Font << /F50 47 0 R /F53 50 0 R >>
 /ProcSet [ /PDF /Text ]
@@ -6589,33 +7260,33 @@ endobj
 99 0 obj
 [3 0 R /Fit]
 endobj
-475 0 obj
+529 0 obj
 [600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600]
 endobj
-476 0 obj
+530 0 obj
 [777.8 277.8 777.8 500 777.8 500 777.8 777.8 777.8 777.8 777.8 777.8 777.8 1000 500 500 777.8 777.8 777.8 777.8 777.8 777.8 777.8 777.8 777.8 777.8 777.8 777.8 1000 1000 777.8 777.8 1000 1000 500 500 1000 1000 1000 777.8 1000 1000 611.1 611.1 1000 1000 1000 777.8 275 1000 666.7 666.7 888.9 888.9 0 0 555.6 555.6 666.7 500 722.2 722.2 777.8 777.8 611.1 798.5 656.8 526.5 771.4 527.8 718.7 594.9 844.5 544.5 677.8 762 689.7 1200.9 820.5 796.1 695.6 816.7 847.5 605.6 544.6 625.8 612.8 987.8 713.3 668.3 724.7 666.7 666.7 666.7 666.7]
 endobj
-477 0 obj
+531 0 obj
 [388.9 388.9 500 777.8 277.8 333.3 277.8 500 500 500 500 500 500 500 500 500 500 500 277.8 277.8 277.8 777.8 472.2 472.2 777.8 750 708.3 722.2 763.9 680.6 652.8 784.7 750 361.1 513.9 777.8 625 916.7 750 777.8 680.6 777.8 736.1 555.6 722.2 750 750 1027.8 750 750 611.1 277.8 500 277.8 500 277.8 277.8 500 555.6 444.4 555.6 444.4 305.6 500 555.6 277.8 305.6 527.8 277.8 833.3 555.6 500 555.6 527.8 391.7 394.4 388.9 555.6]
 endobj
-478 0 obj
-[277.8 277.8 777.8 500 777.8 500 530.9 750 758.5 714.7 827.9 738.2 643.1 786.3]
+532 0 obj
+[277.8 277.8 777.8 500 777.8 500 530.9 750 758.5 714.7 827.9 738.2 643.1 786.3 831.3 439.6 554.5 849.3 680.6 970.1 803.5 762.8 642 790.6 759.3 613.2 584.4 682.8 583.3 944.4 828.5 580.6 682.6 388.9 388.9 388.9 1000 1000 416.7 528.6 429.2 432.8 520.5 465.6 489.6 477 576.2 344.5 411.8 520.6 298.4 878 600.2 484.7 503.1]
 endobj
-479 0 obj
+533 0 obj
 [500 500 167 333 556 278 333 333 0 333 675 0 556 389 333 278 0 0 0 0 0 0 0 0 0 0 0 0 333 214 250 333 420 500 500 833 778 333 333 333 500 675 250 333 250 278 500 500 500 500 500 500 500 500 500 500 333 333 675 675 675 500 920 611 611 667 722 611 611 722 722 333 444 667 556 833 667 722 611 722 611 500 556 722 611 833 611 556 556 389 278 389 422 500 333 500 500 444 500 444 278 500 500 278 278 444 278 722 500 500 500 500 389 389 278 500 444 667 444 444]
 endobj
-480 0 obj
+534 0 obj
 [556 556 167 333 611 278 333 333 0 333 564 0 611 444 333 278 0 0 0 0 0 0 0 0 0 0 0 0 333 180 250 333 408 500 500 833 778 333 333 333 500 564 250 333 250 278 500 500 500 500 500 500 500 500 500 500 278 278 564 564 564 444 921 722 667 667 722 611 556 722 722 333 389 722 611 889 722 722 556 722 667 556 611 722 722 944 722 722 611 333 278 333 469 500 333 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500 500 500 333 389 278 500 500 722 500 500 444 480 200 480 541 0 0 0 333 500 444 1000 500 500 333 1000 556 333 889 0 0 0 0 0 0 444 444 350 500 1000 333 980 389 333 722 0 0 722 0 333 500 500 500 500 200 500 333 760 276 500 564 333 760 333 400 564 300 300 333]
 endobj
-481 0 obj
+535 0 obj
 [556 556 167 333 667 278 333 333 0 333 570 0 667 444 333 278 0 0 0 0 0 0 0 0 0 0 0 0 333 278 250 333 555 500 500 1000 833 333 333 333 500 570 250 333 250 278 500 500 500 500 500 500 500 500 500 500 333 333 570 570 570 500 930 722 667 722 722 667 611 778 778 389 500 778 667 944 722 778 611 778 722 556 667 722 722 1000 722 722 667 333 278 333 581 500 333 500 556 444 556 444 333 500 556 278 333 556 278 833 556 500 556 556 444 389 333 556 500 722 500 500 444]
 endobj
-482 0 obj
+536 0 obj
 <<
-/Length1 1426
-/Length2 6456
+/Length1 1456
+/Length2 6985
 /Length3 0
-/Length 7882      
+/Length 8441      
 >>
 stream
 %!PS-AdobeFont-1.0: CMMI10 003.002
@@ -6635,7 +7306,7 @@ FontDirectory/CMMI10 known{/CMMI10 findfont dup/UniqueID known{dup
 11 dict begin
 /FontType 1 def
 /FontMatrix [0.001 0 0 0.001 0 0 ]readonly def
-/FontName /BDPRPV+CMMI10 def
+/FontName /QAJBQH+CMMI10 def
 /FontBBox {-32 -250 1048 750 }readonly def
 /PaintType 0 def
 /FontInfo 10 dict dup begin
@@ -6654,6 +7325,8 @@ end readonly def
 0 1 255 {1 index exch /.notdef put} for
 dup 70 /F put
 dup 71 /G put
+dup 100 /d put
+dup 112 /p put
 dup 58 /period put
 readonly def
 currentdict end
@@ -6683,15 +7356,14 @@ D·Â ª 	{ieƒ„ô¨<°ØæÍœ˝|¬.{óc∞ál¯0é£à(ß⁄Cò+ÓÕ∏ŸZ∏˛p$ &Òaß¥$E™íFHçm )ﬂﬁ§
 j‡Ö–û§·î¡ò|-∞cLÑÙ¥TüÓz~»úˇL˙Ü7‘•≠G+Z¿ÀüBå±ﬂäøÍ=∏*&ÃÅT7´8~áê#ò“‡∆ølï¬8∂≤≈Ω∏hJ˚∑¶¡†¢(jçˇbÂ*=|tå,c“ì0≈0l∑Ô∞¥Õs<V∫w ¨«1“î˜°*èFÉÚó-®√€≥˘zo5É»•‹´≥d¨Eì˚ &√Çÿ∆ß§¯Lπ.?0¥›-’„⁄S`C Ç7qeTö§ß<b•ppt≤∑ﬁ“∞tTWO`Ü“4.Ox$xíxÁÒé¯X∏†¨Àg8KG_Ó0≥!Å÷oÙz¶WÉÃÀi:«Wº+ÚóK≥ºø¸÷TwÁ©sqáT¨æhÇ6r⁄ÍÚLì&:WYäƒºôë „g™§µLd>åâáKõ@˚3’\ÓSN:8°£'gÈ¶ﬂU?ﬁ)‰‘Rb%—˚⁄oå∑ÄòË>ä6„ƒ«~)ò	Oí
 ´©«Xw5Õ/"À·|kô®(e$/ﬁJ´æG∏‡ì«ı¡û0Mıo#hp—TÈ%ƒÚÂ-R†(>•*Œ˙	“®Ï»25àhºËÔ∫|I.5u¡`QP£˜÷Ç)`Ò©óQQ«∂È(¸˜4ì5ï≥^ßÉﬁÑÇMﬂØoà5G*`?ÕRFM®‡√Ä˛’Ãg„éÍp¿f⁄ﬂn˛ æ5∆1d¨§πëÌKƒÎ[L
 y∏q	¥B¿∂$√@'à 6È!WÎ‡
-Œê˙E∂∆IπÔ6¯,˚IT¡$áç˛ŒyõŸáÓìHñpiπÊˇVchû]l&€ﬂ°F√›:π¬O§È$#»ä!D:® ã Ö%)a„õMxì˝»«"_Ló˙?¬d*˙:á÷0Ô2]7x(Ï∫4pÆP8º*.v5ûsÀb<ıé≥]LQÜ0Ô*¯∂KÌï◊+∑@>e.-⁄o™”èË˛CÆñ°∆Äl Ô∆—\~R+$v√oñD•ô⁄gÜﬂ˛yÅ˘Í†ËaàÁDNnrË*ÔÃˆÆz†Æh¯ÉŸ¯[Å&¶≈&á¿ˇÊ‘¸q.Æã ¯ø›–•áƒŒ•Î«lîVx3ıTù™ˆ%LbzbSz”¥<o:ê’SΩn~Ñiw|P.M’˚ãCa≠õ&Õiµ◊“≤ávN{{Î%⁄-[å„û-ò+üπ.o@‹w@˛ÛÌÌÇåà9^P‹4Ib%¢ú]Ã!D˛˜$>Hv≠ê˜ö“—¶∑ Sc)LÏÜ$,Èô™¶9rº´´}UVKíî±Õmx
-f â'∫o{X:£~CAÁKÏ’ÀfCrx“òÙô&gàõõ⁄≈b*™ªª~0à1^åf&»nüóU=›ü\˘›CŒô&ÚMÄö¸EÄ®˙eû….˙∑vCÁ¥ÕˇÒ∆7fÕå¨–b2™`Îíb—}fŸ1±c±d@ßˇî-ú	1XçÃŸ∂2≥∑aƒñqœäp*åﬂªÌ#œ÷∆  ë˚@˙ü—Ó8¶“Ç5∑Úv÷ΩΩ∞%/Îl¥∞Á9Bo¥¢Á‰ü)Ã√V∫n•ÿ¡Œ‹=–ëE6qﬁ«}’D˘f´5l”Cdƒ'Eâ†6g¢]Òb÷¸&‹Ã>Ô‘ hµCH,hÆE∂è€πıf˚’±2{0¡¡:;≠8÷,-§ÓoäﬂE$∂_XﬂöÓAT¯rw”£åˆ 9rL˜?SCàãå¯gZ©ôeÃ»{”·.Ç[f‚¿-;â“º•vU$u–ª÷ï◊`ùì¶kkMôá|∏ª-ﬂñ·Ôx÷ïb#–áÓ5 q˚‹ÅÛï¶– ì≥zΩYô>D(≤m∞◊ÄTïÈ—âIö¡7ÿ”"¶QÏ∞~¬™aB∂‘«úÍ!Œ\†(Äôß'.lÛ~Ω·^\»O&ÛÉdÅÖJ&uíﬂ¢wFé«Ç˘Z“ÀóiWáhs`Z CüqI¸Gm®'˝]Ö≤b¨!»›®J•Ô+£⁄‚AMÒ∂˘Bíê;Ãök0◊ﬁ7îD""VâW∞ÈÍœ@£úóöò-O	·≠0mÙ ≠CƒﬁH&∑!†'qaâ{Vzòm}CGY∆ „´s˙ô v
-ƒ–π¯É√=^JΩ≥Ÿ¶+g{2∂¬∏ˆué‡Ù˜Ÿ’Ä·}º|FhjJ›:€fmÇ
+Œê˙E∂∆IπÔ6¯,˚IT¡$áç˛ŒyõŸáÓìHñpiπÊˇVchû]l&€ﬂ°F√›:π¬O§È$#»ä!D:® ã Ö%)a„õMxì˝»«"_Ló˙?¬d*˙:á÷0Ô2]7x(Ï∫4pÆP8º*.v5ûsÀb<ıé≥]LQÜ0Ô*¯∂KÌï◊+∑@>e.-⁄o™”èË˛CÆñ°∆Äl Ô∆—\~R+$v√oñD•ô⁄gÜﬂ˛yÅ˘Í†Ëa7s≤∆)cÓk1+£§.¡˝Ò»Ω©õ¯ç#«@c£L´ij¿;N∞ÉË‡CB|(¢¿…Ø‚∑I∏”L4≠±0«˙∆º&‹è£˛bÊÛD¡º≥ãÔTû3øµ∏¸CÈ£ <=D¥gø}Ò@Ω?´G‘øÖˇ¶#Ê”¥œÙÕ?ÀHª]K	è<≈gÈ⁄ôRı˘PHµ›Xœ`û/ùîN€ˆπYﬂ∫©ÜF?	Ÿ3◊≥¸~Ê®äOQZ≠ãÀ˘z∆Ì'+º˙·ºôOÂ"<#ñ≤≤:ÅÜ®Ù«lwgΩK÷_^ÌRh%å|ÈtPùL\Ø®Tîê©–™æ∫TƒGh1qåΩQ«N∞àRZ∑`LütTu±„¬:ëãtﬁbÔ∫øz¨†÷@ôòK˘.öß?Ò∂ íÏØÕ®7:ÒÛ´xÁy2Äè ≥Z£6¨∂ïÑ˚1Xï¡âŸAµùp˛?ÚMÊä*°N,<;8Îú/Ê¯Y,—	 è¥ûé≤Lë∂ûépX◊K´æÎRÑÅ|G˜IøΩ≠Ê«‰ñ≤Œ,«§ïgf£ø‚R{çÒÆßﬂ2∑Ú95Ìº’fŸêJèí<“ÓáPñˇN1f≤í+àÙ∏uŸ¸0UL|B÷óä∫>çágaÙ-–âìÍ˚£G\>:“‡têm3ı≠íuï$^≠ëã®’}rä>ËîKdÄÒŸÿ◊h"=ƒ©W¢ÿ`#ïù«–Óƒ2#…ûÌ3Áº®v≈)à3+«>?s+ﬁˇπ–ß‰Î‹òS›	íö©Í∏LxhƒÿZ,ÓÉÂï Œ´.™Ùÿ∞!Yy≠˙0∂∫åFæ?œ$ÑÜP∫È∫`ã?eSw>Ñ˙qÏCC5◊n√ÿ≈˝ÍÜ•T\∞Ìi_¯ÿ∂Åê)K˛Â§<∑ì¸™õY∆ã∫≤'¬÷£Hﬂ‚}∫¶ãü∆R“Ñêù∞œ™Ç‘Ù[˛¸ˆ‹£òÕ∑†,4Ö1—hÁÕ8ùÅä§cò∑N"∆¿në/t8?‰m∂{a›=FR™l¢ ´VÄ≤sÁAvÕnï§[2_éVa‡4íÌT~E6¡√•‚y8TrΩ6º+*9*¨AWoÑ≈üïQ«¿Ìˆ"·ÂªÜVÁÒx™˛$óπtNßúΩUúÇ•¨—¬ç.hÃ°≈ãòÉÆoE∂ËÑèòFsõ◊KK@¶Aıöâô_
+„ °*≥Fih‰Zc®gÙGhä0`?Ω~œπIŸŸ‘õúπB$N6Õ'nQòw©Ÿ¡RD„ ö≠!X‰€5≤rÈ=a≠»ö√Y÷aB∑ÓŒ˘ÛuøÑoQ(Í/qƒ»J˛âgp †Rá¶Yü ˝P°m]◊º^®ü%‡ó˚@ÉÅ5˚g{ëTc:`ƒ) LYÛ/iÄåŸ–¯œG&$5—˜à∂E¥‹Í_4X ¬ü}ô˘Éó3qpõMÛ@ûÕºÙT(¿ÔXbà∏/Ã\÷≤ãX∑'zÊß˜E*Cù‹Jk <≥mØù	¬ˆº»>}ódŒoK⁄Ÿ"Ø6Â	és˝ÿi?g=A®Pﬂ—0Ú~Gn¢∏	ùu∑'öèà”Õ∞ﬁc˚;…üòêû°Ì√6Ü0£D∞à)s:£À+EøÁÈkœfßÒÇCo¯!†Ï}≈?T ªlíJ"7Iºt”˘â◊Yˆë°uN?πÎ—/™w‡R¥üÿIFù’"jD6	kãÀ=v)~Õé/=,⁄yZsñ˘ÿi„ªûœM{ï≠¨Ôñnzöﬁ¢—Ù?˙û4XqFRuÌaŒ»ô|t‚ÀÃÆúm¥ﬂ‘u¬.ŸÔfÌb¨4”áÃœ∑£>rÁ ·" +}∆,j2âÒÑ∂"ıJ¯ß{å)–”ÏÇp‡ÎÒ¬‘ä…V^ÓZ—xï∞eÔZç‡_q¶
 endstream
 endobj
-483 0 obj
+537 0 obj
 <<
 /Type /FontDescriptor
-/FontName /BDPRPV+CMMI10
+/FontName /QAJBQH+CMMI10
 /Flags 4
 /FontBBox [-32 -250 1048 750]
 /Ascent 694
@@ -6700,11 +7372,11 @@ endobj
 /ItalicAngle -14
 /StemV 72
 /XHeight 431
-/CharSet (/F/G/period)
-/FontFile 482 0 R
+/CharSet (/F/G/d/p/period)
+/FontFile 536 0 R
 >>
 endobj
-484 0 obj
+538 0 obj
 <<
 /Length1 1797
 /Length2 13114
@@ -6842,7 +7514,7 @@ xÅ˛åüùÒ€j6ÚŸmu#›2ãsaıPºuÎX /yô≠|∆?≈/ﬁ£K—ˇ(+÷JÙkÌd®QÂÂz®ú5ªb™x¯"≠„ôÑ w’·
 Œ˚ÅI‰]∑k®©ÑY?§ie›nˆã_“E#ü’ÑÔî◊Ë÷‹?<¨Kˇê"—Ùc¨”ñQ†èX‘I®¯Pb°’úñ=™5+F°6†a“∑#•æw]”ÇÚô°Õ9uà&!}(%Á)s°ÓUÈ—bëè$iÆ∑ë¸1{∫yÀ9¥eDx±»^®≤·ÿ˛*‘K¢|—_F¿‚Î‚≤ÇÈ	ãá©æ=^{Ôë…z€Ü; j	}Ñ}™é_∂N¿1óÑi’.Í)^> G»$_HB kG%3ê Y≠¯ﬁ1ªÿÔﬂ€Ñï™%´ÊßrqWd%≈Fw:¬⁄•!3tqZ¨´Ò∆ûM,.3¶ƒÕrˇ	yvxmº∆•rÄ’3\ÚCñ«Vg~Å∞˛`ùˆùèTºœ.%}Û‹÷QÀK ”UÒ˙U+ı6a($vI–õ∫6ºL?cÃGÇÛ"úitC≥FÖ`ıyç’&WI$œöﬁY”ÿj@œ≤ƒ¿Õªh‡`«Ëi‚g«àÔ'Õ¿≤∫oR»Î®¥£◊qàÇÁ–Æo©]ÏÅ'œ˙õU£ÓäŸ{„À¸#e-≤´∂p≈Í2";8\Õá‡ëªKÔ#."Ë"¥
 endstream
 endobj
-485 0 obj
+539 0 obj
 <<
 /Type /FontDescriptor
 /FontName /IIHCQX+CMR10
@@ -6855,15 +7527,15 @@ endobj
 /StemV 69
 /XHeight 431
 /CharSet (/B/C/F/H/I/a/d/e/eight/five/four/g/l/n/nine/o/p/parenleft/parenright/r/s/seven/six/t/three/two/u/zero)
-/FontFile 484 0 R
+/FontFile 538 0 R
 >>
 endobj
-486 0 obj
+540 0 obj
 <<
-/Length1 1402
-/Length2 6017
+/Length1 1425
+/Length2 6159
 /Length3 0
-/Length 7419      
+/Length 7584      
 >>
 stream
 %!PS-AdobeFont-1.0: CMSY10 003.002
@@ -6883,7 +7555,7 @@ FontDirectory/CMSY10 known{/CMSY10 findfont dup/UniqueID known{dup
 11 dict begin
 /FontType 1 def
 /FontMatrix [0.001 0 0 0.001 0 0 ]readonly def
-/FontName /FCJFIY+CMSY10 def
+/FontName /KAVOHX+CMSY10 def
 /FontBBox {-29 -960 1116 775 }readonly def
 /PaintType 0 def
 /FontInfo 9 dict dup begin
@@ -6899,6 +7571,7 @@ FontDirectory/CMSY10 known{/CMSY10 findfont dup/UniqueID known{dup
 end readonly def
 /Encoding 256 array
 0 1 255 {1 index exch /.notdef put} for
+dup 33 /arrowright put
 dup 94 /logicaland put
 dup 0 /minus put
 readonly def
@@ -6918,14 +7591,15 @@ A5Úô6B=€¢vn€ôT„≠ôè±œº"Ö—˜©]/Õ-}{à—∆…@ü”ñ+ãöi˝©caŒpn…€„¥”‡’{™N©Ç Ôh%s˘™È
 ü«…[”LähüéY≥)ÿo57kﬂ˛ì#%Hí\ ,¨xŒ|ÙsØsxÌ•Hû<FK„‰áÿÕÌhßπZ6–Ö m,ﬁ—hS-WZèŒJ'∑∞˜ =®‰‹wNÂù≥al™:â$¯O5ﬂP‰Ñw√_–âE0ä!Kﬁ3â–À"^Â—˘gq˛90±fE∆(;p"=˛ fc◊.õkGsÌ’CÀÎÅ„ä	O˘ÒÎ` ßpíò{∏ﬂ®I6CñK˝C/w∞ùm´‹ S‘$ÆQ˚—CLÙ¢Ûë∏xòw	‡æ¶ÖF∏ﬁõ&~"Ñ‰Eì>ÕÜ|∂;`≈v˚%¯⁄ØT[Ìc÷]ÔÇeä"GóUjçﬂ´Ñyätvx’:udQëuZy_≤Td"ì™£b+Á¡OÜ]ÿlØx‡'6wÚ„6X≤CøDKO¡áfõ(g@w]f¶VôÀ¬[Í~Îå1F˘È^A3v¨	«‚Oõv“Ø∂2v
 z˙ÂT∏ﬁ˙À0Ÿ›b#ˆõ[õzyœí’$e1¨€k’5ódRAÏ`(≈Ö@{ê=yW>øà‰>˙ëØÁy@Ê≈ˇπU·˙;îú±=√H;«c{ñ<yBb7©l!&xè∫@©á‘Ôï-d°€Ωu‰Í\ ¬ÕÊ"ò˜'uÓ |!>€3˚0¥ç√º£^’Æî)’ô-{∑Oèπ∞O÷˙2R®¬¥x»ËÎàQ≈ÙwBg–ë‚º˝S˝ªûõ"◊™lõbˆz;π±òIy’\E◊¡ÀÍâpr®kM∑@@¬e&¿†3ïòl√ âtS˜Êƒ%ÅÌ)Ë/pR«¯ﬁŸ¿™"2µu
 òEeí5¯+ƒŸ∞sßZÚ'±πßıò‡ÁbàQ≤Ù∞Slüj≈ˆ êzv ﬁÄ‚~%.Kz\N°äÑÁ¸„˜EÍ,„eV2“=Mo)-ÅJc«V‡§:“UŸ2—∏>…1à◊»ì"øQW∫†ÉO˝ı—ë4*Oz˚∫.c∏Ûjcî´Y&¸ﬂ‹ÿÿœèÏÍ=Î7îYô¥ˆ¯»Í,A5n IﬂFäï/ú?¸Ãäô·]as.¥N*Á≤T∫≥ —9êˇÕ∂?=T“‡"Ëmﬂ ¨g†r™Úvd›Nxtƒ‰(h,Dﬁùõ¬_®¬Ëv
-ÕyÒ·ò`+ÈŸW?od;Ä´Æ∂&û »´AùI√`k±¯ÙnywxõÓÉ≈º5øƒç¶”-‘—l∞yù˛ò˙¯SZ˘Èí€ï5©Ã`¶òEñ‰∏õ¯ﬂcP-≥œ∂ÛCWO∞¸°“hj6`Â òû¡ª≤Ù\¡Îü2¶›Uu@êg)äcÔèùƒ⁄±aZ∫z~~¨±Ç÷g∂6ôéDÇÍ¶√JK«∫uºÓ™F-<e5‡£Ñ/rAÊSOÖA
-∂“,⁄uø:Ku¿ÌŒ˘ç?ÆÇú◊‹Âb¸õÆˇ≈§ÑG˛!cB(‰Ií	¬…#^	F±Ãçπ˚⁄ıq|`ºcÔê¿Ÿ·J?Í‡h•qùöT°≥!πµQs÷‘Ô›£æ»ÏÄ¯$à*∂ª ›®H—éÈe‰RÈk∞PCπÁ\ì‰Ÿ«ﬁµJkË	DfA¿≈9Hñ∆†îüRŸõ≤ÓòÁ≥Çk)o•ﬂ˘ÛwvÈzôÃ]≤5OÎYö*7„S`Û
+ÕyÒ·ò`+ÈŸW?od;Ä´Æ∂&û »´AùI√`k±¯ÙnywxõÓÉ≈º5øƒç¶”-‘—l∞yù˛ò˙¯SZ˘Èí‹§`‹˚—√Öq¨}€•vkºmT9»ªTÅúóˆâ3ïƒ"N¥ól¥Fô9T⁄cb•`ŒeLõ‘÷ç≠löùíÏU_>∂–i™D@P⁄n∑”ÉÒmHA.‹|èY/"B’±ŒO%fAöØä˚7≠Ü•˘ﬁSi›5=6ŸcøÜg»I^ÿó	Z∞˘Õ/Ez¿4<Pp˝É	∆§ÍΩ∞•"ó◊>-lˆÎ;Ã ¬°^ |l´TèÌM…~]9∂òõ<Â≥
+.t◊»È:Q…1'‹„a›róûÇ∂ |*…ô1˛†É1ùì©ı-Vˆ¯N"Dÿ¯ÊM(Ë¥xSRï∑i2
+>5aÉ¡‡†+]EB~*(˛~sŒBlìƒ_ôö£QƒGX∑e√-°c’˙’bp<a·$13bÖ}yä?‘J’%5≥GLUÕnÁÏ£k®GºﬂØª¯‘Ä#“£¡≠€ïG±û0ÎoÑÁÜ/“<ﬂåˆ¬	Ù´î{4÷Ñ8d'/v™“lÂû¡w&[Å±ïcøTÄ,«˜1l$UNÊ“"Û!ö˙Ør¿üN7Îà“`LLQÇiZ!a≠•ïD∫bù1IÑ√Ì[l
 endstream
 endobj
-487 0 obj
+541 0 obj
 <<
 /Type /FontDescriptor
-/FontName /FCJFIY+CMSY10
+/FontName /KAVOHX+CMSY10
 /Flags 4
 /FontBBox [-29 -960 1116 775]
 /Ascent 750
@@ -6934,11 +7608,11 @@ endobj
 /ItalicAngle -14
 /StemV 40
 /XHeight 431
-/CharSet (/logicaland/minus)
-/FontFile 486 0 R
+/CharSet (/arrowright/logicaland/minus)
+/FontFile 540 0 R
 >>
 endobj
-488 0 obj
+542 0 obj
 <<
 /Length1 1612
 /Length2 9547
@@ -7020,7 +7694,7 @@ z'OYe¸Á£sç'Ú˚˜kd
 ∆iVv˘Lë†Uπ†0∏uznìOæd‘µXÿ_XT≥„*B>¢;kæˆ‘¯ûeyÄù9-Ü˘€¨óæƒ¿m-ùƒ$ær∞ 8bD¿M…Ä∆∆[KÚqmR*F%ÒH}I#Oz«Æ÷–jbb5x8Xã¥ô≤˜ﬂZÖìQ‘Ñc ‘˘π,}¨úß†ÄcUΩJ¡—ÿ4Qµ˜cYëÂVdëstÂ9óÕÌ™lÎ∞±du∂ëìäÜNß.8Uå≥›á];4∑K©ñUKnï¸Âõ›Kæ~úk
 endstream
 endobj
-489 0 obj
+543 0 obj
 <<
 /Type /FontDescriptor
 /FontName /TFRKHS+NimbusMonL-Regu
@@ -7033,10 +7707,10 @@ endobj
 /StemV 41
 /XHeight 426
 /CharSet (/a/b/c/colon/d/e/f/five/g/h/hyphen/i/l/m/n/o/p/r/s/slash/t/three/u/underscore/v/zero)
-/FontFile 488 0 R
+/FontFile 542 0 R
 >>
 endobj
-490 0 obj
+544 0 obj
 <<
 /Length1 1626
 /Length2 13169
@@ -7127,7 +7801,7 @@ J"*‰aœÊS™Â+‡Èµ{‡ı&G._E∞GIπä%æ2&å≈>{ıo“1hôg‘C=·r≥√xKé.Ÿî‹$ÏoÛı=˘Ω	sÀqãó[¢ÄÒ
 „˛f•»îΩ˘?K{¥∫Dô6V‘ÑÅµ{5ÇÌ	ÅÄXx±√gıÂaê#AÍ)U5ñ30\	ãF†Iou€ô%_g¸·h)‹ÍÒhv¡(Mh¯}ü≥]¸J!J‹vHA–ûA ì+ª»mπŸ´——$6Éx˚ÈQÅ~ˆkÍv—ÌPkQÚπﬂûÁ∑oáÊ¶ùﬂΩ∑bÿÈ©iCøÄw±0`\o·é]™HjÖ€¬ÙU⁄9ø¡5≈„≈7HD‹u˚*«$W»Ò/IC≠Q£3‡®YT	¬ ∆Qk˘5‡Ôrä@Ü≈ÒAª%õ“Ê;Á⁄|Ë√ïÔ)u¶i‹3«K|e⁄ò9ˇÒ*Ô=Iéj]òÅπÜ_,[-6˜{˜PÒMx0∞∑õ†ÔRåù◊fë∑©a»≈·7}mÍa˙%?-}¢∫®-H’˙Å
 endstream
 endobj
-491 0 obj
+545 0 obj
 <<
 /Type /FontDescriptor
 /FontName /BKAJCT+NimbusRomNo9L-Medi
@@ -7140,10 +7814,10 @@ endobj
 /StemV 140
 /XHeight 461
 /CharSet (/A/B/C/D/E/F/G/I/L/M/N/O/P/R/S/T/W/Y/a/b/c/comma/d/e/f/fi/g/h/hyphen/i/j/k/l/m/n/o/one/p/r/s/t/three/u/v/w/x/y/z)
-/FontFile 490 0 R
+/FontFile 544 0 R
 >>
 endobj
-492 0 obj
+546 0 obj
 <<
 /Length1 1630
 /Length2 18858
@@ -7250,7 +7924,7 @@ o§PÄ_°-ö˜b§∫à'FÌ˛ª5tﬂxŸ˙›'n„®X"¶ÌhﬂO;|Gå{d¿ﬁìcx{Ç«˘’ÙEmQÕUH°áq©¥ﬂSàµıÓH¡
 ^(w-¬ËœÏ‘
 endstream
 endobj
-493 0 obj
+547 0 obj
 <<
 /Type /FontDescriptor
 /FontName /GNXADT+NimbusRomNo9L-Regu
@@ -7263,10 +7937,10 @@ endobj
 /StemV 85
 /XHeight 450
 /CharSet (/A/B/C/D/E/F/G/H/I/J/K/L/M/N/O/P/Q/R/S/T/U/V/W/X/Y/Z/a/acute/b/c/colon/comma/copyright/d/dieresis/e/eight/endash/f/fi/five/fl/four/g/h/hyphen/i/j/k/l/m/n/nine/o/one/p/parenleft/parenright/percent/period/q/quotedblleft/quotedblright/quoteright/r/s/semicolon/seven/six/slash/t/three/two/u/v/w/x/y/z/zero)
-/FontFile 492 0 R
+/FontFile 546 0 R
 >>
 endobj
-494 0 obj
+548 0 obj
 <<
 /Length1 1647
 /Length2 14071
@@ -7369,7 +8043,7 @@ B3/~â°√˙øÍ*ãÆÌUòﬁ@è©DâsÖGŒòúÙÖÒFÿ®.{ù™°¢«˘6à  —3ã—,3’oÂ˚£ÚA?sõ·⁄µΩO
 I∆’©]4ÄÎ]P—¿-gL.ÈY^i‹)<n	ıÅÒWjEÏ∂	˝÷o0¢¥ô›–È∑:‰Ö‰Xâ¥õgy‘$ßÚ""ù∑/GwÆœï–µ7˜‚Ü∑Õ0°Ã<“˙ZúÚ¡Ø=i…÷°Vyˇ7Åj"¶Kqo‘≤+9ëO5„Ã´<ú)Æ+“C¡UçØ≠æ}ìzÒ˘˛dç£2∑ƒ≠Ò'‚ŒïÏŒIÑÙå$ÌÿgñÜ»^ºµ≈vDPsıË™&n.¢ùfÆl x∑i[Ω©ÁîK2@x»≤‡ÁÄ;XúDü\˛ÖuMqÕ	¿ƒŒ¨~ z8ƒaﬂ#ÒÆcuoéÈÎb˜Œ”Õµaßç Õ;⁄Ëﬂ•ÊùK◊sŸê,.¡]™o\;èÙ=πÜ†ÄÚ∂ærÇpY˚8eÛ´ÉF}÷…à(! ÷d¥‡Ö–[ÊU•i ¨ê6í<QV h[Iqàu¢'XÂ•/˘ˆÖ≤ËÛÉ˛å-E—D@^x,òDé|⁄˝∑ÏÁpgHy§#fzßJƒé4Y¸jwJ¯Äµypõ|<6K∏çuhóöuÅ!ôº¬√´ÇÔlT™9Î*qhŸºÓ#YeÆ€LòŒl”J∞ ƒ ‘µÆn¬PzNGŒC*à=¿’€ô£ı<<§0ú9îIPÂO¢¯Œ•ºÚÃ§¯§…µ⁄À>◊8ö-ÿná]D(oUΩ5V√øáY~∑Â„ò(U)u	ÕËÓßGÆ€ú-ﬂÇ·)∆m8`—s}[ nQ;z_∏<–aï=äÊá`ÌØ˛ÆtwÊL‡Î§y˙£ÛFRIpu˝i÷Ïçÿ∫èñØı-£ﬁ∆∑¿¡Âd€©Eè„\\’ô0∂πÎï-¡_‰éπ„°Ç"Ï±[„V@ó CÉX‹C4¸‹âîb‹¡∂ªj±uãt9ÿLπõPpf”BQx¶}•¡ìÖ…˘|”¬•-< Â:!xô¸ô<[8ª}ÜﬁÕ∏!@˛ß‚J‘SôÅ
 endstream
 endobj
-495 0 obj
+549 0 obj
 <<
 /Type /FontDescriptor
 /FontName /SENRRL+NimbusRomNo9L-ReguItal
@@ -7382,16 +8056,16 @@ endobj
 /StemV 78
 /XHeight 441
 /CharSet (/A/C/E/F/G/H/I/J/L/M/O/P/R/S/T/X/a/b/c/colon/comma/d/e/eight/f/fi/five/four/g/h/hyphen/i/k/l/m/n/nine/o/one/p/parenleft/parenright/period/question/r/s/seven/six/slash/t/three/two/u/v/w/y/zero)
-/FontFile 494 0 R
+/FontFile 548 0 R
 >>
 endobj
-474 0 obj
+528 0 obj
 <<
 /Type /Encoding
 /Differences [2/fi/fl 37/percent 39/quoteright/parenleft/parenright 44/comma/hyphen/period/slash/zero/one/two/three/four/five/six/seven/eight/nine/colon/semicolon 63/question 65/A/B/C/D/E/F/G/H/I/J/K/L/M/N/O/P/Q/R/S/T/U/V/W/X/Y/Z 95/underscore 97/a/b/c/d/e/f/g/h/i/j/k/l/m/n/o/p/q/r/s/t/u/v/w/x/y/z 147/quotedblleft/quotedblright 150/endash 168/dieresis/copyright 180/acute]
 >>
 endobj
-496 0 obj
+550 0 obj
 <<
 /Length 1535      
 >>
@@ -7501,15 +8175,15 @@ endobj
 <<
 /Type /Font
 /Subtype /Type1
-/BaseFont /BDPRPV+CMMI10
-/FontDescriptor 483 0 R
+/BaseFont /QAJBQH+CMMI10
+/FontDescriptor 537 0 R
 /FirstChar 58
-/LastChar 71
-/Widths 478 0 R
-/ToUnicode 496 0 R
+/LastChar 112
+/Widths 532 0 R
+/ToUnicode 550 0 R
 >>
 endobj
-497 0 obj
+551 0 obj
 <<
 /Length 1724      
 >>
@@ -7637,14 +8311,14 @@ endobj
 /Type /Font
 /Subtype /Type1
 /BaseFont /IIHCQX+CMR10
-/FontDescriptor 485 0 R
+/FontDescriptor 539 0 R
 /FirstChar 40
 /LastChar 117
-/Widths 477 0 R
-/ToUnicode 497 0 R
+/Widths 531 0 R
+/ToUnicode 551 0 R
 >>
 endobj
-498 0 obj
+552 0 obj
 <<
 /Length 2050      
 >>
@@ -7794,15 +8468,15 @@ endobj
 <<
 /Type /Font
 /Subtype /Type1
-/BaseFont /FCJFIY+CMSY10
-/FontDescriptor 487 0 R
+/BaseFont /KAVOHX+CMSY10
+/FontDescriptor 541 0 R
 /FirstChar 0
 /LastChar 94
-/Widths 476 0 R
-/ToUnicode 498 0 R
+/Widths 530 0 R
+/ToUnicode 552 0 R
 >>
 endobj
-499 0 obj
+553 0 obj
 <<
 /Length 1477      
 >>
@@ -7910,15 +8584,15 @@ endobj
 /Type /Font
 /Subtype /Type1
 /BaseFont /TFRKHS+NimbusMonL-Regu
-/FontDescriptor 489 0 R
+/FontDescriptor 543 0 R
 /FirstChar 45
 /LastChar 118
-/Widths 475 0 R
-/Encoding 474 0 R
-/ToUnicode 499 0 R
+/Widths 529 0 R
+/Encoding 528 0 R
+/ToUnicode 553 0 R
 >>
 endobj
-500 0 obj
+554 0 obj
 <<
 /Length 1477      
 >>
@@ -8026,15 +8700,15 @@ endobj
 /Type /Font
 /Subtype /Type1
 /BaseFont /BKAJCT+NimbusRomNo9L-Medi
-/FontDescriptor 491 0 R
+/FontDescriptor 545 0 R
 /FirstChar 2
 /LastChar 122
-/Widths 481 0 R
-/Encoding 474 0 R
-/ToUnicode 500 0 R
+/Widths 535 0 R
+/Encoding 528 0 R
+/ToUnicode 554 0 R
 >>
 endobj
-501 0 obj
+555 0 obj
 <<
 /Length 1477      
 >>
@@ -8142,15 +8816,15 @@ endobj
 /Type /Font
 /Subtype /Type1
 /BaseFont /GNXADT+NimbusRomNo9L-Regu
-/FontDescriptor 493 0 R
+/FontDescriptor 547 0 R
 /FirstChar 2
 /LastChar 180
-/Widths 480 0 R
-/Encoding 474 0 R
-/ToUnicode 501 0 R
+/Widths 534 0 R
+/Encoding 528 0 R
+/ToUnicode 555 0 R
 >>
 endobj
-502 0 obj
+556 0 obj
 <<
 /Length 1482      
 >>
@@ -8258,146 +8932,146 @@ endobj
 /Type /Font
 /Subtype /Type1
 /BaseFont /SENRRL+NimbusRomNo9L-ReguItal
-/FontDescriptor 495 0 R
+/FontDescriptor 549 0 R
 /FirstChar 2
 /LastChar 121
-/Widths 479 0 R
-/Encoding 474 0 R
-/ToUnicode 502 0 R
+/Widths 533 0 R
+/Encoding 528 0 R
+/ToUnicode 556 0 R
 >>
 endobj
 51 0 obj
 <<
 /Type /Pages
 /Count 6
-/Parent 503 0 R
-/Kids [3 0 R 52 0 R 109 0 R 163 0 R 202 0 R 268 0 R]
+/Parent 557 0 R
+/Kids [3 0 R 52 0 R 109 0 R 163 0 R 202 0 R 273 0 R]
 >>
 endobj
-433 0 obj
+457 0 obj
 <<
 /Type /Pages
-/Count 2
-/Parent 503 0 R
-/Kids [399 0 R 434 0 R]
+/Count 3
+/Parent 557 0 R
+/Kids [369 0 R 459 0 R 515 0 R]
 >>
 endobj
-503 0 obj
+557 0 obj
 <<
 /Type /Pages
-/Count 8
-/Kids [51 0 R 433 0 R]
+/Count 9
+/Kids [51 0 R 457 0 R]
 >>
 endobj
-504 0 obj
+558 0 obj
 <<
 /Names [(Doc-Start) 48 0 R (cite.alshiekh2018shielding) 106 0 R (cite.alur2026specification) 103 0 R (cite.beason2024mctf) 102 0 R (cite.dasgupta2023strategy) 99 0 R (cite.hsiung2022lifted) 158 0 R]
 /Limits [(Doc-Start) (cite.hsiung2022lifted)]
 >>
 endobj
-505 0 obj
+559 0 obj
 <<
 /Names [(cite.huang2026nscmarine) 108 0 R (cite.jiang2021temporal) 105 0 R (cite.kiely2025cage) 101 0 R (cite.konighofer2025shields) 107 0 R (cite.leon2020systematic) 104 0 R (cite.liu2023lang2ltl) 160 0 R]
 /Limits [(cite.huang2026nscmarine) (cite.liu2023lang2ltl)]
 >>
 endobj
-506 0 obj
+560 0 obj
 <<
 /Names [(cite.pan2023dataefficient) 159 0 R (cite.rabiei2025ltlcodegen) 161 0 R (cite.rajbhandari2025transformer) 100 0 R (cite.rodrigues2026agentic) 156 0 R (cite.wang2021semantic) 157 0 R (figure.1) 152 0 R]
 /Limits [(cite.pan2023dataefficient) (figure.1)]
 >>
 endobj
-507 0 obj
+561 0 obj
 <<
-/Names [(page.1) 45 0 R (page.2) 91 0 R (page.3) 146 0 R (page.4) 191 0 R (page.5) 261 0 R (page.6) 390 0 R]
+/Names [(page.1) 45 0 R (page.2) 91 0 R (page.3) 146 0 R (page.4) 191 0 R (page.5) 261 0 R (page.6) 357 0 R]
 /Limits [(page.1) (page.6)]
 >>
 endobj
-508 0 obj
+562 0 obj
 <<
-/Names [(page.7) 429 0 R (page.8) 472 0 R (section*.1) 49 0 R (section*.10) 196 0 R (section*.11) 197 0 R (section*.12) 198 0 R]
-/Limits [(page.7) (section*.12)]
+/Names [(page.7) 452 0 R (page.8) 510 0 R (page.9) 527 0 R (section*.1) 49 0 R (section*.10) 196 0 R (section*.11) 197 0 R]
+/Limits [(page.7) (section*.11)]
 >>
 endobj
-509 0 obj
+563 0 obj
 <<
-/Names [(section*.13) 199 0 R (section*.14) 262 0 R (section*.15) 263 0 R (section*.16) 264 0 R (section*.17) 265 0 R (section*.18) 267 0 R]
-/Limits [(section*.13) (section*.18)]
+/Names [(section*.12) 198 0 R (section*.13) 199 0 R (section*.14) 262 0 R (section*.15) 263 0 R (section*.16) 264 0 R (section*.17) 265 0 R]
+/Limits [(section*.12) (section*.17)]
 >>
 endobj
-510 0 obj
+564 0 obj
 <<
-/Names [(section*.19) 392 0 R (section*.2) 92 0 R (section*.20) 393 0 R (section*.21) 394 0 R (section*.22) 396 0 R (section*.23) 397 0 R]
-/Limits [(section*.19) (section*.23)]
+/Names [(section*.18) 267 0 R (section*.19) 359 0 R (section*.2) 92 0 R (section*.20) 360 0 R (section*.21) 361 0 R (section*.22) 363 0 R]
+/Limits [(section*.18) (section*.22)]
 >>
 endobj
-511 0 obj
+565 0 obj
 <<
-/Names [(section*.24) 431 0 R (section*.25) 432 0 R (section*.3) 93 0 R (section*.4) 98 0 R (section*.5) 147 0 R (section*.6) 150 0 R]
-/Limits [(section*.24) (section*.6)]
+/Names [(section*.23) 454 0 R (section*.24) 456 0 R (section*.25) 511 0 R (section*.26) 512 0 R (section*.3) 93 0 R (section*.4) 98 0 R]
+/Limits [(section*.23) (section*.4)]
 >>
 endobj
-512 0 obj
+566 0 obj
 <<
-/Names [(section*.7) 151 0 R (section*.8) 153 0 R (section*.9) 154 0 R (table.1) 266 0 R (table.2) 391 0 R (table.3) 395 0 R]
-/Limits [(section*.7) (table.3)]
+/Names [(section*.5) 147 0 R (section*.6) 150 0 R (section*.7) 151 0 R (section*.8) 153 0 R (section*.9) 154 0 R (table.1) 266 0 R]
+/Limits [(section*.5) (table.1)]
 >>
 endobj
-513 0 obj
+567 0 obj
 <<
-/Names [(table.4) 430 0 R]
-/Limits [(table.4) (table.4)]
+/Names [(table.2) 358 0 R (table.3) 362 0 R (table.4) 453 0 R (table.5) 455 0 R]
+/Limits [(table.2) (table.5)]
 >>
 endobj
-514 0 obj
+568 0 obj
 <<
-/Kids [504 0 R 505 0 R 506 0 R 507 0 R 508 0 R 509 0 R]
-/Limits [(Doc-Start) (section*.18)]
+/Kids [558 0 R 559 0 R 560 0 R 561 0 R 562 0 R 563 0 R]
+/Limits [(Doc-Start) (section*.17)]
 >>
 endobj
-515 0 obj
+569 0 obj
 <<
-/Kids [510 0 R 511 0 R 512 0 R 513 0 R]
-/Limits [(section*.19) (table.4)]
+/Kids [564 0 R 565 0 R 566 0 R 567 0 R]
+/Limits [(section*.18) (table.5)]
 >>
 endobj
-516 0 obj
+570 0 obj
 <<
-/Kids [514 0 R 515 0 R]
-/Limits [(Doc-Start) (table.4)]
+/Kids [568 0 R 569 0 R]
+/Limits [(Doc-Start) (table.5)]
 >>
 endobj
-517 0 obj
+571 0 obj
 <<
-/Dests 516 0 R
+/Dests 570 0 R
 >>
 endobj
-518 0 obj
+572 0 obj
 <<
 /Type /Catalog
-/Pages 503 0 R
-/Names 517 0 R
+/Pages 557 0 R
+/Names 571 0 R
 /PageMode/UseNone/Lang(en-US)/StructTreeRoot 1 0 R/MarkInfo <</Marked true /LetterspaceFlags 0>>
 /OpenAction 2 0 R
 >>
 endobj
-519 0 obj
+573 0 obj
 <<
 /Producer (MiKTeX pdfTeX-1.40.26)
  /Title (Evaluating Neuro-Symbolic Reinforcement Learning in Maritime Capture-the-Flag) /Author (Yahya Masri, Akshith Ambekar, Tuga Wangjie, Armin Khazai, Zawadul Haque, Prithviraj Dasgupta) /Keywords (Neuro-Symbolic AI, Reinforcement Learning, Multi-Agent Systems, Maritime Capture-the-Flag, Linear Temporal Logic, PyQuaticus) /Author()/Title()/Subject()/Creator(LaTeX with hyperref)/Keywords()
-/CreationDate (D:20261012030356-04'00')
-/ModDate (D:20261012030356-04'00')
+/CreationDate (D:20261012035422-04'00')
+/ModDate (D:20261012035422-04'00')
 /Trapped /False
 /PTEX.Fullbanner (This is MiKTeX-pdfTeX 4.19.0 (1.40.26))
 >>
 endobj
 xref
-0 520
+0 574
 0000000030 65535 f 
-0009001961 00000 n 
+0009029313 00000 n 
 0000000015 00000 n 
 0000018505 00000 n 
-0009001437 00000 n 
+0009028789 00000 n 
 0000002223 00000 n 
 0000000061 00000 n 
 0000001205 00000 n 
@@ -8423,7 +9097,7 @@ xref
 0000001957 00000 n 
 0000001849 00000 n 
 0000002328 00000 n 
-0000000473 00000 f 
+0000000000 00000 f 
 0000002433 00000 n 
 0000002544 00000 n 
 0000019218 00000 n 
@@ -8439,12 +9113,12 @@ xref
 0000018769 00000 n 
 0000003540 00000 n 
 0000018612 00000 n 
-0009121583 00000 n 
-0009123311 00000 n 
+0009143022 00000 n 
+0009144750 00000 n 
 0000018662 00000 n 
 0000018712 00000 n 
-0009125044 00000 n 
-0009125239 00000 n 
+0009146483 00000 n 
+0009146678 00000 n 
 0000042401 00000 n 
 0000019004 00000 n 
 0000019111 00000 n 
@@ -8481,7 +9155,7 @@ xref
 0000022076 00000 n 
 0000044766 00000 n 
 0000022217 00000 n 
-0008886501 00000 n 
+0008886551 00000 n 
 0000045160 00000 n 
 0000022358 00000 n 
 0000044931 00000 n 
@@ -8492,41 +9166,41 @@ xref
 0000043457 00000 n 
 0000043615 00000 n 
 0000045102 00000 n 
-0009013399 00000 n 
-0009013369 00000 n 
-0009013339 00000 n 
-0009013309 00000 n 
-0009013279 00000 n 
-0009013249 00000 n 
-0009013219 00000 n 
-0009013189 00000 n 
-0009013159 00000 n 
-0009013129 00000 n 
-0000065855 00000 n 
+0009033860 00000 n 
+0009033830 00000 n 
+0009033800 00000 n 
+0009033770 00000 n 
+0009033740 00000 n 
+0009033710 00000 n 
+0009033680 00000 n 
+0009033650 00000 n 
+0009033620 00000 n 
+0009033590 00000 n 
+0000065905 00000 n 
 0000047028 00000 n 
 0000045636 00000 n 
 0000046038 00000 n 
 0000045748 00000 n 
-0008886668 00000 n 
+0008886718 00000 n 
 0000045893 00000 n 
-0008886832 00000 n 
+0008886882 00000 n 
 0000046673 00000 n 
 0000046238 00000 n 
-0008886993 00000 n 
+0008887043 00000 n 
 0000046383 00000 n 
-0008887160 00000 n 
+0008887210 00000 n 
 0000046528 00000 n 
-0008887323 00000 n 
+0008887373 00000 n 
 0000046918 00000 n 
-0008911409 00000 n 
+0008911457 00000 n 
 0000047304 00000 n 
 0000048124 00000 n 
 0000047416 00000 n 
 0000047528 00000 n 
 0000047909 00000 n 
 0000047674 00000 n 
-0000066056 00000 n 
-0008886390 00000 n 
+0000066106 00000 n 
+0008886440 00000 n 
 0000047791 00000 n 
 0000048014 00000 n 
 0000048701 00000 n 
@@ -8534,390 +9208,444 @@ xref
 0000048371 00000 n 
 0000048481 00000 n 
 0000048591 00000 n 
-0008889380 00000 n 
+0008889430 00000 n 
 0000048863 00000 n 
-0008888351 00000 n 
-0008888232 00000 n 
+0008888401 00000 n 
+0008888282 00000 n 
 0000048975 00000 n 
-0008887822 00000 n 
-0008887875 00000 n 
-0008887491 00000 n 
-0008887656 00000 n 
-0008887932 00000 n 
-0008887993 00000 n 
-0008888050 00000 n 
-0008888112 00000 n 
-0008888172 00000 n 
-0006681230 00000 n 
-0009013099 00000 n 
-0009013069 00000 n 
-0009013039 00000 n 
-0009013009 00000 n 
-0009012979 00000 n 
-0009012949 00000 n 
-0008888461 00000 n 
-0008909509 00000 n 
-0008888918 00000 n 
-0008888579 00000 n 
-0008888692 00000 n 
-0008888805 00000 n 
-0008889160 00000 n 
-0008889270 00000 n 
-0008889768 00000 n 
-0008889546 00000 n 
-0008889658 00000 n 
-0008890386 00000 n 
-0008889907 00000 n 
-0008890019 00000 n 
-0008890165 00000 n 
-0008890275 00000 n 
-0008891093 00000 n 
-0008890536 00000 n 
-0008890649 00000 n 
-0008890760 00000 n 
-0008890871 00000 n 
-0008890982 00000 n 
-0008910157 00000 n 
-0008891245 00000 n 
-0008891358 00000 n 
-0008891469 00000 n 
-0008910046 00000 n 
-0008909911 00000 n 
-0008891580 00000 n 
-0008909620 00000 n 
-0009113940 00000 n 
-0009115886 00000 n 
-0009118158 00000 n 
-0009119856 00000 n 
-0008909678 00000 n 
-0008909735 00000 n 
-0008909792 00000 n 
-0008909851 00000 n 
-0008910637 00000 n 
-0008910302 00000 n 
-0008937586 00000 n 
-0008910415 00000 n 
-0008910526 00000 n 
-0008911269 00000 n 
-0008910786 00000 n 
-0008910899 00000 n 
-0008911010 00000 n 
-0008911121 00000 n 
-0008951630 00000 n 
-0008911583 00000 n 
-0008916241 00000 n 
-0008911696 00000 n 
-0008911955 00000 n 
-0008911809 00000 n 
-0008937717 00000 n 
-0008912112 00000 n 
-0008916137 00000 n 
-0008915932 00000 n 
-0008915798 00000 n 
-0008912679 00000 n 
-0008912223 00000 n 
-0008912337 00000 n 
-0008912451 00000 n 
-0008912565 00000 n 
-0008913242 00000 n 
-0008912786 00000 n 
-0008912900 00000 n 
-0008913014 00000 n 
-0008913128 00000 n 
-0008913805 00000 n 
-0008913349 00000 n 
-0008913463 00000 n 
-0008913577 00000 n 
-0008913691 00000 n 
-0008914368 00000 n 
-0008913912 00000 n 
-0008914026 00000 n 
-0008914140 00000 n 
-0008914254 00000 n 
-0008914931 00000 n 
-0008914475 00000 n 
-0008914589 00000 n 
-0008914703 00000 n 
-0008914817 00000 n 
-0008915494 00000 n 
-0008915038 00000 n 
-0008915152 00000 n 
-0008915266 00000 n 
-0008915380 00000 n 
-0008915715 00000 n 
-0008915601 00000 n 
-0008916018 00000 n 
-0008941396 00000 n 
-0008916383 00000 n 
-0008916496 00000 n 
-0008916607 00000 n 
-0008938411 00000 n 
-0008938276 00000 n 
-0008916718 00000 n 
-0008937866 00000 n 
-0008937919 00000 n 
-0008937976 00000 n 
-0008938033 00000 n 
-0008938095 00000 n 
-0008938154 00000 n 
-0008938216 00000 n 
-0008973199 00000 n 
-0008941292 00000 n 
-0008941087 00000 n 
-0008940961 00000 n 
-0008938901 00000 n 
-0008938559 00000 n 
-0008938673 00000 n 
-0008938787 00000 n 
-0008939342 00000 n 
-0008939000 00000 n 
-0008939114 00000 n 
-0008939228 00000 n 
-0008939783 00000 n 
-0008939441 00000 n 
-0008939555 00000 n 
-0008939669 00000 n 
-0008940224 00000 n 
-0008939882 00000 n 
-0008939996 00000 n 
-0008940110 00000 n 
-0008940665 00000 n 
-0008940323 00000 n 
-0008940437 00000 n 
-0008940551 00000 n 
-0008940878 00000 n 
-0008940764 00000 n 
-0008941173 00000 n 
-0008941876 00000 n 
-0008941541 00000 n 
-0008941654 00000 n 
-0008941765 00000 n 
-0008942450 00000 n 
-0008942004 00000 n 
-0008942117 00000 n 
-0008942228 00000 n 
-0008942339 00000 n 
-0008947600 00000 n 
-0008942595 00000 n 
-0008942708 00000 n 
-0008942856 00000 n 
-0008947496 00000 n 
-0008947291 00000 n 
-0008947133 00000 n 
-0008943309 00000 n 
-0008942967 00000 n 
-0008943081 00000 n 
-0008943195 00000 n 
-0008943750 00000 n 
-0008943408 00000 n 
-0008943522 00000 n 
-0008943636 00000 n 
-0008944191 00000 n 
-0008943849 00000 n 
-0008943963 00000 n 
-0008944077 00000 n 
-0008944632 00000 n 
-0008944290 00000 n 
-0008944404 00000 n 
-0008944518 00000 n 
-0008945073 00000 n 
-0008944731 00000 n 
-0008944845 00000 n 
-0008944959 00000 n 
-0008945514 00000 n 
-0008945172 00000 n 
-0008945286 00000 n 
-0008945400 00000 n 
-0008945955 00000 n 
-0008945613 00000 n 
-0008945727 00000 n 
-0008945841 00000 n 
-0008946396 00000 n 
-0008946054 00000 n 
-0008946168 00000 n 
-0008946282 00000 n 
-0008946837 00000 n 
-0008946495 00000 n 
-0008946609 00000 n 
-0008946723 00000 n 
-0008947050 00000 n 
-0008946936 00000 n 
-0008947377 00000 n 
-0008951482 00000 n 
-0008947750 00000 n 
-0008947863 00000 n 
-0008947974 00000 n 
-0008948085 00000 n 
-0008951378 00000 n 
-0008951173 00000 n 
-0008951039 00000 n 
-0008948538 00000 n 
-0008948196 00000 n 
-0008948310 00000 n 
-0008948424 00000 n 
-0008948979 00000 n 
-0008948637 00000 n 
-0008948751 00000 n 
-0008948865 00000 n 
-0008949420 00000 n 
-0008949078 00000 n 
-0008949192 00000 n 
-0008949306 00000 n 
-0008949861 00000 n 
-0008949519 00000 n 
-0008949633 00000 n 
-0008949747 00000 n 
-0008950302 00000 n 
-0008949960 00000 n 
-0008950074 00000 n 
-0008950188 00000 n 
-0008950743 00000 n 
-0008950401 00000 n 
-0008950515 00000 n 
-0008950629 00000 n 
-0008950956 00000 n 
-0008950842 00000 n 
-0008951259 00000 n 
-0008974459 00000 n 
-0008951776 00000 n 
-0008973904 00000 n 
-0008973782 00000 n 
-0008951889 00000 n 
-0008973310 00000 n 
-0008973368 00000 n 
-0008973428 00000 n 
-0008973485 00000 n 
-0008973542 00000 n 
-0008973599 00000 n 
-0008973661 00000 n 
-0008973721 00000 n 
-0008974015 00000 n 
-0008996812 00000 n 
-0008974126 00000 n 
-0008974237 00000 n 
-0008974348 00000 n 
-0008975158 00000 n 
-0008974601 00000 n 
-0008974714 00000 n 
+0008887872 00000 n 
+0008887925 00000 n 
+0008887541 00000 n 
+0008887706 00000 n 
+0008887982 00000 n 
+0008888043 00000 n 
+0008888100 00000 n 
+0008888162 00000 n 
+0008888222 00000 n 
+0006681280 00000 n 
+0009033560 00000 n 
+0009033530 00000 n 
+0009033500 00000 n 
+0009033470 00000 n 
+0009033440 00000 n 
+0009033410 00000 n 
+0008888511 00000 n 
+0008909594 00000 n 
+0008888968 00000 n 
+0008888629 00000 n 
+0008888742 00000 n 
+0008888855 00000 n 
+0008889210 00000 n 
+0008889320 00000 n 
+0008889818 00000 n 
+0008889596 00000 n 
+0008889708 00000 n 
+0008890436 00000 n 
+0008889957 00000 n 
+0008890069 00000 n 
+0008890215 00000 n 
+0008890325 00000 n 
+0008891143 00000 n 
+0008890586 00000 n 
+0008890699 00000 n 
+0008890810 00000 n 
+0008890921 00000 n 
+0008891032 00000 n 
+0008910242 00000 n 
+0008891295 00000 n 
+0008891408 00000 n 
+0008891519 00000 n 
+0008910131 00000 n 
+0008909996 00000 n 
+0008891630 00000 n 
+0008909705 00000 n 
+0009135378 00000 n 
+0009137325 00000 n 
+0009139597 00000 n 
+0009141295 00000 n 
+0008909763 00000 n 
+0008909820 00000 n 
+0008909877 00000 n 
+0008909936 00000 n 
+0008910722 00000 n 
+0008910387 00000 n 
+0008937604 00000 n 
+0008910500 00000 n 
+0008910611 00000 n 
+0008911317 00000 n 
+0008910871 00000 n 
+0008910984 00000 n 
+0008911095 00000 n 
+0008911206 00000 n 
+0008979335 00000 n 
+0008911631 00000 n 
+0008916289 00000 n 
+0008911744 00000 n 
+0008912003 00000 n 
+0008911857 00000 n 
+0008937735 00000 n 
+0008912160 00000 n 
+0008916185 00000 n 
+0008915980 00000 n 
+0008915846 00000 n 
+0008912727 00000 n 
+0008912271 00000 n 
+0008912385 00000 n 
+0008912499 00000 n 
+0008912613 00000 n 
+0008913290 00000 n 
+0008912834 00000 n 
+0008912948 00000 n 
+0008913062 00000 n 
+0008913176 00000 n 
+0008913853 00000 n 
+0008913397 00000 n 
+0008913511 00000 n 
+0008913625 00000 n 
+0008913739 00000 n 
+0008914416 00000 n 
+0008913960 00000 n 
+0008914074 00000 n 
+0008914188 00000 n 
+0008914302 00000 n 
+0008914979 00000 n 
+0008914523 00000 n 
+0008914637 00000 n 
+0008914751 00000 n 
+0008914865 00000 n 
+0008915542 00000 n 
+0008915086 00000 n 
+0008915200 00000 n 
+0008915314 00000 n 
+0008915428 00000 n 
+0008915763 00000 n 
+0008915649 00000 n 
+0008916066 00000 n 
+0008941377 00000 n 
+0008916431 00000 n 
+0008916544 00000 n 
+0008916655 00000 n 
+0008938429 00000 n 
+0008938294 00000 n 
+0008916766 00000 n 
+0008937884 00000 n 
+0008937937 00000 n 
+0008937994 00000 n 
+0008938051 00000 n 
+0008938113 00000 n 
+0008938172 00000 n 
+0008938234 00000 n 
+0008941273 00000 n 
+0008941068 00000 n 
+0008940942 00000 n 
+0008938882 00000 n 
+0008938540 00000 n 
+0008969660 00000 n 
+0008938654 00000 n 
+0008938768 00000 n 
+0008939323 00000 n 
+0008938981 00000 n 
+0008939095 00000 n 
+0008939209 00000 n 
+0008939764 00000 n 
+0008939422 00000 n 
+0008939536 00000 n 
+0008939650 00000 n 
+0008940205 00000 n 
+0008939863 00000 n 
+0008939977 00000 n 
+0008940091 00000 n 
+0008940646 00000 n 
+0008940304 00000 n 
+0008940418 00000 n 
+0008940532 00000 n 
+0008940859 00000 n 
+0008940745 00000 n 
+0008941154 00000 n 
+0008941857 00000 n 
+0008941522 00000 n 
+0008941635 00000 n 
+0008941746 00000 n 
+0008942431 00000 n 
+0008941985 00000 n 
+0008942098 00000 n 
+0008942209 00000 n 
+0008942320 00000 n 
+0008947544 00000 n 
+0008942576 00000 n 
+0008942689 00000 n 
+0008942800 00000 n 
+0008947440 00000 n 
+0008947235 00000 n 
+0008947077 00000 n 
+0008943253 00000 n 
+0008942911 00000 n 
+0008943025 00000 n 
+0008943139 00000 n 
+0008943694 00000 n 
+0008943352 00000 n 
+0008943466 00000 n 
+0008943580 00000 n 
+0008944135 00000 n 
+0008943793 00000 n 
+0008943907 00000 n 
+0008944021 00000 n 
+0008944576 00000 n 
+0008944234 00000 n 
+0008944348 00000 n 
+0008944462 00000 n 
+0008945017 00000 n 
+0008944675 00000 n 
+0008944789 00000 n 
+0008944903 00000 n 
+0008945458 00000 n 
+0008945116 00000 n 
+0008945230 00000 n 
+0008945344 00000 n 
+0008945899 00000 n 
+0008945557 00000 n 
+0008945671 00000 n 
+0008945785 00000 n 
+0008946340 00000 n 
+0008945998 00000 n 
+0008946112 00000 n 
+0008946226 00000 n 
+0008946781 00000 n 
+0008946439 00000 n 
+0008946553 00000 n 
+0008946667 00000 n 
+0008946994 00000 n 
+0008946880 00000 n 
+0008947321 00000 n 
+0008975270 00000 n 
+0008947694 00000 n 
+0008947807 00000 n 
+0008947918 00000 n 
+0008970304 00000 n 
+0008970182 00000 n 
+0008948029 00000 n 
+0008969771 00000 n 
+0008969829 00000 n 
+0008969889 00000 n 
+0008969946 00000 n 
+0008970003 00000 n 
+0008970060 00000 n 
+0008970122 00000 n 
+0008974944 00000 n 
+0008974739 00000 n 
+0008974581 00000 n 
+0008970757 00000 n 
+0008970415 00000 n 
+0009002096 00000 n 
+0008970529 00000 n 
+0008970643 00000 n 
+0008971198 00000 n 
+0008970856 00000 n 
+0008970970 00000 n 
+0008971084 00000 n 
+0008971639 00000 n 
+0008971297 00000 n 
+0008971411 00000 n 
+0008971525 00000 n 
+0008972080 00000 n 
+0008971738 00000 n 
+0008971852 00000 n 
+0008971966 00000 n 
+0008972521 00000 n 
+0008972179 00000 n 
+0008972293 00000 n 
+0008972407 00000 n 
+0008972962 00000 n 
+0008972620 00000 n 
+0008972734 00000 n 
+0008972848 00000 n 
+0008973403 00000 n 
+0008973061 00000 n 
+0008973175 00000 n 
+0008973289 00000 n 
+0008973844 00000 n 
+0008973502 00000 n 
+0008973616 00000 n 
+0008973730 00000 n 
+0008974285 00000 n 
+0008973943 00000 n 
+0008974057 00000 n 
+0008974171 00000 n 
+0008974498 00000 n 
+0008974384 00000 n 
 0008974825 00000 n 
-0008974936 00000 n 
-0008975047 00000 n 
-0009001328 00000 n 
-0008975291 00000 n 
-0009001115 00000 n 
-0008975636 00000 n 
-0008975404 00000 n 
-0008975519 00000 n 
-0008975964 00000 n 
-0008975732 00000 n 
-0008975847 00000 n 
-0008976292 00000 n 
-0008976060 00000 n 
-0008976175 00000 n 
-0008976620 00000 n 
-0008976388 00000 n 
-0008976503 00000 n 
-0008997411 00000 n 
-0008976716 00000 n 
-0008997257 00000 n 
-0008997162 00000 n 
-0008976831 00000 n 
-0008996924 00000 n 
-0008996977 00000 n 
-0008997038 00000 n 
-0008997100 00000 n 
-0009125352 00000 n 
-0009012423 00000 n 
-0008997739 00000 n 
-0008997507 00000 n 
-0008997622 00000 n 
-0008998067 00000 n 
-0008997835 00000 n 
-0008997950 00000 n 
-0008998395 00000 n 
-0008998163 00000 n 
-0008998278 00000 n 
-0008998723 00000 n 
-0008998491 00000 n 
-0008998606 00000 n 
-0008999051 00000 n 
-0008998819 00000 n 
-0008998934 00000 n 
-0008999379 00000 n 
-0008999147 00000 n 
-0008999262 00000 n 
-0008999707 00000 n 
-0008999475 00000 n 
-0008999590 00000 n 
-0009000035 00000 n 
-0008999803 00000 n 
-0008999918 00000 n 
-0009000363 00000 n 
-0009000131 00000 n 
-0009000246 00000 n 
-0009000691 00000 n 
-0009000459 00000 n 
-0009000574 00000 n 
-0009001019 00000 n 
-0009000787 00000 n 
-0009000902 00000 n 
-0009001595 00000 n 
-0009012535 00000 n 
-0009012866 00000 n 
-0009002106 00000 n 
-0009012808 00000 n 
-0000000000 00000 f 
-0009111931 00000 n 
-0009013428 00000 n 
-0009013743 00000 n 
-0009014293 00000 n 
-0009014731 00000 n 
-0009014828 00000 n 
-0009015299 00000 n 
-0009015985 00000 n 
-0009016462 00000 n 
-0009024443 00000 n 
-0009024674 00000 n 
-0009039685 00000 n 
-0009040003 00000 n 
-0009047521 00000 n 
-0009047758 00000 n 
-0009059016 00000 n 
-0009059326 00000 n 
-0009074221 00000 n 
-0009074565 00000 n 
-0009095153 00000 n 
-0009095685 00000 n 
-0009111503 00000 n 
-0009112345 00000 n 
-0009114102 00000 n 
-0009116048 00000 n 
-0009118319 00000 n 
-0009120046 00000 n 
-0009121774 00000 n 
-0009123502 00000 n 
-0009125437 00000 n 
-0009125505 00000 n 
-0009125773 00000 n 
-0009126062 00000 n 
-0009126344 00000 n 
-0009126504 00000 n 
-0009126689 00000 n 
-0009126891 00000 n 
-0009127091 00000 n 
-0009127286 00000 n 
-0009127468 00000 n 
-0009127548 00000 n 
-0009127663 00000 n 
-0009127760 00000 n 
-0009127839 00000 n 
-0009127877 00000 n 
-0009128060 00000 n 
+0008975048 00000 n 
+0008975159 00000 n 
+0008979187 00000 n 
+0008975455 00000 n 
+0008975568 00000 n 
+0008975679 00000 n 
+0008975790 00000 n 
+0008979083 00000 n 
+0008978878 00000 n 
+0008978744 00000 n 
+0008976243 00000 n 
+0008975901 00000 n 
+0008976015 00000 n 
+0008976129 00000 n 
+0008976684 00000 n 
+0008976342 00000 n 
+0008976456 00000 n 
+0008976570 00000 n 
+0008977125 00000 n 
+0008976783 00000 n 
+0008976897 00000 n 
+0008977011 00000 n 
+0008977566 00000 n 
+0008977224 00000 n 
+0008977338 00000 n 
+0008977452 00000 n 
+0008978007 00000 n 
+0008977665 00000 n 
+0008977779 00000 n 
+0008977893 00000 n 
+0008978448 00000 n 
+0008978106 00000 n 
+0008978220 00000 n 
+0008978334 00000 n 
+0008978661 00000 n 
+0008978547 00000 n 
+0008978964 00000 n 
+0009002846 00000 n 
+0008979489 00000 n 
+0008979602 00000 n 
+0008979713 00000 n 
+0008979824 00000 n 
+0009002624 00000 n 
+0009002502 00000 n 
+0008979935 00000 n 
+0009002208 00000 n 
+0009002261 00000 n 
+0009002322 00000 n 
+0009002379 00000 n 
+0009002441 00000 n 
+0009146791 00000 n 
+0009002735 00000 n 
+0009026882 00000 n 
+0009003545 00000 n 
+0009002988 00000 n 
+0009003101 00000 n 
+0009003212 00000 n 
+0009003323 00000 n 
+0009003434 00000 n 
+0009028680 00000 n 
+0009003678 00000 n 
+0009028467 00000 n 
+0009004023 00000 n 
+0009003791 00000 n 
+0009003906 00000 n 
+0009004351 00000 n 
+0009004119 00000 n 
+0009004234 00000 n 
+0009004679 00000 n 
+0009004447 00000 n 
+0009004562 00000 n 
+0009005007 00000 n 
+0009004775 00000 n 
+0009004890 00000 n 
+0009005335 00000 n 
+0009005103 00000 n 
+0009005218 00000 n 
+0009005663 00000 n 
+0009005431 00000 n 
+0009005546 00000 n 
+0009005991 00000 n 
+0009005759 00000 n 
+0009005874 00000 n 
+0009006319 00000 n 
+0009006087 00000 n 
+0009006202 00000 n 
+0009006647 00000 n 
+0009006415 00000 n 
+0009006530 00000 n 
+0009006975 00000 n 
+0009006743 00000 n 
+0009006858 00000 n 
+0009007303 00000 n 
+0009007071 00000 n 
+0009007186 00000 n 
+0009007631 00000 n 
+0009007399 00000 n 
+0009007514 00000 n 
+0009027387 00000 n 
+0009007727 00000 n 
+0009027270 00000 n 
+0009027175 00000 n 
+0009007842 00000 n 
+0009026994 00000 n 
+0009027052 00000 n 
+0009027114 00000 n 
+0009027715 00000 n 
+0009027483 00000 n 
+0009032889 00000 n 
+0009027598 00000 n 
+0009028043 00000 n 
+0009027811 00000 n 
+0009027926 00000 n 
+0009028371 00000 n 
+0009028139 00000 n 
+0009028254 00000 n 
+0009028947 00000 n 
+0009033001 00000 n 
+0009033327 00000 n 
+0009029458 00000 n 
+0009033274 00000 n 
+0009133369 00000 n 
+0009033889 00000 n 
+0009034204 00000 n 
+0009034754 00000 n 
+0009035192 00000 n 
+0009035527 00000 n 
+0009035998 00000 n 
+0009036684 00000 n 
+0009037161 00000 n 
+0009045701 00000 n 
+0009045936 00000 n 
+0009060947 00000 n 
+0009061265 00000 n 
+0009068948 00000 n 
+0009069196 00000 n 
+0009080454 00000 n 
+0009080764 00000 n 
+0009095659 00000 n 
+0009096003 00000 n 
+0009116591 00000 n 
+0009117123 00000 n 
+0009132941 00000 n 
+0009133783 00000 n 
+0009135541 00000 n 
+0009137487 00000 n 
+0009139758 00000 n 
+0009141485 00000 n 
+0009143213 00000 n 
+0009144941 00000 n 
+0009146884 00000 n 
+0009146952 00000 n 
+0009147220 00000 n 
+0009147509 00000 n 
+0009147791 00000 n 
+0009147951 00000 n 
+0009148131 00000 n 
+0009148333 00000 n 
+0009148533 00000 n 
+0009148730 00000 n 
+0009148918 00000 n 
+0009149052 00000 n 
+0009149167 00000 n 
+0009149264 00000 n 
+0009149343 00000 n 
+0009149381 00000 n 
+0009149564 00000 n 
 trailer
-<< /Size 520
-/Root 518 0 R
-/Info 519 0 R
-/ID [<C14C34C8C10EB337F582960F11CE9865> <C14C34C8C10EB337F582960F11CE9865>] >>
+<< /Size 574
+/Root 572 0 R
+/Info 573 0 R
+/ID [<A55F7892B7F54FF3F3D91C7675898D86> <A55F7892B7F54FF3F3D91C7675898D86>] >>
 startxref
-9128662
+9150166
 %%EOF

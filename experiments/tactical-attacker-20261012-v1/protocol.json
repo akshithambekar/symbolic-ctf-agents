@@ -1,0 +1,27 @@
+{
+  "status": "exploratory",
+  "training_seeds": [
+    0,
+    1
+  ],
+  "demonstrations_per_seed": 24,
+  "behavior_cloning_epochs": 160,
+  "PPO_decisions_per_seed": 4096,
+  "teacher": "CaptureOracle",
+  "training_opponent": "static",
+  "training_guidance": false,
+  "runtime_training_shield": false,
+  "capability_screen": {
+    "episodes": 10,
+    "minimum_capture_rate": 0.6
+  },
+  "promotion": "Evaluate runtime shielding only if both independently trained checkpoints pass static capture screen",
+  "tactical_profiles": [
+    "none",
+    "fixed",
+    "conditional",
+    "dynamic"
+  ],
+  "tactics_note": "explicit scripted per-player primitives, not learned emergent coordination",
+  "stress_note": "standard starts and boundary starts are reported separately; boundary cases are engineered safety probes, not ordinary-task superiority evidence"
+}

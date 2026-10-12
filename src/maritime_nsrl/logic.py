@@ -9,7 +9,7 @@ from itertools import product
 from lark import Lark, Transformer, UnexpectedInput
 
 AP = frozenset({"in_bounds", "tagged", "has_flag", "captured", "home",
-                "defender_behind_center", "attacker_forward", "teammate_safe"})
+                "defender_behind_center", "attacker_forward", "teammate_safe", "opponent_push"})
 GRAMMAR = r"""
 ?start: implication
 ?implication: disjunction | disjunction "->" implication -> implies

@@ -1,0 +1,7 @@
+training_seed,scenario,opponent,start_mode,arm,episodes,captures,capture_rate,pickup_rate,enemy_territory_rate,flag_vicinity_rate,mean_min_flag_distance,mean_common_reward,tag_rate,mean_tags,out_of_bounds_episode_rate,mean_out_of_bounds_steps,mean_rule_violation_steps,ltlf_satisfaction_rate,mean_capture_time_successes,mean_duration,mean_evaluation_wall_seconds,deadlock_rate,numerical_termination_rate,interventions,checks,intervention_frequency,offensive_interventions,near_flag_interventions,carrying_interventions
+0,standard,static,boundary_lower,unshielded,1,1,1.0,1.0,1.0,1.0,4.700957196636364,18.420000000000023,0.0,0.0,1.0,17.0,36.0,0.0,158.0,158.0,1.0039249999681488,0.0,0.0,0,0,0.0,0,0,0
+0,standard,static,boundary_lower,runtime_bounds_shield,1,0,0.0,0.0,0.0,0.0,112.11844608439317,-0.01,0.0,0.0,0.0,0.0,0.0,0.0,,1.0,0.11491970007773489,1.0,0.0,0,2,0.0,0,0,0
+0,standard,patrol,boundary_lower,unshielded,1,0,0.0,1.0,1.0,1.0,4.700957196636364,-4.399999999999954,1.0,1.0,1.0,17.0,76.0,0.0,,240.0,1.6251754000550136,0.0,0.0,0,0,0.0,0,0,0
+0,standard,patrol,boundary_lower,runtime_bounds_shield,1,0,0.0,0.0,0.0,0.0,112.11844608439317,-0.01,0.0,0.0,0.0,0.0,0.0,0.0,,1.0,0.12086959998123348,1.0,0.0,0,2,0.0,0,0,0
+0,standard,chase,boundary_lower,unshielded,1,0,0.0,0.0,1.0,0.0,22.431442837795917,-8.399999999999949,1.0,2.0,1.0,17.0,124.0,0.0,,240.0,1.5990429000230506,0.0,0.0,0,0,0.0,0,0,0
+0,standard,chase,boundary_lower,runtime_bounds_shield,1,0,0.0,0.0,0.0,0.0,112.11844608439317,-0.01,0.0,0.0,0.0,0.0,0.0,0.0,,1.0,0.11660089995712042,1.0,0.0,0,2,0.0,0,0,0

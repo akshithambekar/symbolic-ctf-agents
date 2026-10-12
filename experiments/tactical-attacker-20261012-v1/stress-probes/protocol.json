@@ -1,0 +1,18 @@
+{
+  "type": "post-hoc exploratory stress calibration",
+  "policy": "experiments\\tactical-attacker-20261012-v1\\attackers\\seed0\\policy.zip",
+  "policy_sha256": "dbdeb50c28e15dccd327489d26b491fc2d692d79cfbd95d4f97efbd111967ccb",
+  "seed": 861100,
+  "initial_speeds": [
+    1.0,
+    1.5,
+    2.0
+  ],
+  "boundary_margins": [
+    2.01,
+    2.5,
+    3.0
+  ],
+  "selection_rule": "first grid case with unshielded bounds violation, >=1 substitution, and no shield deadlock; rerun on fresh evaluation seeds and both checkpoints",
+  "note": "Calibration outcomes are not pooled with the final evaluation. Severe and unsuccessful probes remain recorded."
+}

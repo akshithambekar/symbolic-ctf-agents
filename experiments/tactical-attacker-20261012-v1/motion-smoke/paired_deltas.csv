@@ -1,0 +1,4 @@
+training_seed,scenario,opponent,start_mode,evaluation_seed,delta_captures,delta_pickups,delta_common_task_reward,delta_tags_received,delta_out_of_bounds_steps,delta_duration
+0,standard,static,boundary_lower,861000,-1,-1,-18.430000000000025,0,-17,-157.0
+0,standard,patrol,boundary_lower,861000,0,-1,4.389999999999954,-1,-17,-239.0
+0,standard,chase,boundary_lower,861000,0,0,8.389999999999949,-2,-17,-239.0

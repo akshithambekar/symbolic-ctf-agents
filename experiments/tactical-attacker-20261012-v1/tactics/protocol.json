@@ -1,0 +1,26 @@
+{
+  "type": "exploratory scripted tactical validation",
+  "team_size": 3,
+  "modes": [
+    "none",
+    "fixed",
+    "conditional",
+    "dynamic"
+  ],
+  "opponents": [
+    "static",
+    "patrol",
+    "chase",
+    "raid"
+  ],
+  "episodes_per_cell": 3,
+  "evaluation_seeds": [
+    880000,
+    880001,
+    880002
+  ],
+  "action_abstraction": "role-specific waypoint targets; distinct from the 1v1 learned attacker",
+  "hard_shield": false,
+  "role_constraints": "monitored, not formally enforced",
+  "learned_coordination": false
+}

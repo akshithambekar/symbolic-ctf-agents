@@ -1,0 +1,5 @@
+{
+  "status": "invalid stress setup, no evaluation measured",
+  "reason": "margin 0.05m violates 2m vessel radius; PyQuaticus rejected reset",
+  "replacement": "motion-smoke with a valid 2.01m margin and 2m/s outward initial speed"
+}

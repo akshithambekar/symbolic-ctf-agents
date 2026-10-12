@@ -1,0 +1,8 @@
+{
+  "arena_config.json": "b24be68ee1a204eaf6144c84eb1572fde677d2dfbeadc4b5c767af9479174f85",
+  "config.json": "20e2024e9778f5b38759e3bbfab9fda28cc6d1293cdb22987c3716e014eece70",
+  "policy.zip": "dbdeb50c28e15dccd327489d26b491fc2d692d79cfbd95d4f97efbd111967ccb",
+  "ppo_config.json": "69880c3cdbbd7635eb51da65632f6038c664ab9c3e2cdce24a69897151c839cb",
+  "specification.json": "81b9211c3fa6b8d4f582582ecf4402e3c9ffaf6beb326cf4f73e0067966c63f1",
+  "training_complete.json": "05f9fd0bf62d88c2400dd5c0a7c6007875d43628b80eb56c3be781b2f95e3425"
+}

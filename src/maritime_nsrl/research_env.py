@@ -44,6 +44,10 @@ class ArenaConfig:
     evasion_scale: float = 0.
     defender_distance_feature: bool = False
     trace_stride: int = 0
+    # Separate evaluation stress distribution; default reproduces prior resets.
+    start_mode: str = "standard"
+    boundary_start_margin: float = 2.5
+    boundary_start_speed: float = 0.
 
 
 class TeamArena:
@@ -59,6 +63,10 @@ class TeamArena:
         if c.opponent not in {"static", "patrol", "chase"}: raise ValueError(c.opponent)
         if c.scenario not in SCENARIOS or c.repeat < 1 or c.horizon <= 0: raise ValueError("Invalid arena config")
         if not 0 < c.opponent_speed <= 1: raise ValueError("Opponent speed must be in (0,1]")
+        if c.start_mode not in {"standard", "boundary_lower", "boundary_upper"}:
+            raise ValueError("Unknown start distribution")
+        if not 0 < c.boundary_start_margin < SCENARIOS[c.scenario][1]/2:
+            raise ValueError("Boundary start margin must be inside the arena")
         self.n = c.team_size
         self.size = np.array(SCENARIOS[c.scenario])
         self.automaton = compile_ltlf(c.formula)
@@ -70,6 +78,12 @@ class TeamArena:
                     "max_score": 1, "tau": .1, "sim_speedup_factor": 10,
                     "tagging_cooldown": 30., "suppress_numpy_warnings": False})
         self.controllers = {k: copy.deepcopy(p._pid_controllers) for k,p in self.game.players.items()}
+        if c.start_mode != "standard" and c.boundary_start_margin < max(self.game.agent_radius[:self.n]):
+            self.game.close()
+            raise ValueError("Boundary start must keep the complete initial vessel footprint inside the field")
+        if not 0 <= c.boundary_start_speed <= min(self.game.max_speeds[:self.n]):
+            self.game.close()
+            raise ValueError("Boundary initial speed exceeds simulator limits")
         # 0 flag, 1 home, 2 low flank, 3 high flank, 4 low return lane,
         # 5 high return lane, 6 evade nearest opponent, 7 hold position.
         self.action_space = spaces.Discrete(8)
@@ -88,6 +102,7 @@ class TeamArena:
         if min(np.linalg.norm(s["agent_position"][:n] - s["flag_home"][0], axis=1)) <= game.catch_radius:
             result.add("home")
         center = self.size[0] / 2
+        if any(s["agent_position"][n:, 0] < center): result.add("opponent_push")
         # Agent 0 is the defender; the remaining blue agents are attackers.
         if n >= 2 and s["agent_position"][0, 0] < center: result.add("defender_behind_center")
         if n >= 2 and any(s["agent_position"][1:n, 0] > center): result.add("attacker_forward")
@@ -103,12 +118,19 @@ class TeamArena:
         red_ys = np.linspace(.2*h, .8*h, n) if n > 1 else np.array([.84*h])
         if c.random_starts: red_ys += self.rng.uniform(-.08*h, .08*h, n)
         positions = [[.22*w, y] for y in ys] + [[.75*w, y] for y in red_ys]
+        headings = [90.]*n+[180.]*n
+        speeds = [0.]*(2*n)
+        if c.start_mode != "standard":
+            lower = c.start_mode == "boundary_lower"
+            positions[:n] = [[.22*w + 5*i, c.boundary_start_margin if lower else h-c.boundary_start_margin] for i in range(n)]
+            headings[:n] = [180. if lower else 0.]*n
+            speeds[:n] = [c.boundary_start_speed]*n
         for key, controllers in self.controllers.items():
             self.game.players[key]._pid_controllers = copy.deepcopy(controllers)
         with warnings.catch_warnings():
             warnings.filterwarnings("ignore", message="divide by zero encountered in divide", category=RuntimeWarning)
             self.game.reset(seed=int(self.rng.integers(0, 2**31-1)), options={"init_dict": {
-                "agent_position": positions, "agent_heading": [90.]*n+[180.]*n, "agent_speed": [0.]*(2*n)}})
+                "agent_position": positions, "agent_heading": headings, "agent_speed": speeds}})
         self.monitor = TemporalMonitor(self.automaton)
         self.monitor.update(self.labels())
         self.gate = PredictiveShield(c.shield_formula) if c.shield else None

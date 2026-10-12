@@ -1,0 +1,16 @@
+{
+  "eligible": [
+    {
+      "speed": 1.0,
+      "margin": 2.01
+    },
+    {
+      "speed": 1.0,
+      "margin": 2.5
+    }
+  ],
+  "selected": {
+    "speed": 1.0,
+    "margin": 2.01
+  }
+}

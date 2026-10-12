@@ -273,6 +273,40 @@ Shield substitutions & -- & 0 \\
 \label{tab:runtime-shield}
 \end{table}
 
+\subsection{Task-Capable Attacker and Tactical Screen}
+
+To test runtime intervention with an offensive policy, we constructed two new imitation-initialized PPO checkpoints. Each used 24 scripted oracle demonstrations, 160 behavioral-cloning epochs, and 4,096 subsequent PPO decisions against static opponents in the standard arena. The eight-action abstraction was unchanged. Training used conventional task reward without formal reward shaping, temporal-state input, or shielding. Both final checkpoints captured in 10/10 separate held-out static capability-screen episodes. These policies are distinct from the earlier scratch-trained baseline; the screen is not a matched learning-efficiency comparison.
+
+With ordinary starts, the same-checkpoint shield-off/on comparison completed 180 episodes across three maps and three opponents. Each arm captured in 42/90 episodes: 30/30 against static opponents, 12/30 against patrol, and 0/30 against chase. Chase produced no pickups. All 90 pairs had identical trajectories, zero bounds violations, and no substitutions, again leaving the gate dormant.
+
+A separate calibration with one checkpoint varied valid boundary margins and outward initial velocities. We selected the first tested condition with unsafe unshielded proposals, shield substitutions, and no deadlock: a 2.01 m vessel-center margin and 1 m/s initial outward speed. The subsequent two-checkpoint comparison used fresh evaluation seeds, both lower and upper edges, the standard map, and all three opponents. This post-selection stress test is exploratory, not confirmatory or pooled with ordinary-start evaluations.
+
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrr}
+\hline
+Moderate moving-start metric & Shield off & Shield on \\
+\hline
+Episodes & 36 & 36 \\
+Captures / pickups & 16 / 24 & 16 / 24 \\
+Bounds-violation episodes & 18 & 0 \\
+Tag episodes & 20 & 20 \\
+Mean tags received & 0.889 & 1.056 \\
+Mission-satisfied episodes & 10 & 16 \\
+Deadlock episodes & 0 & 0 \\
+Shield substitutions & -- & 18 \\
+\hline
+\end{tabular}
+\caption{Exploratory runtime-only bounds-gate test with two imitation-initialized PPO checkpoints. Each seed separately had nine bounds-violation episodes without the gate and zero with it, with unchanged capture counts.}
+\label{tab:capable-shield}
+\end{table}
+
+All substitutions occurred at the lower home boundary, not near the enemy flag or while carrying; upper-edge pairs were dormant. This demonstrates prevention of observed bounds failures without losing captures in the selected exposure condition, not protection from tagging, improved chase behavior, or a general safety guarantee. At 2 m/s outward speed, a separate one-seed, three-opponent lower-edge probe deadlocked in all shielded episodes after one simulator second. Its zero violations reflect early termination rather than useful safe task execution.
+
+We also added scripted per-player attacker, carrier-return, defender-interception and escort primitives with no-defender, fixed, conditional and dynamic assignment modes. The conditional role clause is $G(p\rightarrow d)$, where $p$ denotes opponent intrusion and $d$ denotes a defender behind the centerline, grounded using the currently selected defender; carriers retain return duties. Human-authored role clauses and mission logic are combined and validated, then monitored, without guaranteed enforcement. The 48-episode 3-vs-3 screen used three episodes per mode/opponent cell. Against explicit raiding opponents, each defensive mode produced 3/3 blue captures and zero red captures, whereas no-defender produced zero blue captures and three red captures. All modes produced zero captures against chase. These are heuristic feasibility probes, not learned coordination or a strategy ranking; dynamic mode additionally uses escort rather than split-flank attack style.
+
 \subsection{Translator Benchmark}
 
 The current English-to-LTLf pipeline produced 93.75\% semantic correctness against the project-authored reference formulas, 98.96\% syntax validity, and 98.96\% compilation success across 120 measured outputs. Its mean latency was 34.9 s and its repair rate was 43.33\%.
@@ -317,7 +351,7 @@ This work evaluated neuro-symbolic reinforcement learning in Maritime Capture-th
 
 In the frozen 3-vs-3 ablation, combined guidance reduced measured tags and rule violations and produced the highest mean fixed common task reward, but it completed no captures. In the later staged 1-vs-1 study, softened guidance without a training penalty for tagging achieved 138 captures in 150 held-out patrol episodes across five seeds. The same promoted policies then achieved zero pickups and zero captures in 150 episodes against an active chasing defender, despite entering enemy territory in every episode. Additional diagnostic variants did not recover flag acquisition.
 
-The separate runtime-only screen left the evaluated neural checkpoints unchanged because the bounds gate never intervened; it provides no evidence that deployment-only shielding recovers offensive behavior.
+The first runtime-only screen left the evaluated neural checkpoints unchanged because the bounds gate never intervened. A later exploratory test with task-capable, imitation-initialized checkpoints prevented observed bounds violations in a selected moving-start condition while retaining 16/36 captures in both arms. The benefit is specific to bounds safety in that exposure condition; tagging did not improve, higher-speed starts deadlocked, and chase acquisition remained unresolved.
 
 The main empirical conclusion is therefore not that neuro-symbolic guidance universally improves task performance, but that symbolic guidance can substantially alter the balance between constraint-related behavior and task execution. The patrol and chase results further show the importance of evaluating policies across increasing levels of adversarial difficulty and of measuring intermediate task stages rather than relying only on final reward or capture rate. For the system studied here, the dominant unresolved failure occurs between entering opponent territory and acquiring the flag under active pursuit. This failure provides a concrete target for future work on reward design, action abstraction, and adaptive symbolic guidance.
 

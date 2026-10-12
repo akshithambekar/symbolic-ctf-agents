@@ -12,3 +12,7 @@
 - Added a runtime-only results table and qualified its exploratory interpretation.
 - Copied the matching CS491_references.bib and FLAIRS template style files for compilation.
 - Added an updated architecture figure and adjusted table spacing to fit the column.
+
+## Tactical attacker follow-up (October 12, 2026)
+
+Added the explicitly exploratory imitation-initialized attacker, paired moderate/severe boundary tests, and scripted per-player role screen. Distinguished these checkpoints from the original baseline and heuristic roles from learned coordination. No prior experimental findings were overwritten.

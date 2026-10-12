@@ -16,6 +16,22 @@ def load_policy_environment(policy, scenario=None, opponent=None, team_size=None
     from .environment import MaritimeEnv
     from .translation import load_spec
     from .specifications import read_artifact
+    if policy == 'tactics':
+        from .tactics import TacticalArena, TacticalPolicy, TacticsConfig, role_contract
+        profile = json.loads(Path(config_path).read_text(encoding='utf-8')) if config_path else {'arena':{'team_size':3}, 'tactics':{}}
+        values = dict(profile['arena'])
+        tactics = TacticsConfig(**profile.get('tactics', {}))
+        artifact = profile.get('specification', role_contract(tactics.defender_mode))
+        from .specifications import check_artifact
+        check_artifact(artifact)
+        if artifact['ltl'] != role_contract(tactics.defender_mode)['ltl'] or values.get('formula', artifact['ltl']) != artifact['ltl']:
+            raise ValueError('Tactical role settings differ from the validated profile contract')
+        if team_size is not None: values['team_size'] = team_size
+        if scenario: values['scenario'] = scenario
+        if opponent: values['opponent'] = opponent
+        values.update(guided=False, reward_shaping=False, temporal_state=False,
+                      formula=role_contract(tactics.defender_mode)['ltl'])
+        return TacticalArena(ArenaConfig(**values), tactics), TacticalPolicy(), True
     if policy=='oracle':
         from .oracle import CaptureOracle
         values=json.loads(Path(config_path).read_text()) if config_path else {}
@@ -76,7 +92,8 @@ def snapshot(env, actions, episode, is_team, previous_captures=None):
         satisfied=bool(satisfied),stage=stage,
         executed_actions=(env.trace[-1]['executed_actions'] if is_team and env.trace else None),
         shield_interventions=int(getattr(getattr(env,'gate',None),'interventions',0)),
-        shield_deadlocks=int(getattr(getattr(env,'gate',None),'deadlocks',0)))
+        shield_deadlocks=int(getattr(getattr(env,'gate',None),'deadlocks',0)),
+        roles=env.roles() if hasattr(env,'roles') else None)
 
 
 class Display:
@@ -125,16 +142,19 @@ class Display:
         surface=pygame.Surface((game.screen_width,game.screen_height+155))
         surface.fill((20,26,34)); surface.blit(game.screen,(0,0))
         for i,pos in enumerate(frame['positions']):
-            role=('agent 0 / designated defender' if n>1 and i==0 else f'blue {i} / attacker') if i<n else f'red {i-n}'
+            if i < n and frame.get('roles'):
+                role = f"blue {i} / {frame['roles'][i]}"
+            else:
+                role=('agent 0 / designated defender' if n>1 and i==0 else f'blue {i} / attacker') if i<n else f'red {i-n}'
             xy=game.env_to_screen(pos)
             surface.blit(self.font.render(role,True,(10,10,10)),(xy[0]+8,xy[1]+10))
         actions=frame.get('actions',frame.get('requested_actions',[]))
-        action_text=', '.join(f'{i}:{ACTION_NAMES[a] if 0<=a<8 else a}' for i,a in enumerate(actions))
+        action_text=', '.join(f'{i}:{"role target" if frame.get("roles") and a==0 else ACTION_NAMES[a] if 0<=a<8 else a}' for i,a in enumerate(actions))
         lines=[f"Episode {frame.get('episode','?')}  time {frame['time']:.1f}s | captures {frame.get('captures','unknown')} | tags {frame.get('tags','unknown')}",
             f"Stage {frame.get('stage','unknown')} | DFA {frame.get('dfa_state',frame.get('monitor_state','unknown'))} | violated {frame.get('contract_violated','unknown')}",
             f"Actions {action_text} | executed {frame.get('executed_actions','unknown')} | shield {frame.get('shield_interventions','unknown')} | deadlocks {frame.get('shield_deadlocks','unknown')}",
             'Propositions: '+', '.join(frame.get('propositions',[])),
-            'PARTIAL HISTORICAL TRACE: blue positions only; opponents/headings/cooldowns and flag state incomplete' if partial else 'Blue IDs 0..n-1; red IDs n..2n-1. Role label does not enforce a role. Space: pause; Esc: quit.']
+            'PARTIAL HISTORICAL TRACE: blue positions only; opponents/headings/cooldowns and flag state incomplete' if partial else ('Roles: '+str(frame['roles'])+' | Space: pause; Esc: quit.' if frame.get('roles') else 'Blue IDs 0..n-1; red IDs n..2n-1. Role label does not enforce a role. Space: pause; Esc: quit.')]
         for j,line in enumerate(lines): surface.blit(self.font.render(line,True,(240,243,248)),(8,game.screen_height+8+j*27))
         if self.record:
             pygame.image.save(surface,str(self.record/f'frame-{self.frame:06d}.png'))
@@ -166,15 +186,15 @@ def watch(args):
         if record:
             trace=(record/'replay.jsonl').open('x',encoding='utf-8')
             metadata=dict(arguments=vars(args),viewer_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-                policy_sha256=None if args.policy=='oracle' else hashlib.sha256(Path(args.policy).read_bytes()).hexdigest())
+                policy_sha256=None if args.policy in {'oracle','tactics'} else hashlib.sha256(Path(args.policy).read_bytes()).hexdigest())
             (record/'viewer_config.json').write_text(json.dumps(metadata,default=str,indent=2))
         frames=0
         for episode in range(args.episodes):
             if is_team: obs=env.reset(args.seed+episode)
             else: obs,_=env.reset(seed=args.seed+episode)
-            if args.policy!='oracle': policy.set_random_seed(args.seed+episode)
+            if args.policy not in {'oracle','tactics'}: policy.set_random_seed(args.seed+episode)
             while not env.finished:
-                if args.policy=='oracle': actions=policy(env)
+                if args.policy in {'oracle','tactics'}: actions=policy(env)
                 else: actions,_=policy.predict(obs,deterministic=not args.stochastic)
                 previous_captures=int(env.game.state['captures'][0])
                 if is_team: obs,_,_,info=env.step(actions)

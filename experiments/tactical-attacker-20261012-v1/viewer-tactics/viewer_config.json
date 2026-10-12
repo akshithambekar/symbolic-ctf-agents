@@ -1,0 +1,19 @@
+{
+  "arguments": {
+    "command": "watch",
+    "policy": "tactics",
+    "scenario": null,
+    "opponent": null,
+    "team_size": null,
+    "seed": 40000,
+    "episodes": 1,
+    "stochastic": false,
+    "config": "strategies\\tactics-3v3-raiding.json",
+    "speed": 10.0,
+    "headless": true,
+    "record": "experiments\\tactical-attacker-20261012-v1\\viewer-tactics",
+    "max_frames": 4
+  },
+  "viewer_sha256": "a0b96fc3d6d8922025a809ec075756f6d6e28511192112ca86bc6bb204d1bf33",
+  "policy_sha256": null
+}
