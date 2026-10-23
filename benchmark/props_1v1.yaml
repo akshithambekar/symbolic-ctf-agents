@@ -1,0 +1,59 @@
+# 1v1 vocabulary for the English -> LTL translator
+# Items tagged PROPOSED need confirmation against PyQuaticus
+
+version: "0.2-1v1"
+semantics: ltlf   # TODO(team, task 2.2): confirm. Games are fixed-length, so finite traces fit.
+
+operators:
+  boolean: ["!", "&", "|", "->", "<->"]
+  temporal: ["X", "F", "G", "U", "R", "W"]
+# Spot reserves single capital letters (F, G, X, U, R, W, M); never use them as proposition names.
+
+rules:
+  field: "160 m x 80 m, two 80 m x 80 m halves; Red vs Blue (here: one agent each)"
+  home_bases: "two quarter-circle corner bases per team; within 10 m of a corner to capture or untag"
+  tag: "within 10 m of an opposing agent, both agents in the TAGGER's half"
+  tagged_state: "tagged agent cannot tag or touch flags; controller drives it to a home base; a carried flag returns to its home immediately"
+  flag_grab: "within 10 m of the opposing flag while untagged and the flag is present"
+  flag_capture: "return to a home base carrying the opposing flag, untagged"
+  auto_tag: "leaving the field = automatic tag, returned to closest home base"
+  collision: "within 4 m of any other agent. In 1v1 the only other agent is the opponent."
+  not_in_1v1: "powerplay and disabled agents (they need a roster to pick from); tag cooldown (not on the rules page)"
+
+# Agents: a1 is us, o1 is the opponent. "enemy" is relative to the named agent, so
+# o1_in_enemy_half means o1 is in the half opposite o1's own, which is OUR half.
+agents:
+  own: [a1]
+  opponent: [o1]
+
+per_agent:
+  has_flag:        {meaning: "{agent} is carrying the opposing flag"}
+  is_tagged:       {meaning: "{agent} is in the tagged state (opponent tag or auto-tag)"}
+  in_own_half:     {meaning: "{agent} is on its own team's side of the field"}
+  in_enemy_half:   {meaning: "{agent} is on the opposing team's side of the field"}
+  at_home_base:    {meaning: "{agent} is within 10 m of one of its team's two home-base corners"}
+  near_own_flag:   {meaning: "{agent} is within 10 m of its own team's flag (PROPOSED radius)"}
+  near_enemy_flag: {meaning: "{agent} is within 10 m of the opposing flag (grab range)"}
+  near_opponent:   {meaning: "{agent} is within 10 m of the opposing agent (tag distance)"}
+  collision:       {meaning: "{agent} is within 4 m of the other agent"}
+  out_of_bounds:   {meaning: "{agent} is outside the field boundary (auto-tag)"}
+
+global:
+  own_flag_taken:    {meaning: "The opponent is carrying our flag"}
+  enemy_flag_taken:  {meaning: "We are carrying the opposing flag"}
+  own_flag_at_home:  {meaning: "Our flag is at its home position"}
+  flag_captured:     {meaning: "We score a capture this step"}
+
+domain_constraints:
+  - "G !({agent}_in_own_half & {agent}_in_enemy_half)"
+  - "G ({agent}_is_tagged -> !{agent}_has_flag)"
+  - "G ({agent}_out_of_bounds -> {agent}_is_tagged)"
+  - "G ({agent}_at_home_base -> {agent}_in_own_half)"
+  - "G (own_flag_at_home <-> !own_flag_taken)"
+  - "G (own_flag_taken <-> o1_has_flag)"
+  - "G (enemy_flag_taken <-> a1_has_flag)"
+
+open_questions:
+  - "Does the 1v1 PyQuaticus setup have one home base or both corners?"
+  - "How does the tier 2 patrolling opponent behave? Commands about 'when it walks away from its flag' need an opponent-to-flag proposition we do not have."
+  - "Does the 1v1 env keep the half-field tag rule from the rules page?"
