@@ -3,3 +3,17 @@ __pycache__/
 *.pyc
 .DS_Store
 ltl/code_ltl_exec.py
+runs/
+.pytest_cache/
+*.egg-info/
+.ruff_cache/
+.mypy_cache/
+.tox/
+.nox/
+build/
+dist/
+*.py[cod]
+*$py.class
+.coverage
+.coverage.*
+htmlcov/

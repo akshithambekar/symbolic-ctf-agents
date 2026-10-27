@@ -1,16 +1,16 @@
 # MCTF 2026 Rules
 
-Source: [official rules](https://www.mctf26.com/rules), reviewed 2026-10-11; source governs.
+Source: [official rules](https://www.mctf26.com/rules), reviewed 2026-10-11. The official rules govern.
 
-## Game Setup
+## Set up the game
 
 Red and Blue each control three autonomous boats. Matches last 10 minutes.
 
 - Field: 160 × 80 m, divided into two 80 × 80 m territories. Boats can enter either half.
 - Each team has two quarter-circle home bases at its corners furthest from midfield.
-- Capture/untag zones are described as “10 m diameter” from corners; the precise geometry needs clarification.
+- The rules describe capture and untag zones as "10 m diameter" from the corners. Their exact geometry needs clarification.
 
-## Tagging and Recovery
+## Tagging and recovery
 
 A boat tags an opponent within 10 m when both occupy the tagging team's territory.
 
@@ -18,7 +18,7 @@ Tagged boats cannot tag or interact with flags. A carried flag immediately retur
 
 Leaving the field causes an automatic tag and immediate return to the nearest home base for recovery.
 
-## Flag Events
+## Flag events
 
 - **Grab:** An untagged boat approaches within 10 m of the opponent's available flag.
 - **Capture:** The untagged carrier returns to either home base with that flag.

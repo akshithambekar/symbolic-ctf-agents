@@ -5,9 +5,17 @@ import copy
 import json
 import os
 from pathlib import Path
+import numpy as np
+import pygame
+from pyquaticus.config import config_dict_std
+from pyquaticus.envs.pyquaticus import PyQuaticusEnv
+from pyquaticus.base_policies.deprecated.base_attack import BaseAttacker
+from pyquaticus.base_policies.deprecated.base_defend import BaseDefender
+from pyquaticus.base_policies.deprecated.base_combined import Heuristic_CTF_Agent
 
 
 def main():
+    # Parse command-line arguments
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", type=Path, default=Path(__file__).parent / "configs/demo.json")
     parser.add_argument("--example", choices=("random", "attack-defend", "combined"))
@@ -28,21 +36,12 @@ def main():
         os.environ.setdefault("SDL_VIDEODRIVER", "dummy")
     os.environ.setdefault("SDL_AUDIODRIVER", "dummy")
 
-    import numpy as np
-    import pygame
-    from pyquaticus.config import config_dict_std
-    from pyquaticus.envs.pyquaticus import PyQuaticusEnv
-    from pyquaticus.base_policies.deprecated.base_attack import BaseAttacker
-    from pyquaticus.base_policies.deprecated.base_defend import BaseDefender
-    from pyquaticus.base_policies.deprecated.base_combined import Heuristic_CTF_Agent
-
     config = copy.deepcopy(config_dict_std)
     config.update(gps_env=False, max_time=args.seconds, sim_speedup_factor=10, render_agent_ids=True)
     team_size = 2 if args.example == "combined" else 1
     if args.example == "combined":
         config["dynamics"] = "si"
-    env = PyQuaticusEnv(team_size=team_size, config_dict=config,
-                       render_mode="human" if args.render == "human" else None)
+    env = PyQuaticusEnv(team_size=team_size, config_dict=config, render_mode="human" if args.render == "human" else None)
     try:
         observations, _ = env.reset(seed=args.seed)
         policies = {}
@@ -53,8 +52,7 @@ def main():
                 options = {"continuous": False, "mode": "hard" if args.example == "combined" else "medium"}
                 if policy != BaseAttacker:
                     options.update(flag_keepout=config["flag_keepout"], catch_radius=env.catch_radius)
-                policies[agent] = policy(agent, env.players[agent].team,
-                                         env.max_speeds[env.players[agent].idx], env.aquaticus_field_points, **options)
+                policies[agent] = policy(agent, env.players[agent].team, env.max_speeds[env.players[agent].idx], env.aquaticus_field_points, **options)
         print(f"{args.example}: {team_size}v{team_size}, seed={args.seed}, limit={args.seconds}s", flush=True)
         for step in range(1, env.max_cycles + 2):
             if args.render == "human":

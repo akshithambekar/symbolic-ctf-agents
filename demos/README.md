@@ -1,4 +1,4 @@
-# PyQuaticus sample-agent demo
+# PyQuaticus sample agent demo
 
 This demo runs existing PyQuaticus policies in maritime capture the flag.
 The default game is 1v1: blue attacks red's flag while red defends it. It opens
@@ -6,7 +6,7 @@ a live game window, prints final counters, and exits. Behavior comes from
 handwritten upstream rules; RL training is a later task. The demo creates no
 recordings, run directories, or result files.
 
-## Install and run
+## Install and run the demo
 
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/) and Git.
 On macOS, Windows PowerShell, or Linux, run from the repository root:
@@ -37,7 +37,7 @@ A headless check runs the same game and prints its results:
 uv run --locked python run_sample_agents.py --render none
 ```
 
-## What happens
+## How the demo runs
 
 1. PyQuaticus creates the field, flags, agents, and movement physics.
 2. Blue's `BaseAttacker` in `medium` mode moves toward red's flag while avoiding
@@ -64,7 +64,7 @@ separate experiments.
 | Black arc around an agent | Tagging cooldown |
 | Yellow ring around an agent | Out of bounds |
 
-## Configuration and other examples
+## Configure the demo and run examples
 
 `configs/demo.json` supplies the defaults: `attack-defend`, live (`human`)
 rendering, 120 simulated seconds, and seed 7. Command-line settings override
@@ -82,7 +82,7 @@ uses the default `heron` dynamics. All examples use the default non-GPS field,
 a simulation speedup factor of 10, and discrete actions. Live playback duration
 depends on the renderer as well as simulated time.
 
-## Dependencies and portability
+## Dependencies and platform support
 
 PyQuaticus is installed directly from competition commit
 `475d670650ec5d49691ba707cd1054c4e45d8053` by uv. The source is unmodified and

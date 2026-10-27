@@ -1,12 +1,13 @@
-# ltl — English → LTL translation
+# English to LTL translation
 
 Core of the LTL code-generation translator, migrated from
 [ExistentialRobotics/LTLCodeGen](https://github.com/ExistentialRobotics/LTLCodeGen)
-(`speech_to_ltl/speech_to_ltl/`, upstream commit `b5eb6a1`). MIT licensed — see `LICENSE-LTLCodeGen`.
+(`speech_to_ltl/speech_to_ltl/`, upstream commit `b5eb6a1`). See `LICENSE-LTLCodeGen` for the MIT license.
 
-The LLM writes Python that calls the operator functions below; running that code
-produces the LTL formula, so the formula's syntax is always valid. If the code
-errors, the error is sent back to the LLM to retry (up to `max_retries`).
+The LLM generates Python that calls the operator functions below. Running that
+code produces the LTL formula, which keeps the formula syntax valid. If the code
+raises an error, the translator sends the error to the LLM and retries up to
+`max_retries` times.
 
 | File | Purpose |
 | --- | --- |
@@ -15,9 +16,9 @@ errors, the error is sent back to the LLM to retry (up to `max_retries`).
 | `code_ltl_prompt_template.py` | Few-shot prompt (examples of instruction → code) |
 | `code_ltl_exec_template.py` | Import header prepended to the generated code before it runs |
 | `code_ltl_translator.py` | Generate → execute → retry loop; entry point `code_ltl_translator(llm, instruction)` |
-| `model.py` | `llm_init()` — builds the OpenAI chat model via LangChain |
+| `model.py` | `llm_init()` builds the OpenAI chat model with LangChain |
 
-## Not migrated
+## Files not migrated
 
 ROS2 node and launch files, YOLO/scene-graph prompts, the NL2LTL baseline
 (`ltl_translator.py`), and the robot stack (SSMI, solar_planner, jackal sim).
@@ -34,6 +35,7 @@ pip install -r ltl/requirements.txt
   Set both to `False` for standard infix LTL (Spot-readable).
 - `available_actions.py` + prompt examples are still robot navigation (`reach object_x`);
   replace with the MCTF vocabulary from the rules team.
-- `code_ltl_translator.py` writes the LLM's code to `ltl/code_ltl_exec.py` and imports it
-  (gitignored). Consider `exec()` in a restricted namespace instead.
+- `code_ltl_translator.py` writes the LLM's code to the gitignored
+  `ltl/code_ltl_exec.py` file and imports it. Consider running it with `exec()` in
+  a restricted namespace instead.
 - `LLMChain` is deprecated in LangChain; `model.py` expects the API key passed in.
