@@ -8,6 +8,12 @@ This is a pipeline smoke test, not a measurement of translation accuracy.
 Semantic checking is deferred to Stage 2, and every result explicitly records `semantic_evaluation.outcome: "not_run"`.
 No checker installation is needed for Stage 1.
 
+`comparison_cases.json` provides four shared examples for manual inspection, including the smoke case, avoidance, reaching both objects, and reaching either object.
+Run them with `python -m benchmarks.run --cases benchmarks/comparison_cases.json`.
+This makes one live request per case and still runs only the team translator.
+Do not use `--offline` to assess these cases: the offline model returns the same canned response for every instruction.
+These examples are not a validated accuracy dataset, and semantic evaluation remains `not_run`.
+
 ## Setup and offline verification
 
 Use the project virtual environment or install the Python requirements:

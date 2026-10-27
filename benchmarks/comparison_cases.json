@@ -1,0 +1,36 @@
+[
+  {
+    "id": "eventually-reach-object-7",
+    "instruction": "Eventually reach object_7.",
+    "propositions": {"reach(object_7)": "The agent reaches object_7 at the current step."},
+    "reference_formula": "F reach(object_7)",
+    "meaning": "At the current step or a later step, the agent reaches object_7."
+  },
+  {
+    "id": "never-reach-object-3",
+    "instruction": "Never reach object_3.",
+    "propositions": {"reach(object_3)": "The agent reaches object_3 at the current step."},
+    "reference_formula": "G !reach(object_3)",
+    "meaning": "At every step, the agent does not reach object_3."
+  },
+  {
+    "id": "eventually-reach-both",
+    "instruction": "Eventually reach object_1, and eventually reach object_2.",
+    "propositions": {
+      "reach(object_1)": "The agent reaches object_1 at the current step.",
+      "reach(object_2)": "The agent reaches object_2 at the current step."
+    },
+    "reference_formula": "F reach(object_1) & F reach(object_2)",
+    "meaning": "Each object is reached at the current step or a later step, in either order."
+  },
+  {
+    "id": "eventually-reach-either",
+    "instruction": "Eventually reach object_1 or object_2, or both.",
+    "propositions": {
+      "reach(object_1)": "The agent reaches object_1 at the current step.",
+      "reach(object_2)": "The agent reaches object_2 at the current step."
+    },
+    "reference_formula": "F (reach(object_1) | reach(object_2))",
+    "meaning": "At least one of the two objects is reached at the current step or a later step."
+  }
+]
