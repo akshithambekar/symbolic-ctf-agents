@@ -2,4 +2,6 @@
 __pycache__/
 *.pyc
 .DS_Store
-ltl/code_ltl_exec.py
+.env
+translators/ltl_codegen/code_ltl_exec.py
+benchmarks/results/

@@ -34,7 +34,7 @@ def execute_code_ltl_translate(code: str):
         if code_ltl_exec is not None:
             code_ltl_exec = importlib.reload(code_ltl_exec)
         else:
-            code_ltl_exec = importlib.import_module("ltl.code_ltl_exec")
+            code_ltl_exec = importlib.import_module("translators.ltl_codegen.code_ltl_exec")
     except Exception as e:
         print(e)
         return str(e), False
