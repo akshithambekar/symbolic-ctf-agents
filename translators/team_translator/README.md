@@ -25,4 +25,5 @@ They are independent of the baseline's globals.
 No prompt or operator module is shared with the original executor.
 
 Install the [benchmark dependencies](../../benchmarks/requirements.txt), run the [offline tests and smoke command](../../benchmarks/README.md), and inspect the ignored JSON output in an editor.
-Semantic evaluation explicitly remains `not_run` pending one shared checker and implementation-specific notation conversion.
+Successful benchmark translations use the [shared Spot evaluator](../../benchmarks/SEMANTICS.md) to compare listed-prefix output against the infix reference over infinite traces.
+Failed translations retain `not_run`; semantic failures remain separate from translation failures.

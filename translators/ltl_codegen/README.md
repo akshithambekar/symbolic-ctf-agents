@@ -9,7 +9,7 @@ See the [history audit and remaining uncertainty](../README.md).
 MIT attribution is retained in [LICENSE-LTLCodeGen](LICENSE-LTLCodeGen).
 
 Our recent AST interpreter and stricter prompt now live separately in [`translators/team_translator/`](../team_translator/README.md).
-The benchmark runs only that restricted implementation and does not import this executor.
+The benchmark defaults to that restricted implementation and can also run this executor in an isolated Docker container.
 Import the baseline from `translators.ltl_codegen.code_ltl_translator`.
 The old `ltl` package path is removed without a compatibility layer; callers wanting our restricted behavior must use `translators.team_translator.translator`.
 
@@ -23,12 +23,10 @@ The old `ltl` package path is removed without a compatibility layer; callers wan
 | `model.py` | Imported legacy OpenAI helper, including its model default and YAML configuration example |
 | `requirements.txt` | Original dependency ranges, including `langchain>=0.3,<1` |
 
-The original executor runs model-generated Python with normal process permissions.
-It is unavailable as a live benchmark execution path until an isolation approach has been selected and verified.
-Do not send live model output to it.
-The required work includes enforcing filesystem, network, process, resource, and credential boundaries; simply launching a subprocess does not provide those boundaries.
-Using our AST interpreter in its place would constitute a modified variant rather than the restored baseline.
-A future benchmark adapter must explicitly disable its translator retries and provider-client retries.
+The original executor runs model-generated Python with normal process permissions when called directly.
+The benchmark's separate container adapter isolates execution and disables retries.
+See the [runner setup and isolation details](../../benchmarks/README.md#isolated-ltlcodegen-baseline).
+Do not call this executor directly with untrusted code.
 
 Offline restoration tests use only trusted, fixed code and fake models in temporary package copies.
 They cover the original fenced success, unfenced failure, and normal-use retry behavior without modifying this source directory.
@@ -41,5 +39,6 @@ python -m pytest -q
 
 The legacy chain API remains deprecated; restoring it is intentional for baseline fidelity.
 The baseline's mutable operator globals, generated module, and reload cache are separate from our implementation's state but remain limitations for concurrent baseline usage.
-No baseline benchmark adapter or semantic checker has been added.
+A container baseline adapter is available; successful output is checked as untrusted formula data by the same [shared semantic evaluator](../../benchmarks/SEMANTICS.md) as the team translator.
+This validates formula syntax and equivalence separately from executor success without changing baseline code.
 IBM NL2LTL is a distinct future baseline, currently only referenced in `DOCUMENTS.md`.

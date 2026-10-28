@@ -2,11 +2,11 @@
 
 Shared cases and orchestration live in `benchmarks/`.
 Translator code lives separately so a future comparison can attribute each output to its implementation.
-The single-case benchmark currently runs only our restricted implementation.
+The single-case benchmark defaults to our restricted implementation and also supports the isolated baseline.
 
 | Implementation | Location | Relationship and availability |
 | --- | --- | --- |
-| Migrated LTLCodeGen baseline | [`ltl_codegen/`](ltl_codegen/README.md) | Imported core restored from repository commit `698677f`; unavailable through the benchmark because it executes generated Python |
+| Migrated LTLCodeGen baseline | [`ltl_codegen/`](ltl_codegen/README.md) | Imported core restored from repository commit `698677f`; available through a resource-limited Docker container |
 | Team translator | [`team_translator/`](team_translator/README.md) | Locally modified derivative; current benchmark default with stable ID `restricted-ast-v1` |
 | IBM NL2LTL | Reference in [`../DOCUMENTS.md`](../DOCUMENTS.md) | Future baseline only; no integration, dependencies, adapter, or runnable benchmark path |
 
@@ -59,16 +59,17 @@ Both implementations retain the migrated MIT license attribution.
 
 ## Future baseline comparison
 
-Before exposing the original executor to model output, choose and verify an isolation design with explicit filesystem, network, process, resource, and credential boundaries.
+The Docker adapter provides filesystem, network, process, resource, and credential boundaries and has opt-in isolation tests.
 A subprocess alone is insufficient because it retains the user's process permissions.
 Replacing its executor with our AST interpreter would change the baseline and must be identified as a separate variant.
-When a baseline adapter is added, disable both translator and provider-client retries for benchmark runs even though normal baseline usage supports retries.
+The baseline adapter disables retries for benchmark execution, and the shared provider client also disables retries, even though normal baseline usage supports them.
 
 IBM NL2LTL still needs source/revision and license review, dependency setup, a minimal adapter, and output-notation documentation.
 Do not infer an integration from the existing link or the historical commit message.
 
-Semantic checking remains deferred with an explicit `not_run` result.
-A future shared evaluator must convert each implementation's native output and the infix reference into one checker's input language, map `reach(object_7)` consistently to one atomic proposition, and preserve standard infinite-trace semantics including current-step `F`.
-Verify that checker independently with equivalent and non-equivalent formulas, then distinguish invalid formulas, checker failures, equivalence, and semantic mismatch for every implementation.
-Do not compare formula strings as a substitute for equivalence.
+Both available benchmark implementations now use the [shared Spot evaluator](../benchmarks/SEMANTICS.md).
+It converts their configured listed-prefix output and the infix reference into a common notation, accepts undeclared well-formed propositions, and checks equivalence over infinite traces with current-step `F`.
+Independent tests cover the lecture identities, non-equivalences, invalid inputs, and checker failures and timeouts.
+Failed translations retain `not_run`, and semantic outcomes do not replace translation/provider outcomes.
+IBM NL2LTL will need an output-notation converter when integrated; it must use this same evaluation process.
 No additional cases or accuracy claims are introduced here.

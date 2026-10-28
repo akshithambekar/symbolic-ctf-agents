@@ -1,4 +1,4 @@
-"""Record a single translation attempt per case, without semantic scoring."""
+"""Record one translation attempt and a separate infinite-trace semantic check."""
 
 import argparse
 from datetime import datetime, timezone
@@ -13,6 +13,7 @@ from openai import APIConnectionError, APIStatusError, DefaultHttpxClient, OpenA
 
 from translators.team_translator import IMPLEMENTATION_ID
 from translators.team_translator.translator import UnsupportedCode, code_ltl_translator
+from benchmarks.semantics import DEFAULT_TIMEOUT_SECONDS, evaluate as evaluate_semantics
 
 
 DEFAULT_CASES = Path(__file__).with_name("cases.json")
@@ -27,6 +28,7 @@ SETTINGS = {
     "provider_allow_fallbacks": False,
     "follow_redirects": False,
     "formula_format": "listed_prefix",
+    "semantic_timeout_seconds": DEFAULT_TIMEOUT_SECONDS,
 }
 OFFLINE_CODE = """def question():
     target = ap(reach, 'object_7')
@@ -96,13 +98,13 @@ def failure_details(error: Exception) -> tuple[str, dict]:
     return "runner_error", {"type": type(error).__name__, "message": "Unexpected local pipeline failure."}
 
 
-def run_cases(cases, llm, model_id, provider, configuration_error=None):
+def run_cases(cases, llm, model_id, provider, configuration_error=None, implementation="restricted"):
     results = []
     for case in cases:
         start = perf_counter()
         result = {
             "case": case,
-            "implementation_id": IMPLEMENTATION_ID,
+            "implementation_id": IMPLEMENTATION_ID if implementation == "restricted" else "ltlcodegen-container-v1",
             "model_id": model_id,
             "provider": provider,
             "settings": dict(SETTINGS),
@@ -113,7 +115,7 @@ def run_cases(cases, llm, model_id, provider, configuration_error=None):
             "formula": None,
             "outcome": "configuration_error",
             "failure": None,
-            "semantic_evaluation": {"outcome": "not_run", "reason": "Stage 2 deferred."},
+            "semantic_evaluation": {"outcome": "not_run", "reason": "Translation did not produce a formula."},
         }
         if configuration_error:
             result["failure"] = {"type": "ConfigurationError", "message": configuration_error}
@@ -127,18 +129,42 @@ def run_cases(cases, llm, model_id, provider, configuration_error=None):
 
             result["attempts"] = 1
             try:
-                formula, success, code = code_ltl_translator(
-                    CountedModel(), case["instruction"], retry_on_error=False, max_retries=0
-                )
+                if implementation == "restricted":
+                    formula, success, code = code_ltl_translator(
+                        CountedModel(), case["instruction"], retry_on_error=False, max_retries=0
+                    )
+                else:
+                    from langchain_core.prompts import PromptTemplate
+                    from benchmarks.ltlcodegen_runner.runner import execute
+
+                    template = (Path(__file__).resolve().parent.parent / "translators/ltl_codegen/code_ltl_prompt_template.py").read_text()
+                    prompt = PromptTemplate(template=template, input_variables=["instruction"]).format(
+                        instruction=case["instruction"], previous_answer="", failure_reason=""
+                    )
+                    code = CountedModel().invoke(prompt)
+                    result["generated_code"] = code
+                    formula, success = execute(code)
                 result["generated_code"] = code
                 if success:
                     result.update(formula=formula, outcome="translated")
                 else:
                     result.update(outcome="translation_error", failure={
-                        "type": "UnsupportedCode", "message": formula,
+                        "type": "UnsupportedCode" if implementation == "restricted" else "ExecutionError", "message": formula,
                     })
             except Exception as error:
                 result["outcome"], result["failure"] = failure_details(error)
+        if result["outcome"] == "translated":
+            try:
+                result["semantic_evaluation"] = evaluate_semantics(
+                    result["formula"], case["reference_formula"],
+                    generated_notation=SETTINGS["formula_format"],
+                    timeout_seconds=SETTINGS["semantic_timeout_seconds"],
+                )
+            except Exception:
+                result["semantic_evaluation"] = {
+                    "outcome": "checker_error", "checker": "spot-ltlfilt",
+                    "message": "Unexpected semantic evaluator failure.",
+                }
         result["elapsed_seconds"] = perf_counter() - start
         results.append(result)
     return results
@@ -156,7 +182,7 @@ def redact(value, secret):
 
 def write_results(path: Path, results: list[dict], secret: str = ""):
     path.parent.mkdir(parents=True, exist_ok=True)
-    payload = {"schema_version": 1, "created_at": datetime.now(timezone.utc).isoformat(), "results": results}
+    payload = {"schema_version": 2, "created_at": datetime.now(timezone.utc).isoformat(), "results": results}
     # Redact every string, including generated code, case metadata, and failures.
     path.write_text(json.dumps(redact(payload, secret), indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
@@ -167,6 +193,7 @@ def main(argv=None) -> int:
     parser.add_argument("--list", action="store_true", help="List cases without calling a model")
     parser.add_argument("--model", help="Explicit OpenRouter model ID; defaults to OPENROUTER_MODEL")
     parser.add_argument("--offline", action="store_true", help="Use a canned fake response, with no network")
+    parser.add_argument("--implementation", choices=["restricted", "ltlcodegen-container"], default="restricted")
     parser.add_argument("--output", type=Path, help="Result JSON path; defaults to benchmarks/results/<unique>.json")
     args = parser.parse_args(argv)
     cases = load_cases(args.cases)
@@ -183,7 +210,8 @@ def main(argv=None) -> int:
     provider = "fake" if args.offline else "openrouter"
     if args.offline:
         from langchain_core.language_models import FakeListLLM
-        llm = FakeListLLM(responses=[OFFLINE_CODE])
+        response = OFFLINE_CODE if args.implementation == "restricted" else "```python\n" + OFFLINE_CODE.rstrip() + "\n```"
+        llm = FakeListLLM(responses=[response])
         model_id = "offline/fake"
     else:
         missing = []
@@ -196,7 +224,10 @@ def main(argv=None) -> int:
         else:
             llm = OpenRouterModel(model_id, secret)
     try:
-        results = run_cases(cases, llm, model_id or None, provider, configuration_error)
+        if args.implementation == "restricted":
+            results = run_cases(cases, llm, model_id or None, provider, configuration_error)
+        else:
+            results = run_cases(cases, llm, model_id or None, provider, configuration_error, args.implementation)
     finally:
         if isinstance(llm, OpenRouterModel):
             llm.close()

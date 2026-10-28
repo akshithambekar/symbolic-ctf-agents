@@ -78,7 +78,7 @@ def test_one_provider_request_and_no_sdk_retries(monkeypatch, status, expected):
         model.close()
     result = results[0]
     assert result["implementation_id"] == "restricted-ast-v1"
-    assert result["semantic_evaluation"]["outcome"] == "not_run"
+    assert result["semantic_evaluation"]["outcome"] == ("equivalent" if status == 200 else "not_run")
     assert result["outcome"] == expected
     assert result["attempts"] == result["provider_requests"] == result["model_invocations"] == len(requests) == 1
     assert constructors[0]["max_retries"] == 0
@@ -187,7 +187,7 @@ def test_offline_cli_and_git_ignore(tmp_path):
     assert result["outcome"] == "translated"
     assert result["implementation_id"] == "restricted-ast-v1"
     assert result["formula"] == "['EVENTUALLY', 'reach(object_7)']"
-    assert result["semantic_evaluation"]["outcome"] == "not_run"
+    assert result["semantic_evaluation"]["outcome"] == "equivalent"
     assert result["attempts"] == 1 and result["provider_requests"] == 0
     ignored = subprocess.run(
         ["git", "check-ignore", "benchmarks/results/example.json"], capture_output=True, check=True, text=True
