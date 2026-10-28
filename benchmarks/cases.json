@@ -1,0 +1,11 @@
+[
+  {
+    "id": "eventually-reach-object-7",
+    "instruction": "Eventually reach object_7.",
+    "propositions": {
+      "reach(object_7)": "The agent reaches object_7 at the current step."
+    },
+    "reference_formula": "F reach(object_7)",
+    "meaning": "At the current step or a later step, the agent reaches object_7."
+  }
+]

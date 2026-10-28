@@ -1,0 +1,5 @@
+-r ../translators/team_translator/requirements.txt
+openai>=1,<3
+python-dotenv>=1,<2
+pytest
+# Native semantic checker: install Spot ltlfilt separately; see SEMANTICS.md.
