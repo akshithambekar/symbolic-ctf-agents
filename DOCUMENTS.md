@@ -2,6 +2,10 @@
 
 This page lists external documents used by the MCTF project. Add each document
 to the section that fits best and fill in every table column.
+
+IBM NL2LTL is a future baseline, currently referenced only: https://github.com/IBM/nl2ltl
+See the [implementation inventory](translators/README.md) for integration status and the separate migrated LTLCodeGen baseline.
+
 ## Competition
 
 | Document | Description | Link |

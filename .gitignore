@@ -17,3 +17,6 @@ dist/
 .coverage
 .coverage.*
 htmlcov/
+.env
+translators/ltl_codegen/code_ltl_exec.py
+benchmarks/results/
