@@ -1,7 +1,7 @@
-# Reference Documents
+# Reference documents
 
-This page lists the external documents the team uses for the MCTF project.
-To add a new document, put it in the section that fits best and fill in every column of the table.
+This page lists external documents used by the MCTF project. Add each document
+to the section that fits best and fill in every table column.
 
 IBM NL2LTL is a future baseline, currently referenced only: https://github.com/IBM/nl2ltl
 See the [implementation inventory](translators/README.md) for integration status and the separate migrated LTLCodeGen baseline.
@@ -12,13 +12,13 @@ See the [implementation inventory](translators/README.md) for integration status
 | --- | --- | --- |
 | MCTF rules | Official rules for the MCTF 2026 competition. | [mctf26.com/rules](https://www.mctf26.com/rules) |
 
-## Research Papers
+## Research papers
 
 | Document | Description | Link |
 | --- | --- | --- |
-| Reward shaping for MCTF | Paper on reward shaping for MCTF agents. | [Article](https://www.sciencedirect.com/science/article/pii/S1877050925007598) · [PDF](https://www.sciencedirect.com/science/article/pii/S1877050925007598/pdf?md5=dd6bfb8cde0db925983ed3bc11f3b13d&pid=1-s2.0-S1877050925007598-main.pdf) |
+| Reward shaping for MCTF | Study of reward shaping for MCTF agents. | [Article](https://www.sciencedirect.com/science/article/pii/S1877050925007598) · [PDF](https://www.sciencedirect.com/science/article/pii/S1877050925007598/pdf?md5=dd6bfb8cde0db925983ed3bc11f3b13d&pid=1-s2.0-S1877050925007598-main.pdf) |
 
-## Background Reading
+## Background reading
 
 | Document | Description | Link |
 | --- | --- | --- |
