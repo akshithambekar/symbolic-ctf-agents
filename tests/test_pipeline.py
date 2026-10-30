@@ -46,3 +46,27 @@ def test_team_train_save_reload_evaluate(tmp_path):
     assert output.is_file()
     with pytest.raises(FileExistsError):
         evaluate_team(policy, output, episodes=1)
+
+
+def test_team_resume_preserves_arena_and_changes_opponent(tmp_path):
+    from maritime_nsrl.experiments import train_team
+
+    spec = tmp_path / "spec.json"
+    save_json(spec, translate("Always stay within the arena. Eventually capture the enemy flag."))
+    policy = train_team(
+        spec, tmp_path / "patrol", team_size=1, opponent="patrol", steps=1,
+        horizon=5.0, config_overrides={"tag_penalty": 0.0, "capture_reward": 25.0},
+    )
+    resumed = train_team(
+        spec, tmp_path / "chase", team_size=1, opponent="chase", steps=1,
+        horizon=5.0, resume=policy,
+    )
+    arena = json.loads((resumed.parent / "arena_config.json").read_text())
+    config = json.loads((resumed.parent / "config.json").read_text())
+    assert arena["opponent"] == "chase"
+    assert arena["tag_penalty"] == 0.0 and arena["capture_reward"] == 25.0
+    assert config["resume"] == str(policy) and len(config["resume_sha256"]) == 64
+    assert json.loads((resumed.parent / "training_budget.json").read_text())["actual_agent_transitions"] == 256
+    with pytest.raises(ValueError, match="team_size"):
+        train_team(spec, tmp_path / "wrong", team_size=2, horizon=5.0, resume=policy)
+    assert not (tmp_path / "wrong").exists()

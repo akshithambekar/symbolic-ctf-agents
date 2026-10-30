@@ -11,9 +11,10 @@ on that branch. These historical results describe different experimental protoco
   specification provenance, and a predictive bounds shield.
 - Scripted capture oracle, native watch/replay viewer, relevant core tests.
 
-Excluded: experiment archives, pretrained policies, manuscripts, frozen source
-copies, translation benchmarks, tactical-role studies, imitation training, and
-chase/shield follow-up runners. The existing demo and earlier `ltl/` work remain.
+The [historical 1v1 archive](../research_archive/README.md) now contains five
+patrol checkpoints and selected chase-study records. The other experiment
+archives, manuscripts, translation benchmarks, tactical-role studies, imitation
+training, and chase/shield follow-up runners remain on the source branch.
 
 ## Recorded outcomes
 

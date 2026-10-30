@@ -1,0 +1,6 @@
+{
+  "at": "2026-09-30T23:07:11.543305+00:00",
+  "scope": "orchestration only",
+  "effect_on_environment_and_policy_configuration": "none",
+  "effect": "One incomplete logical seed is rerun with the same seed and evaluation seeds in a separate immutable directory."
+}

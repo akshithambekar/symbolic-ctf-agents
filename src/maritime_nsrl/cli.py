@@ -40,11 +40,11 @@ def main():
         training.add_argument("--steps", type=positive_int, default=16384)
         training.add_argument("--seed", type=int, default=0)
         training.add_argument("--opponent", choices=("static", "patrol", "chase"), default="static")
+        training.add_argument("--resume", type=Path)
         if name == "train":
             training.add_argument("--guided", action="store_true")
-            training.add_argument("--resume", type=Path)
         else:
-            training.add_argument("--team-size", type=int, choices=(2, 3), default=3)
+            training.add_argument("--team-size", type=int, choices=(1, 2, 3), default=3)
             training.add_argument(
                 "--scenario", choices=("standard", "wide", "narrow"), default="standard"
             )
@@ -123,6 +123,7 @@ def main():
                 role_constraint=args.role_constraint,
                 reward_shaping=not args.no_reward_shaping,
                 temporal_state=not args.no_temporal_state,
+                resume=args.resume,
             )
         )
     elif args.command == "evaluate":

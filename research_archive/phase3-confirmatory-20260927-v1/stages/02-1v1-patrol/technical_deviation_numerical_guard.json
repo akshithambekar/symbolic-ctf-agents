@@ -1,0 +1,7 @@
+{
+  "at": "2026-09-28T21:57:09.534710+00:00",
+  "scope": "TeamArena numerical fail-closed guard",
+  "effect": "Only non-finite PyQuaticus game states now terminate their episode and retain the last valid observation.",
+  "effect_on_prior_completed_runs": "none; completed neural and temporal runs are preserved.",
+  "rerun": "softened_guidance logical seed 0 only, same training/evaluation seed, new immutable retry directory."
+}

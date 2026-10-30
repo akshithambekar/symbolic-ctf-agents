@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-10-01T04:55:34.223983+00:00",
+  "stage": "03-1v1-chase",
+  "config": {
+    "team_size": 1,
+    "opponent": "chase",
+    "scenario": "standard",
+    "previous": "02-1v1-patrol"
+  },
+  "methods": [
+    "softened_guidance_no_tag_penalty"
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "steps_per_run": 100608,
+  "episodes_per_seed": 30,
+  "source_hashes": {
+    "__init__.py": "6bdcaa8333d825e568795fcf25bb48810d8664a34b9e4c3629c31fdf7e087aac",
+    "cli.py": "5d1ce0731cd7074d43ff4267904cb8d3e25ee701c3de1f07a38a9ccfd07ae051",
+    "confirmatory.py": "142c7b0547b739c2b63b27fe28fb82e57a94ac91ddaa0200d74a232020cb88ee",
+    "environment.py": "c5c1e685fc05fd8039d78f0facc6dadbbe6cae50a19dbb616ab2f6c8583e4327",
+    "experiments.py": "94f99f47609eea227bdfa9d4e29967699f927d47f3c160eb3863a1b5eb3e9a74",
+    "guidance.py": "b5bbd0289f83e6f6296f995a64c581dac9c3119b82642d985a0111aa0371d266",
+    "logic.py": "c715af486eb3b433a3ff7ff0cd3459b17f36b9e674efa22db55cdd77f0b0bdd9",
+    "opponents.py": "783922a88f0da78209a861a2bbd6de974151a540837256b16b862759bac7dfc3",
+    "oracle.py": "936d8600ba620319eddd8744d145bfb27303d25010454552519127d4965b8c47",
+    "provider_config.py": "5b2b97e43b835ffbe043a53589bebbfed7e5b8dbf8c4736d7be1fca319939110",
+    "research_env.py": "c9af5d31b0ce5bb9f2dbc36090b89facb3bc6c3220b6f130dd0069218f29ccd6",
+    "shield.py": "db08d34d4cea526b8c9494261112a5ce19e066f3c6f6f8133aa6cbb683c3caa2",
+    "specifications.py": "5fe3174b73c86e9ceec35eb7977e8bb9ef81f11c34329ac0ef21b7a47a9a889e",
+    "temporal.py": "f753cb7d411761672c307288531172f79e7b1e4eab5b60e6118c4500a7971386",
+    "translation.py": "e16af1a27f0bbfa2237dd8235364233862b0fe2f44c47b8a9ee4960d84fc7001",
+    "translator_benchmark/__init__.py": "365dd138d1b21d8c260dba77b50128c3f41d664dba5943e6b7fe350b557a8dbf",
+    "translator_benchmark/adapters.py": "3aef46bf75cf8e4a9370e56be0cc8e316cd45d3ec7e92e9a985499220444a24d",
+    "translator_benchmark/dataset.py": "b1556fe0c95cb267f9404a33bcb21134f3aaae1dd5ef7a1c3d7ecca433b4a618",
+    "translator_benchmark/runner.py": "3778fe104c43e7ca31999f2f410455b451985ae55a95d5fa7bcc3ca1acdea4b5",
+    "translator_benchmark/scoring.py": "206bd74e1edb379511679502d67db25e470006aca12dfe407a3cff1ed352d972",
+    "translator_benchmark/upstream/code_ltl_prompt_template.py": "84a9e38795a983cdddf50c63b976759b75bacc6d6a6583d8c4c3beb1b1fbe22d",
+    "translator_benchmark/upstream/code_ltl_translator.py": "8edcb36f4decdb1163bcb49196d43f51859f53a6c6cd4e82403f129c97450d6d",
+    "translator_benchmark/upstream/LICENSE": "6f2c4201b70e14932a0274db3249b496fef4c6c9277d8a93d2ac0969ff2e4ef6",
+    "translator_benchmark/upstream/ltl_operators.py": "56453ba2933d371cee4169133723b5bb8faddd1b25ee942ef5e7fd771b403c31",
+    "viewer.py": "b5310bc4d93bf512fd92a553c7fcb11d2e5b37b0484c94cf3438f60893b8d17a"
+  },
+  "promotion_rule": {
+    "defined_before_runs": true,
+    "criterion": "A method advances only if at least 3 of 5 training seeds have held-out capture rate >= 0.10 and the pooled rate over 150 deterministic held-out episodes is >= 0.10.",
+    "held_out_episodes_per_seed": 30
+  }
+}
