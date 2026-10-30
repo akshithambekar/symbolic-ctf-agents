@@ -63,10 +63,11 @@ def main():
     for name in ("watch", "replay"):
         viewer = commands.add_parser(name)
         if name == "watch":
-            viewer.add_argument("policy", help="Saved policy.zip or oracle")
+            viewer.add_argument("policy", help="Saved policy.zip, oracle, or teacher")
             viewer.add_argument("--scenario", choices=("standard", "wide", "narrow"))
             viewer.add_argument("--opponent", choices=("static", "patrol", "chase"))
             viewer.add_argument("--team-size", type=int, choices=(1, 2, 3))
+            viewer.add_argument("--opponent-speed", type=float)
             viewer.add_argument("--seed", type=int, default=40000)
             viewer.add_argument("--episodes", type=positive_int, default=1)
             viewer.add_argument("--stochastic", action="store_true")

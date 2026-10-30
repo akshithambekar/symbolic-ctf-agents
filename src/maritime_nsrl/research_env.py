@@ -51,6 +51,7 @@ class ArenaConfig:
     boundary_start_speed: float = 0.0
     probe_action: bool = False
     curriculum_phase: int = 0
+    probe_milestone_reward: float = 0.0
 
 
 class TeamArena:
@@ -80,10 +81,14 @@ class TeamArena:
         self.automaton = compile_ltlf(config.formula)
         if "probe_upper" in self.automaton.propositions and self.n != 1:
             raise ValueError("Probe-lure-switch requires a 1v1 arena")
-        if config.curriculum_phase not in (0, 1, 2):
-            raise ValueError("Curriculum phase must be 0, 1, or 2")
+        if config.curriculum_phase not in range(7):
+            raise ValueError("Curriculum phase must be in 0..6")
+        if not np.isfinite(config.probe_milestone_reward) or config.probe_milestone_reward < 0:
+            raise ValueError("Milestone reward must be finite and nonnegative")
         if config.curriculum_phase and "probe_upper" not in self.automaton.propositions:
             raise ValueError("Probe curriculum requires the probe-lure mission")
+        if config.probe_milestone_reward and "probe_upper" not in self.automaton.propositions:
+            raise ValueError("Milestone rewards require the probe-lure mission")
         self.rng = np.random.default_rng()
         with warnings.catch_warnings():
             warnings.filterwarnings(
@@ -237,6 +242,7 @@ class TeamArena:
             per_agent_pickups=[0] * team_size,
             per_agent_tags=[0] * team_size,
             enemy_territory_steps=0,
+            enemy_territory_time=0.0,
             reached_enemy_territory=False,
             first_enemy_territory_time=None,
             reached_enemy_flag=False,
@@ -264,6 +270,9 @@ class TeamArena:
             executed_action_counts=[0] * self.action_space.n,
             shield_offensive_interventions=0,
             shield_substitutions={},
+            furthest_phase=0,
+            milestone_times=[None] * 6,
+            milestone_reward=0.0,
         )
         self.trace = []
         self.last_valid_observation = self.observe()
@@ -467,6 +476,7 @@ class TeamArena:
         accepted_before = self.monitor.satisfied
         for _ in range(self.config.repeat):
             state = self.game.state
+            time_before = float(self.game.current_time)
             caps, grabs, tags = (
                 state["captures"].copy(),
                 state["grabs"].copy(),
@@ -525,6 +535,19 @@ class TeamArena:
             )
             self.ever_flag |= any(state["agent_has_flag"][:team_size])
             self.monitor.update(self.labels(previous_captures=caps[0]))
+            if "probe_upper" in self.automaton.propositions and not self.monitor.impossible:
+                from .probe_lure import mission_phase
+
+                phase = mission_phase(self.monitor)
+                previous_phase = self.metrics["furthest_phase"]
+                for milestone in range(previous_phase, phase):
+                    self.metrics["milestone_times"][milestone] = float(self.game.current_time)
+                if phase > previous_phase:
+                    self.metrics["furthest_phase"] = phase
+                    if self.config.guided and self.config.reward_shaping:
+                        bonus = self.config.probe_milestone_reward * (phase - previous_phase)
+                        extra += bonus
+                        self.metrics["milestone_reward"] += bonus
             metrics["captures"] += scored
             metrics["opponent_captures"] += int(state["captures"][1] - caps[1])
             metrics["pickups"] += picked
@@ -538,6 +561,9 @@ class TeamArena:
             defender_step = int(team_size > 1 and "defender_behind_center" not in labels)
             fixed_violation = int("in_bounds" not in labels or tagged_step or defender_step)
             metrics["enemy_territory_steps"] += enemy_steps
+            metrics["enemy_territory_time"] += enemy_steps * (
+                float(self.game.current_time) - time_before
+            )
             metrics["tagged_steps"] += tagged_step
             if any(entered_tag):
                 suffix = "after_pickup" if metrics["pickup_time"] is not None else "before_pickup"
@@ -598,7 +624,8 @@ class TeamArena:
                 curriculum_success = mission_phase(self.monitor) >= self.config.curriculum_phase
             self.finished = bool(terms["agent_0"] or truncs["agent_0"] or curriculum_success)
             if curriculum_success:
-                extra += self.config.acceptance_bonus
+                if not self.monitor.satisfied:
+                    extra += self.config.acceptance_bonus
                 metrics["curriculum_success"] = True
             if self.finished:
                 break
@@ -660,7 +687,6 @@ class TeamArena:
                 **copy.deepcopy(metrics),
                 "duration": float(self.game.current_time),
                 "common_task_reward": metrics["common_task_reward"],
-                "enemy_territory_time": 0.1 * metrics["enemy_territory_steps"],
                 "defender_distance_mean": metrics["defender_distance_sum"]
                 / max(metrics["defender_distance_samples"], 1),
                 "rule_violation_steps": metrics.get("rule_violation_steps", 0),

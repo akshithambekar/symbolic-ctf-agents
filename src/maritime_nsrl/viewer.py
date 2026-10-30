@@ -30,7 +30,9 @@ SINGLE_ACTION_NAMES = [
 ]
 
 
-def load_policy_environment(policy, scenario=None, opponent=None, team_size=None, config_path=None):
+def load_policy_environment(
+    policy, scenario=None, opponent=None, team_size=None, config_path=None, opponent_speed=None
+):
     from .research_env import ArenaConfig, TeamArena
     from .environment import MaritimeEnv
     from .translation import load_spec
@@ -47,6 +49,20 @@ def load_policy_environment(policy, scenario=None, opponent=None, team_size=None
         )
         values.setdefault("formula", "G(in_bounds) & F(has_flag & F(captured))")
         return TeamArena(ArenaConfig(**values)), CaptureOracle(values["team_size"]), True
+    if policy == "teacher":
+        from .probe_lure import FORMULA, ProbeLureTeacher
+
+        if team_size not in (None, 1):
+            raise ValueError("Probe teacher is 1v1")
+        return (
+            TeamArena(ArenaConfig(
+                formula=FORMULA, probe_action=True, opponent=opponent or "chase",
+                opponent_speed=1.0 if opponent_speed is None else opponent_speed,
+                scenario=scenario or "standard",
+            )),
+            ProbeLureTeacher(),
+            True,
+        )
     from stable_baselines3 import PPO
 
     policy = Path(policy).resolve()
@@ -327,8 +343,10 @@ def watch(args):
     record = Path(args.record) if args.record else None
     if record:
         record.mkdir(parents=True, exist_ok=False)
+    scripted = args.policy in {"oracle", "teacher"}
     env, policy, is_team = load_policy_environment(
-        args.policy, args.scenario, args.opponent, args.team_size, args.config
+        args.policy, args.scenario, args.opponent, args.team_size, args.config,
+        getattr(args, "opponent_speed", None),
     )
     if is_team:
         env.config.trace_stride = 1  # diagnostic logging only; no policy/physics change
@@ -341,7 +359,7 @@ def watch(args):
                 arguments=vars(args),
                 viewer_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                 policy_sha256=None
-                if args.policy == "oracle"
+                if scripted
                 else hashlib.sha256(Path(args.policy).read_bytes()).hexdigest(),
             )
             (record / "viewer_config.json").write_text(json.dumps(metadata, default=str, indent=2))
@@ -351,10 +369,10 @@ def watch(args):
                 obs = env.reset(args.seed + episode)
             else:
                 obs, _ = env.reset(seed=args.seed + episode)
-            if args.policy != "oracle":
+            if not scripted:
                 policy.set_random_seed(args.seed + episode)
             while not env.finished:
-                if args.policy == "oracle":
+                if scripted:
                     actions = policy(env)
                 else:
                     actions, _ = policy.predict(obs, deterministic=not args.stochastic)
