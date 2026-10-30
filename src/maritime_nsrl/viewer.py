@@ -17,6 +17,7 @@ ACTION_NAMES = [
     "high return",
     "evade",
     "hold",
+    "upper probe",
 ]
 SINGLE_ACTION_NAMES = [
     "flag",
@@ -148,7 +149,7 @@ def snapshot(env, actions, episode, is_team, previous_captures=None):
         executed_actions=(env.trace[-1]["executed_actions"] if is_team and env.trace else None),
         shield_interventions=int(getattr(getattr(env, "gate", None), "interventions", 0)),
         shield_deadlocks=int(getattr(getattr(env, "gate", None), "deadlocks", 0)),
-        action_names=ACTION_NAMES if is_team else SINGLE_ACTION_NAMES,
+        action_names=ACTION_NAMES[:env.action_space.n] if is_team else SINGLE_ACTION_NAMES,
     )
 
 
