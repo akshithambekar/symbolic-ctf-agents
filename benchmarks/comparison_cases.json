@@ -2,14 +2,18 @@
   {
     "id": "eventually-reach-object-7",
     "instruction": "Eventually reach object_7.",
-    "propositions": {"reach(object_7)": "The agent reaches object_7 at the current step."},
+    "propositions": {
+      "reach(object_7)": "The agent reaches object_7 at the current step."
+    },
     "reference_formula": "F reach(object_7)",
     "meaning": "At the current step or a later step, the agent reaches object_7."
   },
   {
     "id": "never-reach-object-3",
     "instruction": "Never reach object_3.",
-    "propositions": {"reach(object_3)": "The agent reaches object_3 at the current step."},
+    "propositions": {
+      "reach(object_3)": "The agent reaches object_3 at the current step."
+    },
     "reference_formula": "G !reach(object_3)",
     "meaning": "At every step, the agent does not reach object_3."
   },
@@ -32,5 +36,54 @@
     },
     "reference_formula": "F (reach(object_1) | reach(object_2))",
     "meaning": "At least one of the two objects is reached at the current step or a later step."
+  },
+  {
+    "id": "next-reach-object-4",
+    "instruction": "Reach object_4 at the next step.",
+    "propositions": {
+      "reach(object_4)": "The agent reaches object_4 at the current step."
+    },
+    "reference_formula": "X reach(object_4)",
+    "meaning": "The agent reaches object_4 at the immediately following step."
+  },
+  {
+    "id": "avoid-object-3-until-reach-object-7",
+    "instruction": "Do not reach object_3 until object_7 is reached, and ensure object_7 is eventually reached.",
+    "propositions": {
+      "reach(object_3)": "The agent reaches object_3 at the current step.",
+      "reach(object_7)": "The agent reaches object_7 at the current step."
+    },
+    "reference_formula": "!reach(object_3) U reach(object_7)",
+    "meaning": "Object_7 is reached eventually, and object_3 is not reached at any earlier step; reaching both at that step is allowed."
+  },
+  {
+    "id": "release-avoid-until-target",
+    "instruction": "Do not reach object_3 unless object_7 has already been reached at an earlier step; object_7 does not have to be reached.",
+    "propositions": {
+      "reach(object_3)": "The agent reaches object_3 at the current step.",
+      "reach(object_7)": "The agent reaches object_7 at the current step."
+    },
+    "reference_formula": "!(!reach(object_7) U reach(object_3))",
+    "meaning": "Object_3 is not reached until after object_7 has been reached; if object_7 is never reached, object_3 is never reached. This is reach(object_7) R !reach(object_3)."
+  },
+  {
+    "id": "weak-until-avoid-target",
+    "instruction": "Do not reach object_3 before object_7 is reached; if object_7 is never reached, never reach object_3. Reaching both at the same step is allowed.",
+    "propositions": {
+      "reach(object_3)": "The agent reaches object_3 at the current step.",
+      "reach(object_7)": "The agent reaches object_7 at the current step."
+    },
+    "reference_formula": "(!reach(object_3) U reach(object_7)) | G !reach(object_3)",
+    "meaning": "Object_3 is avoided until object_7 is reached, or forever if object_7 is never reached. This is !reach(object_3) W reach(object_7)."
+  },
+  {
+    "id": "strong-release-avoid-target",
+    "instruction": "Do not reach object_3 through the step when object_7 is first reached, and ensure object_7 is eventually reached.",
+    "propositions": {
+      "reach(object_3)": "The agent reaches object_3 at the current step.",
+      "reach(object_7)": "The agent reaches object_7 at the current step."
+    },
+    "reference_formula": "!reach(object_3) U (reach(object_7) & !reach(object_3))",
+    "meaning": "Object_7 is reached eventually, and object_3 is not reached before or at that step. This is reach(object_7) M !reach(object_3)."
   }
 ]

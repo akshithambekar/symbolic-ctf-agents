@@ -17,6 +17,11 @@ BODIES = [
     "return ltl_always(ltl_not(ap(reach, 'object_3')))",
     "return ltl_and(ltl_eventually(ap(reach, 'object_1')), ltl_eventually(ap(reach, 'object_2')))",
     "return ltl_eventually(ltl_or(ap(reach, 'object_1'), ap(reach, 'object_2')))",
+    "return ltl_next(ap(reach, 'object_4'))",
+    "return ltl_until(ltl_not(ap(reach, 'object_3')), ap(reach, 'object_7'))",
+    "return ltl_not(ltl_until(ltl_not(ap(reach, 'object_7')), ap(reach, 'object_3')))",
+    "return ltl_or(ltl_until(ltl_not(ap(reach, 'object_3')), ap(reach, 'object_7')), ltl_always(ltl_not(ap(reach, 'object_3'))))",
+    "return ltl_until(ltl_not(ap(reach, 'object_3')), ltl_and(ap(reach, 'object_7'), ltl_not(ap(reach, 'object_3'))))",
 ]
 IMPLEMENTATIONS = [
     "restricted",
@@ -36,8 +41,13 @@ def fixed_model(bodies, implementation):
 @pytest.mark.parametrize("implementation", IMPLEMENTATIONS)
 def test_fixed_comparison_cases(implementation, tmp_path):
     records = run.run_cases(COMPARISON_CASES, fixed_model(BODIES, implementation), "offline/fixed", "fake", implementation=implementation)
-    assert len(records) == 4
+    assert len(records) == 9
     for record in records:
+        if implementation == "ltlcodegen-container" and record["case"]["id"] == "next-reach-object-4":
+            assert record["outcome"] == "translation_error"
+            assert "ltl_next" in record["failure"]["message"]
+            assert record["semantic_evaluation"]["outcome"] == "not_run"
+            continue
         assert record["outcome"] == "translated", record
         assert record["semantic_evaluation"]["outcome"] == "equivalent", record
         assert record["semantic_evaluation"]["timeout_seconds"] == DEFAULT_TIMEOUT_SECONDS
@@ -144,3 +154,27 @@ def test_unexpected_evaluator_failure_does_not_replace_translation(monkeypatch):
     assert record["failure"] is None
     assert record["semantic_evaluation"]["outcome"] == "checker_error"
     assert "must not persist" not in json.dumps(record)
+
+
+def test_adapted_baseline_preserves_raw_code_and_identifies_variant(monkeypatch):
+    from benchmarks.ltlcodegen_runner import runner
+
+    seen = []
+    def execute(code):
+        seen.append(code)
+        return "['EVENTUALLY', 'reach(object_7)']", True
+
+    monkeypatch.setattr(runner, "execute", execute)
+    model = fixed_model(BODIES[:1], "restricted")
+    record = run.run_cases(COMPARISON_CASES[:1], model, "offline/fixed", "fake", implementation="ltlcodegen-adapted")[0]
+    assert record["implementation_id"] == "ltlcodegen-container-adapted-v2"
+    assert record["generated_code"].startswith("def question():")
+    assert seen[0].startswith("```python\nfrom translators.ltl_codegen.ltl_operators import ltl_next\ndef question():")
+    assert record["semantic_evaluation"]["outcome"] == "equivalent"
+
+
+def test_baseline_fence_adapter_preserves_existing_fences_and_prose():
+    fenced = "```python\ndef question():\n    return 1\n```"
+    assert run.adapt_baseline_response(fenced) == "```python\nfrom translators.ltl_codegen.ltl_operators import ltl_next\ndef question():\n    return 1\n```"
+    prose = "Here is the code:\ndef question():\n    return 1"
+    assert run.adapt_baseline_response(prose) == prose
