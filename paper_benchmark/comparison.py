@@ -125,7 +125,7 @@ def summaries(output, rows, methods):
 
 
 def run(output, *, methods, model, endpoint, trials, timeout, case_ids=None, ibm_python=None,
-        ibm_max_tokens=200):
+        ibm_max_tokens=200, dataset_path=None):
     if trials < 1 or timeout <= 0:
         raise ValueError('Trials and timeout must be positive')
     if not methods or len(set(methods)) != len(methods) or set(methods) - IDS.keys():
@@ -134,7 +134,10 @@ def run(output, *, methods, model, endpoint, trials, timeout, case_ids=None, ibm
     key = api_key(endpoint)
     if not key:
         raise ValueError('Missing API key for selected endpoint')
-    data = json.loads((ROOT / 'reference_run/dataset.json').read_text())
+    dataset_path = Path(dataset_path) if dataset_path else ROOT / 'reference_run/dataset.json'
+    data = json.loads(dataset_path.read_text(encoding='utf-8'))
+    for item in data['items']:
+        item.setdefault('paraphrase_group', item.get('semantic_family', item['id']))
     if case_ids:
         unknown = set(case_ids) - {item['id'] for item in data['items']}
         if unknown:
@@ -146,6 +149,10 @@ def run(output, *, methods, model, endpoint, trials, timeout, case_ids=None, ibm
         'experiment_kind': 'exploratory', 'methods': methods, 'implementation_ids': actual_ids,
         'model': model, 'endpoint': endpoint, 'trials': trials, 'timeout_seconds': timeout,
         'benchmark_version': data['version'], 'case_ids': [i['id'] for i in data['items']],
+        'dataset_source': str(dataset_path.resolve()),
+        'dataset_source_sha256': hashlib.sha256(dataset_path.read_bytes()).hexdigest(),
+        'scoring_profile': 'Unconstrained Boolean LTLf reference agreement; grounding invariant not applied',
+        'review_complete': data.get('review_complete', False),
         'semantics': 'Nonempty finite traces; strong X; inclusive F',
         'request_caps': {'current': 3, 'ltlcodegen': 4, 'ibm': 1},
         'ibm_native_request': {'temperature': 0.5, 'max_tokens': 200, 'top_p': 1.0, 'stop': ['\n\n']},

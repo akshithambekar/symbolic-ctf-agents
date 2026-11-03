@@ -90,6 +90,7 @@ def main(argv=None):
         live.add_argument('--env-file', type=Path, default=ROOT.parent / '.env')
         live.add_argument('--output', type=Path)
         if name == 'compare':
+            live.add_argument('--dataset', type=Path, help='Explicit dataset snapshot for a fresh comparison')
             live.add_argument('--methods', nargs='+', choices=('current', 'ltlcodegen', 'ibm'),
                               default=['current', 'ltlcodegen', 'ibm'])
             live.add_argument('--case-id', action='append', dest='case_ids')
@@ -132,7 +133,8 @@ def main(argv=None):
             from comparison import run as compare
             compare(output, methods=args.methods, model=args.model, endpoint=args.endpoint,
                     trials=args.trials, timeout=args.timeout, case_ids=args.case_ids,
-                    ibm_python=args.ibm_python, ibm_max_tokens=args.ibm_max_tokens)
+                    ibm_python=args.ibm_python, ibm_max_tokens=args.ibm_max_tokens,
+                    dataset_path=args.dataset)
         else:
             runner.run(output, model=args.model, endpoint=args.endpoint, trials=args.trials,
                        timeout=args.timeout, logic_backend='dfa')

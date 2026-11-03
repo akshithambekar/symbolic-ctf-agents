@@ -86,7 +86,8 @@ def test_provider_failure_and_missing_worker_are_not_measured(monkeypatch, tmp_p
         worker({}, tmp_path / 'missing-python')
 
 
-def test_matched_three_way_driver_with_fake_http_and_frozen_scorer(tmp_path):
+@pytest.mark.parametrize('candidate_dataset', [False, True])
+def test_matched_three_way_driver_with_fake_http_and_frozen_scorer(tmp_path, candidate_dataset):
     requests_seen = []
     class Handler(BaseHTTPRequestHandler):
         def do_POST(self):
@@ -114,10 +115,11 @@ def test_matched_three_way_driver_with_fake_http_and_frozen_scorer(tmp_path):
     env = {**os.environ, 'LTL_API_KEY': 'test-key'}
     output = tmp_path / 'comparison'
     try:
+        extra = ['--dataset', str(ROOT / 'study/candidate_v1/dataset.json')] if candidate_dataset else []
         subprocess.run([sys.executable, str(ROOT / 'run.py'), 'compare', '--trials', '1',
                         '--model', MODEL, '--endpoint', f'http://127.0.0.1:{server.server_port}/v1',
-                        '--case-id', 'capture-0', '--env-file', str(tmp_path / 'missing.env'),
-                        '--output', str(output)], check=True, capture_output=True, text=True, env=env)
+                        '--case-id', 'dev-capture-0' if candidate_dataset else 'capture-0', '--env-file', str(tmp_path / 'missing.env'),
+                        '--output', str(output)] + extra, check=True, capture_output=True, text=True, env=env)
     finally:
         server.shutdown()
         server.server_close()

@@ -130,3 +130,30 @@ paper's measured two-translator benchmark.
 The frozen `reference_run/REPORT.md` is retained unchanged, including its older
 generic architecture-decision wording. Use the actual raw results and summaries,
 this README's denominators, and the paper's stated limitations for interpretation.
+
+## Fresh four-model / 120-instruction exploratory matrix
+
+`model_matrix.py` uses all 120 candidate instructions and schedules three trials
+for each of the three translators on Ultra, Super VL, Lightning, and Nano Omni:
+4,320 outcomes, plus separate one-item smoke tests and workflow repairs. Each
+model/trial writes into a fresh directory with dataset, source snapshots, raw
+responses, summaries, plots and review sheets. `status.json` tracks progress.
+No old measured rows are reused. Forty instructions were previously exposed;
+this full exploratory run is not a held-out publication test. References remain
+pending independent semantic review. Current scoring uses unconstrained Boolean
+LTLf equivalence, without the proposed grounding invariant; scores can therefore
+penalize physically equivalent predicate aliases and need human review.
+
+IBM uses its explicitly labeled 4096-token variant. The three workflows retain
+different request caps, so this is not an equal-token or equal-call comparison.
+Infrastructure failures stop further trials for that model and remain visible;
+completion of the launcher does not imply a complete matrix. No paid fallback
+or automatic restart of failed conditions is enabled.
+
+```powershell
+.\.venv-paper\Scripts\python.exe paper_benchmark/model_matrix.py --env-file ../maritime-nsrl/.env --output paper_benchmark/runs/fresh-four-model-120
+```
+
+An individual fresh run can use `run.py compare --dataset
+paper_benchmark/study/candidate_v1/dataset.json --model MODEL --ibm-max-tokens
+4096`, with other options as above. Every output path must be new.
