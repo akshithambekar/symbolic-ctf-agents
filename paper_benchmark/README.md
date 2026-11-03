@@ -58,7 +58,7 @@ The translation-only tools do not require PyQuaticus, PyTorch, ROS, Spot, or Doc
 uv venv --no-project --python 3.13 .venv-paper
 uv pip install --python .venv-paper/Scripts/python.exe -r paper_benchmark/requirements-dev.txt
 .\.venv-paper\Scripts\python.exe paper_benchmark/run.py verify
-.\.venv-paper\Scripts\python.exe -m pytest paper_benchmark/tests -q
+.\.venv-paper\Scripts\python.exe -m pytest paper_benchmark/tests/test_reference.py -q
 .\.venv-paper\Scripts\python.exe paper_benchmark/run.py rescore
 ```
 
@@ -98,8 +98,27 @@ review protocol. Preserve raw outputs and exact model/backend/version metadata.
 Match request budgets or state unequal repair budgets. Do not replace the direct
 translator with the newer LTLCodeGen-derived team translator under the same name.
 
-IBM is **not implemented by this restoration**. The newer main branch's IBM
-dependency lockfile does not constitute a completed comparison. The new
+## IBM third arm added
+
+The separately labeled IBM NL2LTL arm is now implemented. See
+[IBM setup, adaptations, limitations, and commands](ibm/README.md).
+It uses the real pinned package in its own Python 3.10 environment, the original
+dataset/scorer, and the same requested model. After its setup, run all tests with
+`python -m pytest paper_benchmark/tests -q` from the paper environment.
+
+```powershell
+.\.venv-paper\Scripts\python.exe paper_benchmark/run.py compare
+```
+
+This starts a fresh three-method comparison, not an update of the preserved
+two-method study. Use `--methods ibm --trials 1 --case-id capture-0` for a smoke
+check. The native request/repair budgets differ and are recorded explicitly.
+For reasoning models, `--ibm-max-tokens 4096` is a separately identified adapter
+variant; the native 200-token smoke returned no final text, whereas the 4096-token
+smoke returned correct formulas for both checked cases. These are integration
+checks, not a completed IBM accuracy benchmark.
+The newer main branch's IBM dependency lockfile alone did not constitute a
+completed comparison. The new
 `llm-ltl-benchmark` branch's partial model experiment is also separate from this
 paper's measured two-translator benchmark.
 

@@ -1,0 +1,2 @@
+method,implementation_id,scheduled,measured,not_measured,formula_reference_outputs,rejection_reference_outputs,syntax_valid_rate,compilable_rate,semantic_correct_rate,unsupported_predicate_rate,appropriate_rejection_rate,repair_rate,mean_latency_seconds,provider_requests,paraphrase_equivalence_rate,paraphrase_pairs_compared
+ibm,ibm-nl2ltl-0.0.6-ctf-openrouter-v1,2,2,0,2,0,0.0,0.0,0.0,0.0,,0.0,4.384420049995242,2,,0

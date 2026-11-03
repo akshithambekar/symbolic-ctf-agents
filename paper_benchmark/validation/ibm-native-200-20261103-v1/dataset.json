@@ -1,0 +1,29 @@
+{
+  "version": "ctf-translators-1.0",
+  "semantics": "LTLf over nonempty finite traces",
+  "glossary": "CTF benchmark domain: 3v3 team, nonempty finite episodes, strong X, inclusive F.\nin_bounds = all controlled boats inside arena; tagged = any controlled boat tagged;\nhas_flag = any controlled boat carrying enemy flag; captured = team score event;\nhome = any controlled boat within catch radius of own flag home (NOT own half);\ndefender_behind_center = designated agent 0 behind center (team size >=2);\nattacker_forward = any agent 1..n-1 beyond center; teammate_safe = no teammate tagged.\nOnly these eight predicates are available. An unspecified defender is NOT necessarily\nagent 0. No predicate represents opponent approach, support, communication, distance,\nor an arbitrary boat's own-half occupancy. Ask for clarification / return an error\nfor unsupported or ambiguous intent. For ordinary 'then', same-state witnesses are\nallowed; 'strictly later' requires X. No implicit safety clauses may be added.\n",
+  "items": [
+    {
+      "id": "tag-0",
+      "category": "safety",
+      "paraphrase_group": "tag",
+      "instruction": "Never get tagged.",
+      "reference_ltl": "G(!tagged)",
+      "expected": "formula",
+      "rationale": "Absorbing safety requirement.",
+      "ordering_sensitive": false,
+      "reference_author": "project-authored; independent human review pending"
+    },
+    {
+      "id": "capture-0",
+      "category": "eventual",
+      "paraphrase_group": "capture",
+      "instruction": "Eventually capture the enemy flag.",
+      "reference_ltl": "F(captured)",
+      "expected": "formula",
+      "rationale": "No additional no-tag clause.",
+      "ordering_sensitive": false,
+      "reference_author": "project-authored; independent human review pending"
+    }
+  ]
+}

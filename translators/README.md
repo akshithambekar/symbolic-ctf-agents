@@ -8,7 +8,7 @@ The single-case benchmark defaults to our restricted implementation and also sup
 | --- | --- | --- |
 | Migrated LTLCodeGen baseline | [`ltl_codegen/`](ltl_codegen/README.md) | Imported core restored from repository commit `698677f`; available through a resource-limited Docker container |
 | Team translator | [`team_translator/`](team_translator/README.md) | Locally modified derivative; current benchmark default with stable ID `restricted-ast-v1` |
-| IBM NL2LTL | Reference in [`../DOCUMENTS.md`](../DOCUMENTS.md) | Future baseline only; no integration, dependencies, adapter, or runnable benchmark path |
+| IBM NL2LTL | [`../paper_benchmark/ibm/`](../paper_benchmark/ibm/README.md) | Pinned CTF/OpenRouter adaptation for the original paper benchmark; separate from this navigation benchmark |
 
 ## Provenance and history audit
 
@@ -64,12 +64,15 @@ A subprocess alone is insufficient because it retains the user's process permiss
 Replacing its executor with our AST interpreter would change the baseline and must be identified as a separate variant.
 The baseline adapter disables retries for benchmark execution, and the shared provider client also disables retries, even though normal baseline usage supports them.
 
-IBM NL2LTL still needs source/revision and license review, dependency setup, a minimal adapter, and output-notation documentation.
-Do not infer an integration from the existing link or the historical commit message.
+IBM NL2LTL is now implemented in the separate [paper benchmark](../paper_benchmark/ibm/README.md),
+with its own pinned Python environment, CTF adaptations, formula conversion, and finite-trace scorer.
+It is not an implementation choice in this navigation benchmark's `benchmarks.run` command.
+The historical reference-only commit remains distinct from that later integration.
 
 Both available benchmark implementations now use the [shared Spot evaluator](../benchmarks/SEMANTICS.md).
 It converts their configured listed-prefix output and the infix reference into a common notation, accepts undeclared well-formed propositions, and checks equivalence over infinite traces with current-step `F`.
 Independent tests cover the lecture identities, non-equivalences, invalid inputs, and checker failures and timeouts.
 Failed translations retain `not_run`, and semantic outcomes do not replace translation/provider outcomes.
-IBM NL2LTL will need an output-notation converter when integrated; it must use this same evaluation process.
+An IBM arm added to this navigation benchmark would still need this infinite-trace evaluation process;
+do not mix the paper benchmark's finite-trace results with these Spot results.
 No additional cases or accuracy claims are introduced here.

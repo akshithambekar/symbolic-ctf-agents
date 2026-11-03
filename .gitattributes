@@ -1,2 +1,4 @@
 # Historical hashes cover exact bytes, including original line endings.
 paper_benchmark/reference_run/** -text
+paper_benchmark/ibm/upstream/** -text
+paper_benchmark/validation/** -text

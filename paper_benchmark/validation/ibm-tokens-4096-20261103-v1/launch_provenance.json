@@ -1,0 +1,7 @@
+{
+  "kind": "new_live_run",
+  "reference_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "same_model_as_paper": true,
+  "source_mode": "unaltered reference_run/source",
+  "original_artifacts_modified": false
+}

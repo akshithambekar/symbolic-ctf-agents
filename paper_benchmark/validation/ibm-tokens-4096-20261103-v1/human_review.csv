@@ -1,0 +1,3 @@
+item_id,method,trial,raw_input,reference_ltl,formula,automatic_score,reviewer_score,reviewer_rationale,reference_approved
+tag-0,ibm,0,Never get tagged.,G(!tagged),!(F(tagged)),Correct,,,
+capture-0,ibm,0,Eventually capture the enemy flag.,F(captured),F(captured),Correct,,,

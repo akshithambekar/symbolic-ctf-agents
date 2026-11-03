@@ -1,0 +1,4 @@
+nl2ltl==0.0.6
+pylogics==0.2.1
+# OpenAI 1.12 passes proxies=; httpx 0.28 removed that constructor argument.
+httpx==0.27.2

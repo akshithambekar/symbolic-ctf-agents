@@ -81,13 +81,21 @@ def main(argv=None):
     commands.add_parser('verify', help='Check saved hashes and summaries; no API calls')
     rescore = commands.add_parser('rescore', help='Re-score the saved model outputs; no API calls')
     rescore.add_argument('--output', type=Path)
-    live = commands.add_parser('run', help='New paid/free provider calls using the frozen implementations')
-    live.add_argument('--model', default=MODEL)
-    live.add_argument('--endpoint', default=ENDPOINT)
-    live.add_argument('--trials', type=int, default=3)
-    live.add_argument('--timeout', type=float, default=120)
-    live.add_argument('--env-file', type=Path, default=ROOT.parent / '.env')
-    live.add_argument('--output', type=Path)
+    for name in ('run', 'compare'):
+        live = commands.add_parser(name, help='New provider calls: frozen pair or comparison including IBM')
+        live.add_argument('--model', default=MODEL)
+        live.add_argument('--endpoint', default=ENDPOINT)
+        live.add_argument('--trials', type=int, default=3)
+        live.add_argument('--timeout', type=float, default=120)
+        live.add_argument('--env-file', type=Path, default=ROOT.parent / '.env')
+        live.add_argument('--output', type=Path)
+        if name == 'compare':
+            live.add_argument('--methods', nargs='+', choices=('current', 'ltlcodegen', 'ibm'),
+                              default=['current', 'ltlcodegen', 'ibm'])
+            live.add_argument('--case-id', action='append', dest='case_ids')
+            live.add_argument('--ibm-python', type=Path)
+            live.add_argument('--ibm-max-tokens', type=int, default=200,
+                              help='IBM native cap is 200; other caps get a separate variant ID')
     args = parser.parse_args(argv)
     evidence = verify()
     if args.command == 'verify':
@@ -120,12 +128,19 @@ def main(argv=None):
     else:
         from maritime_nsrl.provider_config import load_env
         load_env(args.env_file)
-        runner.run(output, model=args.model, endpoint=args.endpoint, trials=args.trials,
-                   timeout=args.timeout, logic_backend='dfa')
+        if args.command == 'compare':
+            from comparison import run as compare
+            compare(output, methods=args.methods, model=args.model, endpoint=args.endpoint,
+                    trials=args.trials, timeout=args.timeout, case_ids=args.case_ids,
+                    ibm_python=args.ibm_python, ibm_max_tokens=args.ibm_max_tokens)
+        else:
+            runner.run(output, model=args.model, endpoint=args.endpoint, trials=args.trials,
+                       timeout=args.timeout, logic_backend='dfa')
         runner.save(output / 'launch_provenance.json', {
-            'kind': 'new_live_run', 'reference_model': MODEL,
+            'kind': 'new_comparison' if args.command == 'compare' else 'new_live_run', 'reference_model': MODEL,
             'same_model_as_paper': args.model == MODEL,
-            'source_mode': 'unaltered reference_run/source',
+            'source_mode': 'frozen pair plus separately labeled IBM adapter' if args.command == 'compare'
+                           else 'unaltered reference_run/source',
             'original_artifacts_modified': False})
         print(f'New results saved to {output}')
 

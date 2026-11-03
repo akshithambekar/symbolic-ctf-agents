@@ -1,0 +1,39 @@
+{
+  "experiment_kind": "exploratory",
+  "methods": [
+    "ibm"
+  ],
+  "implementation_ids": {
+    "current": "paper-direct-json-frozen-20260926",
+    "ltlcodegen": "paper-ctf-codegen-frozen-20260926",
+    "ibm": "ibm-nl2ltl-0.0.6-ctf-openrouter-v1-tokens-4096"
+  },
+  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "endpoint": "https://openrouter.ai/api/v1",
+  "trials": 1,
+  "timeout_seconds": 120,
+  "benchmark_version": "ctf-translators-1.0",
+  "case_ids": [
+    "tag-0",
+    "capture-0"
+  ],
+  "semantics": "Nonempty finite traces; strong X; inclusive F",
+  "request_caps": {
+    "current": 3,
+    "ltlcodegen": 4,
+    "ibm": 1
+  },
+  "ibm_native_request": {
+    "temperature": 0.5,
+    "max_tokens": 200,
+    "top_p": 1.0,
+    "stop": [
+      "\n\n"
+    ]
+  },
+  "ibm_actual_max_tokens": 4096,
+  "timestamp": "2026-11-03T05:34:51.726823+00:00",
+  "ibm_python": "default isolated .venv-ibm",
+  "historical_results_pooled": false,
+  "gold_review": "Independent human approval pending"
+}

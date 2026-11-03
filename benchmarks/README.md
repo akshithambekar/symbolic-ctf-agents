@@ -122,7 +122,8 @@ Older local JSON files are left untouched and may lack implementation attributio
 The stable ID does not replace a future source revision/configuration fingerprint for reproducible comparisons.
 
 The migrated LTLCodeGen baseline is available as `ltlcodegen-container-v1` through the isolated container runner described below.
-IBM NL2LTL is only referenced and remains unintegrated.
+IBM NL2LTL is integrated separately in the [original CTF paper benchmark](../paper_benchmark/ibm/README.md).
+It is not a method in this navigation smoke runner; that separate benchmark uses finite-trace semantics.
 See the [implementation inventory and history audit](../translators/README.md) for provenance, deliberate import changes, mutable settings, and baseline decisions.
 
 The one shared case and its reference remain independent of translator code.

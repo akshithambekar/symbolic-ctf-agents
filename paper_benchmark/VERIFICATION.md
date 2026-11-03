@@ -12,11 +12,13 @@
 - Restoration integrity and isolated execution checks: 2 passed.
 - New live model/API calls: zero.
 
+The checks above describe the original restoration before adding the IBM arm.
 Checks used a separate Python 3.13.3 environment with the saved translation
 dependency versions. `.venv-paper/` and generated verification runs are ignored.
 The complete historical artifacts, not these temporary environments, are committed.
 The checked-in original report and raw records were not rewritten.
 
 Re-run the verification commands in `README.md`. Fresh live measurements will
-depend on provider availability and must be stored as new experiments. IBM NL2LTL
-and new-model comparisons remain future extensions, not completed results.
+depend on provider availability and must be stored as new experiments. The IBM
+implementation and its separate verification are documented in `ibm/README.md`.
+Adding that implementation does not create a completed multi-trial IBM comparison.
