@@ -1,0 +1,13 @@
+{
+  "reference_run": "translator-benchmark-20260926-021055-4de671",
+  "base_commit": "870f84e21dd165f37db3609cc725af1fbbfbbb18",
+  "paper_sha256": "6838b7da61798df4cc072918abcfe0721998e62aaee913658771871d1aaee3d8",
+  "paper_title": "Evaluating Neuro-Symbolic Reinforcement Learning in Maritime Capture-the-Flag",
+  "benchmark_version": "ctf-translators-1.0",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "source_hash_validation": "25 original manifest entries matched before import",
+  "reference_files": 35,
+  "restoration_date": "2026-11-03",
+  "supporting_legacy_tests_sha256": "a66d3e2d7c08bf04f616d04a91df9a94efb7d97846dc4ff9343f8a319cf4fc43",
+  "new_live_model_calls": 0
+}

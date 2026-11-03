@@ -1,5 +1,10 @@
 # Symbolic CTF agents
 
+This branch preserves Yahya's original paper benchmark under
+[paper_benchmark](paper_benchmark/README.md), including the exact translators,
+40-item dataset, model configuration, raw results, and offline verification.
+It is separate from the newer `benchmarks/` and `translators/` implementations.
+
 Train PyQuaticus agents with PPO and optional finite-trace temporal logic guidance:
 
 ```text
