@@ -1,5 +1,10 @@
 # Yahya's original CTF translator benchmark
 
+The additive [candidate study](study/README.md) contains 120 instructions,
+source citations, separate development/test-candidate families, independent
+review worksheets, and a proposed publication protocol. It has not replaced
+the frozen benchmark or been run as a new measured comparison.
+
 This branch restores the exact local benchmark reported in **Evaluating
 Neuro-Symbolic Reinforcement Learning in Maritime Capture-the-Flag**, Table 3.
 The preserved run is `translator-benchmark-20260926-021055-4de671`.

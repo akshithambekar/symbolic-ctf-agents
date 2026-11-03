@@ -1,0 +1,1732 @@
+{
+  "version": "mctf-translation-candidate-2.0",
+  "title": "Maritime CTF Translation Benchmark",
+  "release_stage": "candidate",
+  "review_complete": false,
+  "glossary": "CTF benchmark domain: 3v3 team, nonempty finite episodes, strong X, inclusive F.\nin_bounds = all controlled boats inside arena; tagged = any controlled boat tagged;\nhas_flag = any controlled boat carrying enemy flag; captured = team score event;\nhome = any controlled boat within catch radius of own flag home (NOT own half);\ndefender_behind_center = designated agent 0 behind center (team size >=2);\nattacker_forward = any agent 1..n-1 beyond center; teammate_safe = no teammate tagged.\nOnly these eight predicates are available. An unspecified defender is NOT necessarily\nagent 0. No predicate represents opponent approach, support, communication, distance,\nor an arbitrary boat's own-half occupancy. Ask for clarification / return an error\nfor unsupported or ambiguous intent. For ordinary 'then', same-state witnesses are\nallowed; 'strictly later' requires X. No implicit safety clauses may be added.\n",
+  "semantics": "LTLf; nonempty finite traces; inclusive F; strong X",
+  "proposed_grounding_invariant": "G((teammate_safe -> !tagged) & (!tagged -> teammate_safe))",
+  "invariant_review_required": true,
+  "items": [
+    {
+      "category": "safety",
+      "instruction": "Always stay inside the arena.",
+      "reference_ltl": "G(in_bounds)",
+      "expected": "formula",
+      "rationale": "All steps in bounds.",
+      "ordering_sensitive": false,
+      "id": "dev-bounds-0",
+      "semantic_family": "history-bounds",
+      "split": "development",
+      "historical_item_id": "bounds-0",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "safety",
+      "instruction": "Remain within arena bounds throughout the episode.",
+      "reference_ltl": "G(in_bounds)",
+      "expected": "formula",
+      "rationale": "All steps in bounds.",
+      "ordering_sensitive": false,
+      "id": "dev-bounds-1",
+      "semantic_family": "history-bounds",
+      "split": "development",
+      "historical_item_id": "bounds-1",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "safety",
+      "instruction": "Never get tagged.",
+      "reference_ltl": "G(!tagged)",
+      "expected": "formula",
+      "rationale": "Absorbing safety requirement.",
+      "ordering_sensitive": false,
+      "id": "dev-tag-0",
+      "semantic_family": "history-tag",
+      "split": "development",
+      "historical_item_id": "tag-0",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "safety",
+      "instruction": "At no point may a controlled boat be tagged.",
+      "reference_ltl": "G(!tagged)",
+      "expected": "formula",
+      "rationale": "Absorbing safety requirement.",
+      "ordering_sensitive": false,
+      "id": "dev-tag-1",
+      "semantic_family": "history-tag",
+      "split": "development",
+      "historical_item_id": "tag-1",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "eventual",
+      "instruction": "Eventually capture the enemy flag.",
+      "reference_ltl": "F(captured)",
+      "expected": "formula",
+      "rationale": "No additional no-tag clause.",
+      "ordering_sensitive": false,
+      "id": "dev-capture-0",
+      "semantic_family": "history-capture",
+      "split": "development",
+      "historical_item_id": "capture-0",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "eventual",
+      "instruction": "Score at least once before the episode ends.",
+      "reference_ltl": "F(captured)",
+      "expected": "formula",
+      "rationale": "No additional no-tag clause.",
+      "ordering_sensitive": false,
+      "id": "dev-capture-1",
+      "semantic_family": "history-capture",
+      "split": "development",
+      "historical_item_id": "capture-1",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "eventual",
+      "instruction": "Eventually reach the home flag stand.",
+      "reference_ltl": "F(home)",
+      "expected": "formula",
+      "rationale": "Home means flag vicinity, not own half.",
+      "ordering_sensitive": false,
+      "id": "dev-home-0",
+      "semantic_family": "history-home",
+      "split": "development",
+      "historical_item_id": "home-0",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "eventual",
+      "instruction": "At some time reach within catch radius of our flag home.",
+      "reference_ltl": "F(home)",
+      "expected": "formula",
+      "rationale": "Home means flag vicinity, not own half.",
+      "ordering_sensitive": false,
+      "id": "dev-home-1",
+      "semantic_family": "history-home",
+      "split": "development",
+      "historical_item_id": "home-1",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "ordered",
+      "instruction": "Pick up the enemy flag and then capture it.",
+      "reference_ltl": "F(has_flag & F(captured))",
+      "expected": "formula",
+      "rationale": "Inclusive sequencing as specified by benchmark context.",
+      "ordering_sensitive": true,
+      "id": "dev-pickup_capture-0",
+      "semantic_family": "history-pickup_capture",
+      "split": "development",
+      "historical_item_id": "pickup_capture-0",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "ordered",
+      "instruction": "Obtain the opposing flag, then eventually score.",
+      "reference_ltl": "F(has_flag & F(captured))",
+      "expected": "formula",
+      "rationale": "Inclusive sequencing as specified by benchmark context.",
+      "ordering_sensitive": true,
+      "id": "dev-pickup_capture-1",
+      "semantic_family": "history-pickup_capture",
+      "split": "development",
+      "historical_item_id": "pickup_capture-1",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "ordered",
+      "instruction": "Carry the flag and capture it strictly later.",
+      "reference_ltl": "F(has_flag & X(F(captured)))",
+      "expected": "formula",
+      "rationale": "Strong next distinguishes strict from inclusive order.",
+      "ordering_sensitive": true,
+      "id": "dev-strict-0",
+      "semantic_family": "history-strict",
+      "split": "development",
+      "historical_item_id": "strict-0",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "ordered",
+      "instruction": "At some point possess the flag; score at a later step, not that same step.",
+      "reference_ltl": "F(has_flag & X(F(captured)))",
+      "expected": "formula",
+      "rationale": "Strong next distinguishes strict from inclusive order.",
+      "ordering_sensitive": true,
+      "id": "dev-strict-1",
+      "semantic_family": "history-strict",
+      "split": "development",
+      "historical_item_id": "strict-1",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "ordered",
+      "instruction": "Reach home and then eventually capture.",
+      "reference_ltl": "F(home & F(captured))",
+      "expected": "formula",
+      "rationale": "Reverse witness must not suffice.",
+      "ordering_sensitive": true,
+      "id": "dev-home_capture-0",
+      "semantic_family": "history-home_capture",
+      "split": "development",
+      "historical_item_id": "home_capture-0",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "ordered",
+      "instruction": "Visit our flag home, followed by a score.",
+      "reference_ltl": "F(home & F(captured))",
+      "expected": "formula",
+      "rationale": "Reverse witness must not suffice.",
+      "ordering_sensitive": true,
+      "id": "dev-home_capture-1",
+      "semantic_family": "history-home_capture",
+      "split": "development",
+      "historical_item_id": "home_capture-1",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "conditional",
+      "instruction": "Whenever carrying the flag, eventually reach our flag stand.",
+      "reference_ltl": "G(has_flag -> F(home))",
+      "expected": "formula",
+      "rationale": "Response includes same step and applies at every time.",
+      "ordering_sensitive": false,
+      "id": "dev-response-0",
+      "semantic_family": "history-response",
+      "split": "development",
+      "historical_item_id": "response-0",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "conditional",
+      "instruction": "Every possession of the flag must be followed by reaching home.",
+      "reference_ltl": "G(has_flag -> F(home))",
+      "expected": "formula",
+      "rationale": "Response includes same step and applies at every time.",
+      "ordering_sensitive": false,
+      "id": "dev-response-1",
+      "semantic_family": "history-response",
+      "split": "development",
+      "historical_item_id": "response-1",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "conditional",
+      "instruction": "Whenever we have the flag, eventually score.",
+      "reference_ltl": "G(has_flag -> F(captured))",
+      "expected": "formula",
+      "rationale": "Vacuously true if no possession; no invented eventual possession.",
+      "ordering_sensitive": false,
+      "id": "dev-response_capture-0",
+      "semantic_family": "history-response_capture",
+      "split": "development",
+      "historical_item_id": "response_capture-0",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "conditional",
+      "instruction": "Each time a boat carries the flag, the team must eventually capture.",
+      "reference_ltl": "G(has_flag -> F(captured))",
+      "expected": "formula",
+      "rationale": "Vacuously true if no possession; no invented eventual possession.",
+      "ordering_sensitive": false,
+      "id": "dev-response_capture-1",
+      "semantic_family": "history-response_capture",
+      "split": "development",
+      "historical_item_id": "response_capture-1",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "conditional",
+      "instruction": "Whenever an attacker is forward, no teammate may be tagged.",
+      "reference_ltl": "G(attacker_forward -> teammate_safe)",
+      "expected": "formula",
+      "rationale": "Direction of implication matters.",
+      "ordering_sensitive": false,
+      "id": "dev-safe_attacker-0",
+      "semantic_family": "history-safe_attacker",
+      "split": "development",
+      "historical_item_id": "safe_attacker-0",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "conditional",
+      "instruction": "If an attacker is beyond midfield, the team must be untagged at that step.",
+      "reference_ltl": "G(attacker_forward -> teammate_safe)",
+      "expected": "formula",
+      "rationale": "Direction of implication matters.",
+      "ordering_sensitive": false,
+      "id": "dev-safe_attacker-1",
+      "semantic_family": "history-safe_attacker",
+      "split": "development",
+      "historical_item_id": "safe_attacker-1",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "role",
+      "instruction": "Keep designated defender agent 0 behind the centerline at all times.",
+      "reference_ltl": "G(defender_behind_center)",
+      "expected": "formula",
+      "rationale": "Designated role only, not existential quantification.",
+      "ordering_sensitive": false,
+      "id": "dev-defender-0",
+      "semantic_family": "history-defender",
+      "split": "development",
+      "historical_item_id": "defender-0",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "role",
+      "instruction": "Agent zero must always remain in our half.",
+      "reference_ltl": "G(defender_behind_center)",
+      "expected": "formula",
+      "rationale": "Designated role only, not existential quantification.",
+      "ordering_sensitive": false,
+      "id": "dev-defender-1",
+      "semantic_family": "history-defender",
+      "split": "development",
+      "historical_item_id": "defender-1",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "role",
+      "instruction": "While an attacker is forward, agent 0 must remain behind midfield.",
+      "reference_ltl": "G(attacker_forward -> defender_behind_center)",
+      "expected": "formula",
+      "rationale": "Do not replace this with a global defender obligation.",
+      "ordering_sensitive": false,
+      "id": "dev-conditional_defender-0",
+      "semantic_family": "history-conditional_defender",
+      "split": "development",
+      "historical_item_id": "conditional_defender-0",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "role",
+      "instruction": "If any attacker crosses into enemy territory, keep the designated defender in our half.",
+      "reference_ltl": "G(attacker_forward -> defender_behind_center)",
+      "expected": "formula",
+      "rationale": "Do not replace this with a global defender obligation.",
+      "ordering_sensitive": false,
+      "id": "dev-conditional_defender-1",
+      "semantic_family": "history-conditional_defender",
+      "split": "development",
+      "historical_item_id": "conditional_defender-1",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "combined",
+      "instruction": "Stay in bounds and eventually capture without getting tagged.",
+      "reference_ltl": "G(in_bounds) & G(!tagged) & F(captured)",
+      "expected": "formula",
+      "rationale": "Three independent clauses.",
+      "ordering_sensitive": false,
+      "id": "dev-safe_capture-0",
+      "semantic_family": "history-safe_capture",
+      "split": "development",
+      "historical_item_id": "safe_capture-0",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "combined",
+      "instruction": "Always remain inside, never be tagged, and score before the deadline.",
+      "reference_ltl": "G(in_bounds) & G(!tagged) & F(captured)",
+      "expected": "formula",
+      "rationale": "Three independent clauses.",
+      "ordering_sensitive": false,
+      "id": "dev-safe_capture-1",
+      "semantic_family": "history-safe_capture",
+      "split": "development",
+      "historical_item_id": "safe_capture-1",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "combined",
+      "instruction": "Always stay in bounds. Pick up the enemy flag and then capture it.",
+      "reference_ltl": "G(in_bounds) & F(has_flag & F(captured))",
+      "expected": "formula",
+      "rationale": "Safety plus ordered task.",
+      "ordering_sensitive": false,
+      "id": "dev-bounds_order-0",
+      "semantic_family": "history-bounds_order",
+      "split": "development",
+      "historical_item_id": "bounds_order-0",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "combined",
+      "instruction": "Remain inside the arena while completing possession followed by capture.",
+      "reference_ltl": "G(in_bounds) & F(has_flag & F(captured))",
+      "expected": "formula",
+      "rationale": "Safety plus ordered task.",
+      "ordering_sensitive": false,
+      "id": "dev-bounds_order-1",
+      "semantic_family": "history-bounds_order",
+      "split": "development",
+      "historical_item_id": "bounds_order-1",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "difficult",
+      "instruction": "Stay untagged until capturing, and do capture.",
+      "reference_ltl": "(!tagged U captured)",
+      "expected": "formula",
+      "rationale": "Strong until, not weak until and not global no-tag.",
+      "ordering_sensitive": false,
+      "id": "dev-until-0",
+      "semantic_family": "history-until",
+      "split": "development",
+      "historical_item_id": "until-0",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "difficult",
+      "instruction": "Avoid tags until the first score; scoring must eventually happen.",
+      "reference_ltl": "(!tagged U captured)",
+      "expected": "formula",
+      "rationale": "Strong until, not weak until and not global no-tag.",
+      "ordering_sensitive": false,
+      "id": "dev-until-1",
+      "semantic_family": "history-until",
+      "split": "development",
+      "historical_item_id": "until-1",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "difficult",
+      "instruction": "On the next step, be inside the arena.",
+      "reference_ltl": "X(in_bounds)",
+      "expected": "formula",
+      "rationale": "Strong next rejects a one-state trace.",
+      "ordering_sensitive": false,
+      "id": "dev-next-0",
+      "semantic_family": "history-next",
+      "split": "development",
+      "historical_item_id": "next-0",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "difficult",
+      "instruction": "The immediately following state must be in bounds.",
+      "reference_ltl": "X(in_bounds)",
+      "expected": "formula",
+      "rationale": "Strong next rejects a one-state trace.",
+      "ordering_sensitive": false,
+      "id": "dev-next-1",
+      "semantic_family": "history-next",
+      "split": "development",
+      "historical_item_id": "next-1",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "ambiguous",
+      "instruction": "If you have the flag, return to your side.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "Own-half predicate is absent; home would silently strengthen the instruction.",
+      "ordering_sensitive": false,
+      "id": "dev-own_side-0",
+      "semantic_family": "history-own_side",
+      "split": "development",
+      "historical_item_id": "own_side-0",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "ambiguous",
+      "instruction": "When carrying it, go back to our half.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "Own-half predicate is absent; home would silently strengthen the instruction.",
+      "ordering_sensitive": false,
+      "id": "dev-own_side-1",
+      "semantic_family": "history-own_side",
+      "split": "development",
+      "historical_item_id": "own_side-1",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "ambiguous",
+      "instruction": "Keep one defender behind the centerline.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "Existential role cannot be replaced with designated agent 0.",
+      "ordering_sensitive": false,
+      "id": "dev-one_defender-0",
+      "semantic_family": "history-one_defender",
+      "split": "development",
+      "historical_item_id": "one_defender-0",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "ambiguous",
+      "instruction": "At least one team member should stay back to defend.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "Existential role cannot be replaced with designated agent 0.",
+      "ordering_sensitive": false,
+      "id": "dev-one_defender-1",
+      "semantic_family": "history-one_defender",
+      "split": "development",
+      "historical_item_id": "one_defender-1",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "unsupported",
+      "instruction": "If an opponent approaches, retreat toward home.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "Approach/close and retreat direction have no grounded AP.",
+      "ordering_sensitive": false,
+      "id": "dev-approach-0",
+      "semantic_family": "history-approach",
+      "split": "development",
+      "historical_item_id": "approach-0",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "unsupported",
+      "instruction": "Fall back when the enemy gets close.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "Approach/close and retreat direction have no grounded AP.",
+      "ordering_sensitive": false,
+      "id": "dev-approach-1",
+      "semantic_family": "history-approach",
+      "split": "development",
+      "historical_item_id": "approach-1",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "unsupported",
+      "instruction": "One attacker should capture while another supports.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "Support and per-agent task quantification are not grounded.",
+      "ordering_sensitive": false,
+      "id": "dev-support-0",
+      "semantic_family": "history-support",
+      "split": "development",
+      "historical_item_id": "support-0",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "category": "unsupported",
+      "instruction": "Have one teammate score as a second teammate provides support.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "Support and per-agent task quantification are not grounded.",
+      "ordering_sensitive": false,
+      "id": "dev-support-1",
+      "semantic_family": "history-support",
+      "split": "development",
+      "historical_item_id": "support-1",
+      "source_ids": [
+        "historical_pilot"
+      ]
+    },
+    {
+      "id": "test-carrier_bounds-0",
+      "category": "safety",
+      "semantic_family": "carrier_bounds",
+      "split": "test_candidate",
+      "instruction": "Whenever our team has a flag carrier, every controlled boat must be inside the arena.",
+      "reference_ltl": "G(has_flag -> in_bounds)",
+      "expected": "formula",
+      "rationale": "Team possession implies all-team bounds; no eventual-capture obligation.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "mctf_rules"
+      ]
+    },
+    {
+      "id": "test-carrier_bounds-1",
+      "category": "safety",
+      "semantic_family": "carrier_bounds",
+      "split": "test_candidate",
+      "instruction": "At each step with enemy-flag possession, require all of our boats to be in bounds.",
+      "reference_ltl": "G(has_flag -> in_bounds)",
+      "expected": "formula",
+      "rationale": "Team possession implies all-team bounds; no eventual-capture obligation.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "mctf_rules"
+      ]
+    },
+    {
+      "id": "test-forward_bounds-0",
+      "category": "safety",
+      "semantic_family": "forward_bounds",
+      "split": "test_candidate",
+      "instruction": "Whenever any designated attacker is beyond midfield, keep every controlled boat inside the arena.",
+      "reference_ltl": "G(attacker_forward -> in_bounds)",
+      "expected": "formula",
+      "rationale": "Conditional bounds only while an attacker is forward.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "pyquaticus_policies"
+      ]
+    },
+    {
+      "id": "test-forward_bounds-1",
+      "category": "safety",
+      "semantic_family": "forward_bounds",
+      "split": "test_candidate",
+      "instruction": "If an attacker is forward at a step, all of our boats must be in bounds at that step.",
+      "reference_ltl": "G(attacker_forward -> in_bounds)",
+      "expected": "formula",
+      "rationale": "Conditional bounds only while an attacker is forward.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "pyquaticus_policies"
+      ]
+    },
+    {
+      "id": "test-defender_implies_safe-0",
+      "category": "role",
+      "semantic_family": "defender_implies_safe",
+      "split": "test_candidate",
+      "instruction": "Whenever agent zero is behind midfield, no controlled teammate may be tagged.",
+      "reference_ltl": "G(defender_behind_center -> teammate_safe)",
+      "expected": "formula",
+      "rationale": "This does not require agent zero to remain behind midfield.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-defender_implies_safe-1",
+      "category": "role",
+      "semantic_family": "defender_implies_safe",
+      "split": "test_candidate",
+      "instruction": "Require the whole team to be untagged at every step when the designated defender is in our half.",
+      "reference_ltl": "G(defender_behind_center -> teammate_safe)",
+      "expected": "formula",
+      "rationale": "This does not require agent zero to remain behind midfield.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-exit_implies_tag-0",
+      "category": "safety",
+      "semantic_family": "exit_implies_tag",
+      "split": "test_candidate",
+      "instruction": "Whenever at least one controlled boat is outside the arena, at least one controlled boat must be tagged.",
+      "reference_ltl": "G(!in_bounds -> tagged)",
+      "expected": "formula",
+      "rationale": "Aggregate consequence of auto-tagging, not a per-boat identity assertion.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "mctf_rules"
+      ]
+    },
+    {
+      "id": "test-exit_implies_tag-1",
+      "category": "safety",
+      "semantic_family": "exit_implies_tag",
+      "split": "test_candidate",
+      "instruction": "At every step where our team is not wholly in bounds, require a tagged boat on our team.",
+      "reference_ltl": "G(!in_bounds -> tagged)",
+      "expected": "formula",
+      "rationale": "Aggregate consequence of auto-tagging, not a per-boat identity assertion.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "mctf_rules"
+      ]
+    },
+    {
+      "id": "test-carrier_and_home-0",
+      "category": "eventual",
+      "semantic_family": "carrier_and_home",
+      "split": "test_candidate",
+      "instruction": "At some step, our team must have the enemy flag while a controlled boat is near our own flag stand.",
+      "reference_ltl": "F(has_flag & home)",
+      "expected": "formula",
+      "rationale": "The carrier and home boat may be the same boat; distinct identities are not asserted.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-carrier_and_home-1",
+      "category": "eventual",
+      "semantic_family": "carrier_and_home",
+      "split": "test_candidate",
+      "instruction": "Eventually require both team flag possession and a controlled boat within the home-flag catch radius at the same step.",
+      "reference_ltl": "F(has_flag & home)",
+      "expected": "formula",
+      "rationale": "The carrier and home boat may be the same boat; distinct identities are not asserted.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-roles_together-0",
+      "category": "role",
+      "semantic_family": "roles_together",
+      "split": "test_candidate",
+      "instruction": "Eventually have agent zero behind midfield and a designated attacker beyond midfield at the same step.",
+      "reference_ltl": "F(defender_behind_center & attacker_forward)",
+      "expected": "formula",
+      "rationale": "An eventual joint role configuration, not a global role constraint.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "pyquaticus_policies"
+      ]
+    },
+    {
+      "id": "test-roles_together-1",
+      "category": "role",
+      "semantic_family": "roles_together",
+      "split": "test_candidate",
+      "instruction": "At least once, our defender must be in our half while an attacker is forward.",
+      "reference_ltl": "F(defender_behind_center & attacker_forward)",
+      "expected": "formula",
+      "rationale": "An eventual joint role configuration, not a global role constraint.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "pyquaticus_policies"
+      ]
+    },
+    {
+      "id": "test-capture_or_home-0",
+      "category": "eventual",
+      "semantic_family": "capture_or_home",
+      "split": "test_candidate",
+      "instruction": "Eventually either score a capture or have a controlled boat near our flag stand; both are also acceptable.",
+      "reference_ltl": "F(captured | home)",
+      "expected": "formula",
+      "rationale": "Inclusive alternative, not a requirement to achieve both.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-capture_or_home-1",
+      "category": "eventual",
+      "semantic_family": "capture_or_home",
+      "split": "test_candidate",
+      "instruction": "Before the episode ends, satisfy at least one of team capture and home-flag proximity.",
+      "reference_ltl": "F(captured | home)",
+      "expected": "formula",
+      "rationale": "Inclusive alternative, not a requirement to achieve both.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-safe_home-0",
+      "category": "eventual",
+      "semantic_family": "safe_home",
+      "split": "test_candidate",
+      "instruction": "At some step a controlled boat must be near our flag stand while every teammate is untagged.",
+      "reference_ltl": "F(home & teammate_safe)",
+      "expected": "formula",
+      "rationale": "Joint eventual condition; no never-tagged contract.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-safe_home-1",
+      "category": "eventual",
+      "semantic_family": "safe_home",
+      "split": "test_candidate",
+      "instruction": "Eventually combine home-flag proximity with a completely untagged controlled team.",
+      "reference_ltl": "F(home & teammate_safe)",
+      "expected": "formula",
+      "rationale": "Joint eventual condition; no never-tagged contract.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-possession_home_capture-0",
+      "category": "ordered",
+      "semantic_family": "possession_home_capture",
+      "split": "test_candidate",
+      "instruction": "First the team must hold the enemy flag, then some controlled boat must reach our flag stand, then the team must score.",
+      "reference_ltl": "F(has_flag & F(home & F(captured)))",
+      "expected": "formula",
+      "rationale": "Inclusive sequence over team predicates, not a carrier-specific return assertion.",
+      "ordering_sensitive": true,
+      "source_ids": [
+        "ctf_ltl_study"
+      ]
+    },
+    {
+      "id": "test-possession_home_capture-1",
+      "category": "ordered",
+      "semantic_family": "possession_home_capture",
+      "split": "test_candidate",
+      "instruction": "Require team possession followed by home-flag proximity followed by a capture; these milestones may share a step.",
+      "reference_ltl": "F(has_flag & F(home & F(captured)))",
+      "expected": "formula",
+      "rationale": "Inclusive sequence over team predicates, not a carrier-specific return assertion.",
+      "ordering_sensitive": true,
+      "source_ids": [
+        "ctf_ltl_study"
+      ]
+    },
+    {
+      "id": "test-forward_possession_capture-0",
+      "category": "ordered",
+      "semantic_family": "forward_possession_capture",
+      "split": "test_candidate",
+      "instruction": "Have an attacker beyond midfield, then obtain team flag possession, then capture; milestones may share a step.",
+      "reference_ltl": "F(attacker_forward & F(has_flag & F(captured)))",
+      "expected": "formula",
+      "rationale": "Three ordered team milestones with inclusive eventually.",
+      "ordering_sensitive": true,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-forward_possession_capture-1",
+      "category": "ordered",
+      "semantic_family": "forward_possession_capture",
+      "split": "test_candidate",
+      "instruction": "Eventually progress from an attacker being forward to holding the enemy flag and then scoring.",
+      "reference_ltl": "F(attacker_forward & F(has_flag & F(captured)))",
+      "expected": "formula",
+      "rationale": "Three ordered team milestones with inclusive eventually.",
+      "ordering_sensitive": true,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-strict_three_stage-0",
+      "category": "ordered",
+      "semantic_family": "strict_three_stage",
+      "split": "test_candidate",
+      "instruction": "Have a boat near our flag stand, possess the enemy flag at a strictly later step, and score strictly after that.",
+      "reference_ltl": "F(home & X(F(has_flag & X(F(captured)))))",
+      "expected": "formula",
+      "rationale": "Strong next enforces both strict ordering boundaries.",
+      "ordering_sensitive": true,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-strict_three_stage-1",
+      "category": "ordered",
+      "semantic_family": "strict_three_stage",
+      "split": "test_candidate",
+      "instruction": "Require home-flag proximity, then later possession, then a still later capture; neither transition may be simultaneous.",
+      "reference_ltl": "F(home & X(F(has_flag & X(F(captured)))))",
+      "expected": "formula",
+      "rationale": "Strong next enforces both strict ordering boundaries.",
+      "ordering_sensitive": true,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-strict_role_activation-0",
+      "category": "role",
+      "semantic_family": "strict_role_activation",
+      "split": "test_candidate",
+      "instruction": "At some step put agent zero behind midfield, and at a strictly later step have an attacker beyond midfield.",
+      "reference_ltl": "F(defender_behind_center & X(F(attacker_forward)))",
+      "expected": "formula",
+      "rationale": "Strict eventual role sequence without persistent defender requirement.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-strict_role_activation-1",
+      "category": "role",
+      "semantic_family": "strict_role_activation",
+      "split": "test_candidate",
+      "instruction": "Establish the designated defender in our half before a later forward-attacker milestone; different steps are required.",
+      "reference_ltl": "F(defender_behind_center & X(F(attacker_forward)))",
+      "expected": "formula",
+      "rationale": "Strict eventual role sequence without persistent defender requirement.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-aggregate_recovery-0",
+      "category": "conditional",
+      "semantic_family": "aggregate_recovery",
+      "split": "test_candidate",
+      "instruction": "Whenever any controlled boat is tagged, require some controlled boat to eventually be near our flag stand.",
+      "reference_ltl": "G(tagged -> F(home))",
+      "expected": "formula",
+      "rationale": "Deliberately aggregate recovery abstraction; it does not express identity-preserving recovery.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "mctf_rules"
+      ]
+    },
+    {
+      "id": "test-aggregate_recovery-1",
+      "category": "conditional",
+      "semantic_family": "aggregate_recovery",
+      "split": "test_candidate",
+      "instruction": "Each team-tagged state must be followed now or later by team home-flag proximity; it need not be the tagged boat.",
+      "reference_ltl": "G(tagged -> F(home))",
+      "expected": "formula",
+      "rationale": "Deliberately aggregate recovery abstraction; it does not express identity-preserving recovery.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "mctf_rules"
+      ]
+    },
+    {
+      "id": "test-strict_team_recovery-0",
+      "category": "conditional",
+      "semantic_family": "strict_team_recovery",
+      "split": "test_candidate",
+      "instruction": "Whenever any controlled boat is tagged, the whole controlled team must become untagged at a strictly later step.",
+      "reference_ltl": "G(tagged -> X(F(teammate_safe)))",
+      "expected": "formula",
+      "rationale": "Strong-next response; tag at final step cannot satisfy this obligation.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "mctf_rules"
+      ]
+    },
+    {
+      "id": "test-strict_team_recovery-1",
+      "category": "conditional",
+      "semantic_family": "strict_team_recovery",
+      "split": "test_candidate",
+      "instruction": "After each tagged-team state, require a later step with no tagged controlled teammates.",
+      "reference_ltl": "G(tagged -> X(F(teammate_safe)))",
+      "expected": "formula",
+      "rationale": "Strong-next response; tag at final step cannot satisfy this obligation.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "mctf_rules"
+      ]
+    },
+    {
+      "id": "test-forward_home_response-0",
+      "category": "conditional",
+      "semantic_family": "forward_home_response",
+      "split": "test_candidate",
+      "instruction": "Whenever an attacker is forward, require some controlled boat to reach home-flag proximity now or later.",
+      "reference_ltl": "G(attacker_forward -> F(home))",
+      "expected": "formula",
+      "rationale": "The responding boat identity is intentionally unspecified.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "pyquaticus_policies"
+      ]
+    },
+    {
+      "id": "test-forward_home_response-1",
+      "category": "conditional",
+      "semantic_family": "forward_home_response",
+      "split": "test_candidate",
+      "instruction": "Every forward-attacker state must have an eventual team home-proximity response, not necessarily by that attacker.",
+      "reference_ltl": "G(attacker_forward -> F(home))",
+      "expected": "formula",
+      "rationale": "The responding boat identity is intentionally unspecified.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "pyquaticus_policies"
+      ]
+    },
+    {
+      "id": "test-defender_score_response-0",
+      "category": "conditional",
+      "semantic_family": "defender_score_response",
+      "split": "test_candidate",
+      "instruction": "Whenever agent zero is behind midfield, the team must score at that step or a later one.",
+      "reference_ltl": "G(defender_behind_center -> F(captured))",
+      "expected": "formula",
+      "rationale": "A response condition; no unconditional defender or capture existence is added.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-defender_score_response-1",
+      "category": "conditional",
+      "semantic_family": "defender_score_response",
+      "split": "test_candidate",
+      "instruction": "Each designated-defender-behind state must be followed by an eventual team capture.",
+      "reference_ltl": "G(defender_behind_center -> F(captured))",
+      "expected": "formula",
+      "rationale": "A response condition; no unconditional defender or capture existence is added.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-strict_possession_home-0",
+      "category": "conditional",
+      "semantic_family": "strict_possession_home",
+      "split": "test_candidate",
+      "instruction": "Whenever the team possesses the enemy flag, require home-flag proximity at a strictly later step.",
+      "reference_ltl": "G(has_flag -> X(F(home)))",
+      "expected": "formula",
+      "rationale": "Strict response over aggregate predicates.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-strict_possession_home-1",
+      "category": "conditional",
+      "semantic_family": "strict_possession_home",
+      "split": "test_candidate",
+      "instruction": "Every possession state must be followed later, not simultaneously, by some controlled boat near our flag stand.",
+      "reference_ltl": "G(has_flag -> X(F(home)))",
+      "expected": "formula",
+      "rationale": "Strict response over aggregate predicates.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-unsafe_eventual_defender-0",
+      "category": "role",
+      "semantic_family": "unsafe_eventual_defender",
+      "split": "test_candidate",
+      "instruction": "Whenever the team is not completely untagged, agent zero must eventually be behind midfield.",
+      "reference_ltl": "G(!teammate_safe -> F(defender_behind_center))",
+      "expected": "formula",
+      "rationale": "Uses teammate_safe from the glossary, not distance-based safety.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "pyquaticus_policies"
+      ]
+    },
+    {
+      "id": "test-unsafe_eventual_defender-1",
+      "category": "role",
+      "semantic_family": "unsafe_eventual_defender",
+      "split": "test_candidate",
+      "instruction": "If at least one teammate is tagged, require the designated defender behind center now or later.",
+      "reference_ltl": "G(!teammate_safe -> F(defender_behind_center))",
+      "expected": "formula",
+      "rationale": "Uses teammate_safe from the glossary, not distance-based safety.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "pyquaticus_policies"
+      ]
+    },
+    {
+      "id": "test-prepickup_defender-0",
+      "category": "role",
+      "semantic_family": "prepickup_defender",
+      "split": "test_candidate",
+      "instruction": "While an attacker is forward and the team has no enemy flag, keep agent zero behind midfield.",
+      "reference_ltl": "G((attacker_forward & !has_flag) -> defender_behind_center)",
+      "expected": "formula",
+      "rationale": "Two antecedent conditions, not a globally fixed defender.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "pyquaticus_policies"
+      ]
+    },
+    {
+      "id": "test-prepickup_defender-1",
+      "category": "role",
+      "semantic_family": "prepickup_defender",
+      "split": "test_candidate",
+      "instruction": "Require our designated defender in our half whenever an attacker is forward without team flag possession.",
+      "reference_ltl": "G((attacker_forward & !has_flag) -> defender_behind_center)",
+      "expected": "formula",
+      "rationale": "Two antecedent conditions, not a globally fixed defender.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "pyquaticus_policies"
+      ]
+    },
+    {
+      "id": "test-tag_or_exit_recovery-0",
+      "category": "conditional",
+      "semantic_family": "tag_or_exit_recovery",
+      "split": "test_candidate",
+      "instruction": "Whenever the team has a tagged boat or is not entirely in bounds, eventually have some controlled boat near our flag stand.",
+      "reference_ltl": "G((tagged | !in_bounds) -> F(home))",
+      "expected": "formula",
+      "rationale": "Inclusive disjunction of aggregate triggers.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "mctf_rules"
+      ]
+    },
+    {
+      "id": "test-tag_or_exit_recovery-1",
+      "category": "conditional",
+      "semantic_family": "tag_or_exit_recovery",
+      "split": "test_candidate",
+      "instruction": "A tag or any boundary exit must trigger eventual team home-flag proximity; either trigger is sufficient.",
+      "reference_ltl": "G((tagged | !in_bounds) -> F(home))",
+      "expected": "formula",
+      "rationale": "Inclusive disjunction of aggregate triggers.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "mctf_rules"
+      ]
+    },
+    {
+      "id": "test-forward_carrier_response-0",
+      "category": "conditional",
+      "semantic_family": "forward_carrier_response",
+      "split": "test_candidate",
+      "instruction": "Whenever the team has the flag and an attacker is forward, eventually score.",
+      "reference_ltl": "G((has_flag & attacker_forward) -> F(captured))",
+      "expected": "formula",
+      "rationale": "Conditional capture; neither antecedent is required to occur.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-forward_carrier_response-1",
+      "category": "conditional",
+      "semantic_family": "forward_carrier_response",
+      "split": "test_candidate",
+      "instruction": "Require a current or later capture after each step with both team possession and a forward attacker.",
+      "reference_ltl": "G((has_flag & attacker_forward) -> F(captured))",
+      "expected": "formula",
+      "rationale": "Conditional capture; neither antecedent is required to occur.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-next_defender_contingency-0",
+      "category": "role",
+      "semantic_family": "next_defender_contingency",
+      "split": "test_candidate",
+      "instruction": "If the team is not completely untagged while an attacker is forward, agent zero must be behind midfield on the next step.",
+      "reference_ltl": "G((!teammate_safe & attacker_forward) -> X(defender_behind_center))",
+      "expected": "formula",
+      "rationale": "Strong-next obligation, not an eventual response.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-next_defender_contingency-1",
+      "category": "role",
+      "semantic_family": "next_defender_contingency",
+      "split": "test_candidate",
+      "instruction": "Following a step with a tagged teammate and a forward attacker, require the designated defender behind center immediately next.",
+      "reference_ltl": "G((!teammate_safe & attacker_forward) -> X(defender_behind_center))",
+      "expected": "formula",
+      "rationale": "Strong-next obligation, not an eventual response.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-bounds_and_home-0",
+      "category": "combined",
+      "semantic_family": "bounds_and_home",
+      "split": "test_candidate",
+      "instruction": "Keep every controlled boat inside the arena and eventually have a boat near our flag stand.",
+      "reference_ltl": "G(in_bounds) & F(home)",
+      "expected": "formula",
+      "rationale": "Persistent bounds plus independent eventual home condition.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "mctf_rules"
+      ]
+    },
+    {
+      "id": "test-bounds_and_home-1",
+      "category": "combined",
+      "semantic_family": "bounds_and_home",
+      "split": "test_candidate",
+      "instruction": "Always stay in bounds as a team, and reach team home-flag proximity before the episode ends.",
+      "reference_ltl": "G(in_bounds) & F(home)",
+      "expected": "formula",
+      "rationale": "Persistent bounds plus independent eventual home condition.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "mctf_rules"
+      ]
+    },
+    {
+      "id": "test-untagged_home_capture-0",
+      "category": "combined",
+      "semantic_family": "untagged_home_capture",
+      "split": "test_candidate",
+      "instruction": "Never allow a controlled boat to be tagged, and visit our flag stand before an eventual capture.",
+      "reference_ltl": "G(!tagged) & F(home & F(captured))",
+      "expected": "formula",
+      "rationale": "Global no-tag constraint plus ordered mission; no global bounds clause.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-untagged_home_capture-1",
+      "category": "combined",
+      "semantic_family": "untagged_home_capture",
+      "split": "test_candidate",
+      "instruction": "Keep the team untagged throughout while achieving home-flag proximity followed by scoring; simultaneous milestones are allowed.",
+      "reference_ltl": "G(!tagged) & F(home & F(captured))",
+      "expected": "formula",
+      "rationale": "Global no-tag constraint plus ordered mission; no global bounds clause.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-fixed_defender_attack_capture-0",
+      "category": "combined",
+      "semantic_family": "fixed_defender_attack_capture",
+      "split": "test_candidate",
+      "instruction": "Keep agent zero behind midfield throughout; eventually have an attacker forward and then score.",
+      "reference_ltl": "G(defender_behind_center) & F(attacker_forward & F(captured))",
+      "expected": "formula",
+      "rationale": "Fixed defender with an inclusive offensive sequence.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "pyquaticus_policies"
+      ]
+    },
+    {
+      "id": "test-fixed_defender_attack_capture-1",
+      "category": "combined",
+      "semantic_family": "fixed_defender_attack_capture",
+      "split": "test_candidate",
+      "instruction": "Maintain our designated defender in our half for the whole episode, with a forward-attacker milestone followed by a team capture.",
+      "reference_ltl": "G(defender_behind_center) & F(attacker_forward & F(captured))",
+      "expected": "formula",
+      "rationale": "Fixed defender with an inclusive offensive sequence.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "pyquaticus_policies"
+      ]
+    },
+    {
+      "id": "test-bounds_safe_attack_pickup-0",
+      "category": "combined",
+      "semantic_family": "bounds_safe_attack_pickup",
+      "split": "test_candidate",
+      "instruction": "Keep all boats in bounds, require every teammate untagged whenever an attacker is forward, and eventually possess the enemy flag.",
+      "reference_ltl": "G(in_bounds) & G(attacker_forward -> teammate_safe) & F(has_flag)",
+      "expected": "formula",
+      "rationale": "Three clauses; pickup rather than capture is the eventual objective.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-bounds_safe_attack_pickup-1",
+      "category": "combined",
+      "semantic_family": "bounds_safe_attack_pickup",
+      "split": "test_candidate",
+      "instruction": "Always stay inside; while an attacker is forward keep the controlled team untagged; obtain team flag possession at least once.",
+      "reference_ltl": "G(in_bounds) & G(attacker_forward -> teammate_safe) & F(has_flag)",
+      "expected": "formula",
+      "rationale": "Three clauses; pickup rather than capture is the eventual objective.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-unordered_home_capture-0",
+      "category": "difficult",
+      "semantic_family": "unordered_home_capture",
+      "split": "test_candidate",
+      "instruction": "Eventually have a boat near our flag stand and eventually score, in either order.",
+      "reference_ltl": "F(home) & F(captured)",
+      "expected": "formula",
+      "rationale": "Two independent eventualities, not an ordered sequence.",
+      "ordering_sensitive": true,
+      "source_ids": [
+        "ctf_ltl_study"
+      ]
+    },
+    {
+      "id": "test-unordered_home_capture-1",
+      "category": "difficult",
+      "semantic_family": "unordered_home_capture",
+      "split": "test_candidate",
+      "instruction": "Achieve both home-flag proximity and a capture sometime during the episode; no order is required.",
+      "reference_ltl": "F(home) & F(captured)",
+      "expected": "formula",
+      "rationale": "Two independent eventualities, not an ordered sequence.",
+      "ordering_sensitive": true,
+      "source_ids": [
+        "ctf_ltl_study"
+      ]
+    },
+    {
+      "id": "test-every_possession_and_existence-0",
+      "category": "difficult",
+      "semantic_family": "every_possession_and_existence",
+      "split": "test_candidate",
+      "instruction": "Obtain the enemy flag at least once, and ensure every possession state has a capture at that step or later.",
+      "reference_ltl": "G(has_flag -> F(captured)) & F(has_flag)",
+      "expected": "formula",
+      "rationale": "Existence plus universal response; later possession after a score still creates an obligation.",
+      "ordering_sensitive": true,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-every_possession_and_existence-1",
+      "category": "difficult",
+      "semantic_family": "every_possession_and_existence",
+      "split": "test_candidate",
+      "instruction": "Require some team possession plus a current-or-future scoring response to each possession state, not just the first.",
+      "reference_ltl": "G(has_flag -> F(captured)) & F(has_flag)",
+      "expected": "formula",
+      "rationale": "Existence plus universal response; later possession after a score still creates an obligation.",
+      "ordering_sensitive": true,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-untagged_until_home-0",
+      "category": "difficult",
+      "semantic_family": "untagged_until_home",
+      "split": "test_candidate",
+      "instruction": "Keep the team untagged until some controlled boat is near our flag stand, and require that home milestone to occur.",
+      "reference_ltl": "(!tagged U home)",
+      "expected": "formula",
+      "rationale": "Strong until; tagging at the home step itself is not prohibited by this formula.",
+      "ordering_sensitive": true,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-untagged_until_home-1",
+      "category": "difficult",
+      "semantic_family": "untagged_until_home",
+      "split": "test_candidate",
+      "instruction": "Home-flag proximity must happen; before its first satisfying step no controlled boat may be tagged.",
+      "reference_ltl": "(!tagged U home)",
+      "expected": "formula",
+      "rationale": "Strong until; tagging at the home step itself is not prohibited by this formula.",
+      "ordering_sensitive": true,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-bounds_untagged_until_pickup-0",
+      "category": "combined",
+      "semantic_family": "bounds_untagged_until_pickup",
+      "split": "test_candidate",
+      "instruction": "Always keep the team in bounds and avoid all tags until the team obtains the enemy flag; obtaining it is required.",
+      "reference_ltl": "G(in_bounds) & (!tagged U has_flag)",
+      "expected": "formula",
+      "rationale": "Strong until acquisition plus global bounds, without a capture requirement.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-bounds_untagged_until_pickup-1",
+      "category": "combined",
+      "semantic_family": "bounds_untagged_until_pickup",
+      "split": "test_candidate",
+      "instruction": "Remain inside throughout and require possession, with no team tag at steps before the possession milestone.",
+      "reference_ltl": "G(in_bounds) & (!tagged U has_flag)",
+      "expected": "formula",
+      "rationale": "Strong until acquisition plus global bounds, without a capture requirement.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-home_then_persistent_bounds-0",
+      "category": "difficult",
+      "semantic_family": "home_then_persistent_bounds",
+      "split": "test_candidate",
+      "instruction": "At some step have a controlled boat near our flag stand, and from that step through the end keep every boat inside the arena.",
+      "reference_ltl": "F(home & G(in_bounds))",
+      "expected": "formula",
+      "rationale": "Bounds are required only from the selected home milestone onward.",
+      "ordering_sensitive": true,
+      "source_ids": [
+        "ctf_ltl_study"
+      ]
+    },
+    {
+      "id": "test-home_then_persistent_bounds-1",
+      "category": "difficult",
+      "semantic_family": "home_then_persistent_bounds",
+      "split": "test_candidate",
+      "instruction": "Eventually establish home-flag proximity together with bounds compliance that lasts for the rest of the episode.",
+      "reference_ltl": "F(home & G(in_bounds))",
+      "expected": "formula",
+      "rationale": "Bounds are required only from the selected home milestone onward.",
+      "ordering_sensitive": true,
+      "source_ids": [
+        "ctf_ltl_study"
+      ]
+    },
+    {
+      "id": "test-possession_then_untagged-0",
+      "category": "difficult",
+      "semantic_family": "possession_then_untagged",
+      "split": "test_candidate",
+      "instruction": "At some step the team must possess the flag and remain completely untagged from that step through the end.",
+      "reference_ltl": "F(has_flag & G(!tagged))",
+      "expected": "formula",
+      "rationale": "Eventual persistent no-tag suffix; earlier tags are permitted.",
+      "ordering_sensitive": true,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-possession_then_untagged-1",
+      "category": "difficult",
+      "semantic_family": "possession_then_untagged",
+      "split": "test_candidate",
+      "instruction": "Eventually obtain a possession state after which no controlled boat is tagged, including at that selected state.",
+      "reference_ltl": "F(has_flag & G(!tagged))",
+      "expected": "formula",
+      "rationale": "Eventual persistent no-tag suffix; earlier tags are permitted.",
+      "ordering_sensitive": true,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-distance_trigger-0",
+      "category": "unsupported",
+      "semantic_family": "distance_trigger",
+      "split": "test_candidate",
+      "instruction": "When an opponent gets within twelve meters of our carrier, have that carrier evade.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "Requires distance, carrier identity, and an evasion-action predicate absent from this profile.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "ctf_ltl_study"
+      ]
+    },
+    {
+      "id": "test-distance_trigger-1",
+      "category": "unsupported",
+      "semantic_family": "distance_trigger",
+      "split": "test_candidate",
+      "instruction": "Make the flag carrier dodge whenever an enemy is closer than twelve meters.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "Requires distance, carrier identity, and an evasion-action predicate absent from this profile.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "ctf_ltl_study"
+      ]
+    },
+    {
+      "id": "test-collision_separation-0",
+      "category": "unsupported",
+      "semantic_family": "collision_separation",
+      "split": "test_candidate",
+      "instruction": "Maintain at least four meters of separation from every other boat.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "No distance or collision predicate is available; tagged is not collision proximity.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "mctf_rules"
+      ]
+    },
+    {
+      "id": "test-collision_separation-1",
+      "category": "unsupported",
+      "semantic_family": "collision_separation",
+      "split": "test_candidate",
+      "instruction": "Never come within the competition collision distance of a teammate or opponent.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "No distance or collision predicate is available; tagged is not collision proximity.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "mctf_rules"
+      ]
+    },
+    {
+      "id": "test-powerplay_action-0",
+      "category": "unsupported",
+      "semantic_family": "powerplay_action",
+      "split": "test_candidate",
+      "instruction": "During our Powerplay, keep the disabled opponent from moving or tagging.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "Requires Powerplay timing, disabled-agent identity, and action predicates.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "mctf_rules"
+      ]
+    },
+    {
+      "id": "test-powerplay_action-1",
+      "category": "unsupported",
+      "semantic_family": "powerplay_action",
+      "split": "test_candidate",
+      "instruction": "For the Powerplay interval, prevent the selected red boat from moving and interacting with flags.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "Requires Powerplay timing, disabled-agent identity, and action predicates.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "mctf_rules"
+      ]
+    },
+    {
+      "id": "test-legal_tag_action-0",
+      "category": "unsupported",
+      "semantic_family": "legal_tag_action",
+      "split": "test_candidate",
+      "instruction": "Tag an opponent only when both of those boats are in our territory.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "Our tagged atom describes controlled boats being tagged, not tagging actions or per-boat territory.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "mctf_rules"
+      ]
+    },
+    {
+      "id": "test-legal_tag_action-1",
+      "category": "unsupported",
+      "semantic_family": "legal_tag_action",
+      "split": "test_candidate",
+      "instruction": "Permit a tagging action only if the tagging boat and its target are both on our side.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "Our tagged atom describes controlled boats being tagged, not tagging actions or per-boat territory.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "mctf_rules"
+      ]
+    },
+    {
+      "id": "test-corner_base_capture-0",
+      "category": "unsupported",
+      "semantic_family": "corner_base_capture",
+      "split": "test_candidate",
+      "instruction": "Return the flag carrier to either official corner home base to score.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "home denotes the flag stand vicinity, not official corner bases; no per-carrier corner predicate exists.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "mctf_rules"
+      ]
+    },
+    {
+      "id": "test-corner_base_capture-1",
+      "category": "unsupported",
+      "semantic_family": "corner_base_capture",
+      "split": "test_candidate",
+      "instruction": "Complete a capture by bringing the carrier into one of the competition corner capture zones.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "home denotes the flag stand vicinity, not official corner bases; no per-carrier corner predicate exists.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "mctf_rules"
+      ]
+    },
+    {
+      "id": "test-defend_when_needed-0",
+      "category": "ambiguous",
+      "semantic_family": "defend_when_needed",
+      "split": "test_candidate",
+      "instruction": "Defend whenever necessary, otherwise attack.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "The defense trigger and role-switch criteria are unspecified.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "pyquaticus_policies"
+      ]
+    },
+    {
+      "id": "test-defend_when_needed-1",
+      "category": "ambiguous",
+      "semantic_family": "defend_when_needed",
+      "split": "test_candidate",
+      "instruction": "Switch to defense when the situation calls for it; attack at other times.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "The defense trigger and role-switch criteria are unspecified.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "pyquaticus_policies"
+      ]
+    },
+    {
+      "id": "test-quick_safe_capture-0",
+      "category": "ambiguous",
+      "semantic_family": "quick_safe_capture",
+      "split": "test_candidate",
+      "instruction": "Capture quickly but do not take too much risk.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "No deadline, risk measure, or acceptable threshold is provided.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-quick_safe_capture-1",
+      "category": "ambiguous",
+      "semantic_family": "quick_safe_capture",
+      "split": "test_candidate",
+      "instruction": "Score soon while keeping risk at an acceptable level.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "No deadline, risk measure, or acceptable threshold is provided.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "new_composition"
+      ]
+    },
+    {
+      "id": "test-support_distinct_attacker-0",
+      "category": "unsupported",
+      "semantic_family": "support_distinct_attacker",
+      "split": "test_candidate",
+      "instruction": "Have one attacker carry the flag while a different attacker escorts it.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "Requires distinct-boat identity and support/escort predicates; aggregate possession cannot express it.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "pyquaticus_policies"
+      ]
+    },
+    {
+      "id": "test-support_distinct_attacker-1",
+      "category": "unsupported",
+      "semantic_family": "support_distinct_attacker",
+      "split": "test_candidate",
+      "instruction": "Assign separate boats to carrying the flag and supporting the carrier.",
+      "reference_ltl": null,
+      "expected": "clarification_or_rejection",
+      "rationale": "Requires distinct-boat identity and support/escort predicates; aggregate possession cannot express it.",
+      "ordering_sensitive": false,
+      "source_ids": [
+        "pyquaticus_policies"
+      ]
+    }
+  ]
+}
