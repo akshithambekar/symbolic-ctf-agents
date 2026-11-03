@@ -157,3 +157,14 @@ or automatic restart of failed conditions is enabled.
 An individual fresh run can use `run.py compare --dataset
 paper_benchmark/study/candidate_v1/dataset.json --model MODEL --ibm-max-tokens
 4096`, with other options as above. Every output path must be new.
+
+After interruption, `resume_matrix.py --previous PATH_TO_MATRIX --env-file
+PATH_TO_ENV --output NEW_PATH` retains the first measured outcome for each
+model/trial/method/item, including incorrect and unusable translations. It retries
+only missing/infrastructure outcomes, at most three batches per condition with
+60-second delays. Repeat `--previous` to include earlier continuations. Old files
+are read-only; each batch stores its matrix trial identity and its own source
+snapshot. `status.json` records the active child PID and condition; raw files
+provide within-condition progress. A final `combined_measured.jsonl` links each
+retained row to its original file/line. Local batch trial numbers are always zero;
+use `matrix_trial` from condition metadata when aggregating continuations.
