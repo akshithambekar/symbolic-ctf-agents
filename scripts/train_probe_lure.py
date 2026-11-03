@@ -10,7 +10,7 @@ from stable_baselines3.common.callbacks import BaseCallback
 from stable_baselines3.common.logger import configure
 from maritime_nsrl.experiments import save_json
 from maritime_nsrl.probe_lure import INSTRUCTION, mission_phase
-from maritime_nsrl.research_env import ArenaConfig, TeamArena, SharedTeamVecEnv
+from maritime_nsrl.team_env import ArenaConfig, TeamArena, SharedTeamVecEnv
 from maritime_nsrl.translation import translate
 
 

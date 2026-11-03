@@ -36,7 +36,7 @@ class CaptureOracle:
 def run_oracle(config, episodes=5, seed=30000, trace_stride=1):
     """Evaluate the oracle and retain episode metrics plus decision traces."""
     from dataclasses import replace
-    from .research_env import TeamArena
+    from .team_env import TeamArena
 
     config = replace(
         config,

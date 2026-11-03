@@ -17,7 +17,7 @@ import torch
 from stable_baselines3 import PPO
 
 from maritime_nsrl.probe_lure import INSTRUCTION, ProbeLureTeacher
-from maritime_nsrl.research_env import ArenaConfig, SharedTeamVecEnv, TeamArena
+from maritime_nsrl.team_env import ArenaConfig, SharedTeamVecEnv, TeamArena
 from maritime_nsrl.translation import translate
 from train_probe_lure_full import (
     REPOSITORY, evaluate, save_bundle, selection_score, source_hashes, write_json,

@@ -109,7 +109,7 @@ the slower condition.
 ```bash
 MPLCONFIGDIR=/tmp/mctf-mpl .venv/bin/python -m pytest \
   tests/test_probe_lure.py tests/test_probe_lure_runner.py \
-  tests/test_research.py tests/test_pipeline.py tests/test_viewer.py -q
+  tests/test_team_env.py tests/test_pipeline.py tests/test_viewer.py -q
 ```
 
 These checks cover ordered mission progression, one-time rewards, later

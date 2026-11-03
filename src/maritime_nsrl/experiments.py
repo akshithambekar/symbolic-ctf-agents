@@ -12,9 +12,9 @@ import torch
 from stable_baselines3 import PPO
 from stable_baselines3.common.callbacks import BaseCallback
 from stable_baselines3.common.logger import configure
-from .environment import MaritimeEnv
+from .single_agent_env import MaritimeEnv
 from .translation import load_spec
-from .research_env import TeamArena, ArenaConfig, SharedTeamVecEnv
+from .team_env import TeamArena, ArenaConfig, SharedTeamVecEnv
 
 
 def save_json(path, value):

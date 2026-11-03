@@ -1,5 +1,5 @@
 import numpy as np
-from maritime_nsrl.research_env import TeamArena, ArenaConfig, SharedTeamVecEnv
+from maritime_nsrl.team_env import TeamArena, ArenaConfig, SharedTeamVecEnv
 from maritime_nsrl.shield import PredictiveShield
 from maritime_nsrl.translation import translate
 from maritime_nsrl.oracle import run_oracle

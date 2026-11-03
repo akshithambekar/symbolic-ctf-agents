@@ -57,7 +57,7 @@ def test_training_rejects_unrecorded_override_before_creating_run(tmp_path):
 
 def test_shield_only_has_no_guidance_reward_or_temporal_observation():
     import numpy as np
-    from maritime_nsrl.research_env import TeamArena, ArenaConfig
+    from maritime_nsrl.team_env import TeamArena, ArenaConfig
 
     arena = TeamArena(
         ArenaConfig(

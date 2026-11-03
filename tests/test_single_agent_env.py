@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 from stable_baselines3.common.env_checker import check_env
-from maritime_nsrl.environment import MaritimeEnv
+from maritime_nsrl.single_agent_env import MaritimeEnv
 from maritime_nsrl.logic import validate
 
 SPEC = validate("G(in_bounds) & F(has_flag & F(captured))")

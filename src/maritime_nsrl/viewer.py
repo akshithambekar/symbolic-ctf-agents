@@ -33,8 +33,8 @@ SINGLE_ACTION_NAMES = [
 def load_policy_environment(
     policy, scenario=None, opponent=None, team_size=None, config_path=None, opponent_speed=None
 ):
-    from .research_env import ArenaConfig, TeamArena
-    from .environment import MaritimeEnv
+    from .team_env import ArenaConfig, TeamArena
+    from .single_agent_env import MaritimeEnv
     from .translation import load_spec
     from .specifications import read_artifact
 
@@ -402,7 +402,7 @@ def watch(args):
 def replay(args):
     if args.speed <= 0:
         raise ValueError("Playback speed must be positive")
-    from .research_env import SCENARIOS
+    from .team_env import SCENARIOS
 
     records = []
     with Path(args.trajectory).open(encoding="utf-8") as f:

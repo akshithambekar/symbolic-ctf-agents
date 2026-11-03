@@ -4,7 +4,7 @@ import pytest
 from maritime_nsrl.probe_lure import INSTRUCTION, MILESTONES, tactical_labels, mission_phase
 from maritime_nsrl.translation import translate
 from maritime_nsrl.temporal import compile_ltlf, TemporalMonitor
-from maritime_nsrl.research_env import TeamArena, ArenaConfig
+from maritime_nsrl.team_env import TeamArena, ArenaConfig
 from maritime_nsrl.probe_lure import FORMULA
 
 

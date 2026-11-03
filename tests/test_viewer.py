@@ -5,7 +5,7 @@ from maritime_nsrl.viewer import load_policy_environment, snapshot, watch, repla
 
 
 def test_single_agent_snapshot_labels_hold_correctly():
-    from maritime_nsrl.environment import MaritimeEnv
+    from maritime_nsrl.single_agent_env import MaritimeEnv
     from maritime_nsrl.logic import validate
 
     env = MaritimeEnv(validate("F(captured)"), horizon=5)
