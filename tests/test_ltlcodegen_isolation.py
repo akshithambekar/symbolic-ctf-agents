@@ -55,3 +55,22 @@ def test_timeout(monkeypatch):
     monkeypatch.setattr(runner, 'TIMEOUT', 3)
     with pytest.raises(TimeoutError):
         runner.execute(fenced('while True: pass'))
+
+
+def test_adapted_plain_response_runs_in_container():
+    from benchmarks.run import adapt_baseline_response
+
+    code = "def question():\n    return ltl_eventually(ap(reach, 'object_7'))"
+    assert runner.execute(adapt_baseline_response(code)) == ("['EVENTUALLY', 'reach(object_7)']", True)
+
+
+@pytest.mark.parametrize("fenced_input", [False, True])
+def test_adapted_next_evaluates_semantically(fenced_input):
+    from benchmarks.run import adapt_baseline_response
+    from benchmarks.semantics import evaluate
+
+    body = "return ltl_next(ap(reach, 'object_4'))"
+    code = fenced(body) if fenced_input else "def question():\n    " + body
+    formula, success = runner.execute(adapt_baseline_response(code))
+    assert success
+    assert evaluate(formula, "X reach(object_4)", generated_notation="listed_prefix")["outcome"] == "equivalent"

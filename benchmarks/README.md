@@ -9,10 +9,12 @@ Successful translations now pass through one shared Spot evaluator over infinite
 Failed translations retain `semantic_evaluation.outcome: "not_run"`.
 Install the checker and read the [semantic evaluation guide](SEMANTICS.md) for grammar, limits, result categories, and license/platform details.
 
-`comparison_cases.json` provides four shared examples for manual inspection, including the smoke case, avoidance, reaching both objects, and reaching either object.
+`comparison_cases.json` provides nine shared examples for manual inspection, including next, strong until, release, weak until, and strong release meanings.
+Release, weak until, and strong release are expressed using equivalent supported operators; their symbols are not accepted directly by the translators or checker.
 Run them with `python -m benchmarks.run --cases benchmarks/comparison_cases.json`.
 This makes one live request per case using the team translator by default; select `--implementation ltlcodegen-container` to use the isolated baseline.
 Do not use `--offline` to assess these cases: the offline model returns the same canned response for every instruction.
+The migrated baseline defines `ltl_next` but does not import it in its execution template, so a response calling `ltl_next` fails translation.
 These examples are not a validated accuracy dataset.
 The fixed-response integration tests exercise them with both implementations and shared semantic checking.
 
@@ -61,7 +63,7 @@ Missing configuration is recorded as `configuration_error`, with zero attempts a
 The exit status remains 0 when all translations succeed and 1 for translation/provider/configuration failures.
 Semantic mismatches and checker errors do not change this status; inspect `semantic_evaluation.outcome`.
 
-The client uses OpenRouter's [OpenAI-compatible endpoint](https://openrouter.ai/docs/quickstart), a temperature of 0, a 1024-token output limit, and a 60-second timeout.
+The client uses OpenRouter's [OpenAI-compatible endpoint](https://openrouter.ai/docs/quickstart), a temperature of 0, a 4096-token output limit, and a 60-second timeout.
 Our restricted translator calls the model once per case and rejects attempts to enable retries.
 The SDK is configured with `max_retries=0` and HTTP redirects disabled.
 OpenRouter [provider fallbacks](https://openrouter.ai/docs/guides/routing/provider-selection) are disabled with `provider.allow_fallbacks=false`.
@@ -101,6 +103,7 @@ Open that JSON file in an editor to inspect the case, `implementation_id`, model
 Use `--output PATH` to choose another result path; keep custom output outside tracked files.
 Use `--cases PATH` to select a different case list.
 
+Responses stopped at the output token limit are recorded as `provider_error` with `TruncatedResponseError` and are not translated.
 Outcomes distinguish `translated`, `translation_error`, `provider_error`, `rate_limit_error`, `configuration_error`, and unexpected local `runner_error` failures.
 Rejected generated code is retained with the interpreter's reason, while provider failures retain the exception type, HTTP status when available, and a fixed diagnostic message.
 Provider exception bodies, request objects, headers, and raw exception text are omitted.
@@ -127,6 +130,14 @@ The shared evaluator converts both implementations' flat listed-prefix output an
 It quotes each complete proposition spelling, so `reach(object_7)` is one atom even when undeclared in case metadata.
 Evaluation distinguishes equivalence, mismatch, invalid generated/reference formulas, checker errors, and whole-evaluation timeouts.
 No string-based semantic comparison or sampled-trace substitute is performed.
+
+## Adapted baseline
+
+Select `--implementation ltlcodegen-adapted` to wrap a plain response beginning with `def question(` in a Python code fence before passing it to the same isolated baseline executor.
+The adapter adds the missing `ltl_next` import to both plain and single fenced Python responses; other response formats are not repaired.
+The saved `generated_code` remains the original model response, and the distinct ID is `ltlcodegen-container-adapted-v2`.
+This is a modified comparison variant, not the untouched migrated baseline.
+The adapter does not change semantic evaluation.
 
 ## Isolated LTLCodeGen baseline
 

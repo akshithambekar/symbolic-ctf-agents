@@ -179,7 +179,8 @@ python -m pytest -q
 LTL_DOCKER_TESTS=1 python -m pytest -q tests/test_semantic_benchmarks.py tests/test_ltlcodegen_isolation.py
 ```
 
-The fixed-response integration tests run the same four existing comparison cases through each implementation and the same evaluator.
+The fixed-response integration tests run the same nine comparison cases through each implementation.
+Successful translations use the same evaluator; the baseline next-step fixture fails because its execution template does not import `ltl_next`.
 They also exercise intentional mismatch and invalid-reference cases, while baseline tests include an executor-success response containing invalid formula data.
 No live provider credentials are needed.
 The comparison examples remain illustrative and are not a validated accuracy dataset.

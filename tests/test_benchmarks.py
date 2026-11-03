@@ -86,7 +86,7 @@ def test_one_provider_request_and_no_sdk_retries(monkeypatch, status, expected):
     body = json.loads(requests[0].content)
     assert body["model"] == "test/model"
     assert body["provider"] == {"allow_fallbacks": False}
-    assert body["temperature"] == 0 and body["max_tokens"] == 1024
+    assert body["temperature"] == 0 and body["max_tokens"] == 4096
     # Provider bodies and exception text must never become failure details.
     assert secret not in json.dumps(result)
     if status != 200:
@@ -200,3 +200,28 @@ def test_list_needs_no_configuration(monkeypatch, capsys):
     monkeypatch.delenv("OPENROUTER_MODEL", raising=False)
     assert run.main(["--list"]) == 0
     assert "eventually-reach-object-7" in capsys.readouterr().out
+
+
+def test_truncated_provider_response_is_not_translated(monkeypatch):
+    def handle(request):
+        return httpx.Response(200, json={
+            "id": "fake-id", "object": "chat.completion", "created": 0, "model": "test/model",
+            "choices": [{"index": 0, "finish_reason": "length", "message": {
+                "role": "assistant", "content": run.OFFLINE_CODE,
+            }}],
+        })
+
+    def client_factory(**kwargs):
+        kwargs.pop("http_client").close()
+        return OpenAI(**kwargs, http_client=httpx.Client(transport=httpx.MockTransport(handle)))
+
+    monkeypatch.setattr(run, "OpenAI", client_factory)
+    model = run.OpenRouterModel("test/model", "fake-key")
+    try:
+        result = run.run_cases(CASES, model, "test/model", "openrouter")[0]
+    finally:
+        model.close()
+    assert result["outcome"] == "provider_error"
+    assert result["failure"]["type"] == "TruncatedResponseError"
+    assert result["semantic_evaluation"]["outcome"] == "not_run"
+    assert result["provider_requests"] == 1

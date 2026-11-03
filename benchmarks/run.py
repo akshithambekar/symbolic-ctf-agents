@@ -1,6 +1,7 @@
 """Record one translation attempt and a separate infinite-trace semantic check."""
 
 import argparse
+import re
 from datetime import datetime, timezone
 import json
 import os
@@ -21,7 +22,7 @@ ENV_FILE = Path(__file__).resolve().parent.parent / ".env"
 RESULTS_DIR = Path(__file__).with_name("results")
 SETTINGS = {
     "temperature": 0.0,
-    "max_tokens": 1024,
+    "max_tokens": 4096,
     "timeout_seconds": 60.0,
     "translator_retries": 0,
     "provider_client_retries": 0,
@@ -53,6 +54,10 @@ class ProviderResponseError(ValueError):
     """The provider did not return a chat completion."""
 
 
+class TruncatedResponseError(ProviderResponseError):
+    """The provider stopped at the output limit."""
+
+
 class OpenRouterModel:
     def __init__(self, model_id: str, api_key: str):
         self.model_id = model_id
@@ -74,6 +79,8 @@ class OpenRouterModel:
         )
         if getattr(response, "error", None) or not response.choices:
             raise ProviderResponseError("Provider returned no completion.")
+        if response.choices[0].finish_reason == "length":
+            raise TruncatedResponseError("Provider response reached the output token limit.")
         content = response.choices[0].message.content
         if not isinstance(content, str):
             raise ProviderResponseError("Provider returned no text completion.")
@@ -91,11 +98,26 @@ def failure_details(error: Exception) -> tuple[str, dict]:
         outcome = "rate_limit_error" if status == 429 else "provider_error"
         message = "Provider rate limit." if status == 429 else "Provider HTTP failure."
         return outcome, {"type": type(error).__name__, "http_status": status, "message": message}
+    if isinstance(error, TruncatedResponseError):
+        return "provider_error", {"type": type(error).__name__, "message": "Provider response reached the output token limit."}
     if isinstance(error, (APIConnectionError, ProviderResponseError)):
         return "provider_error", {"type": type(error).__name__, "message": "Provider connection or response failure."}
     if isinstance(error, UnsupportedCode):
         return "translation_error", {"type": type(error).__name__, "message": str(error)}
     return "runner_error", {"type": type(error).__name__, "message": "Unexpected local pipeline failure."}
+
+
+def adapt_baseline_response(code: str) -> str:
+    """Normalize a simple response and import next for the modified baseline."""
+    source = code.strip()
+    if re.match(r"def[ \t]+question[ \t]*\(", source):
+        body = source
+    else:
+        match = re.fullmatch(r"```(?:python)?[ \t]*\r?\n(.*?)\r?\n```", source, re.DOTALL)
+        if not match:
+            return code
+        body = match.group(1)
+    return "```python\nfrom translators.ltl_codegen.ltl_operators import ltl_next\n" + body + "\n```"
 
 
 def run_cases(cases, llm, model_id, provider, configuration_error=None, implementation="restricted"):
@@ -104,7 +126,7 @@ def run_cases(cases, llm, model_id, provider, configuration_error=None, implemen
         start = perf_counter()
         result = {
             "case": case,
-            "implementation_id": IMPLEMENTATION_ID if implementation == "restricted" else "ltlcodegen-container-v1",
+            "implementation_id": {"restricted": IMPLEMENTATION_ID, "ltlcodegen-container": "ltlcodegen-container-v1", "ltlcodegen-adapted": "ltlcodegen-container-adapted-v2"}[implementation],
             "model_id": model_id,
             "provider": provider,
             "settings": dict(SETTINGS),
@@ -143,7 +165,7 @@ def run_cases(cases, llm, model_id, provider, configuration_error=None, implemen
                     )
                     code = CountedModel().invoke(prompt)
                     result["generated_code"] = code
-                    formula, success = execute(code)
+                    formula, success = execute(adapt_baseline_response(code) if implementation == "ltlcodegen-adapted" else code)
                 result["generated_code"] = code
                 if success:
                     result.update(formula=formula, outcome="translated")
@@ -193,7 +215,7 @@ def main(argv=None) -> int:
     parser.add_argument("--list", action="store_true", help="List cases without calling a model")
     parser.add_argument("--model", help="Explicit OpenRouter model ID; defaults to OPENROUTER_MODEL")
     parser.add_argument("--offline", action="store_true", help="Use a canned fake response, with no network")
-    parser.add_argument("--implementation", choices=["restricted", "ltlcodegen-container"], default="restricted")
+    parser.add_argument("--implementation", choices=["restricted", "ltlcodegen-container", "ltlcodegen-adapted"], default="restricted")
     parser.add_argument("--output", type=Path, help="Result JSON path; defaults to benchmarks/results/<unique>.json")
     args = parser.parse_args(argv)
     cases = load_cases(args.cases)
