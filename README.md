@@ -7,9 +7,8 @@ English strategy → validated specification → temporal monitor/rewards → PP
 ```
 
 The core was imported from `yahya-akshith_rl` at `663e9b0`. It supports 1v1 and
-shared-policy 2v2/3v3 experiments. Selected historical 1v1 runs and checkpoints
-are in [research_archive](research_archive/README.md). The full studies,
-manuscript, and tactical follow-up artifacts remain on that branch.
+shared-policy 2v2/3v3 experiments. The full studies, manuscript, and tactical
+follow-up artifacts remain on that branch.
 
 ## Setup
 
@@ -64,17 +63,8 @@ Team evaluation covers three arena geometries and all three defensive opponents.
 no-tag and designated-defender constraints to the monitored mission. Those role
 constraints are not enforced by the bounds gate.
 
-To continue one of the archived 1v1 team policies against chase:
-
-```bash
-PATROL=research_archive/phase3-confirmatory-20260927-v1/stages/02-1v1-patrol/softened_guidance_no_tag_penalty/seed2_interrupted_rerun1
-uv run --locked mctf train-team --spec "$PATROL/specification.json" --output runs/patrol-to-chase --team-size 1 --opponent chase --resume "$PATROL/policy.zip" --steps 16384 --seed 2
-uv run --locked mctf evaluate-team runs/patrol-to-chase/policy.zip --output runs/patrol-to-chase/evaluation.csv --episodes 20
-```
-
 Team continuation retains the saved arena settings and PPO state, and starts new
-environments and logs. The archived team policies use a different observation and
-action interface from `mctf train` policies. Resume them with `train-team`.
+environments and logs. Resume a team checkpoint with `train-team`.
 
 ## Inspect behavior
 
@@ -94,8 +84,8 @@ headless recording writes frames and replay data into a fresh directory.
 | `src/maritime_nsrl/` | RL environments, logic, translation, training, evaluation, viewer |
 | `tests/` | Logic semantics, provenance, simulator behavior, PPO integration |
 | `strategies/` | Supported controlled-English examples |
-| `demos/` | Existing upstream-policy demo; separate uv environment |
-| `ltl/` | Earlier LTLCodeGen-based work; independent of the new pipeline |
+| `translators/` | English-to-LTL implementations, separate from PPO |
+| `benchmarks/` | Translation smoke test and Spot semantic checker |
 | [RL contract](docs/RL_PIPELINE.md) | Observations, actions, rewards, semantics, rule differences |
 | [Progress](docs/PROGRESS.md) | Imported scope, recorded outcomes, remaining work |
 | [Game rules](GAME_RULES.md) | Official competition gameplay summary |
