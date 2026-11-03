@@ -66,7 +66,8 @@ def main():
                     missing = [i['id'] for i in data['items'] if (model, trial, method, i['id']) not in known]
                     if not missing:
                         break
-                    target = output / f'model-{index}-trial-{trial}-{method}-attempt-{retry}'
+                    # Keep snapshot paths below Windows' legacy path-length limit.
+                    target = output / f'm{index}t{trial}{method[:1]}a{retry}'
                     condition = dict(model=model, matrix_trial=trial, method=method,
                                      missing=len(missing), output=str(target), status='running')
                     state['conditions'].append(condition)
