@@ -45,6 +45,7 @@ def main():
             training.add_argument("--guided", action="store_true")
         else:
             training.add_argument("--team-size", type=int, choices=(1, 2, 3), default=3)
+            training.add_argument("--episodes", type=positive_int)
             training.add_argument(
                 "--scenario", choices=("standard", "wide", "narrow"), default="standard"
             )
@@ -125,6 +126,7 @@ def main():
                 reward_shaping=not args.no_reward_shaping,
                 temporal_state=not args.no_temporal_state,
                 resume=args.resume,
+                episodes=args.episodes,
             )
         )
     elif args.command == "evaluate":

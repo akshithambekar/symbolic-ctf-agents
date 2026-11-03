@@ -24,9 +24,11 @@ def save_json(path, value):
 
 
 class EpisodeLog(BaseCallback):
-    def __init__(self, path):
+    def __init__(self, path, episode_limit=None):
         super().__init__()
         self.path = path
+        self.episode_limit = episode_limit
+        self.episodes = 0
 
     def _on_step(self):
         if self.num_timesteps % 2048 == 0:
@@ -35,6 +37,9 @@ class EpisodeLog(BaseCallback):
             if "metrics" in info:
                 with self.path.open("a", encoding="utf-8") as f:
                     f.write(json.dumps({"timesteps": self.num_timesteps, **info["metrics"]}) + "\n")
+                self.episodes += 1
+                if self.episode_limit and self.episodes >= self.episode_limit:
+                    return False
         return True
 
 
@@ -337,6 +342,7 @@ def train_team(
     role_constraint=False,
     config_overrides=None,
     resume=None,
+    episodes=None,
 ):
     """Train one shared PPO policy across a correlated team of blue agents."""
     from .specifications import read_artifact, compose, ROLE_CONSTRAINTS
@@ -389,6 +395,8 @@ def train_team(
         config = ArenaConfig(**{**asdict(previous_config), "opponent": opponent})
     else:
         config = ArenaConfig(**values, **(config_overrides or {}))
+    if episodes is not None:
+        steps = max(steps, int(np.ceil(episodes * team_size * horizon / (0.1 * config.repeat))))
     output = Path(output)
     output.mkdir(parents=True, exist_ok=False)
     arena = TeamArena(config)
@@ -459,7 +467,8 @@ def train_team(
     )
     try:
         model.learn(
-            total_timesteps=steps, callback=EpisodeLog(output / "training_episode_metrics.jsonl")
+            total_timesteps=steps,
+            callback=EpisodeLog(output / "training_episode_metrics.jsonl", episodes),
         )
         model.save(output / "policy.zip")
         save_json(
@@ -467,6 +476,9 @@ def train_team(
             {
                 "actual_agent_transitions": model.num_timesteps,
                 "actual_joint_decisions": model.num_timesteps // team_size,
+                "completed_episodes": sum(
+                    1 for _ in (output / "training_episode_metrics.jsonl").open()
+                ),
             },
         )
     finally:
