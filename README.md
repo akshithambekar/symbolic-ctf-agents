@@ -7,8 +7,8 @@ English strategy → validated specification → temporal monitor/rewards → PP
 ```
 
 The core was imported from `yahya-akshith_rl` at `663e9b0`. It supports 1v1 and
-shared-policy 2v2/3v3 experiments. Historical runs, checkpoints, manuscripts,
-translator benchmarks, and tactical follow-up studies remain on that branch.
+shared-policy 2v2/3v3 experiments. The full studies, manuscript, and tactical
+follow-up artifacts remain on that branch.
 
 ## Setup
 
@@ -63,6 +63,9 @@ Team evaluation covers three arena geometries and all three defensive opponents.
 no-tag and designated-defender constraints to the monitored mission. Those role
 constraints are not enforced by the bounds gate.
 
+Team continuation retains the saved arena settings and PPO state, and starts new
+environments and logs. Resume a team checkpoint with `train-team`.
+
 ## Inspect behavior
 
 ```bash
@@ -81,8 +84,8 @@ headless recording writes frames and replay data into a fresh directory.
 | `src/maritime_nsrl/` | RL environments, logic, translation, training, evaluation, viewer |
 | `tests/` | Logic semantics, provenance, simulator behavior, PPO integration |
 | `strategies/` | Supported controlled-English examples |
-| `demos/` | Existing upstream-policy demo; separate uv environment |
-| `ltl/` | Earlier LTLCodeGen-based work; independent of the new pipeline |
+| `translators/` | English-to-LTL implementations, separate from PPO |
+| `benchmarks/` | Translation smoke test and Spot semantic checker |
 | [RL contract](docs/RL_PIPELINE.md) | Observations, actions, rewards, semantics, rule differences |
 | [Progress](docs/PROGRESS.md) | Imported scope, recorded outcomes, remaining work |
 | [Game rules](GAME_RULES.md) | Official competition gameplay summary |

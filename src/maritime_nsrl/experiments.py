@@ -1,8 +1,10 @@
 """Reproducible PPO training, paired evaluation, and raw experiment records."""
 
 import csv
+import hashlib
 import json
 import platform
+from dataclasses import asdict
 from pathlib import Path
 import importlib.metadata
 import numpy as np
@@ -334,6 +336,7 @@ def train_team(
     temporal_state=True,
     role_constraint=False,
     config_overrides=None,
+    resume=None,
 ):
     """Train one shared PPO policy across a correlated team of blue agents."""
     from .specifications import read_artifact, compose, ROLE_CONSTRAINTS
@@ -346,8 +349,6 @@ def train_team(
         raise ValueError(
             "Formula overrides break provenance; compose explicit human constraints instead"
         )
-    output = Path(output)
-    output.mkdir(parents=True, exist_ok=False)
     values = dict(
         team_size=team_size,
         formula=ltl,
@@ -362,24 +363,59 @@ def train_team(
     overlap = set(values) & set(config_overrides or {})
     if overlap:
         raise ValueError(f"Config overrides duplicate fixed training fields: {sorted(overlap)}")
-    config = ArenaConfig(**values, **(config_overrides or {}))
+    if resume:
+        resume = Path(resume)
+        previous = json.loads((resume.parent / "config.json").read_text(encoding="utf-8"))
+        previous_spec = read_artifact(resume.parent / "specification.json")
+        if previous.get("mode") != "team" or previous.get("formula") != previous_spec["ltl"]:
+            raise ValueError("Resume checkpoint has invalid team specification provenance")
+        previous_values = json.loads(
+            (resume.parent / "arena_config.json").read_text(encoding="utf-8")
+        )
+        previous_config = ArenaConfig(**previous_values)
+        if (
+            previous.get("team_size") != previous_config.team_size
+            or previous_spec["ltl"] != previous_config.formula
+        ):
+            raise ValueError("Resume checkpoint configuration disagrees with its saved arena")
+        for key in (
+            "team_size", "formula", "scenario", "shield", "horizon",
+            "reward_shaping", "temporal_state",
+        ):
+            if getattr(previous_config, key) != values[key]:
+                raise ValueError(f"Resume configuration mismatch: {key}")
+        if config_overrides:
+            raise ValueError("Resume uses the saved arena configuration; overrides are not supported")
+        config = ArenaConfig(**{**asdict(previous_config), "opponent": opponent})
+    else:
+        config = ArenaConfig(**values, **(config_overrides or {}))
+    output = Path(output)
+    output.mkdir(parents=True, exist_ok=False)
     arena = TeamArena(config)
     vec = SharedTeamVecEnv(arena)
     torch.set_num_threads(1)
-    model = PPO(
-        "MlpPolicy",
-        vec,
-        learning_rate=3e-4,
-        n_steps=256,
-        batch_size=64,
-        n_epochs=5,
-        gamma=config.gamma,
-        ent_coef=0.01,
-        policy_kwargs={"net_arch": [128, 128]},
-        seed=seed,
-        device="cpu",
-        verbose=0,
-    )
+    try:
+        if resume:
+            model = PPO.load(resume, env=vec, device="cpu")
+            model.set_random_seed(seed)
+        else:
+            model = PPO(
+                "MlpPolicy",
+                vec,
+                learning_rate=3e-4,
+                n_steps=256,
+                batch_size=64,
+                n_epochs=5,
+                gamma=config.gamma,
+                ent_coef=0.01,
+                policy_kwargs={"net_arch": [128, 128]},
+                seed=seed,
+                device="cpu",
+                verbose=0,
+            )
+    except Exception:
+        vec.close()
+        raise
     model.set_logger(configure(str(output), ["csv"]))
     save_json(
         output / "config.json",
@@ -395,16 +431,17 @@ def train_team(
             "seed": seed,
             "horizon": horizon,
             "formula": ltl,
+            "resume": str(resume) if resume else None,
+            "resume_sha256": hashlib.sha256(resume.read_bytes()).hexdigest() if resume else None,
             "pyquaticus_commit": "475d670650ec5d49691ba707cd1054c4e45d8053",
         },
     )
     save_json(output / "specification.json", spec_data)
-    from dataclasses import asdict
-
     save_json(output / "arena_config.json", asdict(config))
-    save_json(
-        output / "ppo_config.json",
-        {
+    ppo_config = (
+        json.loads((resume.parent / "ppo_config.json").read_text(encoding="utf-8"))
+        if resume
+        else {
             "algorithm": "shared-policy PPO",
             "learning_rate": 3e-4,
             "n_steps": 256,
@@ -413,10 +450,12 @@ def train_team(
             "gamma": config.gamma,
             "ent_coef": 0.01,
             "net_arch": [128, 128],
-            "seed": seed,
             "device": "cpu",
-            "requested_agent_transitions": steps,
-        },
+        }
+    )
+    save_json(
+        output / "ppo_config.json",
+        {**ppo_config, "seed": seed, "requested_agent_transitions": steps},
     )
     try:
         model.learn(

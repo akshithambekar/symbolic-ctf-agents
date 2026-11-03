@@ -40,11 +40,11 @@ def main():
         training.add_argument("--steps", type=positive_int, default=16384)
         training.add_argument("--seed", type=int, default=0)
         training.add_argument("--opponent", choices=("static", "patrol", "chase"), default="static")
+        training.add_argument("--resume", type=Path)
         if name == "train":
             training.add_argument("--guided", action="store_true")
-            training.add_argument("--resume", type=Path)
         else:
-            training.add_argument("--team-size", type=int, choices=(2, 3), default=3)
+            training.add_argument("--team-size", type=int, choices=(1, 2, 3), default=3)
             training.add_argument(
                 "--scenario", choices=("standard", "wide", "narrow"), default="standard"
             )
@@ -63,10 +63,11 @@ def main():
     for name in ("watch", "replay"):
         viewer = commands.add_parser(name)
         if name == "watch":
-            viewer.add_argument("policy", help="Saved policy.zip or oracle")
+            viewer.add_argument("policy", help="Saved policy.zip, oracle, or teacher")
             viewer.add_argument("--scenario", choices=("standard", "wide", "narrow"))
             viewer.add_argument("--opponent", choices=("static", "patrol", "chase"))
             viewer.add_argument("--team-size", type=int, choices=(1, 2, 3))
+            viewer.add_argument("--opponent-speed", type=float)
             viewer.add_argument("--seed", type=int, default=40000)
             viewer.add_argument("--episodes", type=positive_int, default=1)
             viewer.add_argument("--stochastic", action="store_true")
@@ -123,6 +124,7 @@ def main():
                 role_constraint=args.role_constraint,
                 reward_shaping=not args.no_reward_shaping,
                 temporal_state=not args.no_temporal_state,
+                resume=args.resume,
             )
         )
     elif args.command == "evaluate":

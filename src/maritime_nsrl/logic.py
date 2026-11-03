@@ -20,6 +20,10 @@ AP = frozenset(
         "attacker_forward",
         "teammate_safe",
         "opponent_push",
+        "probe_upper",
+        "pursuit_committed",
+        "withdrawn",
+        "attack_lower",
     }
 )
 GRAMMAR = r"""

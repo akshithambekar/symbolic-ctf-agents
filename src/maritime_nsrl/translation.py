@@ -7,6 +7,7 @@ import json
 import os
 import requests
 from .logic import validate
+from .probe_lure import INSTRUCTION, FORMULA
 
 CLAUSES = {
     "always stay within the arena": "G(in_bounds)",
@@ -17,6 +18,7 @@ CLAUSES = {
     "keep the defender behind the centerline": "G(defender_behind_center)",
     "keep the designated defender behind the centerline while the team is safe": "G(teammate_safe -> defender_behind_center)",
 }
+CLAUSES[INSTRUCTION.rstrip(".").lower()] = FORMULA
 SYSTEM = """Translate Maritime Capture the Flag instructions into JSON {"ltl": "..."}.
 No code, no actions, no Markdown. Only these grounded propositions exist:
 in_bounds: boat center inside arena; tagged: currently tagged;

@@ -11,9 +11,10 @@ on that branch. These historical results describe different experimental protoco
   specification provenance, and a predictive bounds shield.
 - Scripted capture oracle, native watch/replay viewer, relevant core tests.
 
-Excluded: experiment archives, pretrained policies, manuscripts, frozen source
-copies, translation benchmarks, tactical-role studies, imitation training, and
-chase/shield follow-up runners. The existing demo and earlier `ltl/` work remain.
+The checked-in patrol checkpoints and chase-study records were removed from this
+checkout. The other experiment archives, manuscripts, translation benchmarks,
+tactical-role studies, imitation training, and chase/shield follow-up runners
+remain on the source branch.
 
 ## Recorded outcomes
 
