@@ -50,6 +50,11 @@ its corresponding paid route and uses that route for its remaining cases. This c
 incur charges. The result records both model IDs and estimates cost from recorded
 usage and listed prices when possible.
 
+The runner makes requests in sequence and waits at least 3.1 seconds between them.
+A per-key file lock makes other benchmark processes on this computer wait for the
+active run to finish. Use `--stop-on-http-errors` to stop on the first 404 or 429
+without trying the paid route.
+
 ## Complete a benchmark run
 
 The initial run is incomplete. It measured three responses out of 960 scheduled
@@ -64,9 +69,12 @@ The small 9B and 12B v2 aliases are unavailable on OpenRouter. Skip them in the 
 run. First test the remaining unmeasured routes one at a time:
 
 ```bash
-PYTHONPATH=src ./.venv/bin/python -m benchmarks.nemotron --models lightning --trials 1
-PYTHONPATH=src ./.venv/bin/python -m benchmarks.nemotron --models super-vl --trials 1
-PYTHONPATH=src ./.venv/bin/python -m benchmarks.nemotron --models super --trials 1
+PYTHONPATH=src ./.venv/bin/python -m benchmarks.nemotron --models lightning --trials 1 \
+  --stop-on-http-errors
+PYTHONPATH=src ./.venv/bin/python -m benchmarks.nemotron --models super-vl --trials 1 \
+  --stop-on-http-errors
+PYTHONPATH=src ./.venv/bin/python -m benchmarks.nemotron --models super --trials 1 \
+  --stop-on-http-errors
 ```
 
 Each command starts a new run. The runner tests up to 40 instructions for the model
@@ -79,7 +87,8 @@ that succeeded in the single-trial checks. For example:
 
 ```bash
 PYTHONPATH=src ./.venv/bin/python -m benchmarks.nemotron \
-  --models nano nano-omni super ultra lightning super-vl --trials 3
+  --models nano-omni ultra lightning super-vl --trials 3 \
+  --stop-on-http-errors
 ```
 
 If a run stops on a rate limit, wait for the OpenRouter limit to reset, then resume
@@ -87,8 +96,9 @@ the same model set and trial count with the printed result directory:
 
 ```bash
 PYTHONPATH=src ./.venv/bin/python -m benchmarks.nemotron \
-  --models nano nano-omni super ultra lightning super-vl --trials 3 \
-  --output benchmarks/results/nemotron/RUN_DIRECTORY --resume
+  --models nano-omni ultra lightning super-vl --trials 3 \
+  --output benchmarks/results/nemotron/RUN_DIRECTORY --resume \
+  --stop-on-http-errors
 ```
 
 The runner skips measured cases and retries pending ones. Results remain local because

@@ -2,7 +2,9 @@
 
 import argparse
 import csv
+from contextlib import contextmanager
 from datetime import datetime, timezone
+import fcntl
 import hashlib
 import itertools
 import json
@@ -12,6 +14,7 @@ from pathlib import Path
 import random
 import statistics
 import subprocess
+import tempfile
 from time import perf_counter, sleep
 from unittest.mock import patch
 from urllib.parse import urlparse
@@ -54,6 +57,24 @@ PAID_PRICES_PER_MILLION = {
     "nvidia/nemotron-3.5-super-vl": (0.10, 0.40),
 }
 LAST_REQUEST_AT = 0.0
+
+
+@contextmanager
+def benchmark_api_lock(key):
+    lock_dir = Path(tempfile.gettempdir()) / "nemotron-benchmark-locks"
+    lock_dir.mkdir(parents=True, exist_ok=True)
+    lock_name = hashlib.sha256(key.encode()).hexdigest() + ".lock"
+    with (lock_dir / lock_name).open("a", encoding="utf-8") as lock_file:
+        try:
+            fcntl.flock(lock_file.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError:
+            print("Another benchmark is using this OpenRouter key. Waiting for it to finish.",
+                  flush=True)
+            fcntl.flock(lock_file.fileno(), fcntl.LOCK_EX)
+        try:
+            yield
+        finally:
+            fcntl.flock(lock_file.fileno(), fcntl.LOCK_UN)
 
 
 def load_key():
@@ -325,12 +346,17 @@ def estimated_cost(row):
     return total
 
 
-def run(models, output, trials, timeout, resume, pause):
+def run(models, output, trials, timeout, resume, pause, stop_on_http_errors):
     key = load_key()
     if not key:
         raise ValueError("Missing OPENROUTER_API_KEY in the process environment or repository-root .env")
     if urlparse(ENDPOINT).hostname != "openrouter.ai":
         raise ValueError("Unexpected provider endpoint")
+    with benchmark_api_lock(key):
+        return run_locked(models, output, trials, timeout, resume, pause, stop_on_http_errors, key)
+
+
+def run_locked(models, output, trials, timeout, resume, pause, stop_on_http_errors, key):
     data = read_dataset()
     output = Path(output)
     if resume:
@@ -344,6 +370,7 @@ def run(models, output, trials, timeout, resume, pause):
         config["model_aliases"] = models
         config["requested_models"] = [MODEL_ALIASES[alias] for alias in models]
         config["paid_fallbacks_on_404_or_429"] = PAID_FALLBACKS
+        config["stop_on_http_404_or_429"] = stop_on_http_errors
         config.setdefault("resume_sessions", []).append(datetime.now(timezone.utc).isoformat())
         (output / "config.json").write_text(json.dumps(config, indent=2) + "\n", encoding="utf-8")
     else:
@@ -360,6 +387,7 @@ def run(models, output, trials, timeout, resume, pause):
             "timestamp": datetime.now(timezone.utc).isoformat(),
             "gold_review": "Project-authored references; independent human approval pending",
             "paid_fallbacks_on_404_or_429": PAID_FALLBACKS,
+            "stop_on_http_404_or_429": stop_on_http_errors,
         }
         (output / "config.json").write_text(json.dumps(config, indent=2) + "\n", encoding="utf-8")
     raw_path = output / "raw.jsonl"
@@ -387,7 +415,8 @@ def run(models, output, trials, timeout, resume, pause):
                 status_code = (result.get("attempts", [{}])[-1].get("http_status")
                                if result.get("attempts") else None)
                 if (result["infrastructure_error"] and status_code in {404, 429}
-                        and alias in PAID_FALLBACKS and alias not in paid_models):
+                        and alias in PAID_FALLBACKS and alias not in paid_models
+                        and not stop_on_http_errors):
                     failed_free_result = result
                     result = call_translator(
                         item, data["glossary"], alias, PAID_FALLBACKS[alias], key, timeout
@@ -416,7 +445,7 @@ def run(models, output, trials, timeout, resume, pause):
                 print(f"{alias} trial={trial + 1}/{trials} {item['id']}: {assessment['score']}", flush=True)
                 if result["infrastructure_error"]:
                     status_code = result.get("attempts", [{}])[-1].get("http_status") if result.get("attempts") else None
-                    if status_code == 429:
+                    if status_code == 429 or (stop_on_http_errors and status_code == 404):
                         stop_all = True
                         break
                     if status_code in {401, 402, 403}:
@@ -447,6 +476,8 @@ def main(argv=None):
                         help="New result directory; defaults to benchmarks/results/nemotron/<UTC timestamp>")
     parser.add_argument("--resume", action="store_true",
                         help="Resume pending cases in an existing output directory")
+    parser.add_argument("--stop-on-http-errors", action="store_true",
+                        help="Stop the run on the first HTTP 404 or 429 without paid fallback")
     parser.add_argument("--list", action="store_true", help="List free Nemotron model shortcuts")
     args = parser.parse_args(argv)
     if args.list:
@@ -460,7 +491,8 @@ def main(argv=None):
         parser.error("model aliases must be unique")
     output = args.output or RESULTS / datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     try:
-        location = run(models, output, args.trials, args.timeout, args.resume, args.pause)
+        location = run(models, output, args.trials, args.timeout, args.resume, args.pause,
+                       args.stop_on_http_errors)
     except Exception as exc:
         parser.exit(2, f"benchmark setup failed: {type(exc).__name__}: {exc}\n")
     print(location)
