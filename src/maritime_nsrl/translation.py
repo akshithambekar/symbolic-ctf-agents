@@ -46,8 +46,10 @@ def translate(text, backend="offline", model=None, base_url=None, logic_backend=
 Return data only, no code or Markdown. Allowed propositions: in_bounds (all controlled
 boats inside arena), tagged (any controlled boat tagged), has_flag (any controlled
 boat carries enemy flag), captured (team scores on this transition), home (any
-controlled boat within catch radius of own flag). Use ! & | -> X U F G with arbitrary
-nesting. Strong X requires a next state; U is strong until. Finite-trace semantics:
+controlled boat within catch radius of own flag), defender_behind_center (the
+designated defender is behind the centerline), attacker_forward (an attacker is
+beyond it), teammate_safe (no controlled teammate is tagged). Use ! & | -> X U F G
+with arbitrary nesting. Strong X requires a next state; U is strong until. Finite-trace semantics:
 eventual obligations must finish by the episode deadline. Do not invent constraints.
 Example: Whenever carrying a flag, eventually capture it: G(has_flag -> F(captured)).
 If intent is ambiguous or cannot be expressed, return {"error":"explanation"}."""
