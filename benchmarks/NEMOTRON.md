@@ -43,47 +43,25 @@ PYTHONPATH=src python -m benchmarks.nemotron --models all --trials 3 \
 ```
 
 OpenRouter free variants are rate-limited, and unsuccessful calls may count toward
-the limit. The runner stops after a 429 response and leaves the rest pending. The
-default call timeout is 120 seconds. Use `--pause SECONDS` to space requests further
-apart. If a free endpoint returns HTTP 404 or 429, the runner retries that model on
-its corresponding paid route and uses that route for its remaining cases. This can
-incur charges. The result records both model IDs and estimates cost from recorded
-usage and listed prices when possible.
+the limit. The default call timeout is 120 seconds. Use `--pause SECONDS` to space
+requests further apart. If a free endpoint returns HTTP 404 or 429, the runner tries
+that model's corresponding paid route unless you pass `--stop-on-http-errors`. Paid
+fallback can incur charges. The result records both model IDs and estimates cost from
+recorded usage and listed prices when possible.
 
 The runner makes requests in sequence and waits at least 3.1 seconds between them.
 A per-key file lock makes other benchmark processes on this computer wait for the
 active run to finish. Use `--stop-on-http-errors` to stop on the first 404 or 429
 without trying the paid route.
 
-## Complete a benchmark run
+## Run the benchmark
 
-The initial run is incomplete. It measured three responses out of 960 scheduled
-model, case, and trial outcomes. OpenRouter reported that the 9B v2 free and paid
-routes no longer have a provider. It gave the same response for the 12B v2 VL free
-and paid routes. The Nano free route returned 404, then its paid route produced one
-measured response. The Nano Omni and Ultra free routes each produced one measured
-response. The Super free route returned 404, and its paid route returned 429. The
-remaining models have no measured cases.
+The completed three-trial comparison uses the four routes that responded during
+route checks. It excludes the unavailable 9B v2 and 12B v2 VL routes. Nano's free
+route returned 404, and Super's free route returned 404. Earlier paid-route checks
+received one Nano response and a 429 for Super. See [results](NEMOTRON_RESULTS.md).
 
-The small 9B and 12B v2 aliases are unavailable on OpenRouter. Skip them in the full
-run. First test the remaining unmeasured routes one at a time:
-
-```bash
-PYTHONPATH=src ./.venv/bin/python -m benchmarks.nemotron --models lightning --trials 1 \
-  --stop-on-http-errors
-PYTHONPATH=src ./.venv/bin/python -m benchmarks.nemotron --models super-vl --trials 1 \
-  --stop-on-http-errors
-PYTHONPATH=src ./.venv/bin/python -m benchmarks.nemotron --models super --trials 1 \
-  --stop-on-http-errors
-```
-
-Each command starts a new run. The runner tests up to 40 instructions for the model
-unless OpenRouter returns an error that stops that model or the whole run. Review
-the printed result directory and its `summary.json` before continuing. Paid fallbacks
-can incur charges.
-
-After the routes respond, run all available models for three trials. Use the aliases
-that succeeded in the single-trial checks. For example:
+To repeat the completed comparison without paid fallbacks, run:
 
 ```bash
 PYTHONPATH=src ./.venv/bin/python -m benchmarks.nemotron \
@@ -91,8 +69,9 @@ PYTHONPATH=src ./.venv/bin/python -m benchmarks.nemotron \
   --stop-on-http-errors
 ```
 
-If a run stops on a rate limit, wait for the OpenRouter limit to reset, then resume
-the same model set and trial count with the printed result directory:
+If a run stops or encounters a connection error, resume the same model set and trial
+count with the printed result directory. The runner skips measured cases and retries
+pending ones:
 
 ```bash
 PYTHONPATH=src ./.venv/bin/python -m benchmarks.nemotron \
@@ -101,9 +80,8 @@ PYTHONPATH=src ./.venv/bin/python -m benchmarks.nemotron \
   --stop-on-http-errors
 ```
 
-The runner skips measured cases and retries pending ones. Results remain local because
-`benchmarks/results/` is gitignored. See [partial results](NEMOTRON_RESULTS.md) for
-the observed errors and measured sample counts.
+Results remain local because `benchmarks/results/` is gitignored. The tracked
+summary is in [results](NEMOTRON_RESULTS.md).
 
 ## Metrics
 

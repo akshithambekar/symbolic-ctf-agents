@@ -1,25 +1,32 @@
-# Partial Nemotron benchmark results
+# Nemotron benchmark results
 
-The initial three-trial run scheduled 960 outcomes across eight model aliases and 40
-instructions. It measured three responses before unavailable routes and a rate limit
-stopped progress. These samples are too small for a model comparison.
+The completed run measured 480 model, instruction, and trial outcomes across four
+free routes. Each route handled 40 instructions over three trials. The routes were
+run sequentially, with at least 3.1 seconds between provider requests.
 
-| Shortcut | Measured | Observed route result |
-| --- | ---: | --- |
-| `nano-9b-v2` | 0 | Free and paid routes returned 404. OpenRouter said no provider serves either route. |
-| `nano-12b-v2-vl` | 0 | Free and paid routes returned 404. OpenRouter said no provider serves either route. |
-| `nano` | 1 | Free route returned 404. The paid route returned one response. |
-| `nano-omni` | 1 | Free route returned one response. |
-| `super` | 0 | Free route returned 404. The paid route returned 429 with `Provider returned error`. |
-| `ultra` | 1 | Free route returned one response. |
-| `lightning` | 0 | No measured responses. |
-| `super-vl` | 0 | No measured responses. |
+| Shortcut | Model ID | Measured | Syntax valid | Compilable | Semantically correct | Mean latency | Estimated cost |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| `nano-omni` | `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free` | 120/120 | 98.96% | 98.96% | 54.17% | 20.90 s | $0.00 |
+| `ultra` | `nvidia/nemotron-3-ultra-550b-a55b:free` | 120/120 | 100% | 100% | 95.83% | 24.08 s | $0.00 |
+| `lightning` | `nvidia/nemotron-3.5-lightning:free` | 120/120 | 93.75% | 93.75% | 66.67% | 60.14 s | $0.00 |
+| `super-vl` | `nvidia/nemotron-3.5-super-vl:free` | 120/120 | 100% | 100% | 88.54% | 15.28 s | $0.00 |
 
-The single responses do not produce a semantic accuracy rate. A full comparison needs
-all 40 instructions for each available model and three trials. Run the remaining
-single-trial checks and the full benchmark as described in [the run guide](NEMOTRON.md).
+Semantic correctness compares each formula with the project-authored reference under
+the benchmark's finite-trace semantics. The references still need independent human
+review. These metrics show agreement with those references, not proof that they cover
+every reasonable interpretation of the English instructions.
 
-The runner stores detailed outputs, provider errors, and usage data in the local
-`benchmarks/results/nemotron/` directory. Git ignores that directory. The first run
-was written to `benchmarks/results/nemotron/20261103T044915Z`. A separate retest of
-`nano-9b-v2` was written to `benchmarks/results/nemotron/20261103T050550Z`.
+The run recorded 679 provider requests. Seven requests failed transiently during the
+run: five connection errors, one chunked response error, and one HTTP 502. Resume runs
+recovered every scheduled outcome. OpenRouter returned no HTTP 404 or 429 for these
+four routes. The results include only free-route attempts, so estimated cost is $0.00.
+
+Separate route checks found that OpenRouter no longer serves the 9B v2 or 12B v2 VL
+routes. Nano and Super free routes returned 404. In an earlier run, Nano's paid route
+produced a response and Super's paid route returned 429. This completed comparison
+excludes those four aliases. Review their route availability before adding them to a
+future comparison.
+
+The runner stores full raw outputs and usage data in the local,
+gitignored `benchmarks/results/nemotron/20261103T073211Z/` directory. Use the commands
+in [the run guide](NEMOTRON.md) to repeat or extend the benchmark.
