@@ -22,6 +22,8 @@ It is a separate experiment from the newer repository's `benchmarks/` tools.
 `reference_run/` is copied byte-for-byte from the local experiment. All 25 entries
 in its original source/dataset manifest matched before import. An additional
 manifest covers the complete preserved folder. Do not edit historical artifacts.
+Git line-ending conversion is disabled for that folder to preserve its hashes
+on Windows and POSIX checkouts.
 The runner imports `reference_run/source` explicitly, so neither the latest RL
 translator nor `translators/team_translator` replaces the original implementation.
 
