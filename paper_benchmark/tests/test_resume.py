@@ -4,7 +4,17 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from resume_matrix import completed
+from resume_matrix import completed, daily_quota_reset
+
+
+def test_daily_quota_reset_requires_explicit_daily_limit(tmp_path):
+    path = tmp_path / 'raw.jsonl'
+    response = {'error': {'metadata': {'limit_source': 'openrouter_free_tier_daily',
+                                     'headers': {'X-RateLimit-Reset': '1793836800000'}}}}
+    path.write_text(json.dumps({'attempts': [{'response': json.dumps(response)}]}))
+    assert daily_quota_reset(path) == 1793836800
+    path.write_text(json.dumps({'attempts': [{'response': '{"error":{"code":429}}'}]}))
+    assert daily_quota_reset(path) is None
 
 
 def test_resume_preserves_unusable_but_retries_infrastructure(tmp_path):

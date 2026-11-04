@@ -11,6 +11,27 @@ import time
 from model_matrix import MODELS, ROOT, save
 
 
+def daily_quota_reset(path):
+    """Return provider reset time only for an explicit daily-quota response."""
+    if not path.exists():
+        return None
+    for line in path.read_text(encoding='utf-8').splitlines():
+        try:
+            row = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        for attempt in row.get('attempts', []):
+            try:
+                error = json.loads(attempt.get('response') or '{}').get('error', {})
+                metadata = error.get('metadata', {})
+                if metadata.get('limit_source') == 'openrouter_free_tier_daily':
+                    reset = metadata.get('headers', {}).get('X-RateLimit-Reset')
+                    return float(reset) / 1000 if reset else time.time() + 3600
+            except (ValueError, TypeError, AttributeError):
+                continue
+    return None
+
+
 def completed(roots):
     outcomes = {}
     for root in roots:
@@ -96,6 +117,19 @@ def main():
                                      remaining=remaining, exit_code=process.returncode)
                     state['measured_outputs'] = len(known)
                     save(output / 'status.json', state)
+                    reset = daily_quota_reset(target / 'raw.jsonl')
+                    if reset is not None:
+                        # Keep the background launcher alive without issuing more
+                        # API requests until the provider's daily reset.
+                        wake = max(reset + 60, time.time() + 60)
+                        state.update(status='waiting_for_daily_quota',
+                                     resume_at=datetime.fromtimestamp(wake, timezone.utc).isoformat())
+                        save(output / 'status.json', state)
+                        while time.time() < wake:
+                            time.sleep(min(30, max(0.1, wake - time.time())))
+                        state.update(status='running')
+                        state.pop('resume_at', None)
+                        save(output / 'status.json', state)
                     if remaining:
                         time.sleep(60)
     outcomes = completed(roots)
