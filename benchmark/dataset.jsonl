@@ -48,7 +48,7 @@
 
 
 """
-Paragraph agent category
+Paraphrase agent category
 """
 {"id": "p001", "english": "Score a point.", "ltl": "F flag_captured", "category": "paraphrase", "difficulty": "easy", "split": "test", "mode": "1v1", "group": "g_capture", "expected_error": null, "notes": ""}
 {"id": "p002", "english": "Bring their flag back to our side.", "ltl": "F flag_captured", "category": "paraphrase", "difficulty": "medium", "split": "test", "mode": "1v1", "group": "g_capture", "expected_error": null, "notes": "Treats capture as returning the flag home."}

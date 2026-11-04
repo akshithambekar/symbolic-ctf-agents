@@ -1,0 +1,27 @@
+"""
+3v3 Agent Team Instruction
+"""
+
+"""
+A1 and A2 Team Duo Setup
+"""
+
+"""
+A1 and A3 Team Duo Setup
+"""
+
+"""
+A2 and A3 Team Duo Setup
+"""
+
+"""
+Individual of each A1, A2, and A3 behaviors 
+(Should repopulate individual from dataset_1v1) where we replace each number in A_ depending on which ones we want to test for)
+(Will be added in for validate_3v3 if needed and more info will be adjusted)
+"""
+
+"""
+Check Error Behavior (Not commands/random words/avoidable instructions)
+Should be team checking error where it should not be executed under any condition.
+"""
+

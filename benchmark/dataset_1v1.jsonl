@@ -70,3 +70,4 @@
 {"id": "n001", "english": "What is the weather like today?", "ltl": null, "category": "not_a_command", "difficulty": "easy", "split": "test", "mode": "1v1", "tier_min": 1, "group": null, "expected_error": "NOT_A_COMMAND", "notes": ""}
 {"id": "n002", "english": "asdf qwerty zxcv", "ltl": null, "category": "not_a_command", "difficulty": "easy", "split": "test", "mode": "1v1", "tier_min": 1, "group": null, "expected_error": "NOT_A_COMMAND", "notes": ""}
 {"id": "n003", "english": "Do your best.", "ltl": null, "category": "not_a_command", "difficulty": "easy", "split": "test", "mode": "1v1", "tier_min": 1, "group": null, "expected_error": "NOT_A_COMMAND", "notes": "Too vague to translate."}
+{"id": "n004", "english": "go up to 5 miles then jump", "ltl": null, "category": "not_a_command", "difficulty": "easy", "split": "test", "mode": "1v1", "tier_min": 1, "group": null, "expected_error": "NOT_A_COMMAND", "notes": "Not part of command and we do not use miles"}

@@ -3,7 +3,7 @@
 This page lists the external documents the team uses for the MCTF project.
 To add a new document, put it in the section that fits best and fill in every column of the table.
 
-IBM NL2LTL (will look into further for import library and it's ability): https://github.com/IBM/nl2ltl
+IBM NL2LTL: https://github.com/IBM/nl2ltl
 ## Competition
 
 | Document | Description | Link |
