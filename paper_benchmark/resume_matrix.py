@@ -61,6 +61,8 @@ def main():
     parser.add_argument('--previous', type=Path, action='append', required=True)
     parser.add_argument('--env-file', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--models', nargs='+', choices=MODELS, default=MODELS,
+                        help='Limit continuation to these model IDs; other models receive no calls')
     args = parser.parse_args()
     previous = [p.resolve() for p in args.previous]
     output = args.output.resolve()
@@ -77,9 +79,13 @@ def main():
     state = dict(kind='exploratory-continuation', previous=[str(p) for p in previous],
                  started=datetime.now(timezone.utc).isoformat(), dataset_sha256=digest,
                  source_commit=subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
-                 scheduled=4320, retained=len(completed(previous)), conditions=[], status='running',
+                 scheduled=4320, selected_models=args.models,
+                 selected_scheduled=len(set(args.models))*1080,
+                 retained=len(completed(previous)), conditions=[], status='running',
                  policy='Keep first non-infrastructure outcome, including incorrect/unusable outputs; retry only infrastructure/missing outcomes')
     for index, model in enumerate(MODELS):
+        if model not in args.models:
+            continue
         for trial in range(3):
             for method in ('current', 'ltlcodegen', 'ibm'):
                 for retry in range(3):
@@ -136,7 +142,9 @@ def main():
     with (output / 'combined_measured.jsonl').open('x', encoding='utf-8') as stream:
         for (model, trial, method, item_id), entry in sorted(outcomes.items()):
             stream.write(json.dumps(dict(**entry, matrix_trial=trial)) + '\n')
-    state.update(status='complete' if len(outcomes) == 4320 else 'incomplete',
+    selected_measured = sum(k[0] in args.models for k in outcomes)
+    state.update(status='complete' if selected_measured == state['selected_scheduled'] else 'incomplete',
+                 selected_measured=selected_measured,
                  measured_outputs=len(outcomes), finished=datetime.now(timezone.utc).isoformat())
     save(output / 'status.json', state)
 
