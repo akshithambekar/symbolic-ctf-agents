@@ -81,6 +81,8 @@ def call_backend(item, model, endpoint, timeout, glossary, api_key, python=None,
         except requests.RequestException as exc:
             attempt['error'] = type(exc).__name__
             attempt['http_status'] = exc.response.status_code if exc.response is not None else None
+            if exc.response is not None:
+                attempt['provider_error_response'] = exc.response.text
             result.update(infrastructure_error=True, error=type(exc).__name__)
             return result
         finally:

@@ -168,3 +168,13 @@ snapshot. `status.json` records the active child PID and condition; raw files
 provide within-condition progress. A final `combined_measured.jsonl` links each
 retained row to its original file/line. Local batch trial numbers are always zero;
 use `matrix_trial` from condition metadata when aggregating continuations.
+
+`finish_ultra.py` accepts the same `--previous`, `--env-file`, and fresh `--output`
+arguments plus optional `--existing-pid PID`. It supervises the existing recovery
+without interrupting its request, then launches fresh Ultra-only recovery passes
+until all 1,080 outcomes are measured. It prevents idle system sleep on Windows,
+retains every measured outcome, waits through quota resets, and writes a final
+consolidated report with source-file/line provenance. It has no finite recovery
+round limit; terminate its process explicitly to stop supervision. It cannot
+survive shutdown/power loss and must be relaunched with all prior roots after
+such an interruption. Pending requests can still take several minutes.

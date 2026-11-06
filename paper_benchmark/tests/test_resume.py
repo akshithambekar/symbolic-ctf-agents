@@ -13,6 +13,8 @@ def test_daily_quota_reset_requires_explicit_daily_limit(tmp_path):
                                      'headers': {'X-RateLimit-Reset': '1793836800000'}}}}
     path.write_text(json.dumps({'attempts': [{'response': json.dumps(response)}]}))
     assert daily_quota_reset(path) == 1793836800
+    path.write_text(json.dumps({'attempts': [{'provider_error_response': json.dumps(response)}]}))
+    assert daily_quota_reset(path) == 1793836800
     path.write_text(json.dumps({'attempts': [{'response': '{"error":{"code":429}}'}]}))
     assert daily_quota_reset(path) is None
 

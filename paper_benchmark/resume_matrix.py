@@ -22,7 +22,7 @@ def daily_quota_reset(path):
             continue
         for attempt in row.get('attempts', []):
             try:
-                error = json.loads(attempt.get('response') or '{}').get('error', {})
+                error = json.loads(attempt.get('provider_error_response') or attempt.get('response') or '{}').get('error', {})
                 metadata = error.get('metadata', {})
                 if metadata.get('limit_source') == 'openrouter_free_tier_daily':
                     reset = metadata.get('headers', {}).get('X-RateLimit-Reset')
