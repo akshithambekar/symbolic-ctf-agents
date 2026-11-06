@@ -30,6 +30,8 @@ class ArenaConfig:
     scenario: str = "standard"
     random_starts: bool = True
     horizon: float = 240.0
+    max_score: int = 1
+    tagging_cooldown: float = 30.0
     repeat: int = 5
     gamma: float = 0.99
     capture_reward: float = 20.0
@@ -50,6 +52,7 @@ class ArenaConfig:
     boundary_start_margin: float = 2.5
     boundary_start_speed: float = 0.0
     probe_action: bool = False
+    role_actions: bool = False
     curriculum_phase: int = 0
     probe_milestone_reward: float = 0.0
 
@@ -68,11 +71,19 @@ class TeamArena:
             raise ValueError("Supported teams: 1, 2, or 3")
         if config.opponent not in {"static", "patrol", "chase"}:
             raise ValueError(config.opponent)
-        if config.scenario not in SCENARIOS or config.repeat < 1 or config.horizon <= 0:
+        if (
+            config.scenario not in SCENARIOS
+            or config.repeat < 1
+            or config.horizon <= 0
+            or config.max_score < 1
+            or config.tagging_cooldown < 0
+        ):
             raise ValueError("Invalid arena config")
         if not 0 < config.opponent_speed <= 1:
             raise ValueError("Opponent speed must be in (0,1]")
-        if config.start_mode not in {"standard", "boundary_lower", "boundary_upper"}:
+        if config.start_mode not in {
+            "standard", "boundary_lower", "boundary_upper", "near_flag", "carry"
+        }:
             raise ValueError("Unknown start distribution")
         if not 0 < config.boundary_start_margin < SCENARIOS[config.scenario][1] / 2:
             raise ValueError("Boundary start margin must be inside the arena")
@@ -100,10 +111,10 @@ class TeamArena:
                 config_dict={
                     "env_bounds": self.size.tolist(),
                     "max_time": config.horizon,
-                    "max_score": 1,
+                    "max_score": config.max_score,
                     "tau": 0.1,
                     "sim_speedup_factor": 10,
-                    "tagging_cooldown": 30.0,
+                    "tagging_cooldown": config.tagging_cooldown,
                     "suppress_numpy_warnings": False,
                 },
             )
@@ -122,7 +133,9 @@ class TeamArena:
             raise ValueError("Boundary initial speed exceeds simulator limits")
         # 0 flag, 1 home, 2 low flank, 3 high flank, 4 low return lane,
         # 5 high return lane, 6 evade nearest opponent, 7 hold position.
-        self.action_space = spaces.Discrete(9 if config.probe_action else 8)
+        if config.probe_action and config.role_actions:
+            raise ValueError("Probe and team-role actions both use action 8")
+        self.action_space = spaces.Discrete(9 if config.probe_action or config.role_actions else 8)
         extra_features = int(config.defender_distance_feature)
         self.observation_space = spaces.Box(
             -2.0,
@@ -188,33 +201,56 @@ class TeamArena:
         headings = [90.0] * team_size + [180.0] * team_size
         speeds = [0.0] * (2 * team_size)
         if config.start_mode != "standard":
-            lower = config.start_mode == "boundary_lower"
-            positions[:team_size] = [
-                [
-                    0.22 * width + 5 * i,
-                    config.boundary_start_margin
-                    if lower
-                    else height - config.boundary_start_margin,
+            if config.start_mode in {"boundary_lower", "boundary_upper"}:
+                lower = config.start_mode == "boundary_lower"
+                positions[:team_size] = [
+                    [
+                        0.22 * width + 5 * i,
+                        config.boundary_start_margin
+                        if lower
+                        else height - config.boundary_start_margin,
+                    ]
+                    for i in range(team_size)
                 ]
-                for i in range(team_size)
-            ]
-            headings[:team_size] = [180.0 if lower else 0.0] * team_size
-            speeds[:team_size] = [config.boundary_start_speed] * team_size
+                headings[:team_size] = [180.0 if lower else 0.0] * team_size
+                speeds[:team_size] = [config.boundary_start_speed] * team_size
+            elif config.start_mode in {"near_flag", "carry"}:
+                # Controlled late-approach and return-leg starts for feasibility screens.
+                jitter = self.rng.uniform(-0.025 * height, 0.025 * height)
+                x_fraction = 0.87 if config.start_mode == "near_flag" else 0.62
+                positions[0] = [
+                    x_fraction * width,
+                    np.clip(0.84 * height + jitter, 5, height - 5),
+                ]
+                headings[0] = 90.0
+                if config.start_mode == "carry":
+                    positions[team_size] = [
+                        0.82 * width,
+                        np.clip(0.68 * height - jitter, 5, height - 5),
+                    ]
+                else:
+                    positions[team_size] = [
+                        0.70 * width,
+                        np.clip(0.68 * height - jitter, 5, height - 5),
+                    ]
         for key, controllers in self.controllers.items():
             self.game.players[key]._pid_controllers = copy.deepcopy(controllers)
+        init_dict = {
+            "agent_position": positions,
+            "agent_heading": headings,
+            "agent_speed": speeds,
+        }
+        if config.start_mode == "carry":
+            init_dict["agent_has_flag"] = np.array(
+                [True] + [False] * (2 * team_size - 1), dtype=bool
+            )
         with warnings.catch_warnings():
             warnings.filterwarnings(
                 "ignore", message="divide by zero encountered in divide", category=RuntimeWarning
             )
             self.game.reset(
                 seed=int(self.rng.integers(0, 2**31 - 1)),
-                options={
-                    "init_dict": {
-                        "agent_position": positions,
-                        "agent_heading": headings,
-                        "agent_speed": speeds,
-                    }
-                },
+                options={"init_dict": init_dict},
             )
         self.monitor = TemporalMonitor(self.automaton)
         self.monitor.update(self.labels())
@@ -230,6 +266,10 @@ class TeamArena:
             guidance_reward=0.0,
             captures=0,
             opponent_captures=0,
+            opponent_pickups=0,
+            collisions=0,
+            collisions_for=0,
+            collisions_against=0,
             pickups=0,
             tags_received=0,
             out_of_bounds_steps=0,
@@ -351,6 +391,18 @@ class TeamArena:
         pos = self.game.state["agent_position"][index]
         if action == 8 and self.config.probe_action:
             return np.array([0.56 * width, 0.80 * height])
+        if action == 8 and self.config.role_actions:
+            state = self.game.state
+            opponents = np.arange(self.n, 2 * self.n)
+            carriers = opponents[state["agent_has_flag"][opponents]]
+            invaders = opponents[state["agent_position"][opponents, 0] < width / 2]
+            targets = carriers if len(carriers) else invaders
+            if not len(targets):
+                targets = opponents
+            if len(targets):
+                distances = np.linalg.norm(state["agent_position"][targets] - pos, axis=1)
+                return state["agent_position"][targets[np.argmin(distances)]]
+            return np.array([0.32 * width, 0.5 * height])
         if action == 0:
             return self.game.state["flag_home"][1]
         if action == 1:
@@ -482,6 +534,9 @@ class TeamArena:
                 state["grabs"].copy(),
                 state["tags"].copy(),
             )
+            collision_total = int(np.sum(state["agent_collisions"]))
+            blue_collision_total = int(np.sum(state["agent_collisions"][:team_size]))
+            red_collision_total = int(np.sum(state["agent_collisions"][team_size:]))
             had_flag = np.array(state["agent_has_flag"][:team_size]).copy()
             was_tagged = np.array(state["agent_is_tagged"][:team_size]).copy()
             opponents = self.opponent_actions()
@@ -509,6 +564,17 @@ class TeamArena:
                 result = self.game.step(choices[0][1])
             _, _, terms, truncs, _ = result
             state = self.game.state
+            metrics = self.metrics
+            collisions_delta = max(0, int(np.sum(state["agent_collisions"])) - collision_total)
+            blue_collisions_delta = max(
+                0, int(np.sum(state["agent_collisions"][:team_size])) - blue_collision_total
+            )
+            red_collisions_delta = max(
+                0, int(np.sum(state["agent_collisions"][team_size:])) - red_collision_total
+            )
+            metrics["collisions"] += collisions_delta // 2
+            metrics["collisions_for"] += blue_collisions_delta
+            metrics["collisions_against"] += red_collisions_delta
             if not self.finite_game_state():
                 # PyQuaticus can occasionally produce invalid interception geometry.
                 # End this episode, retain the previous valid observation, and let
@@ -551,6 +617,7 @@ class TeamArena:
             metrics["captures"] += scored
             metrics["opponent_captures"] += int(state["captures"][1] - caps[1])
             metrics["pickups"] += picked
+            metrics["opponent_pickups"] += int(state["grabs"][1] - grabs[1])
             metrics["tags_received"] += int(state["tags"][1] - tags[1])
             metrics["out_of_bounds_steps"] += int(any(state["agent_oob"][:team_size]))
             metrics["temporal_failure_steps"] += int(self.monitor.impossible)
