@@ -47,7 +47,7 @@ def worker(data, python=None):
         raise WorkerUnavailable(f'IBM worker could not run: {type(exc).__name__}') from exc
 
 
-def call_backend(item, model, endpoint, timeout, glossary, api_key, python=None, max_tokens=200):
+def call_backend(item, model, endpoint, timeout, glossary, api_key, python=None, max_tokens=200, domain_profile=None):
     start = time.perf_counter()
     result = dict(method='ibm', implementation_id=implementation_id(max_tokens),
                   formula=None, attempts=[], repair_attempts=0, latency_seconds=None,
@@ -56,6 +56,8 @@ def call_backend(item, model, endpoint, timeout, glossary, api_key, python=None,
     try:
         data = {'action': 'request', 'instruction': item['instruction'],
                 'model': model, 'glossary': glossary}
+        if domain_profile is not None:
+            data.update(domain_profile)
         built = worker(data, python)
         if 'request' not in built:
             raise WorkerUnavailable('IBM engine could not construct a request: ' + built.get('error', 'unknown error'))

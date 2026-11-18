@@ -56,7 +56,18 @@ def process(data):
 
     core.client = SimpleNamespace(chat=SimpleNamespace(completions=SimpleNamespace(create=completion)))
     engine = CTFEngine(model=data['model'], prompt=PROMPT)
-    engine._prompt += ('\n\nCTF DOMAIN ADAPTATION:\n' + data['glossary'] +
+    if 'domain_name' in data:
+        # Separate upstream-domain variant; default CTF request text stays fixed.
+        engine._prompt += ('\n\nDOMAIN ADAPTATION: ' + data['domain_name'] + '\n' + data['glossary'] +
+            '\nAllowed symbols: ' + ', '.join(data['allowed_symbols']) +
+            '\nSelect ONE of these implemented templates: ' + ', '.join(PATTERNS) +
+            '. Preserve the entire instruction. Return PATTERN: template_name and a newline '
+            'SYMBOLS: symbol_names separated by comma-space. If one template cannot express '
+            'the whole instruction, return UNSUPPORTED: explanation. Do not return LTL or code.')
+    else:
+        engine._prompt += ''
+    if 'domain_name' not in data:
+        engine._prompt += ('\n\nCTF DOMAIN ADAPTATION:\n' + data['glossary'] +
                       '\nFor this domain ALLOWED_SYMBOLS are exactly the eight predicate names above.'
                       '\nThe library supports these DECLARE templates: ' + ', '.join(PATTERNS) +
                       '. Select ONE template that preserves the whole instruction exactly.'
