@@ -61,7 +61,8 @@ def main():
     parser.add_argument('--previous', type=Path, action='append', required=True)
     parser.add_argument('--env-file', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
-    parser.add_argument('--models', nargs='+', choices=MODELS, default=MODELS,
+    parser.add_argument('--models', nargs='+', choices=MODELS + [
+        'google/gemma-4-26b-a4b-it:free', 'google/gemma-4-31b-it:free'], default=MODELS,
                         help='Limit continuation to these model IDs; other models receive no calls')
     args = parser.parse_args()
     previous = [p.resolve() for p in args.previous]
@@ -83,9 +84,7 @@ def main():
                  selected_scheduled=len(set(args.models))*1080,
                  retained=len(completed(previous)), conditions=[], status='running',
                  policy='Keep first non-infrastructure outcome, including incorrect/unusable outputs; retry only infrastructure/missing outcomes')
-    for index, model in enumerate(MODELS):
-        if model not in args.models:
-            continue
+    for index, model in enumerate(dict.fromkeys(args.models)):
         for trial in range(3):
             for method in ('current', 'ltlcodegen', 'ibm'):
                 for retry in range(3):
