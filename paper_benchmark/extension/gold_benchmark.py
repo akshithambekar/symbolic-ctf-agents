@@ -233,6 +233,7 @@ def run(args):
                 if not any((r['requested_model'],r['method'],r['item_id'])==identity for r in rows):
                     rows.append(dict(row,source_file=str(previous/'raw.jsonl')))
     retained={(r['requested_model'],r['method'],r['item_id']) for r in rows}
+    (output/'status.json').write_text(json.dumps(dict(status='running',recorded=len(rows),scheduled=270)))
     with (output/'raw.jsonl').open('x',encoding='utf-8') as stream:
         for index,item in enumerate(dataset['items']):
             for model in MODELS:
@@ -264,6 +265,7 @@ def run(args):
                                 summary.append(dict(domain=domain,model=mm,method=mt,recorded=len(group),
                                     measured=len(measured),equivalent=sum(r['assessment']['outcome']=='equivalent' for r in measured)))
                     (output/'summary.json').write_text(json.dumps(summary,indent=2))
+                    (output/'status.json').write_text(json.dumps(dict(status='running',recorded=len(rows),scheduled=270)))
                     print(model,method,item['id'],assessment['outcome'],flush=True)
                     if result['infrastructure_error']:
                         # Pause visibly rather than silently converting quota failures into quality zeros.
