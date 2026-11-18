@@ -17,6 +17,19 @@ authors or reproducing the paper. No primary score has been rewritten.
 5. Pick's canonical labels provide limited grounding semantics for manipulation
    events. Our navigation-derived object interface is not a validated recreation
    of the paper's dataset-specific task representation.
+6. The paper's NL2LTL baseline cites Dai et al., "Optimal Scene Graph Planning
+   with Large Language Model Guidance" (ICRA 2024), reference 7. Its public
+   `ltl_translator.py` and `scenegraph_prompt.py` implement direct LTL generation
+   and checking. It is not interchangeable with the IBM NL2LTL 0.0.6 DECLARE
+   template adapter in our pilot. IBM is a complementary comparison, not a
+   reproduction of the paper's baseline despite the similar name.
+
+The authors' Table II caption also states that BART baseline results come from
+the original Pan et al. paper. Copying those published values must be labeled
+as literature results. An independent rerun requires the corresponding
+fine-tuning/cross-validation runs or verified trained checkpoints.
+
+Verification source: https://arxiv.org/html/2503.07902v2 (Table II and reference 7).
 
 ## Concrete reference/English discrepancy
 
