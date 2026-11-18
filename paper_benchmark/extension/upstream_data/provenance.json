@@ -1,0 +1,9 @@
+{
+  "source_revision": "e152ebd0d0b328f945e07b6c050106ce89bdb794",
+  "source_url": "https://raw.githubusercontent.com/ExistentialRobotics/LTLCodeGen/e152ebd0d0b328f945e07b6c050106ce89bdb794/real_world_evaluation_prompts.yaml",
+  "sha256": "fbdad740dda6075ccc1b15856167358235e69cf7670579825cf0fecd4154cc9d",
+  "items": 45,
+  "reference_formulas_available": false,
+  "license": "MIT; see LICENSE",
+  "retrieved": "2026-11-17"
+}

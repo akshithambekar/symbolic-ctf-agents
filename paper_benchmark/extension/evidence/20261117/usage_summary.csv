@@ -1,0 +1,13 @@
+model,method,provider_attempts,repair_attempts,infrastructure_outcome_attempts,attempts_with_usage,prompt_tokens_reported,completion_tokens_reported,reasoning_tokens_reported,total_tokens_reported,attempts_with_reported_cost,reported_cost_usd
+nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free,current,9,0,9,0,0,0,0,0,0,
+nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free,ibm,9,0,9,0,0,0,0,0,0,
+nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free,ltlcodegen,9,0,9,0,0,0,0,0,0,
+nvidia/nemotron-3-ultra-550b-a55b:free,current,533,169,5,529,296342,497111,477635,793453,529,0
+nvidia/nemotron-3-ultra-550b-a55b:free,ibm,385,0,25,360,672189,592687,569474,1264876,360,0
+nvidia/nemotron-3-ultra-550b-a55b:free,ltlcodegen,496,125,11,485,3581290,1221881,1062967,4803171,485,0
+nvidia/nemotron-3.5-lightning:free,current,192,63,9,183,106819,721205,712604,828024,183,0
+nvidia/nemotron-3.5-lightning:free,ibm,9,0,9,0,0,0,0,0,0,
+nvidia/nemotron-3.5-lightning:free,ltlcodegen,89,15,10,79,581632,495838,465781,1077470,79,0
+nvidia/nemotron-3.5-super-vl:free,current,485,122,3,482,261701,702409,687590,964110,482,0
+nvidia/nemotron-3.5-super-vl:free,ibm,367,0,7,360,672130,922966,910279,1595096,360,0
+nvidia/nemotron-3.5-super-vl:free,ltlcodegen,511,148,3,508,3751191,1996805,1809205,5747996,508,0

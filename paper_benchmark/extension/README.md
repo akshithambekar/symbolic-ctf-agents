@@ -19,6 +19,24 @@ formulas for ambiguous/unsupported requests, 20 code-interpretation failures,
 and 1 output-limit failure. The remaining 206 agree with formula references.
 Do not collapse these categories into an undifferentiated syntax-error claim.
 
+Concrete examples retained in the raw outputs:
+
+- IBM translates pickup-then-capture as `G(has_flag -> F(captured))` in a failed
+  case. That response rule can hold without any pickup, whereas
+  `F(has_flag & F(captured))` explicitly requires possession and capture.
+- IBM can choose eventual-response semantics where a rule requires an immediate
+  condition: `G(attacker_forward -> F(teammate_safe))` permits delayed recovery.
+- Codegen sometimes adds `!captured U has_flag` to the intended mission. This
+  strengthens the abstract contract beyond the requested clauses.
+- Both workflows can use `!tagged` where the gold uses `teammate_safe`. The game
+  glossary relates these predicates, but the primary scorer treats them as
+  independent Boolean inputs. These cases need special attention before calling
+  every mismatch a mistranslation.
+
+`grounding_diagnostic.json` separately tests the proposed equivalence invariant
+for those two predicates. It is a sensitivity analysis requiring review, and
+does not replace the original scores or prove physical realizability.
+
 ## 2. Token and cost accounting
 
 `usage_attempts.csv` includes every actual saved request from the source roots,
@@ -53,6 +71,11 @@ NVIDIA Lightning/Nano Omni are approximately 30B total / 3B active; Super VL is
 120B / 12B; Ultra is 550B / 55B. Gemma supplies a small/large active-size contrast,
 not an exact match in total parameters, architecture, or inference compute.
 These sizes come from the archived OpenRouter descriptions and model endpoints.
+
+`wait_gemma.py` queues capacity retries at 30-minute intervals for up to 24
+rounds. It retries whole runs only while there are zero measured outputs. Once
+any measured data exists, it preserves that run and stops whole-run retries so
+later recovery can target missing cells without replacing unfavorable outcomes.
 
 On November 17 the live catalog lists no second non-NVIDIA family with two free
 text models. The checked OpenAI GPT-OSS 20B/120B and Qwen 30B/235B free aliases
@@ -96,6 +119,13 @@ UM-ARM-Lab/Efficient-Eng-2-LTL. Those are separate resources with different
 predicate grammars and semantics. A scored reproduction needs their gold data,
 operator normalization and semantic checker; the instruction-only 45-case test
 must not be misreported as such a reproduction.
+
+The separate source repository has been located at commit
+`7c778144c6bfcfecd14b3df5fbb6a40d2e15fd17`; its three
+`datasets/{drone-planning,clean-up,pick-and-place}/golden.jsonl` files expose
+natural-language instructions and `raw_ltl` references. A proper semantic
+evaluation must retain their declared trace semantics rather than silently
+reusing the finite-trace CTF accuracy metric.
 
 Primary sources:
 

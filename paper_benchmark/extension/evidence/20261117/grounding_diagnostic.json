@@ -1,0 +1,849 @@
+{
+  "kind": "supplementary-sensitivity-analysis",
+  "invariant": "G((teammate_safe -> !tagged) & (!tagged -> teammate_safe))",
+  "primary_scores_changed": false,
+  "independent_invariant_review_pending": true,
+  "matches_only_under_invariant": [
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ltlcodegen",
+      "trial": 0,
+      "item_id": "dev-safe_attacker-0",
+      "formula": "G((attacker_forward) -> (!(tagged)))",
+      "reference": "G(attacker_forward -> teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ltlcodegen",
+      "trial": 0,
+      "item_id": "dev-safe_attacker-1",
+      "formula": "G((attacker_forward) -> (!(tagged)))",
+      "reference": "G(attacker_forward -> teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ltlcodegen",
+      "trial": 0,
+      "item_id": "test-defender_implies_safe-1",
+      "formula": "G((defender_behind_center) -> (!(tagged)))",
+      "reference": "G(defender_behind_center -> teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "current",
+      "trial": 0,
+      "item_id": "test-strict_team_recovery-0",
+      "formula": "G(tagged -> X F !tagged)",
+      "reference": "G(tagged -> X(F(teammate_safe)))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "current",
+      "trial": 0,
+      "item_id": "test-strict_team_recovery-1",
+      "formula": "G(tagged -> F(teammate_safe))",
+      "reference": "G(tagged -> X(F(teammate_safe)))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "current",
+      "trial": 0,
+      "item_id": "test-unsafe_eventual_defender-1",
+      "formula": "G(tagged -> F(defender_behind_center))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "current",
+      "trial": 0,
+      "item_id": "test-next_defender_contingency-1",
+      "formula": "G((tagged & attacker_forward) -> X(defender_behind_center))",
+      "reference": "G((!teammate_safe & attacker_forward) -> X(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "current",
+      "trial": 0,
+      "item_id": "test-bounds_safe_attack_pickup-1",
+      "formula": "G(in_bounds) & G(attacker_forward -> !tagged) & F(has_flag)",
+      "reference": "G(in_bounds) & G(attacker_forward -> teammate_safe) & F(has_flag)"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ibm",
+      "trial": 0,
+      "item_id": "test-strict_team_recovery-1",
+      "formula": "G((tagged) -> (F(teammate_safe)))",
+      "reference": "G(tagged -> X(F(teammate_safe)))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ibm",
+      "trial": 0,
+      "item_id": "test-unsafe_eventual_defender-0",
+      "formula": "G((tagged) -> (F(defender_behind_center)))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ibm",
+      "trial": 0,
+      "item_id": "test-unsafe_eventual_defender-1",
+      "formula": "G((tagged) -> (F(defender_behind_center)))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ltlcodegen",
+      "trial": 0,
+      "item_id": "test-strict_team_recovery-0",
+      "formula": "G((tagged) -> (X(F(!(tagged)))))",
+      "reference": "G(tagged -> X(F(teammate_safe)))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ltlcodegen",
+      "trial": 0,
+      "item_id": "test-unsafe_eventual_defender-0",
+      "formula": "G((tagged) -> (F(defender_behind_center)))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ltlcodegen",
+      "trial": 0,
+      "item_id": "test-next_defender_contingency-1",
+      "formula": "G(((tagged) & (attacker_forward)) -> (X(defender_behind_center)))",
+      "reference": "G((!teammate_safe & attacker_forward) -> X(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "current",
+      "trial": 1,
+      "item_id": "test-strict_team_recovery-0",
+      "formula": "G(tagged -> X F(!tagged))",
+      "reference": "G(tagged -> X(F(teammate_safe)))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "current",
+      "trial": 1,
+      "item_id": "test-strict_team_recovery-1",
+      "formula": "G(tagged -> X F !tagged)",
+      "reference": "G(tagged -> X(F(teammate_safe)))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "current",
+      "trial": 1,
+      "item_id": "test-unsafe_eventual_defender-0",
+      "formula": "G(tagged -> F(defender_behind_center))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "current",
+      "trial": 1,
+      "item_id": "test-unsafe_eventual_defender-1",
+      "formula": "G(tagged -> F(defender_behind_center))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "current",
+      "trial": 1,
+      "item_id": "test-next_defender_contingency-1",
+      "formula": "G((tagged & attacker_forward) -> X defender_behind_center)",
+      "reference": "G((!teammate_safe & attacker_forward) -> X(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "current",
+      "trial": 1,
+      "item_id": "test-untagged_home_capture-1",
+      "formula": "G(teammate_safe) & F(home & F(captured))",
+      "reference": "G(!tagged) & F(home & F(captured))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "current",
+      "trial": 1,
+      "item_id": "test-untagged_until_home-0",
+      "formula": "teammate_safe U home",
+      "reference": "(!tagged U home)"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "current",
+      "trial": 1,
+      "item_id": "test-bounds_untagged_until_pickup-1",
+      "formula": "G(in_bounds) & (teammate_safe U has_flag)",
+      "reference": "G(in_bounds) & (!tagged U has_flag)"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ltlcodegen",
+      "trial": 1,
+      "item_id": "dev-safe_attacker-0",
+      "formula": "G((attacker_forward) -> (!(tagged)))",
+      "reference": "G(attacker_forward -> teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ltlcodegen",
+      "trial": 1,
+      "item_id": "dev-safe_attacker-1",
+      "formula": "G((attacker_forward) -> (!(tagged)))",
+      "reference": "G(attacker_forward -> teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ltlcodegen",
+      "trial": 1,
+      "item_id": "test-safe_home-1",
+      "formula": "F((home) & (!(tagged)))",
+      "reference": "F(home & teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ltlcodegen",
+      "trial": 1,
+      "item_id": "test-strict_team_recovery-0",
+      "formula": "G((tagged) -> (X(F(!(tagged)))))",
+      "reference": "G(tagged -> X(F(teammate_safe)))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ltlcodegen",
+      "trial": 1,
+      "item_id": "test-strict_team_recovery-1",
+      "formula": "G((tagged) -> (F(teammate_safe)))",
+      "reference": "G(tagged -> X(F(teammate_safe)))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ltlcodegen",
+      "trial": 1,
+      "item_id": "test-unsafe_eventual_defender-0",
+      "formula": "G((tagged) -> (F(defender_behind_center)))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ltlcodegen",
+      "trial": 1,
+      "item_id": "test-unsafe_eventual_defender-1",
+      "formula": "G((tagged) -> (F(defender_behind_center)))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ltlcodegen",
+      "trial": 1,
+      "item_id": "test-next_defender_contingency-1",
+      "formula": "G(((tagged) & (attacker_forward)) -> (X(defender_behind_center)))",
+      "reference": "G((!teammate_safe & attacker_forward) -> X(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ltlcodegen",
+      "trial": 1,
+      "item_id": "test-possession_then_untagged-1",
+      "formula": "F((has_flag) & (G(teammate_safe)))",
+      "reference": "F(has_flag & G(!tagged))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "current",
+      "trial": 2,
+      "item_id": "test-strict_team_recovery-1",
+      "formula": "G(tagged -> F teammate_safe)",
+      "reference": "G(tagged -> X(F(teammate_safe)))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "current",
+      "trial": 2,
+      "item_id": "test-unsafe_eventual_defender-1",
+      "formula": "G(tagged -> F(defender_behind_center))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "current",
+      "trial": 2,
+      "item_id": "test-next_defender_contingency-0",
+      "formula": "G((tagged & attacker_forward) -> X(defender_behind_center))",
+      "reference": "G((!teammate_safe & attacker_forward) -> X(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "current",
+      "trial": 2,
+      "item_id": "test-next_defender_contingency-1",
+      "formula": "G((tagged & attacker_forward) -> X(defender_behind_center))",
+      "reference": "G((!teammate_safe & attacker_forward) -> X(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "current",
+      "trial": 2,
+      "item_id": "test-untagged_home_capture-1",
+      "formula": "G(teammate_safe) & F(home & F(captured))",
+      "reference": "G(!tagged) & F(home & F(captured))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "current",
+      "trial": 2,
+      "item_id": "test-bounds_safe_attack_pickup-1",
+      "formula": "G(in_bounds) & G(attacker_forward -> !tagged) & F(has_flag)",
+      "reference": "G(in_bounds) & G(attacker_forward -> teammate_safe) & F(has_flag)"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "current",
+      "trial": 2,
+      "item_id": "test-untagged_until_home-0",
+      "formula": "teammate_safe U home",
+      "reference": "(!tagged U home)"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "current",
+      "trial": 2,
+      "item_id": "test-bounds_untagged_until_pickup-1",
+      "formula": "G(in_bounds) & (teammate_safe U has_flag)",
+      "reference": "G(in_bounds) & (!tagged U has_flag)"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ltlcodegen",
+      "trial": 2,
+      "item_id": "dev-safe_attacker-0",
+      "formula": "G((attacker_forward) -> (!(tagged)))",
+      "reference": "G(attacker_forward -> teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ltlcodegen",
+      "trial": 2,
+      "item_id": "dev-safe_attacker-1",
+      "formula": "G((attacker_forward) -> (!(tagged)))",
+      "reference": "G(attacker_forward -> teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ltlcodegen",
+      "trial": 2,
+      "item_id": "test-defender_implies_safe-0",
+      "formula": "G((defender_behind_center) -> (!(tagged)))",
+      "reference": "G(defender_behind_center -> teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ltlcodegen",
+      "trial": 2,
+      "item_id": "test-strict_team_recovery-0",
+      "formula": "G((tagged) -> (X(F(!(tagged)))))",
+      "reference": "G(tagged -> X(F(teammate_safe)))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "current",
+      "trial": 0,
+      "item_id": "dev-safe_attacker-1",
+      "formula": "G(attacker_forward -> !tagged)",
+      "reference": "G(attacker_forward -> teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "current",
+      "trial": 0,
+      "item_id": "test-defender_implies_safe-1",
+      "formula": "G(defender_behind_center -> !tagged)",
+      "reference": "G(defender_behind_center -> teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "current",
+      "trial": 0,
+      "item_id": "test-safe_home-1",
+      "formula": "F(home & !tagged)",
+      "reference": "F(home & teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "current",
+      "trial": 0,
+      "item_id": "test-unsafe_eventual_defender-1",
+      "formula": "G(tagged -> F(defender_behind_center))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "current",
+      "trial": 0,
+      "item_id": "test-next_defender_contingency-0",
+      "formula": "G((tagged & attacker_forward) -> X defender_behind_center)",
+      "reference": "G((!teammate_safe & attacker_forward) -> X(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "current",
+      "trial": 0,
+      "item_id": "test-next_defender_contingency-1",
+      "formula": "G((tagged & attacker_forward) -> X defender_behind_center)",
+      "reference": "G((!teammate_safe & attacker_forward) -> X(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "current",
+      "trial": 0,
+      "item_id": "test-bounds_safe_attack_pickup-1",
+      "formula": "G(in_bounds) & G(attacker_forward -> !tagged) & F(has_flag)",
+      "reference": "G(in_bounds) & G(attacker_forward -> teammate_safe) & F(has_flag)"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ibm",
+      "trial": 0,
+      "item_id": "test-strict_team_recovery-1",
+      "formula": "G((tagged) -> (F(teammate_safe)))",
+      "reference": "G(tagged -> X(F(teammate_safe)))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ibm",
+      "trial": 0,
+      "item_id": "test-unsafe_eventual_defender-0",
+      "formula": "G((tagged) -> (F(defender_behind_center)))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ibm",
+      "trial": 0,
+      "item_id": "test-unsafe_eventual_defender-1",
+      "formula": "G((tagged) -> (F(defender_behind_center)))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ltlcodegen",
+      "trial": 0,
+      "item_id": "test-defender_implies_safe-0",
+      "formula": "G((defender_behind_center) -> (!(tagged)))",
+      "reference": "G(defender_behind_center -> teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ltlcodegen",
+      "trial": 0,
+      "item_id": "test-strict_team_recovery-0",
+      "formula": "G((tagged) -> (X(F(!(tagged)))))",
+      "reference": "G(tagged -> X(F(teammate_safe)))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ltlcodegen",
+      "trial": 0,
+      "item_id": "test-strict_team_recovery-1",
+      "formula": "G((tagged) -> (F(teammate_safe)))",
+      "reference": "G(tagged -> X(F(teammate_safe)))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ltlcodegen",
+      "trial": 0,
+      "item_id": "test-unsafe_eventual_defender-0",
+      "formula": "G((tagged) -> (F(defender_behind_center)))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ltlcodegen",
+      "trial": 0,
+      "item_id": "test-next_defender_contingency-1",
+      "formula": "G(((tagged) & (attacker_forward)) -> (X(defender_behind_center)))",
+      "reference": "G((!teammate_safe & attacker_forward) -> X(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ltlcodegen",
+      "trial": 0,
+      "item_id": "test-bounds_safe_attack_pickup-1",
+      "formula": "((G(in_bounds)) & (G((attacker_forward) -> (!(tagged))))) & (F(has_flag))",
+      "reference": "G(in_bounds) & G(attacker_forward -> teammate_safe) & F(has_flag)"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "current",
+      "trial": 1,
+      "item_id": "dev-safe_attacker-1",
+      "formula": "G(attacker_forward -> !tagged)",
+      "reference": "G(attacker_forward -> teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "current",
+      "trial": 1,
+      "item_id": "test-defender_implies_safe-1",
+      "formula": "G(defender_behind_center -> !tagged)",
+      "reference": "G(defender_behind_center -> teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "current",
+      "trial": 1,
+      "item_id": "test-strict_team_recovery-0",
+      "formula": "G(tagged -> X F !tagged)",
+      "reference": "G(tagged -> X(F(teammate_safe)))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "current",
+      "trial": 1,
+      "item_id": "test-unsafe_eventual_defender-0",
+      "formula": "G(tagged -> F(defender_behind_center))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "current",
+      "trial": 1,
+      "item_id": "test-unsafe_eventual_defender-1",
+      "formula": "G(tagged -> F(defender_behind_center))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "current",
+      "trial": 1,
+      "item_id": "test-next_defender_contingency-1",
+      "formula": "G((tagged & attacker_forward) -> X defender_behind_center)",
+      "reference": "G((!teammate_safe & attacker_forward) -> X(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "current",
+      "trial": 1,
+      "item_id": "test-bounds_safe_attack_pickup-1",
+      "formula": "G(in_bounds) & G(attacker_forward -> !tagged) & F(has_flag)",
+      "reference": "G(in_bounds) & G(attacker_forward -> teammate_safe) & F(has_flag)"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ibm",
+      "trial": 1,
+      "item_id": "test-strict_team_recovery-1",
+      "formula": "G((tagged) -> (F(teammate_safe)))",
+      "reference": "G(tagged -> X(F(teammate_safe)))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ibm",
+      "trial": 1,
+      "item_id": "test-unsafe_eventual_defender-0",
+      "formula": "G((tagged) -> (F(defender_behind_center)))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ltlcodegen",
+      "trial": 1,
+      "item_id": "test-defender_implies_safe-1",
+      "formula": "G((defender_behind_center) -> (!(tagged)))",
+      "reference": "G(defender_behind_center -> teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ltlcodegen",
+      "trial": 1,
+      "item_id": "test-safe_home-1",
+      "formula": "F((home) & (!(tagged)))",
+      "reference": "F(home & teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ltlcodegen",
+      "trial": 1,
+      "item_id": "test-strict_team_recovery-1",
+      "formula": "G((tagged) -> (F(teammate_safe)))",
+      "reference": "G(tagged -> X(F(teammate_safe)))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ltlcodegen",
+      "trial": 1,
+      "item_id": "test-untagged_home_capture-1",
+      "formula": "(G(teammate_safe)) & (F((home) & (F(captured))))",
+      "reference": "G(!tagged) & F(home & F(captured))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ltlcodegen",
+      "trial": 1,
+      "item_id": "test-bounds_safe_attack_pickup-1",
+      "formula": "((G(in_bounds)) & (G((attacker_forward) -> (!(tagged))))) & (F(has_flag))",
+      "reference": "G(in_bounds) & G(attacker_forward -> teammate_safe) & F(has_flag)"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ltlcodegen",
+      "trial": 2,
+      "item_id": "test-unsafe_eventual_defender-0",
+      "formula": "G((tagged) -> (F(defender_behind_center)))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ltlcodegen",
+      "trial": 2,
+      "item_id": "test-next_defender_contingency-0",
+      "formula": "G(((tagged) & (attacker_forward)) -> (X(defender_behind_center)))",
+      "reference": "G((!teammate_safe & attacker_forward) -> X(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ltlcodegen",
+      "trial": 2,
+      "item_id": "test-next_defender_contingency-1",
+      "formula": "G(((tagged) & (attacker_forward)) -> (X(defender_behind_center)))",
+      "reference": "G((!teammate_safe & attacker_forward) -> X(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "current",
+      "trial": 2,
+      "item_id": "test-defender_implies_safe-1",
+      "formula": "G(defender_behind_center -> !tagged)",
+      "reference": "G(defender_behind_center -> teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "current",
+      "trial": 2,
+      "item_id": "test-unsafe_eventual_defender-0",
+      "formula": "G(tagged -> F(defender_behind_center))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "current",
+      "trial": 2,
+      "item_id": "test-next_defender_contingency-1",
+      "formula": "G((tagged & attacker_forward) -> X defender_behind_center)",
+      "reference": "G((!teammate_safe & attacker_forward) -> X(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "current",
+      "trial": 2,
+      "item_id": "test-bounds_safe_attack_pickup-1",
+      "formula": "G(in_bounds) & G(attacker_forward -> !tagged) & F(has_flag)",
+      "reference": "G(in_bounds) & G(attacker_forward -> teammate_safe) & F(has_flag)"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "current",
+      "trial": 2,
+      "item_id": "test-possession_then_untagged-0",
+      "formula": "F(has_flag & G(teammate_safe))",
+      "reference": "F(has_flag & G(!tagged))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ibm",
+      "trial": 2,
+      "item_id": "test-strict_team_recovery-1",
+      "formula": "G((tagged) -> (F(teammate_safe)))",
+      "reference": "G(tagged -> X(F(teammate_safe)))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ibm",
+      "trial": 2,
+      "item_id": "test-unsafe_eventual_defender-0",
+      "formula": "G((tagged) -> (F(defender_behind_center)))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ibm",
+      "trial": 2,
+      "item_id": "test-unsafe_eventual_defender-1",
+      "formula": "G((tagged) -> (F(defender_behind_center)))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ltlcodegen",
+      "trial": 2,
+      "item_id": "test-defender_implies_safe-1",
+      "formula": "G((defender_behind_center) -> (!(tagged)))",
+      "reference": "G(defender_behind_center -> teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ltlcodegen",
+      "trial": 2,
+      "item_id": "test-safe_home-1",
+      "formula": "F((home) & (!(tagged)))",
+      "reference": "F(home & teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ltlcodegen",
+      "trial": 2,
+      "item_id": "test-unsafe_eventual_defender-0",
+      "formula": "G((tagged) -> (F(defender_behind_center)))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ltlcodegen",
+      "trial": 2,
+      "item_id": "test-next_defender_contingency-0",
+      "formula": "G(((tagged) & (attacker_forward)) -> (X(defender_behind_center)))",
+      "reference": "G((!teammate_safe & attacker_forward) -> X(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-super-vl:free",
+      "method": "ltlcodegen",
+      "trial": 2,
+      "item_id": "test-bounds_safe_attack_pickup-1",
+      "formula": "((G(in_bounds)) & (G((attacker_forward) -> (!(tagged))))) & (F(has_flag))",
+      "reference": "G(in_bounds) & G(attacker_forward -> teammate_safe) & F(has_flag)"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-lightning:free",
+      "method": "current",
+      "trial": 0,
+      "item_id": "test-defender_implies_safe-0",
+      "formula": "G(defender_behind_center -> !tagged)",
+      "reference": "G(defender_behind_center -> teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-lightning:free",
+      "method": "current",
+      "trial": 0,
+      "item_id": "test-safe_home-1",
+      "formula": "F(home & !tagged)",
+      "reference": "F(home & teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-lightning:free",
+      "method": "current",
+      "trial": 0,
+      "item_id": "test-strict_team_recovery-1",
+      "formula": "G(tagged -> F teammate_safe)",
+      "reference": "G(tagged -> X(F(teammate_safe)))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-lightning:free",
+      "method": "current",
+      "trial": 0,
+      "item_id": "test-unsafe_eventual_defender-0",
+      "formula": "G(tagged -> F(defender_behind_center))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-lightning:free",
+      "method": "current",
+      "trial": 0,
+      "item_id": "test-unsafe_eventual_defender-1",
+      "formula": "G(tagged -> F(defender_behind_center))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-lightning:free",
+      "method": "current",
+      "trial": 0,
+      "item_id": "test-bounds_safe_attack_pickup-1",
+      "formula": "G in_bounds & G(attacker_forward -> !tagged) & F has_flag",
+      "reference": "G(in_bounds) & G(attacker_forward -> teammate_safe) & F(has_flag)"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-lightning:free",
+      "method": "ltlcodegen",
+      "trial": 0,
+      "item_id": "dev-safe_attacker-0",
+      "formula": "G((attacker_forward) -> (!(tagged)))",
+      "reference": "G(attacker_forward -> teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-lightning:free",
+      "method": "ltlcodegen",
+      "trial": 0,
+      "item_id": "test-defender_implies_safe-0",
+      "formula": "G((defender_behind_center) -> (!(tagged)))",
+      "reference": "G(defender_behind_center -> teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-lightning:free",
+      "method": "ltlcodegen",
+      "trial": 0,
+      "item_id": "test-defender_implies_safe-1",
+      "formula": "G((defender_behind_center) -> (!(tagged)))",
+      "reference": "G(defender_behind_center -> teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3.5-lightning:free",
+      "method": "ltlcodegen",
+      "trial": 0,
+      "item_id": "test-safe_home-1",
+      "formula": "F((home) & (!(tagged)))",
+      "reference": "F(home & teammate_safe)"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ibm",
+      "trial": 2,
+      "item_id": "test-strict_team_recovery-1",
+      "formula": "G((tagged) -> (F(teammate_safe)))",
+      "reference": "G(tagged -> X(F(teammate_safe)))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ibm",
+      "trial": 2,
+      "item_id": "test-unsafe_eventual_defender-0",
+      "formula": "G((tagged) -> (F(defender_behind_center)))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ibm",
+      "trial": 1,
+      "item_id": "test-strict_team_recovery-0",
+      "formula": "G((tagged) -> (F(teammate_safe)))",
+      "reference": "G(tagged -> X(F(teammate_safe)))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ibm",
+      "trial": 1,
+      "item_id": "test-strict_team_recovery-1",
+      "formula": "G((tagged) -> (F(teammate_safe)))",
+      "reference": "G(tagged -> X(F(teammate_safe)))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ibm",
+      "trial": 1,
+      "item_id": "test-unsafe_eventual_defender-0",
+      "formula": "G((tagged) -> (F(defender_behind_center)))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    },
+    {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "method": "ibm",
+      "trial": 1,
+      "item_id": "test-unsafe_eventual_defender-1",
+      "formula": "G((tagged) -> (F(defender_behind_center)))",
+      "reference": "G(!teammate_safe -> F(defender_behind_center))"
+    }
+  ],
+  "inconclusive": []
+}

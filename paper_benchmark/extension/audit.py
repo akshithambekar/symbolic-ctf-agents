@@ -161,6 +161,33 @@ def audit(roots, output):
     return manifest
 
 
+def grounding_diagnostic(roots, output):
+    """Supplementary sensitivity check; never replace the primary saved scores."""
+    from run import use_frozen_source
+    use_frozen_source()
+    from maritime_nsrl.translator_benchmark.scoring import equivalence
+    invariant = 'G((teammate_safe -> !tagged) & (!tagged -> teammate_safe))'
+    changed, inconclusive = [], []
+    for (model, trial, method, item_id), entry in completed(roots).items():
+        row = entry['row']
+        if not (row['reference_ltl'] and row.get('formula') and row['assessment'].get('compilable')
+                and row['assessment']['score'] != 'Correct'):
+            continue
+        try:
+            result = equivalence(f'({invariant}) & ({row["formula"]})',
+                                 f'({invariant}) & ({row["reference_ltl"]})')
+            if result['equivalent']:
+                changed.append(dict(model=model, method=method, trial=trial, item_id=item_id,
+                                    formula=row['formula'], reference=row['reference_ltl']))
+        except ValueError as exc:
+            inconclusive.append(dict(item_id=item_id, model=model, method=method, error=str(exc)))
+    value = dict(kind='supplementary-sensitivity-analysis', invariant=invariant,
+                 primary_scores_changed=False, independent_invariant_review_pending=True,
+                 matches_only_under_invariant=changed, inconclusive=inconclusive)
+    (output / 'grounding_diagnostic.json').write_text(json.dumps(value, indent=2), encoding='utf-8')
+    return value
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--supervisor', type=Path, default=ROOT / 'runs/w-1106-085330/status.json')
@@ -168,4 +195,5 @@ if __name__ == '__main__':
     args = parser.parse_args()
     roots = [Path(p) for p in json.loads(args.supervisor.read_text())['roots']]
     result = audit(roots, args.output)
+    grounding_diagnostic(roots, args.output)
     print(json.dumps({'output': str(args.output), 'measured': result['measured_outcomes']}))
