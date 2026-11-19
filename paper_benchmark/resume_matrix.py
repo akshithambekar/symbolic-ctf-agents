@@ -62,7 +62,8 @@ def main():
     parser.add_argument('--env-file', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--models', nargs='+', choices=MODELS + [
-        'google/gemma-4-26b-a4b-it:free', 'google/gemma-4-31b-it:free'], default=MODELS,
+        'google/gemma-4-26b-a4b-it:free', 'google/gemma-4-31b-it:free',
+        'cohere/north-mini-code:free', 'dots-studio/dots-3-note-preview:free'], default=MODELS,
                         help='Limit continuation to these model IDs; other models receive no calls')
     args = parser.parse_args()
     previous = [p.resolve() for p in args.previous]
