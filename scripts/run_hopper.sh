@@ -7,11 +7,11 @@ episodes=${3:-256}
 previous=${4:-}
 chunk_size=${HOPPER_CHUNK_EPISODES:-100000}
 if [[ $# -gt 4 || ! "$netid" =~ ^[[:alnum:]_][[:alnum:]_.-]*$ ||
-      ! "$device" =~ ^(cpu|cuda)?$ || ! "$episodes" =~ ^[1-9][0-9]{0,7}$ ||
+      ! "$device" =~ ^(cpu|cuda)$ || ! "$episodes" =~ ^[1-9][0-9]{0,7}$ ||
       ! "$chunk_size" =~ ^[1-9][0-9]{0,7}$ ||
       ( -n "$previous" && ! "$previous" =~ ^ppo-1v1\.[[:alnum:]]{8}$ ) ||
-      ( $# -gt 1 && -z "$device" ) ]]; then
-    echo "Usage: bash scripts/run_hopper.sh GMU_NETID [cpu|cuda [EPISODES [PREVIOUS_RUN_NAME]]]" >&2
+      $# -lt 2 ]]; then
+    echo "Usage: bash scripts/run_hopper.sh GMU_NETID cpu|cuda [EPISODES [PREVIOUS_RUN_NAME]]" >&2
     exit 2
 fi
 
@@ -22,10 +22,8 @@ trap 'rm -rf "$staging"' EXIT
 commit=$(git -C "$repo" rev-parse HEAD)
 mkdir "$staging/source"
 git -C "$repo" archive "$commit" | tar -xf - -C "$staging/source"
-cp "$repo/scripts/hopper_smoke.slurm" "$staging/source/scripts/"
-if [[ -n "$device" ]]; then
-    cp "$repo/src/maritime_nsrl/"{cli,experiments}.py "$staging/source/src/maritime_nsrl/"
-fi
+cp "$repo/scripts/hopper_train.slurm" "$staging/source/scripts/"
+cp "$repo/src/maritime_nsrl/"{cli,experiments}.py "$staging/source/src/maritime_nsrl/"
 printf '%s\n' "$commit" > "$staging/source/source-commit.txt"
 # Hopper's GNU tar warns about macOS metadata in archives.
 COPYFILE_DISABLE=1 tar -c --no-xattrs -zf "$staging/source.tar.gz" -C "$staging/source" .
@@ -39,15 +37,11 @@ remote_script='
     chunk_size=$4
     root="${SCRATCH:-/scratch/$USER}/symbolic-ctf-agents"
     mkdir -p "$root"
-    run_name=smoke
-    if [[ -n "$device" ]]; then
-        run_name=ppo-1v1
-    fi
     if [[ -n "$previous" && ! -f "$root/$previous/runs/ppo-1v1/training/training_complete.json" ]]; then
         echo "Completed training checkpoint missing in $root/$previous" >&2
         exit 1
     fi
-    run_dir=$(mktemp -d "$root/$run_name.XXXXXXXX")
+    run_dir=$(mktemp -d "$root/ppo-1v1.XXXXXXXX")
     tar -xzf - -C "$run_dir"
     cd "$run_dir"
     resources=()
@@ -55,12 +49,6 @@ remote_script='
         resources+=(--partition=gpuq --qos=gpu --gres=gpu:1g.10gb:1)
     fi
     printf "Run directory: %s\n" "$run_dir"
-    if [[ -z "$device" ]]; then
-        job=$(sbatch --parsable scripts/hopper_smoke.slurm)
-        printf "Slurm job: %s\n" "$job"
-        exit
-    fi
-
     checkpoint=
     if [[ -n "$previous" ]]; then
         checkpoint="../$previous/runs/ppo-1v1/training/policy.zip"
@@ -81,7 +69,7 @@ remote_script='
             time=2-00:00:00
         fi
         job=$(sbatch --parsable ${resources[@]+"${resources[@]}"} ${dependency[@]+"${dependency[@]}"} \
-            --time="$time" --job-name=ppo-1v1 scripts/hopper_smoke.slurm \
+            --time="$time" --job-name=ppo-1v1 scripts/hopper_train.slurm \
             "$device" "$count" "$checkpoint" "$run")
         printf "Slurm job: %s (%s episodes, %s)\n" "$job" "$count" "$run"
         dependency=(--dependency="afterok:${job%%;*}" --kill-on-invalid-dep=yes)
