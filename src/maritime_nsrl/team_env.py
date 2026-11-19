@@ -277,6 +277,7 @@ class TeamArena:
             shield_interventions=0,
             shield_deadlocks=0,
             shield_predictions=0,
+            shield_decisions=0,
             capture_time=None,
             decisions=0,
             per_agent_pickups=[0] * team_size,
@@ -542,6 +543,7 @@ class TeamArena:
             opponents = self.opponent_actions()
             choices = list(self.candidates(actions, opponents))
             if self.gate:
+                self.metrics["shield_decisions"] += 1
                 game, result, index = self.gate.transition(
                     self.game, (low for _, low in choices), lambda g: self.labels(g, caps[0])
                 )
@@ -748,6 +750,8 @@ class TeamArena:
                 shield_deadlocks=self.gate.deadlocks,
                 shield_predictions=self.gate.predictions,
             )
+        if self.finished and not self.gate:
+            metrics.pop("shield_decisions", None)
         info = {}
         if self.finished:
             info["metrics"] = {

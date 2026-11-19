@@ -2,9 +2,11 @@
 
 import argparse
 import json
+import sys
 from pathlib import Path
 
-from .experiments import evaluate, evaluate_team, plot_runs, save_json, train, train_team
+from .experiments import evaluate, evaluate_team, plot_runs, save_json
+from .training import launch_training
 from .specifications import check_artifact, compose, read_artifact
 from .translation import translate
 
@@ -13,6 +15,20 @@ def positive_int(value):
     number = int(value)
     if number < 1:
         raise argparse.ArgumentTypeError("Must be at least 1")
+    return number
+
+
+def positive_float(value):
+    number = float(value)
+    if not 0 < number < float("inf"):
+        raise argparse.ArgumentTypeError("Must be a positive finite number")
+    return number
+
+
+def probability(value):
+    number = float(value)
+    if not 0 <= number <= 1:
+        raise argparse.ArgumentTypeError("Must be between 0 and 1")
     return number
 
 
@@ -38,11 +54,20 @@ def main():
         training.add_argument("--spec", type=Path, required=True)
         training.add_argument("--output", type=Path, required=True)
         training.add_argument("--steps", type=positive_int, default=16384)
+        training.add_argument("--horizon", type=positive_float, default=240.0)
         training.add_argument("--seed", type=int, default=0)
         training.add_argument("--opponent", choices=("static", "patrol", "chase"), default="static")
+        training.add_argument("--config", type=Path)
         training.add_argument("--resume", type=Path)
+        training.add_argument("--eval-interval", type=positive_int, default=10000)
+        training.add_argument("--eval-episodes", type=positive_int, default=5)
+        training.add_argument("--eval-seed", type=int, default=10000)
+        training.add_argument("--no-tensorboard-server", action="store_true")
         if name == "train":
             training.add_argument("--guided", action="store_true")
+            training.add_argument("--return-start-probability", type=probability, default=0.0)
+            training.add_argument("--device", choices=("cpu", "cuda"), default="cpu")
+            training.add_argument("--episodes", type=positive_int)
         else:
             training.add_argument("--team-size", type=int, choices=(1, 2, 3), default=3)
             training.add_argument("--episodes", type=positive_int)
@@ -81,7 +106,31 @@ def main():
         viewer.add_argument("--record", type=Path)
         viewer.add_argument("--max-frames", type=int, default=0)
     commands.add_parser("plot").add_argument("directory", type=Path)
-    args = parser.parse_args()
+    argv = sys.argv[1:]
+    if argv and argv[0] in ("train", "train-team") and "--config" in argv:
+        index = argv.index("--config")
+        if index + 1 >= len(argv):
+            parser.error("--config requires a JSON file")
+        settings = json.loads(Path(argv[index + 1]).read_text(encoding="utf-8"))
+        if not isinstance(settings, dict):
+            parser.error("Training configuration must be a JSON object")
+        training_parser = commands.choices[argv[0]]
+        by_name = {action.dest: action for action in training_parser._actions}
+        configured = []
+        for key, value in settings.items():
+            action = by_name.get(key.replace("-", "_"))
+            if not action or not action.option_strings or key == "config":
+                parser.error(f"Unknown training configuration field: {key}")
+            option = action.option_strings[-1]
+            if isinstance(action, argparse._StoreTrueAction):
+                if not isinstance(value, bool):
+                    parser.error(f"{key} must be true or false")
+                if value:
+                    configured.append(option)
+            else:
+                configured.extend((option, str(value)))
+        argv = [argv[0], *configured, *argv[1:]]
+    args = parser.parse_args(argv)
 
     if args.command in ("translate", "compose"):
         if args.output.exists():
@@ -99,36 +148,8 @@ def main():
         save_json(args.output, result)
     elif args.command == "validate":
         result = check_artifact(read_artifact(args.specification)).report()
-    elif args.command == "train":
-        result = str(
-            train(
-                args.spec,
-                args.output,
-                args.guided,
-                args.opponent,
-                args.steps,
-                args.seed,
-                resume=args.resume,
-            )
-        )
-    elif args.command == "train-team":
-        result = str(
-            train_team(
-                args.spec,
-                args.output,
-                team_size=args.team_size,
-                opponent=args.opponent,
-                scenario=args.scenario,
-                shield=args.shield,
-                steps=args.steps,
-                seed=args.seed,
-                role_constraint=args.role_constraint,
-                reward_shaping=not args.no_reward_shaping,
-                temporal_state=not args.no_temporal_state,
-                resume=args.resume,
-                episodes=args.episodes,
-            )
-        )
+    elif args.command in ("train", "train-team"):
+        result = str(launch_training(args))
     elif args.command == "evaluate":
         result = evaluate(args.policy, args.output, args.episodes, args.seed)
     elif args.command == "evaluate-team":

@@ -79,6 +79,36 @@ captures, common task reward, and violations. Guided returns include extra rewar
 Run these commands with fresh output names. Training and evaluation refuse to
 overwrite existing runs. `runs/` is gitignored.
 
+Every standard local training command starts TensorBoard on `127.0.0.1` and
+prints its URL. The server stops when training exits; event files remain in the
+run's `tensorboard/` directory. To view them later, run:
+
+```bash
+uv run tensorboard --logdir runs/baseline/tensorboard --host 127.0.0.1
+```
+
+Set `--eval-interval` (policy transitions, default 10000), `--eval-episodes`
+(default 5), and `--eval-seed` (default 10000) to control deterministic periodic
+evaluation. Evaluation uses a separate environment. Training metrics use the
+latest 100 completed games. Solve rate means that the mission's temporal formula
+is satisfied. Steps per success counts policy decisions and appears after the
+first successful game. The valid action rate checks the action space, so it is
+normally 100%. Shielded team runs also show acceptance, substitutions, and
+deadlocks. PPO diagnostics appear after an update.
+
+You can supply training options in a JSON configuration file. Keys use the CLI
+option names with underscores. Command-line values override file values. Boolean
+flags can be enabled from the command line:
+
+```json
+{"spec": "runs/capture.json", "output": "runs/example", "opponent": "static", "episodes": 50000, "eval_interval": 10000}
+```
+
+Save it as `training.json`, then run `uv run mctf train --config training.json`.
+Use `train-team` and its team options for shared-policy runs. For a headless
+remote job, add `--no-tensorboard-server`; event logging remains enabled. Copy
+the run's event directory locally, then use the TensorBoard command above.
+
 For a patrol curriculum, initialize from a compatible guided checkpoint:
 
 ```bash
