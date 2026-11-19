@@ -6,11 +6,12 @@ import json
 import platform
 from dataclasses import asdict
 from pathlib import Path
+from time import perf_counter
 import importlib.metadata
 import numpy as np
 import torch
 from stable_baselines3 import PPO
-from stable_baselines3.common.callbacks import BaseCallback
+from stable_baselines3.common.callbacks import BaseCallback, CallbackList
 from stable_baselines3.common.logger import configure
 from .single_agent_env import MaritimeEnv
 from .translation import load_spec
@@ -53,7 +54,19 @@ def train(
     horizon=240.0,
     resume=None,
     return_start_probability=0.0,
+    device="cpu",
+    episodes=None,
+    telemetry=False,
+    eval_interval=10000,
+    eval_episodes=5,
+    eval_seed=10000,
 ):
+    if device == "cuda" and not torch.cuda.is_available():
+        raise RuntimeError("CUDA was requested, but PyTorch cannot access a CUDA device")
+    repeat = 5
+    if episodes is not None:
+        # Each game step advances one simulated second, and each action repeats five times.
+        steps = max(steps, episodes * int(np.ceil(horizon / repeat)))
     output = Path(output)
     output.mkdir(parents=True, exist_ok=False)
     spec = load_spec(spec_path)
@@ -64,6 +77,7 @@ def train(
         guided=guided,
         opponent=opponent,
         horizon=horizon,
+        repeat=repeat,
         gamma=gamma,
         return_start_probability=return_start_probability,
     )
@@ -74,11 +88,16 @@ def train(
         seed=seed,
         horizon=horizon,
         gamma=gamma,
-        repeat=5,
+        repeat=repeat,
         dynamics="heron",
         formula=spec.formula,
         resume=str(resume) if resume else None,
         return_start_probability=return_start_probability,
+        device=device,
+        requested_episodes=episodes,
+        eval_interval=eval_interval if telemetry else None,
+        eval_episodes=eval_episodes if telemetry else None,
+        eval_seed=eval_seed if telemetry else None,
     )
     versions = {
         name: importlib.metadata.version(name)
@@ -96,14 +115,21 @@ def train(
     save_json(
         output / "specification.json", json.loads(Path(spec_path).read_text(encoding="utf-8"))
     )
+    completed_before = 0
+    writer = None
     try:
         if resume:
-            old_config = json.loads((Path(resume).parent / "config.json").read_text())
+            previous_dir = Path(resume).parent
+            old_config = json.loads((previous_dir / "config.json").read_text())
             for key in ("guided", "formula", "gamma", "repeat", "dynamics", "horizon"):
                 if old_config[key] != config[key]:
                     raise ValueError(f"Resume configuration mismatch: {key}")
-            model = PPO.load(resume, env=env, device="cpu")
+            model = PPO.load(resume, env=env, device=device)
             model.set_random_seed(seed)
+            previous_summary = previous_dir / "training_complete.json"
+            if previous_summary.is_file():
+                summary = json.loads(previous_summary.read_text())
+                completed_before = summary.get("total_completed_episodes", 0)
         else:
             model = PPO(
                 "MlpPolicy",
@@ -116,14 +142,55 @@ def train(
                 ent_coef=0.01,
                 policy_kwargs={"net_arch": [64, 64]},
                 seed=seed,
-                device="cpu",
+                device=device,
                 verbose=0,
             )
         model.set_logger(configure(str(output), ["csv"]))
-        model.learn(total_timesteps=steps, callback=EpisodeLog(output / "episodes.jsonl"))
+        callbacks = [EpisodeLog(output / "episodes.jsonl", episodes)]
+        if telemetry:
+            from torch.utils.tensorboard import SummaryWriter
+            from .training import MetricWriter, TrainingMetrics
+
+            writer = SummaryWriter(str(output / "tensorboard"))
+            model.logger.output_formats.append(MetricWriter(writer))
+            callbacks.insert(0, TrainingMetrics(
+                writer, lambda: MaritimeEnv(spec, guided=guided, opponent=opponent,
+                    horizon=horizon, repeat=repeat, gamma=gamma,
+                    return_start_probability=return_start_probability),
+                False, eval_interval, eval_episodes, eval_seed,
+            ))
+        if device == "cuda":
+            print(f"Training on {torch.cuda.get_device_name(model.device)}", flush=True)
+        episode_log = callbacks[-1]
+        started = perf_counter()
+        start_timesteps = model.num_timesteps if resume else 0
+        model.learn(
+            total_timesteps=steps, callback=CallbackList(callbacks),
+            reset_num_timesteps=not bool(resume),
+        )
+        if device == "cuda":
+            torch.cuda.synchronize(model.device)
+        elapsed = perf_counter() - started
+        if episodes is not None and episode_log.episodes != episodes:
+            raise RuntimeError(f"Completed {episode_log.episodes} of {episodes} requested episodes")
+        if telemetry:
+            model.logger.dump(model.num_timesteps)
         model.save(output / "policy.zip")
-        save_json(output / "training_complete.json", {"actual_timesteps": model.num_timesteps})
+        save_json(
+            output / "training_complete.json",
+            {
+                "actual_timesteps": model.num_timesteps - start_timesteps,
+                "cumulative_timesteps": model.num_timesteps,
+                "completed_episodes": episode_log.episodes,
+                "total_completed_episodes": completed_before + episode_log.episodes,
+                "training_seconds": elapsed,
+                "steps_per_second": (model.num_timesteps - start_timesteps) / elapsed,
+                "device": str(model.device),
+            },
+        )
     finally:
+        if writer is not None:
+            writer.close()
         env.close()
     return output / "policy.zip"
 
@@ -343,6 +410,10 @@ def train_team(
     config_overrides=None,
     resume=None,
     episodes=None,
+    telemetry=False,
+    eval_interval=10000,
+    eval_episodes=5,
+    eval_seed=10000,
 ):
     """Train one shared PPO policy across a correlated team of blue agents."""
     from .specifications import read_artifact, compose, ROLE_CONSTRAINTS
@@ -425,6 +496,17 @@ def train_team(
         vec.close()
         raise
     model.set_logger(configure(str(output), ["csv"]))
+    callbacks = [EpisodeLog(output / "training_episode_metrics.jsonl", episodes)]
+    writer = None
+    if telemetry:
+        from torch.utils.tensorboard import SummaryWriter
+        from .training import MetricWriter, TrainingMetrics
+
+        writer = SummaryWriter(str(output / "tensorboard"))
+        model.logger.output_formats.append(MetricWriter(writer))
+        callbacks.insert(0, TrainingMetrics(
+            writer, lambda: TeamArena(config), True, eval_interval, eval_episodes, eval_seed,
+        ))
     save_json(
         output / "config.json",
         {
@@ -437,6 +519,9 @@ def train_team(
             "reward_shaping": reward_shaping,
             "temporal_state": temporal_state,
             "seed": seed,
+            "eval_interval": eval_interval if telemetry else None,
+            "eval_episodes": eval_episodes if telemetry else None,
+            "eval_seed": eval_seed if telemetry else None,
             "horizon": horizon,
             "formula": ltl,
             "resume": str(resume) if resume else None,
@@ -466,22 +551,29 @@ def train_team(
         {**ppo_config, "seed": seed, "requested_agent_transitions": steps},
     )
     try:
+        start_timesteps = model.num_timesteps if resume else 0
         model.learn(
             total_timesteps=steps,
-            callback=EpisodeLog(output / "training_episode_metrics.jsonl", episodes),
+            callback=CallbackList(callbacks),
+            reset_num_timesteps=not bool(resume),
         )
+        if telemetry:
+            model.logger.dump(model.num_timesteps)
         model.save(output / "policy.zip")
         save_json(
             output / "training_budget.json",
             {
-                "actual_agent_transitions": model.num_timesteps,
-                "actual_joint_decisions": model.num_timesteps // team_size,
+                "actual_agent_transitions": model.num_timesteps - start_timesteps,
+                "cumulative_agent_transitions": model.num_timesteps,
+                "actual_joint_decisions": (model.num_timesteps - start_timesteps) // team_size,
                 "completed_episodes": sum(
                     1 for _ in (output / "training_episode_metrics.jsonl").open()
                 ),
             },
         )
     finally:
+        if writer is not None:
+            writer.close()
         vec.close()
     return output / "policy.zip"
 
