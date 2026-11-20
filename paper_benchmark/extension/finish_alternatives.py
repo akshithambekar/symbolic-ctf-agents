@@ -15,12 +15,12 @@ from extension.audit import audit
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--previous',type=Path,required=True)
+    parser.add_argument('--previous',type=Path,action='append',required=True)
     parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--env-file',type=Path,required=True)
     args=parser.parse_args()
     output=args.output.resolve();output.mkdir(parents=True,exist_ok=False)
-    roots=[args.previous.resolve()]
+    roots=list(dict.fromkeys(path.resolve() for path in args.previous))
     state=dict(models=MODELS,target=2160,status='starting',roots=[str(p) for p in roots],
         policy='Preserve first measured output, including failures; retry missing/infrastructure only.',
         source_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT.parent,text=True).strip())
