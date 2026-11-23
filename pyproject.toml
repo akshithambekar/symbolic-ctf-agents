@@ -30,6 +30,7 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]
 
 [tool.uv]
 # Simulation does not use the native MOOS hardware bridge.
