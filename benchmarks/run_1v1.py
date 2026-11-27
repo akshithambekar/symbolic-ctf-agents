@@ -90,6 +90,7 @@ class ScenarioRed:
         self.route = route
         self.speed_fraction = speed_fraction
         self.reactive = reactive
+        self.pursuit_enabled = reactive or "trigger_distance" in route
         self.waypoint = 1
         self.route_initialized = False
         self.pursuing = False
@@ -134,7 +135,8 @@ class ScenarioRed:
         blue_in_red = blue[0] >= 80
         blue_tagged = bool(game.state["agent_is_tagged"][0])
         threshold = 0 if self.reactive else self.route.get("trigger_distance", 16)
-        eligible = blue_in_red and not blue_tagged and (self.reactive or np.linalg.norm(red-blue) <= threshold)
+        eligible = (self.pursuit_enabled and blue_in_red and not blue_tagged and
+                    (self.reactive or np.linalg.norm(red-blue) <= threshold))
         if self.pursuing:
             broken = (not blue_in_red or blue_tagged or
                       now-self.pursuit_started >= self.route.get("max_duration", 8) or

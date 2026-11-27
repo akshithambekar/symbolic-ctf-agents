@@ -91,3 +91,16 @@ def test_midfield_crossing_is_recorded_when_capture_clears_possession_same_tick(
     assert rec.milestones["crossed_home_territory_carrying"] == 11.0
     assert rec.milestones["captured"] == 11.0
     assert rec.possession_durations == [3.0]
+
+
+def test_fixed_patrol_does_not_inherit_pursuit_behavior():
+    route = SUITE["cases"][14]["red_route"]
+    red = ScenarioRed(route, 0.8)
+    class Game:
+        current_time = 20.0
+        max_speeds = [2.0, 2.0]
+        state = {"agent_position": np.array([[85.0, 11.0], [84.0, 11.0]]),
+                 "agent_heading": np.array([90.0, 0.0]),
+                 "agent_is_tagged": np.array([False, False])}
+    red.action(Game())
+    assert not red.pursuing
