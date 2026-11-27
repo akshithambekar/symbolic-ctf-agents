@@ -1206,7 +1206,7 @@
         "max_duration": 8,
         "leash_distance": 18,
         "cooldown": 12,
-        "default_leg": "N"
+        "default_leg": "S"
       }
     },
     {
