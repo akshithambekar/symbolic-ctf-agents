@@ -1088,7 +1088,7 @@
       "family": "patrol",
       "seed": 51043,
       "blue_start": [
-        21,
+        23,
         38
       ],
       "red_speed_fraction": 1.0,
@@ -1112,7 +1112,12 @@
             58
           ]
         ]
-      }
+      },
+      "proposed_blue_start": [
+        21,
+        38
+      ],
+      "start_adjustment_reason": "Moved 2 m east because PyQuaticus reset rejects the proposed point for collision with the Blue flag."
     },
     {
       "id": 44,

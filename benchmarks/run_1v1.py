@@ -44,6 +44,8 @@ def validate_suite(suite):
         x, y = c["blue_start"]
         if not (0 <= x < 80 and 0 <= y <= 80):
             raise ValueError(f"Case {c['id']} has an invalid Blue start")
+        if math.dist((x, y), (20, 40)) <= 3.0:
+            raise ValueError(f"Case {c['id']} Blue start collides with the Blue flag")
         if not 0.8 <= c["red_speed_fraction"] <= 1.0:
             raise ValueError(f"Case {c['id']} speed is outside 80–100%")
         route = c["red_route"]

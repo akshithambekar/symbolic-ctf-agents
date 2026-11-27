@@ -21,6 +21,8 @@ def test_v1_roster_invariants_and_explicit_starts():
     validate_suite(SUITE)
     assert [case["seed"] for case in SUITE["cases"]] == list(range(51001, 51051))
     assert SUITE["cases"][14]["red_route"]["start"] == [84, 11]
+    assert SUITE["cases"][42]["proposed_blue_start"] == [21, 38]
+    assert SUITE["cases"][42]["blue_start"] == [23, 38]
     assert SUITE["cases"][44]["red_route"]["start"] == [86, 26]
     assert SUITE["cases"][49]["red_route"]["start"] == [112, 60]
 
