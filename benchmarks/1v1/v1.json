@@ -324,6 +324,10 @@
       "red_speed_fraction": 0.8,
       "red_route": {
         "type": "pace",
+        "start": [
+          84,
+          11
+        ],
         "waypoints": [
           [
             84,
@@ -348,6 +352,10 @@
       "red_speed_fraction": 0.9,
       "red_route": {
         "type": "pace",
+        "start": [
+          84,
+          68
+        ],
         "waypoints": [
           [
             84,
@@ -372,6 +380,10 @@
       "red_speed_fraction": 1.0,
       "red_route": {
         "type": "pace",
+        "start": [
+          84,
+          32
+        ],
         "waypoints": [
           [
             84,
@@ -396,6 +408,10 @@
       "red_speed_fraction": 0.85,
       "red_route": {
         "type": "pace",
+        "start": [
+          84,
+          49
+        ],
         "waypoints": [
           [
             84,
@@ -420,6 +436,10 @@
       "red_speed_fraction": 0.95,
       "red_route": {
         "type": "pace",
+        "start": [
+          87,
+          21
+        ],
         "waypoints": [
           [
             87,
@@ -444,6 +464,10 @@
       "red_speed_fraction": 0.8,
       "red_route": {
         "type": "pace",
+        "start": [
+          87,
+          58
+        ],
         "waypoints": [
           [
             87,
@@ -468,6 +492,10 @@
       "red_speed_fraction": 0.9,
       "red_route": {
         "type": "pace",
+        "start": [
+          87,
+          37
+        ],
         "waypoints": [
           [
             87,
@@ -492,6 +520,10 @@
       "red_speed_fraction": 1.0,
       "red_route": {
         "type": "pace",
+        "start": [
+          87,
+          44
+        ],
         "waypoints": [
           [
             87,
@@ -516,6 +548,10 @@
       "red_speed_fraction": 0.85,
       "red_route": {
         "type": "pace",
+        "start": [
+          90,
+          13
+        ],
         "waypoints": [
           [
             90,
@@ -540,6 +576,10 @@
       "red_speed_fraction": 0.95,
       "red_route": {
         "type": "pace",
+        "start": [
+          90,
+          40
+        ],
         "waypoints": [
           [
             90,
@@ -564,6 +604,10 @@
       "red_speed_fraction": 0.9,
       "red_route": {
         "type": "pace",
+        "start": [
+          90,
+          39
+        ],
         "waypoints": [
           [
             90,
@@ -588,6 +632,10 @@
       "red_speed_fraction": 1.0,
       "red_route": {
         "type": "pace",
+        "start": [
+          90,
+          66
+        ],
         "waypoints": [
           [
             90,
@@ -612,6 +660,10 @@
       "red_speed_fraction": 1.0,
       "red_route": {
         "type": "pace",
+        "start": [
+          100,
+          14
+        ],
         "waypoints": [
           [
             100,
@@ -636,6 +688,10 @@
       "red_speed_fraction": 0.85,
       "red_route": {
         "type": "pace",
+        "start": [
+          100,
+          65
+        ],
         "waypoints": [
           [
             100,
@@ -660,6 +716,10 @@
       "red_speed_fraction": 0.95,
       "red_route": {
         "type": "pace",
+        "start": [
+          100,
+          39
+        ],
         "waypoints": [
           [
             100,
@@ -684,6 +744,10 @@
       "red_speed_fraction": 0.8,
       "red_route": {
         "type": "pace",
+        "start": [
+          100,
+          52
+        ],
         "waypoints": [
           [
             100,
@@ -708,6 +772,10 @@
       "red_speed_fraction": 0.9,
       "red_route": {
         "type": "pace",
+        "start": [
+          112,
+          20
+        ],
         "waypoints": [
           [
             112,
@@ -732,6 +800,10 @@
       "red_speed_fraction": 1.0,
       "red_route": {
         "type": "pace",
+        "start": [
+          112,
+          60
+        ],
         "waypoints": [
           [
             112,
@@ -756,6 +828,10 @@
       "red_speed_fraction": 0.85,
       "red_route": {
         "type": "pace",
+        "start": [
+          112,
+          33
+        ],
         "waypoints": [
           [
             112,
@@ -780,6 +856,10 @@
       "red_speed_fraction": 0.95,
       "red_route": {
         "type": "pace",
+        "start": [
+          124,
+          17
+        ],
         "waypoints": [
           [
             124,
@@ -804,6 +884,10 @@
       "red_speed_fraction": 0.8,
       "red_route": {
         "type": "pace",
+        "start": [
+          124,
+          63
+        ],
         "waypoints": [
           [
             124,
@@ -828,6 +912,10 @@
       "red_speed_fraction": 0.9,
       "red_route": {
         "type": "pace",
+        "start": [
+          124,
+          49
+        ],
         "waypoints": [
           [
             124,
@@ -1210,6 +1298,10 @@
       "red_speed_fraction": 1.0,
       "red_route": {
         "type": "pace",
+        "start": [
+          112,
+          60
+        ],
         "waypoints": [
           [
             112,
