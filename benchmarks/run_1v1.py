@@ -22,7 +22,6 @@ from maritime_nsrl.single_agent_env import MaritimeEnv
 from maritime_nsrl.translation import load_spec
 
 SUITE_PATH = ROOT / "benchmarks/1v1/v1.json"
-DEFAULT_CHECKPOINT = ROOT / "runs/fixed-start-orbit-ppo-20261119/training/policy.zip"
 DEFAULT_SPEC = ROOT / "runs/ppo-nov/specification.json"
 DEFAULT_RUN_META = ROOT / "runs/fixed-start-orbit-ppo-20261119/config.json"
 DEFAULT_EXPERIMENT = ROOT / "runs/fixed-start-orbit-ppo-20261119/experiment.py"
@@ -330,7 +329,7 @@ def summarize(rows):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--checkpoint", type=Path, default=DEFAULT_CHECKPOINT)
+    ap.add_argument("checkpoint", type=Path, help="Path to the PPO checkpoint")
     ap.add_argument("--specification", type=Path, default=DEFAULT_SPEC)
     ap.add_argument("--output", type=Path, required=True)
     ap.add_argument("--case-id", type=int, help="Run one case as a checkpoint smoke test")

@@ -6,10 +6,11 @@ Run the full suite into a new output directory:
 
 ```sh
 MPLCONFIGDIR=/tmp/mplcache PYTHONPATH=src .venv/bin/python benchmarks/run_1v1.py \
+  runs/fixed-start-orbit-ppo-20261119/training/policy.zip \
   --output runs/1v1-benchmark-v1/run-1
 ```
 
-Run it again with a different `--output` path to compare repeatability. The default checkpoint is `runs/fixed-start-orbit-ppo-20261119/training/policy.zip`; use `--checkpoint` and `--specification` to select compatible alternatives. Add `--case-id 50` to run one case.
+The checkpoint path is a required positional argument. Run again with a different `--output` path to compare repeatability. Use `--specification` to select another compatible specification, or add `--case-id 50` to run one case.
 
 Each output directory contains:
 
