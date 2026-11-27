@@ -91,13 +91,15 @@ class MaritimeEnv(gym.Env):
 
     def reset(self, *, seed=None, options=None):
         super().reset(seed=seed)
+        options = options or {}
         game_seed = int(self.np_random.integers(0, 2**31 - 1))
         jitter = self.np_random.uniform(-6, 6)
         return_start = (
             self.return_start_probability > 0
             and self.np_random.random() < self.return_start_probability
         )
-        init = {
+        scenario = options.get("scenario")
+        init = scenario.get("init_dict") if scenario else {
             "agent_position": [[110.0 if return_start else 35.0, 40.0 + jitter], [120.0, 67.0]],
             "agent_heading": [-90.0 if return_start else 90.0, 180.0],
             "agent_speed": [0.0, 0.0],
@@ -116,7 +118,10 @@ class MaritimeEnv(gym.Env):
                 module=r"pyquaticus\.utils\.utils",
             )
             self.game.reset(seed=game_seed, options={"init_dict": init})
-        self.opponent = Opponent(self.opponent_kind)
+        self.opponent = scenario.get("opponent_controller") if scenario else None
+        if self.opponent is None:
+            self.opponent = Opponent(self.opponent_kind)
+        self.step_observer = scenario.get("step_observer") if scenario else None
         self.guidance = Guidance(self.spec, gamma=self.gamma)
         self.guidance.monitor.update(labels_from_state(self.game))
         self.metrics = dict(
@@ -160,6 +165,8 @@ class MaritimeEnv(gym.Env):
                 }
             )
             state = self.game.state
+            if self.step_observer is not None:
+                self.step_observer(self.game)
             scored = int(state["captures"][0] - captures[0])
             grabbed = int(state["grabs"][0] - grabs[0])
             tagged_event = int(bool(state["agent_is_tagged"][0]) and not was_tagged)
