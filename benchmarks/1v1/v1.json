@@ -1156,6 +1156,10 @@
       "red_speed_fraction": 0.8,
       "red_route": {
         "type": "pursuit",
+        "start": [
+          86,
+          26
+        ],
         "waypoints": [
           [
             86,
@@ -1184,6 +1188,10 @@
       "red_speed_fraction": 0.85,
       "red_route": {
         "type": "pursuit",
+        "start": [
+          108,
+          56
+        ],
         "waypoints": [
           [
             108,
