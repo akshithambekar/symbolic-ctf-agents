@@ -66,3 +66,28 @@ def test_pursuit_respects_timeout_and_cooldown():
     red.action(Game())
     assert not red.pursuing
     assert red.cooldown_until > Game.current_time
+
+
+def test_midfield_crossing_is_recorded_when_capture_clears_possession_same_tick():
+    rec = CaseEvents(SUITE["cases"][0])
+    class Game:
+        current_time = 10.0
+        state = {"agent_position": np.array([[81.0, 40.0], [140.0, 20.0]]),
+                 "agent_heading": np.array([90.0, 180.0]),
+                 "agent_speed": np.array([2.0, 1.0]),
+                 "agent_on_sides": np.array([True, False]),
+                 "agent_has_flag": np.array([True, False]),
+                 "agent_is_tagged": np.array([False, False]),
+                 "agent_oob": np.array([False, False]),
+                 "captures": np.array([0, 0]), "grabs": np.array([1, 0]),
+                 "tags": np.array([0, 0])}
+    game = Game()
+    rec.prime(game)
+    rec.possession_started = 8.0
+    game.current_time = 11.0
+    game.state = {**game.state, "agent_position": np.array([[19.0, 40.0], [140.0, 20.0]]),
+                  "agent_has_flag": np.array([False, False]), "captures": np.array([1, 0])}
+    rec.observe(game)
+    assert rec.milestones["crossed_home_territory_carrying"] == 11.0
+    assert rec.milestones["captured"] == 11.0
+    assert rec.possession_durations == [3.0]

@@ -218,11 +218,12 @@ class CaseEvents:
                 self.pickup_time = now
                 self.milestones["picked_up_flag"] = now
             self.events.append({"time": now, "event": "pickup", "count": grabs, "position": bp.tolist()})
-        if self.previous["bp"][0] >= 80 and bp[0] < 80 and carrying and "crossed_home_territory_carrying" not in self.milestones:
+        captures = int(s["captures"][0] - self.previous["captures"][0])
+        if (self.previous["bp"][0] >= 80 and bp[0] < 80 and (carrying or captures)
+                and "crossed_home_territory_carrying" not in self.milestones):
             self.milestones["crossed_home_territory_carrying"] = now
             self.events.append({"time": now, "event": "crossed_home_territory_carrying", "position": bp.tolist()})
         lost = self.previous["carrying"] and not carrying
-        captures = int(s["captures"][0] - self.previous["captures"][0])
         if captures and "captured" not in self.milestones:
             self.milestones["captured"] = now
             self.events.append({"time": now, "event": "capture", "position": bp.tolist()})
