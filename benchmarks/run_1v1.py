@@ -189,6 +189,7 @@ class CaseEvents:
             self.last_route_sample = now
             self.route_samples.append({"time": now, "red_position": rp.tolist(),
                 "red_heading": float(s["agent_heading"][1]), "red_speed": float(s["agent_speed"][1]),
+                "blue_position": bp.tolist(), "blue_tagged": tagged,
                 "red_on_blue_side": bool(s["agent_on_sides"][1]),
                 "pursuing": bool(self.controller and self.controller.pursuing)})
         if self.previous is None:
@@ -266,11 +267,12 @@ def run_case(model, spec, case, settings):
                       repeat=settings["repeat"], dynamics=settings["dynamics"])
     rec = CaseEvents(case)
     try:
-        obs, _ = env.reset(seed=case["seed"], options={"scenario": scenario_for(case, rec)})
+        scenario = scenario_for(case, rec)
+        obs, _ = env.reset(seed=case["seed"], options={"scenario": scenario})
         rec.prime(env.game)
         state = env.game.state
         actual = np.asarray(state["agent_position"], dtype=float)
-        wanted = np.asarray([case["blue_start"], scenario_for(case, rec)["init_dict"]["agent_position"][1]])
+        wanted = np.asarray(scenario["init_dict"]["agent_position"])
         if not np.allclose(actual, wanted, atol=1e-6):
             raise RuntimeError(f"case {case['id']} reset spawn mismatch: {actual} != {wanted}")
         route = case["red_route"]
