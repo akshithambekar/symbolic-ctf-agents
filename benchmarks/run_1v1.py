@@ -346,11 +346,13 @@ def main():
     torch.set_num_threads(1)
     model = PPO.load(args.checkpoint, device="cpu")
     spec = load_spec(args.specification)
+    settings["formula"] = spec.formula
     sha = hashlib.sha256(args.checkpoint.read_bytes()).hexdigest()
     provenance = {"checkpoint_path": str(args.checkpoint.resolve()), "checkpoint_sha256": sha,
                   "checkpoint_run_metadata": metadata, "run_experiment_source_sha256": hashlib.sha256(DEFAULT_EXPERIMENT.read_bytes()).hexdigest(),
                   "specification_path": str(args.specification.resolve()),
                   "specification_sha256": hashlib.sha256(args.specification.read_bytes()).hexdigest(),
+                  "saved_specification": json.loads(args.specification.read_text()),
                   "effective_environment": settings, "suite_path": str(SUITE_PATH.resolve()),
                   "suite_sha256": hashlib.sha256(SUITE_PATH.read_bytes()).hexdigest(),
                   "simulator_rules": suite["arena"], "pursuit_defaults": suite["pursuit_defaults"]}
