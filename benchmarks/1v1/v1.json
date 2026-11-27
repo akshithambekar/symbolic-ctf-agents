@@ -1,0 +1,1228 @@
+{
+  "suite": "pyquaticus-1v1-checkpoint-benchmark",
+  "version": "v1",
+  "units": "meters",
+  "seed_rule": "51000 + case id",
+  "arena": {
+    "bounds": [
+      160,
+      80
+    ],
+    "midfield_x": 80,
+    "blue_flag": [
+      20,
+      40
+    ],
+    "red_flag": [
+      140,
+      40
+    ],
+    "pickup_radius": 10,
+    "boat_radius": 2,
+    "max_speed_mps": 2
+  },
+  "blue_start_heading_degrees": 90,
+  "starts_at_rest": true,
+  "deadline_sim_seconds": 240,
+  "first_capture_wins": true,
+  "red_speed_note": "Fraction of Red max commanded speed while moving; no legacy 0.65 patrol multiplier.",
+  "pursuit_defaults": {
+    "trigger_distance": 16,
+    "max_duration_sim_seconds": 8,
+    "leash_distance": 18,
+    "cooldown_sim_seconds": 12
+  },
+  "cases": [
+    {
+      "id": 1,
+      "family": "flag_orbit",
+      "seed": 51001,
+      "blue_start": [
+        26,
+        18
+      ],
+      "red_speed_fraction": 0.8,
+      "red_route": {
+        "type": "orbit",
+        "center": [
+          140,
+          40
+        ],
+        "radius": 10,
+        "start_angle_degrees": 0,
+        "direction": "cw"
+      }
+    },
+    {
+      "id": 2,
+      "family": "flag_orbit",
+      "seed": 51002,
+      "blue_start": [
+        38,
+        39
+      ],
+      "red_speed_fraction": 0.85,
+      "red_route": {
+        "type": "orbit",
+        "center": [
+          140,
+          40
+        ],
+        "radius": 10,
+        "start_angle_degrees": 72,
+        "direction": "ccw"
+      }
+    },
+    {
+      "id": 3,
+      "family": "flag_orbit",
+      "seed": 51003,
+      "blue_start": [
+        48,
+        62
+      ],
+      "red_speed_fraction": 0.9,
+      "red_route": {
+        "type": "orbit",
+        "center": [
+          140,
+          40
+        ],
+        "radius": 10,
+        "start_angle_degrees": 144,
+        "direction": "cw"
+      }
+    },
+    {
+      "id": 4,
+      "family": "flag_orbit",
+      "seed": 51004,
+      "blue_start": [
+        29,
+        60
+      ],
+      "red_speed_fraction": 0.95,
+      "red_route": {
+        "type": "orbit",
+        "center": [
+          140,
+          40
+        ],
+        "radius": 10,
+        "start_angle_degrees": 216,
+        "direction": "ccw"
+      }
+    },
+    {
+      "id": 5,
+      "family": "flag_orbit",
+      "seed": 51005,
+      "blue_start": [
+        51,
+        24
+      ],
+      "red_speed_fraction": 1.0,
+      "red_route": {
+        "type": "orbit",
+        "center": [
+          140,
+          40
+        ],
+        "radius": 10,
+        "start_angle_degrees": 288,
+        "direction": "cw"
+      }
+    },
+    {
+      "id": 6,
+      "family": "flag_orbit",
+      "seed": 51006,
+      "blue_start": [
+        32,
+        28
+      ],
+      "red_speed_fraction": 1.0,
+      "red_route": {
+        "type": "orbit",
+        "center": [
+          140,
+          40
+        ],
+        "radius": 14,
+        "start_angle_degrees": 36,
+        "direction": "ccw"
+      }
+    },
+    {
+      "id": 7,
+      "family": "flag_orbit",
+      "seed": 51007,
+      "blue_start": [
+        43,
+        55
+      ],
+      "red_speed_fraction": 0.8,
+      "red_route": {
+        "type": "orbit",
+        "center": [
+          140,
+          40
+        ],
+        "radius": 14,
+        "start_angle_degrees": 108,
+        "direction": "cw"
+      }
+    },
+    {
+      "id": 8,
+      "family": "flag_orbit",
+      "seed": 51008,
+      "blue_start": [
+        55,
+        40
+      ],
+      "red_speed_fraction": 0.95,
+      "red_route": {
+        "type": "orbit",
+        "center": [
+          140,
+          40
+        ],
+        "radius": 14,
+        "start_angle_degrees": 180,
+        "direction": "ccw"
+      }
+    },
+    {
+      "id": 9,
+      "family": "flag_orbit",
+      "seed": 51009,
+      "blue_start": [
+        24,
+        47
+      ],
+      "red_speed_fraction": 0.85,
+      "red_route": {
+        "type": "orbit",
+        "center": [
+          140,
+          40
+        ],
+        "radius": 14,
+        "start_angle_degrees": 252,
+        "direction": "cw"
+      }
+    },
+    {
+      "id": 10,
+      "family": "flag_orbit",
+      "seed": 51010,
+      "blue_start": [
+        46,
+        19
+      ],
+      "red_speed_fraction": 0.9,
+      "red_route": {
+        "type": "orbit",
+        "center": [
+          140,
+          40
+        ],
+        "radius": 14,
+        "start_angle_degrees": 324,
+        "direction": "ccw"
+      }
+    },
+    {
+      "id": 11,
+      "family": "flag_orbit",
+      "seed": 51011,
+      "blue_start": [
+        34,
+        65
+      ],
+      "red_speed_fraction": 0.85,
+      "red_route": {
+        "type": "orbit",
+        "center": [
+          140,
+          40
+        ],
+        "radius": 16,
+        "start_angle_degrees": 45,
+        "direction": "cw"
+      }
+    },
+    {
+      "id": 12,
+      "family": "flag_orbit",
+      "seed": 51012,
+      "blue_start": [
+        52,
+        50
+      ],
+      "red_speed_fraction": 1.0,
+      "red_route": {
+        "type": "orbit",
+        "center": [
+          140,
+          40
+        ],
+        "radius": 16,
+        "start_angle_degrees": 135,
+        "direction": "ccw"
+      }
+    },
+    {
+      "id": 13,
+      "family": "flag_orbit",
+      "seed": 51013,
+      "blue_start": [
+        27,
+        34
+      ],
+      "red_speed_fraction": 0.9,
+      "red_route": {
+        "type": "orbit",
+        "center": [
+          140,
+          40
+        ],
+        "radius": 16,
+        "start_angle_degrees": 225,
+        "direction": "cw"
+      }
+    },
+    {
+      "id": 14,
+      "family": "flag_orbit",
+      "seed": 51014,
+      "blue_start": [
+        44,
+        70
+      ],
+      "red_speed_fraction": 0.95,
+      "red_route": {
+        "type": "orbit",
+        "center": [
+          140,
+          40
+        ],
+        "radius": 16,
+        "start_angle_degrees": 315,
+        "direction": "ccw"
+      }
+    },
+    {
+      "id": 15,
+      "family": "midfield_pace",
+      "seed": 51015,
+      "blue_start": [
+        25,
+        22
+      ],
+      "red_speed_fraction": 0.8,
+      "red_route": {
+        "type": "pace",
+        "waypoints": [
+          [
+            84,
+            10
+          ],
+          [
+            84,
+            70
+          ]
+        ],
+        "initial_leg": "N"
+      }
+    },
+    {
+      "id": 16,
+      "family": "midfield_pace",
+      "seed": 51016,
+      "blue_start": [
+        39,
+        42
+      ],
+      "red_speed_fraction": 0.9,
+      "red_route": {
+        "type": "pace",
+        "waypoints": [
+          [
+            84,
+            10
+          ],
+          [
+            84,
+            70
+          ]
+        ],
+        "initial_leg": "S"
+      }
+    },
+    {
+      "id": 17,
+      "family": "midfield_pace",
+      "seed": 51017,
+      "blue_start": [
+        53,
+        63
+      ],
+      "red_speed_fraction": 1.0,
+      "red_route": {
+        "type": "pace",
+        "waypoints": [
+          [
+            84,
+            10
+          ],
+          [
+            84,
+            70
+          ]
+        ],
+        "initial_leg": "N"
+      }
+    },
+    {
+      "id": 18,
+      "family": "midfield_pace",
+      "seed": 51018,
+      "blue_start": [
+        30,
+        58
+      ],
+      "red_speed_fraction": 0.85,
+      "red_route": {
+        "type": "pace",
+        "waypoints": [
+          [
+            84,
+            10
+          ],
+          [
+            84,
+            70
+          ]
+        ],
+        "initial_leg": "S"
+      }
+    },
+    {
+      "id": 19,
+      "family": "midfield_pace",
+      "seed": 51019,
+      "blue_start": [
+        47,
+        16
+      ],
+      "red_speed_fraction": 0.95,
+      "red_route": {
+        "type": "pace",
+        "waypoints": [
+          [
+            87,
+            20
+          ],
+          [
+            87,
+            60
+          ]
+        ],
+        "initial_leg": "N"
+      }
+    },
+    {
+      "id": 20,
+      "family": "midfield_pace",
+      "seed": 51020,
+      "blue_start": [
+        33,
+        36
+      ],
+      "red_speed_fraction": 0.8,
+      "red_route": {
+        "type": "pace",
+        "waypoints": [
+          [
+            87,
+            20
+          ],
+          [
+            87,
+            60
+          ]
+        ],
+        "initial_leg": "S"
+      }
+    },
+    {
+      "id": 21,
+      "family": "midfield_pace",
+      "seed": 51021,
+      "blue_start": [
+        56,
+        54
+      ],
+      "red_speed_fraction": 0.9,
+      "red_route": {
+        "type": "pace",
+        "waypoints": [
+          [
+            87,
+            20
+          ],
+          [
+            87,
+            60
+          ]
+        ],
+        "initial_leg": "N"
+      }
+    },
+    {
+      "id": 22,
+      "family": "midfield_pace",
+      "seed": 51022,
+      "blue_start": [
+        23,
+        65
+      ],
+      "red_speed_fraction": 1.0,
+      "red_route": {
+        "type": "pace",
+        "waypoints": [
+          [
+            87,
+            20
+          ],
+          [
+            87,
+            60
+          ]
+        ],
+        "initial_leg": "S"
+      }
+    },
+    {
+      "id": 23,
+      "family": "midfield_pace",
+      "seed": 51023,
+      "blue_start": [
+        41,
+        25
+      ],
+      "red_speed_fraction": 0.85,
+      "red_route": {
+        "type": "pace",
+        "waypoints": [
+          [
+            90,
+            12
+          ],
+          [
+            90,
+            42
+          ]
+        ],
+        "initial_leg": "N"
+      }
+    },
+    {
+      "id": 24,
+      "family": "midfield_pace",
+      "seed": 51024,
+      "blue_start": [
+        49,
+        44
+      ],
+      "red_speed_fraction": 0.95,
+      "red_route": {
+        "type": "pace",
+        "waypoints": [
+          [
+            90,
+            12
+          ],
+          [
+            90,
+            42
+          ]
+        ],
+        "initial_leg": "S"
+      }
+    },
+    {
+      "id": 25,
+      "family": "midfield_pace",
+      "seed": 51025,
+      "blue_start": [
+        28,
+        48
+      ],
+      "red_speed_fraction": 0.9,
+      "red_route": {
+        "type": "pace",
+        "waypoints": [
+          [
+            90,
+            38
+          ],
+          [
+            90,
+            68
+          ]
+        ],
+        "initial_leg": "N"
+      }
+    },
+    {
+      "id": 26,
+      "family": "midfield_pace",
+      "seed": 51026,
+      "blue_start": [
+        54,
+        30
+      ],
+      "red_speed_fraction": 1.0,
+      "red_route": {
+        "type": "pace",
+        "waypoints": [
+          [
+            90,
+            38
+          ],
+          [
+            90,
+            68
+          ]
+        ],
+        "initial_leg": "S"
+      }
+    },
+    {
+      "id": 27,
+      "family": "interior_pace",
+      "seed": 51027,
+      "blue_start": [
+        31,
+        17
+      ],
+      "red_speed_fraction": 1.0,
+      "red_route": {
+        "type": "pace",
+        "waypoints": [
+          [
+            100,
+            12
+          ],
+          [
+            100,
+            68
+          ]
+        ],
+        "initial_leg": "N"
+      }
+    },
+    {
+      "id": 28,
+      "family": "interior_pace",
+      "seed": 51028,
+      "blue_start": [
+        45,
+        37
+      ],
+      "red_speed_fraction": 0.85,
+      "red_route": {
+        "type": "pace",
+        "waypoints": [
+          [
+            100,
+            12
+          ],
+          [
+            100,
+            68
+          ]
+        ],
+        "initial_leg": "S"
+      }
+    },
+    {
+      "id": 29,
+      "family": "interior_pace",
+      "seed": 51029,
+      "blue_start": [
+        50,
+        66
+      ],
+      "red_speed_fraction": 0.95,
+      "red_route": {
+        "type": "pace",
+        "waypoints": [
+          [
+            100,
+            12
+          ],
+          [
+            100,
+            68
+          ]
+        ],
+        "initial_leg": "N"
+      }
+    },
+    {
+      "id": 30,
+      "family": "interior_pace",
+      "seed": 51030,
+      "blue_start": [
+        22,
+        56
+      ],
+      "red_speed_fraction": 0.8,
+      "red_route": {
+        "type": "pace",
+        "waypoints": [
+          [
+            100,
+            12
+          ],
+          [
+            100,
+            68
+          ]
+        ],
+        "initial_leg": "S"
+      }
+    },
+    {
+      "id": 31,
+      "family": "interior_pace",
+      "seed": 51031,
+      "blue_start": [
+        57,
+        21
+      ],
+      "red_speed_fraction": 0.9,
+      "red_route": {
+        "type": "pace",
+        "waypoints": [
+          [
+            112,
+            18
+          ],
+          [
+            112,
+            62
+          ]
+        ],
+        "initial_leg": "N"
+      }
+    },
+    {
+      "id": 32,
+      "family": "interior_pace",
+      "seed": 51032,
+      "blue_start": [
+        36,
+        46
+      ],
+      "red_speed_fraction": 1.0,
+      "red_route": {
+        "type": "pace",
+        "waypoints": [
+          [
+            112,
+            18
+          ],
+          [
+            112,
+            62
+          ]
+        ],
+        "initial_leg": "S"
+      }
+    },
+    {
+      "id": 33,
+      "family": "interior_pace",
+      "seed": 51033,
+      "blue_start": [
+        42,
+        60
+      ],
+      "red_speed_fraction": 0.85,
+      "red_route": {
+        "type": "pace",
+        "waypoints": [
+          [
+            112,
+            18
+          ],
+          [
+            112,
+            62
+          ]
+        ],
+        "initial_leg": "N"
+      }
+    },
+    {
+      "id": 34,
+      "family": "interior_pace",
+      "seed": 51034,
+      "blue_start": [
+        26,
+        31
+      ],
+      "red_speed_fraction": 0.95,
+      "red_route": {
+        "type": "pace",
+        "waypoints": [
+          [
+            124,
+            16
+          ],
+          [
+            124,
+            42
+          ]
+        ],
+        "initial_leg": "N"
+      }
+    },
+    {
+      "id": 35,
+      "family": "interior_pace",
+      "seed": 51035,
+      "blue_start": [
+        48,
+        32
+      ],
+      "red_speed_fraction": 0.8,
+      "red_route": {
+        "type": "pace",
+        "waypoints": [
+          [
+            124,
+            38
+          ],
+          [
+            124,
+            66
+          ]
+        ],
+        "initial_leg": "S"
+      }
+    },
+    {
+      "id": 36,
+      "family": "interior_pace",
+      "seed": 51036,
+      "blue_start": [
+        58,
+        64
+      ],
+      "red_speed_fraction": 0.9,
+      "red_route": {
+        "type": "pace",
+        "waypoints": [
+          [
+            124,
+            38
+          ],
+          [
+            124,
+            66
+          ]
+        ],
+        "initial_leg": "N"
+      }
+    },
+    {
+      "id": 37,
+      "family": "patrol",
+      "seed": 51037,
+      "blue_start": [
+        24,
+        20
+      ],
+      "red_speed_fraction": 0.8,
+      "red_route": {
+        "type": "diagonal",
+        "waypoints": [
+          [
+            88,
+            14
+          ],
+          [
+            128,
+            58
+          ]
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "family": "patrol",
+      "seed": 51038,
+      "blue_start": [
+        37,
+        53
+      ],
+      "red_speed_fraction": 0.95,
+      "red_route": {
+        "type": "diagonal",
+        "waypoints": [
+          [
+            128,
+            22
+          ],
+          [
+            88,
+            66
+          ]
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "family": "patrol",
+      "seed": 51039,
+      "blue_start": [
+        52,
+        36
+      ],
+      "red_speed_fraction": 0.9,
+      "red_route": {
+        "type": "diagonal",
+        "waypoints": [
+          [
+            92,
+            42
+          ],
+          [
+            132,
+            16
+          ]
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "family": "patrol",
+      "seed": 51040,
+      "blue_start": [
+        30,
+        67
+      ],
+      "red_speed_fraction": 1.0,
+      "red_route": {
+        "type": "diagonal",
+        "waypoints": [
+          [
+            132,
+            64
+          ],
+          [
+            92,
+            38
+          ]
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "family": "patrol",
+      "seed": 51041,
+      "blue_start": [
+        45,
+        14
+      ],
+      "red_speed_fraction": 0.85,
+      "red_route": {
+        "type": "loop",
+        "waypoints": [
+          [
+            89,
+            18
+          ],
+          [
+            123,
+            15
+          ],
+          [
+            132,
+            37
+          ],
+          [
+            99,
+            42
+          ]
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "family": "patrol",
+      "seed": 51042,
+      "blue_start": [
+        55,
+        58
+      ],
+      "red_speed_fraction": 0.9,
+      "red_route": {
+        "type": "loop",
+        "waypoints": [
+          [
+            123,
+            65
+          ],
+          [
+            89,
+            62
+          ],
+          [
+            99,
+            38
+          ],
+          [
+            132,
+            43
+          ]
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "family": "patrol",
+      "seed": 51043,
+      "blue_start": [
+        21,
+        38
+      ],
+      "red_speed_fraction": 1.0,
+      "red_route": {
+        "type": "loop",
+        "waypoints": [
+          [
+            89,
+            22
+          ],
+          [
+            126,
+            18
+          ],
+          [
+            130,
+            62
+          ],
+          [
+            89,
+            58
+          ]
+        ]
+      }
+    },
+    {
+      "id": 44,
+      "family": "patrol",
+      "seed": 51044,
+      "blue_start": [
+        40,
+        68
+      ],
+      "red_speed_fraction": 0.95,
+      "red_route": {
+        "type": "loop",
+        "waypoints": [
+          [
+            130,
+            53
+          ],
+          [
+            118,
+            40
+          ],
+          [
+            130,
+            27
+          ],
+          [
+            150,
+            40
+          ]
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "family": "brief_pursuit",
+      "seed": 51045,
+      "blue_start": [
+        27,
+        23
+      ],
+      "red_speed_fraction": 0.8,
+      "red_route": {
+        "type": "pursuit",
+        "waypoints": [
+          [
+            86,
+            12
+          ],
+          [
+            86,
+            68
+          ]
+        ],
+        "trigger_distance": 16,
+        "max_duration": 8,
+        "leash_distance": 18,
+        "cooldown": 12,
+        "default_leg": "N"
+      }
+    },
+    {
+      "id": 46,
+      "family": "brief_pursuit",
+      "seed": 51046,
+      "blue_start": [
+        44,
+        42
+      ],
+      "red_speed_fraction": 0.85,
+      "red_route": {
+        "type": "pursuit",
+        "waypoints": [
+          [
+            108,
+            18
+          ],
+          [
+            108,
+            62
+          ]
+        ],
+        "trigger_distance": 16,
+        "max_duration": 8,
+        "leash_distance": 18,
+        "cooldown": 12,
+        "default_leg": "N"
+      }
+    },
+    {
+      "id": 47,
+      "family": "brief_pursuit",
+      "seed": 51047,
+      "blue_start": [
+        54,
+        61
+      ],
+      "red_speed_fraction": 0.9,
+      "red_route": {
+        "type": "orbit",
+        "center": [
+          140,
+          40
+        ],
+        "radius": 14,
+        "start_angle_degrees": 180,
+        "direction": "cw",
+        "trigger_distance": 16,
+        "max_duration": 8,
+        "leash_distance": 18,
+        "cooldown": 12
+      }
+    },
+    {
+      "id": 48,
+      "family": "brief_pursuit",
+      "seed": 51048,
+      "blue_start": [
+        32,
+        52
+      ],
+      "red_speed_fraction": 0.95,
+      "red_route": {
+        "type": "diagonal",
+        "waypoints": [
+          [
+            92,
+            64
+          ],
+          [
+            129,
+            22
+          ]
+        ],
+        "trigger_distance": 16,
+        "max_duration": 8,
+        "leash_distance": 18,
+        "cooldown": 12
+      }
+    },
+    {
+      "id": 49,
+      "family": "brief_pursuit",
+      "seed": 51049,
+      "blue_start": [
+        50,
+        27
+      ],
+      "red_speed_fraction": 0.9,
+      "red_route": {
+        "type": "loop",
+        "waypoints": [
+          [
+            130,
+            33
+          ],
+          [
+            118,
+            45
+          ],
+          [
+            133,
+            62
+          ],
+          [
+            150,
+            46
+          ]
+        ],
+        "trigger_distance": 16,
+        "max_duration": 8,
+        "leash_distance": 18,
+        "cooldown": 12
+      }
+    },
+    {
+      "id": 50,
+      "family": "reactive",
+      "seed": 51050,
+      "blue_start": [
+        35,
+        40
+      ],
+      "red_speed_fraction": 1.0,
+      "red_route": {
+        "type": "pace",
+        "waypoints": [
+          [
+            112,
+            18
+          ],
+          [
+            112,
+            62
+          ]
+        ],
+        "initial_leg": "S",
+        "reactive": true
+      }
+    }
+  ]
+}
